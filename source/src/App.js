@@ -8,9 +8,15 @@ function App() {
     <div className="App">
       <nav>
         <Link to='/'>HOME</Link>
-        <Link to='/product'>PRODUCT</Link>
-        <Link to='/'>Cart</Link>
-        <Link to='/aboutus'></Link>
+        <Link to='/products'>PRODUCTS</Link>
+        <Link to='/cook-create'>COOK & CREATE</Link>
+        <Link to='/support'>SUPPORT</Link>
+        <Link to='/about-us'>ABOUT US</Link>
+        <Link to='/cart'>CART</Link>
+        <Link to='/log-in'>LOG IN</Link>
+        <Link to='#'>Hotline: 678 8888</Link>
+
+
       </nav>
       <Routes>
         <Route path="/" element={<Home/>}/>
