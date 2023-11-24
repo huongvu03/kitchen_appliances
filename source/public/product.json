@@ -81,40 +81,40 @@
     {"id":7,
     "name":"Grill pans",
     "category":"Cookware",
-    "description":"Material: Aluminum with anti-Gmail coating. Diameter: 25- 32 cm. Can be used on all types of alcohol stoves and travel gas stoves. Color: black. The baking pan has 2 handles for convenient use. Weight: 660gr",
+    "description":"HEAVY-DUTY CONSTRUCTION - The Cast Iron Grill is heavy-duty, built from premium quality cast iron that will provide a lifetime of use. It is oven safe and great for stovetop, BBQ, campfire, and smoker. Get the outdoor char and grilled flavors indoors. PREMIUM MATERIAL - This Grill is made from premium cast iron used by the best chefs in the world. The Cast Iron Grill can withstand over 800°F and is an excellent conductor and retainer of heat. These properties make it an excellent surface for grilling. TRUE GRILL FLAVORS - Cast Iron Grill is constructed with side walls, wide cooking surface, and deep grill ridges. Your steaks, chicken breasts, burgers, salmon, and vegetables will have the proper char, sear, grill marks, and the flavors you love. LARGE GRILLING SURFACE - The Cast Iron Grill is 10.21 inches wide and 12.42 inches long. There is ample space to grill 4 to 6 burger patties. The quantity will vary by the size of the patties. FATS FUNNEL AWAY - The Cast Iron Grill is designed with deep ridges to allow excess fats and oils to funnel away so that the meat or poultry is not sitting in its own fat while cooking. The end result is deliciously juicy protein that is healthier for you. PRE-SEASONED & NON-STICK - The Cast Iron Grill is pre-seasoned with vegetable oil and is ultra non-stick. It is eco-friendly and does not contain PFOA or Cadmium. EASY CLEANUP - The Cast Iron Grill’s ultra-non-stick surface provides superior food release. It stands up to everyday use. Food slides smoothly along the surface, making cleanup a breeze. It is also resistant to stains and scratches. ERGONOMIC CAST IRON HANDLES & STAY-COOL SILICONE COVERS - One of the most important parts of any cookware are the handles. The handles are heavy-duty, ergonomic, and anti-fatigue with removable stay-cool Silicone handle covers. COMPLEMENTARY TO PIC - The Cast Iron Grill is also induction ready. It is a perfect complement to every NUWAVE Precision Induction Cooktops. It distributes the heat evenly and delivers excellent heat conduction to impart a perfect sear full of flavor. WORKS ON ALL COOKTOPS & OVEN SAFE - The Cast Iron Grill is safe for use on all cooktops including electric and gas stoves, charcoal and gas grills, smokers, and even over fire. It is oven-safe up to 800°F for seamless transition from stove to oven.",
     "quantity":21,
-    "price":120000,
+    "price":59.99,
     "image":[
-        "/image/grill_pans_1.jpg",
-        "/image/grill_pans_2.jpg",
-        "/image/grill_pans_3.jpg",
-        "/image/grill_pans_4.jpg"
+        "img/cook/cook_grillPans_1.jpg",
+        "img/cook/cook_grillPans_2.jpg",
+        "img/cook/cook_grillPans_3.jpg",
+        "img/cook/cook_grillPans_4.jpg"
     ]
     },
     {"id":8,
-    "name":"Tawas",
+    "name":"Vinod Flat Non-Stick Multi Tawa, 13 inch (Crepe Pan/Griddle)",
     "category":"Cookware",
-    "description":"Pure distilled alum powder is used to effectively eliminate odors, foot odor, and shoe odor. The product is prepared using a very elaborate distillation and extraction method and is absolutely safe for long-term use.",
+    "description":"Thick 4 mm 100% Virgin aluminium ensures even heat distribution which ensures the food does not burn. Triple layered with Swiss technology, scratch-proof non-stick coating. Metal spoon friendly. PFOA Free, which ensures fully non toxic coatings. You can enjoy food absolutely worry free. Triple riveted handles which ensures handles don’t get loose over long period of time. Stay-cool Bakelite handles which are Ideal, heat resistant and designed to fit the curve of your palm",
     "quantity":14,
-    "price":95000,
+    "price":45.00,
     "image":[
-        "/image/tawas_1.jpg",
-        "/image/tawas_2.jpg",
-        "/image/tawas_3.jpg",
-        "/image/tawas_4.jpg"
+        "img/cook/cook_tawas_1.jpg",
+        "img/cook/cook_tawas_2.jpg",
+        "img/cook/cook_tawas_3.jpg",
+        "img/cook/cook_tawas_4.jpg"
         ]
     },   
     {"id":9,
     "name":"Egg Poachers",
     "category":"Cookware",
-    "description":"Dimensions: 2.4 x 3.5 inches / 6.2 x 8.8 inches. Material: food grade silicone and PP. Color: Translucent and red body. Package includes: 6 x DIY",
+    "description":"Constructed in stainless steel for durability. Stay cool handle. Easy to clean. Dishwasher safe. Nonstick coated egg cups for easy extraction of eggs",
     "quantity":25,
-    "price":66100,
+    "price":29.95,
     "image":[
-        "/image/egg_poachers_1.jpg",
-        "/image/egg_poachers_2.jpg",
-        "/image/egg_poachers_3.jpg",
-        "/image/egg_poachers_4.jpg"
+        "img/cook/cook_eggPoachers_1.jpg",
+        "img/cook/cook_eggPoachers_2.jpg",
+        "img/cook/cook_eggPoachers_3.jpg",
+        "img/cook/cook_eggPoachers_4.jpg"
         ]
     },  
     {"id":10,
