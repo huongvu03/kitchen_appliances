@@ -7,7 +7,6 @@ import ProductsList from './components/ProductList';
 function App() {
   const [products, setProducts] = useState([]);
   const [filterProducts, setFilterProducts] = useState([]);
-
   useEffect(() => {
     fetch('products.json')
       .then(response => response.json())

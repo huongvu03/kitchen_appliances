@@ -1,0 +1,23 @@
+.productslist {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  column-gap: 0;
+}
+
+.productslist_category_left {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.productslist_card_item {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  row-gap: 50px;
+
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.productslist_page {
+  background-color: grey;
+}
