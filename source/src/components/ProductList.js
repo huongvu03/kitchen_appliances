@@ -42,9 +42,9 @@ function ProductsList({ products }) {
                 <div><input type="checkbox" />Food Storage</div>
                 <hr></hr>
                 <div><h4>Sort</h4></div>
-                <div>Price min to max</div>
-                <div>Price max to min</div>
-                <div>Name A-z</div>
+                <div><input type="checkbox" />Price min to max</div>
+                <div><input type="checkbox" />Price max to min</div>
+                <div><input type="checkbox" />Name A-z</div>
                 <hr></hr>
             </div>
             <div className='productslist_category_right'>
