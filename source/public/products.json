@@ -124,10 +124,10 @@
     "quantity":34,
     "price":149000,
     "image":[
-        "/img/steamers_1.jpg",
-        "/img/steamers_2.jpg",
-        "/img/steamers_3.jpg",
-        "/img/steamers_4.jpg"
+        "/img/cook/steamers_1.jpg",
+        "/img/cook/steamers_2.jpg",
+        "/img/cook/steamers_3.jpg",
+        "/img/cook/steamers_4.jpg"
         ]
     },   
     {"id":11,
@@ -137,10 +137,10 @@
     "quantity":18,
     "price":8390000,
     "image":[
-        "/img/freezers_1.jpg",
-        "/img/freezers_2.jpg",
-        "/img/freezers_3.jpg",
-        "/img/freezers_4.jpg"
+        "/img/ref/freezers_1.jpg",
+        "/img/ref/freezers_2.jpg",
+        "/img/ref/freezers_3.jpg",
+        "/img/ref/freezers_4.jpg"
     ]
     },  
     {"id":12,
@@ -150,10 +150,10 @@
     "quantity":26,
     "price":3950000,
     "image":[
-        "/img/refrigerators_1.jpg",
-        "/img/refrigerators_2.jpg",
-        "/img/refrigerators_3.jpg",
-        "/img/refrigerators_4.jpg"
+        "/img/ref/refrigerators_1.jpg",
+        "/img/ref/refrigerators_2.jpg",
+        "/img/ref/refrigerators_3.jpg",
+        "/img/ref/refrigerators_4.jpg"
     ]
     },
     {
