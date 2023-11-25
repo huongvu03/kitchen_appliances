@@ -1,9 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-import { Route, Routes } from 'react-router-dom';
-import Home from './components/Home';
 
+import './App.css';
+import { Route, Routes, Link } from 'react-router-dom';
+import Home from './components/Home';
+import { useEffect, useState } from 'react';
+import ProductsList from './components/ProductList';
 function App() {
+  const [products, setProducts] = useState([]);
+  const [filterProducts, setFilterProducts] = useState([]);
+
+  useEffect(() => {
+    fetch('products.json')
+      .then(response => response.json())
+      .then(data => {
+        setProducts(data);
+        setFilterProducts(data);
+      })
+      .catch(error => console.log('error reading json', error));
+  }, []);
   return (
     <div className="App">
       <nav>
@@ -19,7 +32,8 @@ function App() {
 
       </nav>
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<ProductsList products={filterProducts} />} />
       </Routes>
     </div>
   );

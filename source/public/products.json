@@ -124,10 +124,10 @@
     "quantity":34,
     "price":149000,
     "image":[
-        "/image/steamers_1.jpg",
-        "/image/steamers_2.jpg",
-        "/image/steamers_3.jpg",
-        "/image/steamers_4.jpg"
+        "/img/steamers_1.jpg",
+        "/img/steamers_2.jpg",
+        "/img/steamers_3.jpg",
+        "/img/steamers_4.jpg"
         ]
     },   
     {"id":11,
@@ -137,10 +137,10 @@
     "quantity":18,
     "price":8390000,
     "image":[
-        "/image/freezers_1.jpg",
-        "/image/freezers_2.jpg",
-        "/image/freezers_3.jpg",
-        "/image/freezers_4.jpg"
+        "/img/freezers_1.jpg",
+        "/img/freezers_2.jpg",
+        "/img/freezers_3.jpg",
+        "/img/freezers_4.jpg"
     ]
     },  
     {"id":12,
@@ -150,10 +150,10 @@
     "quantity":26,
     "price":3950000,
     "image":[
-        "/image/refrigerators_1.jpg",
-        "/image/refrigerators_2.jpg",
-        "/image/refrigerators_3.jpg",
-        "/image/refrigerators_4.jpg"
+        "/img/refrigerators_1.jpg",
+        "/img/refrigerators_2.jpg",
+        "/img/refrigerators_3.jpg",
+        "/img/refrigerators_4.jpg"
     ]
     },
     {
@@ -240,7 +240,7 @@
             "img/app/app_foodChopper_4.jpg"
         ]
     },
-    {"id":"19"
+    {"id":19
     ,"name":"Toasters"
     ,"category":"Appliances"
     ,"price":420.75
@@ -253,7 +253,7 @@
     ,"description":"Electronic browning controls and carriage control levers. Uniformly toasts regular bread, bagels, Texas toast, frozen waffles, and more. Full-brushed stainless steel housing. Dishwasher-safe crumb tray"
     ,"quantity":10
     },
-    {"id":"20"
+    {"id":20
     ,"name":"Flask"
     ,"category":"Food Storage"
     ,"price":420.75
@@ -266,7 +266,7 @@
     ,"description":"Material: 304 stainless steel, corrosion resistant；Size: Length 4.8 inches * height 3.3 inches * thickness 1 inch, weight 0.37 pounds. Versatile And Washable: You can serve rum, whiskey, gin, vodka, tequila, scotch or any spirit of your choice in a glass bottle. Design: Designers use craft technology, the use of brushed design, simple approach, with a clean and sharp curve to outline the classic fashion decanter. Exquisite: Lightweight and easy to carry, exquisite style, exquisite pattern, suitable for the urban business elite extraordinary pursuit of quality. Fashion: Minimalism prevails, type warm fashion is the most important element of this season, and brings a greater degree of comfort and practical function"
     ,"quantity":10
     },
-    {"id":"21"
+    {"id":21
     ,"name":"Spice Jars"
     ,"category":"Food Storage"
     ,"price":420.75
@@ -280,7 +280,7 @@
     ,"description":"It's looks stylish and great decoration on your kitchen counter. Preservation, Bar, Party, Family, Dining Room, Kitchen, Hotels, coffee Shop Essential Choice. Type: With spoon and lid. sugar jar,salt and pepper container,candy Jar and more. The home of condiments, the kitchen is no longer messy."
     ,"quantity":10
     },
-    {"id":"22"
+    {"id":22
     ,"name":"Storage bags"
     ,"category":"Food Storage"
     ,"price":420.75
@@ -293,7 +293,7 @@
     ,"description":"Microwave Safe, Dishwasher Safe, Freezer Safe, Boil, Airtight, Leakproof, All Cookware, The best substitute for plastic, ziplock storage, sous vide & meal prep bags!, Thick silicone doesn’t break, soft & foldable, can be stored flat"
     ,"quantity":10
     },
-    {"id":"23"
+    {"id":23
     ,"name":"Lunch Boxes"
     ,"category":"Food Storage"
     ,"price":420.75
@@ -306,7 +306,7 @@
     ,"description":"Sleek - Maelstrom Foodie Buds Are An Ultra-Light Lunch Bag Weighing Only 1.0Lb, That Takes Less Space While Still Providing Plenty Of Volume15L. The Specially Designed Skeleton Structure And The Four Sides Stitched Lining Keeps The Lunch Bag Standing Upright Even After Being Folded Flat For A Long-Time. It's A Perfect Lunch Bag For Work, Business Trips, and daily travel. Advanced Thermal Efficiency - Thoughtful Five Layer Insulation Design. Exterior Surfaces Are Made Of Rip-Stop Nylon Fabric Plus One Layer Of Waterproof Pvc. Interior Layers Are Thicker, Reinforced Food-Grade Peva Materials With Seamless Ultrasonic Welding For 100% Leak-Proof And Tear-Resistance. A Built-In 5Mm Epe Foam Middle Layer And 210D Liner Add Additional Insulation, Allowing The Maelstrom Foodie Buds To Keep Food Cold/Warm Until It's Time to dig in. Durability - Is An Outstanding Feature Of The Foodie Buds. The Reinforced Zipper With An Attractive Tail Rope Is Not Going To Get Stuck, And Is Easier To Open And Close. The Webbing And A Padded Handle Are Thoroughly Stitched Together, Which Is Tear-Proof And Comfortable To Carry Without Strangling Your Hand. The Lunch Bag Is Equipped With A Detachable And Adjustable Long Shoulder Strap, Giving You Two Options To Comfortably carry the bag. Unique Design - Maelstrom Designed An Insulated Front Pocket. The Inside Of The Front Pocket Is Made Of Food-Grade Thick Aluminum Foil, Sewn With One Elastic Band To Hold Cutlery, And Four Little Foil Pockets Are Sewn For Knives And Forks. It Is Specially Designed To Put Oily Tableware In To Clean Later. Very Useful And Cleanable. MULTI-POCKETS - Main compartment is used for lunch, bread, etc. The top layer is more suitable for storing fruits, cakes, salad, or drinks. The Maelstrom portable lunch bag is equipped with one front pocket for storing dirty tableware, and two mesh side pockets to stash extra snacks. One of them is specially zipped to hold small items. One mesh pocket on the cover of the bag can hold disposable tableware and towels, and finally one large pocket on the back to hold plates and napkins."
     ,"quantity":10
     },
-    {"id":"24"
+    {"id":24
     ,"name":"Vacuum bottles"
     ,"category":"Food Storage"
     ,"price":420.75
