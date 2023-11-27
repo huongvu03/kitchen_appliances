@@ -4,6 +4,7 @@ import { Route, Routes, Link } from 'react-router-dom';
 import Home from './components/Home';
 import { useEffect, useState } from 'react';
 import ProductsList from './components/ProductList';
+import Login from './components/LogIn';
 function App() {
   const [products, setProducts] = useState([]);
   const [filterProducts, setFilterProducts] = useState([]);
@@ -33,6 +34,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<ProductsList products={filterProducts} />} />
+        <Route path='/log-in' element={<Login/>}/>
       </Routes>
     </div>
   );
