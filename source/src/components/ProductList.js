@@ -9,21 +9,21 @@ function ProductsList({ products, searchValue, handleSearch, handleCategory
     return (<div className="productslist_page container">
         <Carousel>
             <Carousel.Item>
-                <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhTg0GOOxzFYbIhnGQ9S184ZDvZgPCoYUrAw&usqp=CAU"} width={"20%"} />
+                <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhTg0GOOxzFYbIhnGQ9S184ZDvZgPCoYUrAw&usqp=CAU"} width={"20%"} alt="" />
                 <Carousel.Caption>
                     <h3>First slide label</h3>
                     <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhTg0GOOxzFYbIhnGQ9S184ZDvZgPCoYUrAw&usqp=CAU"} width={"20%"} />
+                <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhTg0GOOxzFYbIhnGQ9S184ZDvZgPCoYUrAw&usqp=CAU"} width={"20%"} alt="" />
                 <Carousel.Caption>
                     <h3>Second slide label</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhTg0GOOxzFYbIhnGQ9S184ZDvZgPCoYUrAw&usqp=CAU"} width={"20%"} />
+                <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhTg0GOOxzFYbIhnGQ9S184ZDvZgPCoYUrAw&usqp=CAU"} width={"20%"} alt="" />
                 <Carousel.Caption>
                     <h3>Third slide label</h3>
                     <p>

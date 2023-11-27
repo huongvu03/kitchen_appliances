@@ -1,161 +1,173 @@
 [
-    {"id":1,
-    "name":"Cooking pots",
-    "category":"Cookware",
-    "description":"Oven & Stovetop Safe: Gotham Steel cookware is oven safe up to 500 degrees and compatible with all types of stovetops- Gas, electric, halogen & ceramic, besides induction  allowing you to cook virtually anywhere you'd like.",
-    "quantity":10,
-    "price":91.29,
-    "image":[
+    {
+        "id": 1,
+        "name": "Cooking pots",
+        "category": "Cookware",
+        "description": "Oven & Stovetop Safe: Gotham Steel cookware is oven safe up to 500 degrees and compatible with all types of stovetops- Gas, electric, halogen & ceramic, besides induction  allowing you to cook virtually anywhere you'd like.",
+        "quantity": 10,
+        "price": 91.29,
+        "image": [
             "img/cook/cook_cooking_pots_1.jpg",
             "img/cook/cook_cooking_pots_2.jpg",
             "img/cook/cook_cooking_pots_3.jpg",
             "img/cook/cook_cooking_pots_4.jpg"
         ]
     },
-    {"id":2,
-    "name":"Cooking Pans",
-    "category":"Cookware",
-    "description":"Goodful's All in One 11-inch deep dish nonstick pan can replace your bulky kitchen cookware sets. The multi-functional pan can be used as a frying pan, saute pan, sauce pan, stockpot, wok pan, skillet, and braiser. Includes lid and beechwood turner.",
-    "quantity":10,
-    "price":49.99,
-    "image":[
-        "img/cook/cook_cooking_pans_1.jpg",
-        "img/cook/cook_cooking_pans_2.jpg",
-        "img/cook/cook_cooking_pans_3.jpg",
-        "img/cook/cook_cooking_pans_4.jpg"
+    {
+        "id": 2,
+        "name": "Cooking Pans",
+        "category": "cookware",
+        "description": "Goodful's All in One 11-inch deep dish nonstick pan can replace your bulky kitchen cookware sets. The multi-functional pan can be used as a frying pan, saute pan, sauce pan, stockpot, wok pan, skillet, and braiser. Includes lid and beechwood turner.",
+        "quantity": 10,
+        "price": 49.99,
+        "image": [
+            "img/cook/cook_cooking_pans_1.jpg",
+            "img/cook/cook_cooking_pans_2.jpg",
+            "img/cook/cook_cooking_pans_3.jpg",
+            "img/cook/cook_cooking_pans_4.jpg"
         ]
-    } ,   
-    {"id":3,
-    "name":"Frying Pans",
-    "category":"Cookware",
-    "description":"Premium Design: Effortlessly prepare a wide range of recipes and enjoy the benefits of easy cleaning, perfect preheating, deep vessel shapes, comfortable handling, and superior heat distribution in one exceptional cookware set.",
-    "quantity":10,
-    "price":72.46,
-    "image":[
+    },
+    {
+        "id": 3,
+        "name": "Frying Pans",
+        "category": "Cookware",
+        "description": "Premium Design: Effortlessly prepare a wide range of recipes and enjoy the benefits of easy cleaning, perfect preheating, deep vessel shapes, comfortable handling, and superior heat distribution in one exceptional cookware set.",
+        "quantity": 10,
+        "price": 72.46,
+        "image": [
             "img/cook/cook_frying_pans_1.jpg",
             "img/cook/cook_frying_pans_2.jpg",
             "img/cook/cook_frying_pans_3.jpg",
             "img/cook/cook_frying_pans_4.jpg"
         ]
-    } ,  
-    {"id":4,
-    "name":"Cookware Sets",
-    "category":"Cookware",
-    "description":"Set includes: 8, 10 and 11,5 inch fry pan, 11.5 inch lid, 10.25 inch square griddle, 1 quart saucepan with lid, 2 and 3 quart saucepan with lids, 3.5 quart deep sauté pan with lid, 5 quart dutch oven with lid, 3 quart steamer insert, and a 1 egg fry pan.",
-    "quantity":10,
-    "price":139.99,
-    "image":[
+    },
+    {
+        "id": 4,
+        "name": "Cookware Sets",
+        "category": "Cookware",
+        "description": "Set includes: 8, 10 and 11,5 inch fry pan, 11.5 inch lid, 10.25 inch square griddle, 1 quart saucepan with lid, 2 and 3 quart saucepan with lids, 3.5 quart deep sauté pan with lid, 5 quart dutch oven with lid, 3 quart steamer insert, and a 1 egg fry pan.",
+        "quantity": 10,
+        "price": 139.99,
+        "image": [
             "img/cook/cook_cookware_sets_1.jpg",
             "img/cook/cook_cookware_sets_2.jpg",
             "img/cook/cook_cookware_sets_3.jpg",
             "img/cook/cook_cookware_sets_4.jpg"
         ]
-    },   
-    {"id":5,
-    "name":"Handis",
-    "category":"Cookware",
-    "description":"Prestige stainless steel cookers use the best quality stainless steel with stronger lugs and thick base to give your cooker a safe and long life",
-    "quantity":10,
-    "price":56.99,
-    "image":[
+    },
+    {
+        "id": 5,
+        "name": "Handis",
+        "category": "Cookware",
+        "description": "Prestige stainless steel cookers use the best quality stainless steel with stronger lugs and thick base to give your cooker a safe and long life",
+        "quantity": 10,
+        "price": 56.99,
+        "image": [
             "img/cook/cook_handis_1.jpg",
             "img/cook/cook_handis_2.jpg",
             "img/cook/cook_handis_3.jpg",
             "img/cook/cook_handis_4.jpg"
-            ]
-    } ,  
-    {"id":6,
-    "name":"Kadais",
-    "category":"Cookware",
-    "description":"DEEP & HEAVY DESIGN: This set of copper and stainless steel Indian kadai with copper bottom is constructed using high-quality materials for lasting durability. The kadhai has a smooth glossy finish inside and out that can also prevent scratches.",
-    "quantity":10,
-    "price":22.9,
-    "image":[
-        "img/cook/cook_kadais_1.jpg",
-        "img/cook/cook_kadais_2.jpg",
-        "img/cook/cook_kadais_3.jpg",
-        "img/cook/cook_kadais_4.jpg"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Kadais",
+        "category": "Cookware",
+        "description": "DEEP & HEAVY DESIGN: This set of copper and stainless steel Indian kadai with copper bottom is constructed using high-quality materials for lasting durability. The kadhai has a smooth glossy finish inside and out that can also prevent scratches.",
+        "quantity": 10,
+        "price": 22.9,
+        "image": [
+            "img/cook/cook_kadais_1.jpg",
+            "img/cook/cook_kadais_2.jpg",
+            "img/cook/cook_kadais_3.jpg",
+            "img/cook/cook_kadais_4.jpg"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Grill pans",
+        "category": "Cookware",
+        "description": "HEAVY-DUTY CONSTRUCTION - The Cast Iron Grill is heavy-duty, built from premium quality cast iron that will provide a lifetime of use. It is oven safe and great for stovetop, BBQ, campfire, and smoker. Get the outdoor char and grilled flavors indoors. PREMIUM MATERIAL - This Grill is made from premium cast iron used by the best chefs in the world. The Cast Iron Grill can withstand over 800°F and is an excellent conductor and retainer of heat. These properties make it an excellent surface for grilling. TRUE GRILL FLAVORS - Cast Iron Grill is constructed with side walls, wide cooking surface, and deep grill ridges. Your steaks, chicken breasts, burgers, salmon, and vegetables will have the proper char, sear, grill marks, and the flavors you love. LARGE GRILLING SURFACE - The Cast Iron Grill is 10.21 inches wide and 12.42 inches long. There is ample space to grill 4 to 6 burger patties. The quantity will vary by the size of the patties. FATS FUNNEL AWAY - The Cast Iron Grill is designed with deep ridges to allow excess fats and oils to funnel away so that the meat or poultry is not sitting in its own fat while cooking. The end result is deliciously juicy protein that is healthier for you. PRE-SEASONED & NON-STICK - The Cast Iron Grill is pre-seasoned with vegetable oil and is ultra non-stick. It is eco-friendly and does not contain PFOA or Cadmium. EASY CLEANUP - The Cast Iron Grill’s ultra-non-stick surface provides superior food release. It stands up to everyday use. Food slides smoothly along the surface, making cleanup a breeze. It is also resistant to stains and scratches. ERGONOMIC CAST IRON HANDLES & STAY-COOL SILICONE COVERS - One of the most important parts of any cookware are the handles. The handles are heavy-duty, ergonomic, and anti-fatigue with removable stay-cool Silicone handle covers. COMPLEMENTARY TO PIC - The Cast Iron Grill is also induction ready. It is a perfect complement to every NUWAVE Precision Induction Cooktops. It distributes the heat evenly and delivers excellent heat conduction to impart a perfect sear full of flavor. WORKS ON ALL COOKTOPS & OVEN SAFE - The Cast Iron Grill is safe for use on all cooktops including electric and gas stoves, charcoal and gas grills, smokers, and even over fire. It is oven-safe up to 800°F for seamless transition from stove to oven.",
+        "quantity": 21,
+        "price": 59.99,
+        "image": [
+            "img/cook/cook_grillPans_1.jpg",
+            "img/cook/cook_grillPans_2.jpg",
+            "img/cook/cook_grillPans_3.jpg",
+            "img/cook/cook_grillPans_4.jpg"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Vinod Flat Non-Stick Multi Tawa, 13 inch (Crepe Pan/Griddle)",
+        "category": "Cookware",
+        "description": "Thick 4 mm 100% Virgin aluminium ensures even heat distribution which ensures the food does not burn. Triple layered with Swiss technology, scratch-proof non-stick coating. Metal spoon friendly. PFOA Free, which ensures fully non toxic coatings. You can enjoy food absolutely worry free. Triple riveted handles which ensures handles don’t get loose over long period of time. Stay-cool Bakelite handles which are Ideal, heat resistant and designed to fit the curve of your palm",
+        "quantity": 14,
+        "price": 45.00,
+        "image": [
+            "img/cook/cook_tawas_1.jpg",
+            "img/cook/cook_tawas_2.jpg",
+            "img/cook/cook_tawas_3.jpg",
+            "img/cook/cook_tawas_4.jpg"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Egg Poachers",
+        "category": "Cookware",
+        "description": "Constructed in stainless steel for durability. Stay cool handle. Easy to clean. Dishwasher safe. Nonstick coated egg cups for easy extraction of eggs",
+        "quantity": 25,
+        "price": 29.95,
+        "image": [
+            "img/cook/cook_eggPoachers_1.jpg",
+            "img/cook/cook_eggPoachers_2.jpg",
+            "img/cook/cook_eggPoachers_3.jpg",
+            "img/cook/cook_eggPoachers_4.jpg"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Steamers",
+        "category": "Cookware",
+        "description": "Spring is designed on 2 separate floors. Versatile, convenient absorption. Needle cap type fits tightly. Work extremely fast. Dimensions: diameter 28 cm, height 6.5 cm. Material: stainless steel",
+        "quantity": 34,
+        "price": 59.99,
+        "image": [
+            "img/cook/cook_steamers_1.jpg",
+            "img/cook/cook_steamers_2.jpg",
+            "img/cook/cook_steamers_3.jpg",
+            "img/cook/cook_steamers_4.jpg"
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Refrigerators",
+        "category": "Refrigeration",
+        "description": "Total capacity: 165 liters. Usable capacity: 150 liters. Number of doors: 2 doors. Number of users: 2 - 3 people. Stone sediment capacity: 35 liters. Cool bass capacity: 115 liters. Inverter Technology: Inverter Refrigerator",
+        "quantity": 26,
+        "price": 1599.00,
+        "image": [
+            "img/ref/ref_refrigerators_1.jpg",
+            "img/ref/ref_refrigerators_2.jpg",
+            "img/ref/ref_refrigerators_3.jpg",
+            "img/ref/ref_refrigerators_4.jpg"
+        ]
+    },
+    {
+        "id": 12,
+        "name": "295L Solid Door Hybrid Chest Freezer",
+        "category": "Refrigeration",
+        "description": "This easy-to-use chest freezer by Husky offers great freezing functionality and efficiency for any home environment. It features a removable storage basket and digital temperature control with a digital display all combined with a large 295L gross capacity to ensure adequate space and size.",
+        "quantity": 18,
+        "price": 635.00,
+        "image": [
+            "img/ref/ref_freezers_1.jpg",
+            "img/ref/ref_freezers_2.jpg",
+            "img/ref/ref_freezers_3.jpg",
+            "img/ref/ref_freezers_4.jpg"
         ]
     },
 
-    {"id":7,
-    "name":"Grill pans",
-    "category":"Cookware",
-    "description":"HEAVY-DUTY CONSTRUCTION - The Cast Iron Grill is heavy-duty, built from premium quality cast iron that will provide a lifetime of use. It is oven safe and great for stovetop, BBQ, campfire, and smoker. Get the outdoor char and grilled flavors indoors. PREMIUM MATERIAL - This Grill is made from premium cast iron used by the best chefs in the world. The Cast Iron Grill can withstand over 800°F and is an excellent conductor and retainer of heat. These properties make it an excellent surface for grilling. TRUE GRILL FLAVORS - Cast Iron Grill is constructed with side walls, wide cooking surface, and deep grill ridges. Your steaks, chicken breasts, burgers, salmon, and vegetables will have the proper char, sear, grill marks, and the flavors you love. LARGE GRILLING SURFACE - The Cast Iron Grill is 10.21 inches wide and 12.42 inches long. There is ample space to grill 4 to 6 burger patties. The quantity will vary by the size of the patties. FATS FUNNEL AWAY - The Cast Iron Grill is designed with deep ridges to allow excess fats and oils to funnel away so that the meat or poultry is not sitting in its own fat while cooking. The end result is deliciously juicy protein that is healthier for you. PRE-SEASONED & NON-STICK - The Cast Iron Grill is pre-seasoned with vegetable oil and is ultra non-stick. It is eco-friendly and does not contain PFOA or Cadmium. EASY CLEANUP - The Cast Iron Grill’s ultra-non-stick surface provides superior food release. It stands up to everyday use. Food slides smoothly along the surface, making cleanup a breeze. It is also resistant to stains and scratches. ERGONOMIC CAST IRON HANDLES & STAY-COOL SILICONE COVERS - One of the most important parts of any cookware are the handles. The handles are heavy-duty, ergonomic, and anti-fatigue with removable stay-cool Silicone handle covers. COMPLEMENTARY TO PIC - The Cast Iron Grill is also induction ready. It is a perfect complement to every NUWAVE Precision Induction Cooktops. It distributes the heat evenly and delivers excellent heat conduction to impart a perfect sear full of flavor. WORKS ON ALL COOKTOPS & OVEN SAFE - The Cast Iron Grill is safe for use on all cooktops including electric and gas stoves, charcoal and gas grills, smokers, and even over fire. It is oven-safe up to 800°F for seamless transition from stove to oven.",
-    "quantity":21,
-    "price":59.99,
-    "image":[
-        "img/cook/cook_grillPans_1.jpg",
-        "img/cook/cook_grillPans_2.jpg",
-        "img/cook/cook_grillPans_3.jpg",
-        "img/cook/cook_grillPans_4.jpg"
-    ]
-    },
-    {"id":8,
-    "name":"Vinod Flat Non-Stick Multi Tawa, 13 inch (Crepe Pan/Griddle)",
-    "category":"Cookware",
-    "description":"Thick 4 mm 100% Virgin aluminium ensures even heat distribution which ensures the food does not burn. Triple layered with Swiss technology, scratch-proof non-stick coating. Metal spoon friendly. PFOA Free, which ensures fully non toxic coatings. You can enjoy food absolutely worry free. Triple riveted handles which ensures handles don’t get loose over long period of time. Stay-cool Bakelite handles which are Ideal, heat resistant and designed to fit the curve of your palm",
-    "quantity":14,
-    "price":45.00,
-    "image":[
-        "img/cook/cook_tawas_1.jpg",
-        "img/cook/cook_tawas_2.jpg",
-        "img/cook/cook_tawas_3.jpg",
-        "img/cook/cook_tawas_4.jpg"
-        ]
-    },   
-    {"id":9,
-    "name":"Egg Poachers",
-    "category":"Cookware",
-    "description":"Constructed in stainless steel for durability. Stay cool handle. Easy to clean. Dishwasher safe. Nonstick coated egg cups for easy extraction of eggs",
-    "quantity":25,
-    "price":29.95,
-    "image":[
-        "img/cook/cook_eggPoachers_1.jpg",
-        "img/cook/cook_eggPoachers_2.jpg",
-        "img/cook/cook_eggPoachers_3.jpg",
-        "img/cook/cook_eggPoachers_4.jpg"
-        ]
-    },  
-    {"id":10,
-    "name":"Steamers",
-    "category":"Cookware",
-    "description":"Spring is designed on 2 separate floors. Versatile, convenient absorption. Needle cap type fits tightly. Work extremely fast. Dimensions: diameter 28 cm, height 6.5 cm. Material: stainless steel",
-    "quantity":34,
-    "price":59.99,
-    "image":[
-        "img/cook/cook_steamers_1.jpg",
-        "img/cook/cook_steamers_2.jpg",
-        "img/cook/cook_steamers_3.jpg",
-        "img/cook/cook_steamers_4.jpg"
-        ]
-    },   
-    {"id":11,
-    "name":"295L Solid Door Hybrid Chest Freezer",
-    "category":"Refrigeration",
-    "description":"This easy-to-use chest freezer by Husky offers great freezing functionality and efficiency for any home environment. It features a removable storage basket and digital temperature control with a digital display all combined with a large 295L gross capacity to ensure adequate space and size.",
-    "quantity":18,
-    "price":635.00,
-    "image":[
-        "img/ref/ref_freezers_1.jpg",
-        "img/ref/ref_freezers_2.jpg",
-        "img/ref/ref_freezers_3.jpg",
-        "img/ref/ref_freezers_4.jpg"
-    ]
-    },  
-    {"id":12,
-    "name":"Refrigerators",
-    "category":"Refrigeration",
-    "description":"Total capacity: 165 liters. Usable capacity: 150 liters. Number of doors: 2 doors. Number of users: 2 - 3 people. Stone sediment capacity: 35 liters. Cool bass capacity: 115 liters. Inverter Technology: Inverter Refrigerator",
-    "quantity":26,
-    "price":1599.00,
-    "image":[
-        "img/ref/ref_refrigerators_1.jpg",
-        "img/ref/ref_refrigerators_2.jpg",
-        "img/ref/ref_refrigerators_3.jpg",
-        "img/ref/ref_refrigerators_4.jpg"
-    ]
-    },
     {
         "id": 13,
         "category": "Appliances",
@@ -240,84 +252,89 @@
             "img/app/app_foodChopper_4.jpg"
         ]
     },
-    {"id":19
-    ,"name":"Toasters"
-    ,"category":"Appliances"
-    ,"price":420.75
-    ,"image": [
-        "img/app/app_toaster_1.jpg",
-        "img/app/app_toaster_2.jpg",
-        "img/app/app_toaster_3.jpg",
-        "img/app/app_toaster_4.jpg"
-    ]    
-    ,"description":"Electronic browning controls and carriage control levers. Uniformly toasts regular bread, bagels, Texas toast, frozen waffles, and more. Full-brushed stainless steel housing. Dishwasher-safe crumb tray"
-    ,"quantity":10
+    {
+        "id": 19,
+        "name": "Toasters",
+        "category": "Appliances",
+        "price": 420.75,
+        "image": [
+            "img/app/app_toaster_1.jpg",
+            "img/app/app_toaster_2.jpg",
+            "img/app/app_toaster_3.jpg",
+            "img/app/app_toaster_4.jpg"
+        ],
+        "description": "Electronic browning controls and carriage control levers. Uniformly toasts regular bread, bagels, Texas toast, frozen waffles, and more. Full-brushed stainless steel housing. Dishwasher-safe crumb tray",
+        "quantity": 10
     },
-    {"id":20
-    ,"name":"Flask"
-    ,"category":"Food Storage"
-    ,"price":420.75
-    ,"image":[
-        "img/food/food_flask_1.jpg",
-        "img/food/food_flask_2.jpg",
-        "img/food/food_flask_3.jpg",
-        "img/food/food_flask_4.jpg"
-    ]
-    ,"description":"Material: 304 stainless steel, corrosion resistant；Size: Length 4.8 inches * height 3.3 inches * thickness 1 inch, weight 0.37 pounds. Versatile And Washable: You can serve rum, whiskey, gin, vodka, tequila, scotch or any spirit of your choice in a glass bottle. Design: Designers use craft technology, the use of brushed design, simple approach, with a clean and sharp curve to outline the classic fashion decanter. Exquisite: Lightweight and easy to carry, exquisite style, exquisite pattern, suitable for the urban business elite extraordinary pursuit of quality. Fashion: Minimalism prevails, type warm fashion is the most important element of this season, and brings a greater degree of comfort and practical function"
-    ,"quantity":10
+    {
+        "id": 20,
+        "name": "Vacuum bottles",
+        "category": "Food Storage",
+        "price": 420.75,
+        "image": [
+            "img/food/food_vacuumBottles_1.jpg",
+            "img/food/food_vacuumBottles_2.jpg",
+            "img/food/food_vacuumBottles_3.jpg",
+            "img/food/food_vacuumBottles_4.jpg"
+        ],
+        "description": "STAYS HOT OR COLD: THERMOS vacuum insulation technology for maximum temperature retention of hot or cold meals. Keeps the weather out and the delicious in. Soups stay hot for up to 9 hours and cold foods stay cold up to 14 hours. EXTREMELY DURABLE: High quality 18/8 stainless steel construction is dependable any time of the year, from lunch on-the-go to camping in the wilderness. SWEAT-PROOF: Exterior stays cools to the touch with hot contents and sweat-proof with cold. THERMOS brand food jars are dishwasher safe, top rack recommended. SPOON INCLUDED: A full-sized spoon that folds for conveniently storing inside of lid. The insulated lid doubles as a built-in serving bowl. OTHER CAPACITIES: Love the food jar but looking for a different size? The STAINLESS KING food jar also comes in a 24 ounce and 47 ounce capacity. SINCE 1904: THERMOS brand products have been making everyday life better, every time. Hot stays hot. Cold stays cold. Food and drinks stay fresh. The little things go a long way, so do we",
+        "quantity": 10
     },
-    {"id":21
-    ,"name":"Spice Jars"
-    ,"category":"Food Storage"
-    ,"price":420.75
-    ,"image":[
-        "img/food/food_spiceJars_1.jpg",
-        "img/food/food_spiceJars_2.jpg",
-        "img/food/food_spiceJars_3.jpg",
-        "img/food/food_spiceJars_4.jpg"
-        
-    ]
-    ,"description":"It's looks stylish and great decoration on your kitchen counter. Preservation, Bar, Party, Family, Dining Room, Kitchen, Hotels, coffee Shop Essential Choice. Type: With spoon and lid. sugar jar,salt and pepper container,candy Jar and more. The home of condiments, the kitchen is no longer messy."
-    ,"quantity":10
+    {
+        "id": 21,
+        "name": "Flask",
+        "category": "Food Storage",
+        "price": 420.75,
+        "image": [
+            "img/food/food_flask_1.jpg",
+            "img/food/food_flask_2.jpg",
+            "img/food/food_flask_3.jpg",
+            "img/food/food_flask_4.jpg"
+        ],
+        "description": "Material: 304 stainless steel, corrosion resistant；Size: Length 4.8 inches * height 3.3 inches * thickness 1 inch, weight 0.37 pounds. Versatile And Washable: You can serve rum, whiskey, gin, vodka, tequila, scotch or any spirit of your choice in a glass bottle. Design: Designers use craft technology, the use of brushed design, simple approach, with a clean and sharp curve to outline the classic fashion decanter. Exquisite: Lightweight and easy to carry, exquisite style, exquisite pattern, suitable for the urban business elite extraordinary pursuit of quality. Fashion: Minimalism prevails, type warm fashion is the most important element of this season, and brings a greater degree of comfort and practical function",
+        "quantity": 10
     },
-    {"id":22
-    ,"name":"Storage bags"
-    ,"category":"Food Storage"
-    ,"price":420.75
-    ,"image":[
-        "img/food/food_storageBags_1.jpg",
-        "img/food/food_storageBags_2.jpg",
-        "img/food/food_storageBags_3.jpg",
-        "img/food/food_storageBags_4.jpg"
-    ]
-    ,"description":"Microwave Safe, Dishwasher Safe, Freezer Safe, Boil, Airtight, Leakproof, All Cookware, The best substitute for plastic, ziplock storage, sous vide & meal prep bags!, Thick silicone doesn’t break, soft & foldable, can be stored flat"
-    ,"quantity":10
+    {
+        "id": 22,
+        "name": "Spice Jars",
+        "category": "Food Storage",
+        "price": 420.75,
+        "image": [
+            "img/food/food_spiceJars_1.jpg",
+            "img/food/food_spiceJars_2.jpg",
+            "img/food/food_spiceJars_3.jpg",
+            "img/food/food_spiceJars_4.jpg"
+        ],
+        "description": "It's looks stylish and great decoration on your kitchen counter. Preservation, Bar, Party, Family, Dining Room, Kitchen, Hotels, coffee Shop Essential Choice. Type: With spoon and lid. sugar jar,salt and pepper container,candy Jar and more. The home of condiments, the kitchen is no longer messy.",
+        "quantity": 10
     },
-    {"id":23
-    ,"name":"Lunch Boxes"
-    ,"category":"Food Storage"
-    ,"price":420.75
-    ,"image":[
-        "img/food/food_lunchBoxes_1.jpg",
-        "img/food/food_lunchBoxes_2.jpg",
-        "img/food/food_lunchBoxes_3.jpg",
-        "img/food/food_lunchBoxes_4.jpg"
-    ]
-    ,"description":"Sleek - Maelstrom Foodie Buds Are An Ultra-Light Lunch Bag Weighing Only 1.0Lb, That Takes Less Space While Still Providing Plenty Of Volume15L. The Specially Designed Skeleton Structure And The Four Sides Stitched Lining Keeps The Lunch Bag Standing Upright Even After Being Folded Flat For A Long-Time. It's A Perfect Lunch Bag For Work, Business Trips, and daily travel. Advanced Thermal Efficiency - Thoughtful Five Layer Insulation Design. Exterior Surfaces Are Made Of Rip-Stop Nylon Fabric Plus One Layer Of Waterproof Pvc. Interior Layers Are Thicker, Reinforced Food-Grade Peva Materials With Seamless Ultrasonic Welding For 100% Leak-Proof And Tear-Resistance. A Built-In 5Mm Epe Foam Middle Layer And 210D Liner Add Additional Insulation, Allowing The Maelstrom Foodie Buds To Keep Food Cold/Warm Until It's Time to dig in. Durability - Is An Outstanding Feature Of The Foodie Buds. The Reinforced Zipper With An Attractive Tail Rope Is Not Going To Get Stuck, And Is Easier To Open And Close. The Webbing And A Padded Handle Are Thoroughly Stitched Together, Which Is Tear-Proof And Comfortable To Carry Without Strangling Your Hand. The Lunch Bag Is Equipped With A Detachable And Adjustable Long Shoulder Strap, Giving You Two Options To Comfortably carry the bag. Unique Design - Maelstrom Designed An Insulated Front Pocket. The Inside Of The Front Pocket Is Made Of Food-Grade Thick Aluminum Foil, Sewn With One Elastic Band To Hold Cutlery, And Four Little Foil Pockets Are Sewn For Knives And Forks. It Is Specially Designed To Put Oily Tableware In To Clean Later. Very Useful And Cleanable. MULTI-POCKETS - Main compartment is used for lunch, bread, etc. The top layer is more suitable for storing fruits, cakes, salad, or drinks. The Maelstrom portable lunch bag is equipped with one front pocket for storing dirty tableware, and two mesh side pockets to stash extra snacks. One of them is specially zipped to hold small items. One mesh pocket on the cover of the bag can hold disposable tableware and towels, and finally one large pocket on the back to hold plates and napkins."
-    ,"quantity":10
+    {
+        "id": 23,
+        "name": "Storage bags",
+        "category": "Food Storage",
+        "price": 420.75,
+        "image": [
+            "img/food/food_storageBags_1.jpg",
+            "img/food/food_storageBags_2.jpg",
+            "img/food/food_storageBags_3.jpg",
+            "img/food/food_storageBags_4.jpg"
+        ],
+        "description": "Microwave Safe, Dishwasher Safe, Freezer Safe, Boil, Airtight, Leakproof, All Cookware, The best substitute for plastic, ziplock storage, sous vide & meal prep bags!, Thick silicone doesn’t break, soft & foldable, can be stored flat",
+        "quantity": 10
     },
-    {"id":24
-    ,"name":"Vacuum bottles"
-    ,"category":"Food Storage"
-    ,"price":420.75
-    ,"image":[
-        "img/food/food_vacuumBottles_1.jpg",
-        "img/food/food_vacuumBottles_2.jpg",
-        "img/food/food_vacuumBottles_3.jpg",
-        "img/food/food_vacuumBottles_4.jpg"
-    ]
-    ,"description":"STAYS HOT OR COLD: THERMOS vacuum insulation technology for maximum temperature retention of hot or cold meals. Keeps the weather out and the delicious in. Soups stay hot for up to 9 hours and cold foods stay cold up to 14 hours. EXTREMELY DURABLE: High quality 18/8 stainless steel construction is dependable any time of the year, from lunch on-the-go to camping in the wilderness. SWEAT-PROOF: Exterior stays cools to the touch with hot contents and sweat-proof with cold. THERMOS brand food jars are dishwasher safe, top rack recommended. SPOON INCLUDED: A full-sized spoon that folds for conveniently storing inside of lid. The insulated lid doubles as a built-in serving bowl. OTHER CAPACITIES: Love the food jar but looking for a different size? The STAINLESS KING food jar also comes in a 24 ounce and 47 ounce capacity. SINCE 1904: THERMOS brand products have been making everyday life better, every time. Hot stays hot. Cold stays cold. Food and drinks stay fresh. The little things go a long way, so do we"
-    ,"quantity":10
+    {
+        "id": 24,
+        "name": "Lunch Boxes",
+        "category": "Food Storage",
+        "price": 420.75,
+        "image": [
+            "img/food/food_lunchBoxes_1.jpg",
+            "img/food/food_lunchBoxes_2.jpg",
+            "img/food/food_lunchBoxes_3.jpg",
+            "img/food/food_lunchBoxes_4.jpg"
+        ],
+        "description": "Sleek - Maelstrom Foodie Buds Are An Ultra-Light Lunch Bag Weighing Only 1.0Lb, That Takes Less Space While Still Providing Plenty Of Volume15L. The Specially Designed Skeleton Structure And The Four Sides Stitched Lining Keeps The Lunch Bag Standing Upright Even After Being Folded Flat For A Long-Time. It's A Perfect Lunch Bag For Work, Business Trips, and daily travel. Advanced Thermal Efficiency - Thoughtful Five Layer Insulation Design. Exterior Surfaces Are Made Of Rip-Stop Nylon Fabric Plus One Layer Of Waterproof Pvc. Interior Layers Are Thicker, Reinforced Food-Grade Peva Materials With Seamless Ultrasonic Welding For 100% Leak-Proof And Tear-Resistance. A Built-In 5Mm Epe Foam Middle Layer And 210D Liner Add Additional Insulation, Allowing The Maelstrom Foodie Buds To Keep Food Cold/Warm Until It's Time to dig in. Durability - Is An Outstanding Feature Of The Foodie Buds. The Reinforced Zipper With An Attractive Tail Rope Is Not Going To Get Stuck, And Is Easier To Open And Close. The Webbing And A Padded Handle Are Thoroughly Stitched Together, Which Is Tear-Proof And Comfortable To Carry Without Strangling Your Hand. The Lunch Bag Is Equipped With A Detachable And Adjustable Long Shoulder Strap, Giving You Two Options To Comfortably carry the bag. Unique Design - Maelstrom Designed An Insulated Front Pocket. The Inside Of The Front Pocket Is Made Of Food-Grade Thick Aluminum Foil, Sewn With One Elastic Band To Hold Cutlery, And Four Little Foil Pockets Are Sewn For Knives And Forks. It Is Specially Designed To Put Oily Tableware In To Clean Later. Very Useful And Cleanable. MULTI-POCKETS - Main compartment is used for lunch, bread, etc. The top layer is more suitable for storing fruits, cakes, salad, or drinks. The Maelstrom portable lunch bag is equipped with one front pocket for storing dirty tableware, and two mesh side pockets to stash extra snacks. One of them is specially zipped to hold small items. One mesh pocket on the cover of the bag can hold disposable tableware and towels, and finally one large pocket on the back to hold plates and napkins.",
+        "quantity": 10
     }
-
-    ]
+  
+]

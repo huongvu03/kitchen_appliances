@@ -1,22 +1,47 @@
 
 import './App.css';
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes} from 'react-router-dom';
 import Home from './components/Home';
 import { useEffect, useState } from 'react';
 import ProductsList from './components/ProductList';
 import Login from './components/LogIn';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import ProductHome from './components/ProductHome';
+
 function App() {
   const [products, setProducts] = useState([]);
   const [filterProducts, setFilterProducts] = useState([]);
-  useEffect(() => {
-    fetch('products.json')
-      .then(response => response.json())
-      .then(data => {
-        setProducts(data);
-        setFilterProducts(data);
-      })
-      .catch(error => console.log('error reading json', error));
-  }, []);
+  const [cooks,setCooks]= useState ([]);
+  const [refridge,setRefridge]=useState([]);
+  const[apps,setApps]= useState([]);
+  const[foods,setFoods]= useState([]);
+
+  useEffect (()=>{
+    const fetchData = async () => {
+      try{
+        //đọc file json thứ nhất
+        const productJson = await fetch('products.json');
+        const productData = await productJson.json();
+        setProducts(productData);
+        setFilterProducts(productData);
+        const productData1=productData;
+        const productData2=productData;
+        const productData3=productData;
+        const productData4=productData;
+        
+        setCooks(productData1.filter(p => p.category === "Cookware").slice(0, 1));
+        setRefridge(productData2.filter(p => p.category === "Refrigeration").slice(0, 1));
+        setApps(productData3.filter(p => p.category === "Appliances").slice(0, 1));
+        setFoods(productData4.filter(p => p.category === "Food Storage").slice(0, 1));
+
+      }catch (error){
+         console.log('error reading json');
+       }
+     };
+     fetchData();
+   }, []);
+
   //search name
   const [searchValue, setSearchValue] = useState('');
   const handleSearch = (value) => {
@@ -51,20 +76,10 @@ function App() {
   };
   return (
     <div className="App">
-      <nav>
-        <Link to='/'>HOME</Link>
-        <Link to='/products'>PRODUCTS</Link>
-        <Link to='/cook-create'>COOK & CREATE</Link>
-        <Link to='/support'>SUPPORT</Link>
-        <Link to='/about-us'>ABOUT US</Link>
-        <Link to='/cart'>CART</Link>
-        <Link to='/log-in'>LOG IN</Link>
-        <Link to='#'>Hotline: 678 8888</Link>
-
-
-      </nav>
+     <Header/>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path='/producthome' element={<ProductHome cook={cooks} app={apps} refridge={refridge} food={foods} />} />
         <Route path="/products" element={
           <div>
 
@@ -77,7 +92,9 @@ function App() {
 
         } />
         <Route path='/log-in' element={<Login />} />
+      
       </Routes>
+      <Footer/>
     </div>
   );
 }
