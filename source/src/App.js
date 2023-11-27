@@ -17,6 +17,38 @@ function App() {
       })
       .catch(error => console.log('error reading json', error));
   }, []);
+  //search name
+  const [searchValue, setSearchValue] = useState('');
+  const handleSearch = (value) => {
+    setSearchValue(value);
+    const dataSearch = products.filter(pro => pro.name.toLowerCase().includes(value.toLowerCase()));
+    setFilterProducts(dataSearch);
+  }
+  //filter category
+  const handleCategory = (value) => {
+    const newItems = products.filter((pro) => pro.category === value)
+    setFilterProducts(newItems);
+  }
+  //sort
+  const handleSortName = () => {
+    const sortedProduct = [...filterProducts].sort((a, b) => a.name.localeCompare(b.name));
+    setFilterProducts(sortedProduct);
+  }
+  const handleSortPriceMinMax = () => {
+    const sortedPrice = [...filterProducts].sort((a, b) => a.price - b.price);
+    setFilterProducts(sortedPrice);
+  }
+  const handleSortPriceMaxMin = () => {
+    const sortedPrice = [...filterProducts].sort((a, b) => b.price - a.price);
+    setFilterProducts(sortedPrice);
+  }
+  //reset filter
+  const clearFilter = () => {
+    //reload page xoa dc checkbox nhung cham
+    //setfilter thi nhanh nhung ko xoa dc checkbox
+    setFilterProducts(products);
+    // window.location.reload()
+  };
   return (
     <div className="App">
       <nav>
@@ -33,8 +65,18 @@ function App() {
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products" element={<ProductsList products={filterProducts} />} />
-        <Route path='/log-in' element={<Login/>}/>
+        <Route path="/products" element={
+          <div>
+
+            <ProductsList products={filterProducts}
+              searchValue={searchValue} handleSearch={handleSearch}
+              handleCategory={handleCategory}
+              handleSortName={handleSortName}
+              handleSortPriceMinMax={handleSortPriceMinMax} handleSortPriceMaxMin={handleSortPriceMaxMin}
+              clearFilter={clearFilter} /></div>
+
+        } />
+        <Route path='/log-in' element={<Login />} />
       </Routes>
     </div>
   );
