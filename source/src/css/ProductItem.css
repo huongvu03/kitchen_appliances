@@ -1,5 +1,5 @@
 .productitem_card {
-  background-color: aliceblue;
+  background-color: rgb(255, 255, 255);
   overflow: hidden;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
@@ -15,9 +15,10 @@
 }
 .productitem_card_body_content {
   height: 150px;
+  padding-top: 25px;
 }
 
-.productitem_card_body_addcart {
+.btn_detail {
   background-color: #27ae60;
   border-radius: 8px;
   border-style: none;
@@ -31,9 +32,27 @@
   text-align: center;
   text-decoration: none;
 }
-
-.productitem_card_body_addcart:hover {
+.btn_detail:hover {
   color: rgb(252, 252, 252);
-  background-color: rgb(21, 126, 91);
+  background-color: #1b8a49;
+  transition: 0.35s ease;
+}
+.btn_addcart {
+  margin-left: 30px;
+
+  border-style: none;
+  text-decoration: none;
+  background-color: transparent;
+}
+.icon_addcart {
+  color: #27ae60;
+  font-size: 30px;
+}
+.icon_addcart:hover {
+  color: #1b8a49;
+}
+
+.productitem :hover.productitem_card {
+  transform: translateY(-15px) scale(1.005) translateZ(0);
   transition: 0.35s ease;
 }

@@ -1,5 +1,6 @@
 
 import './App.css';
+
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import { useEffect, useState } from 'react';
@@ -51,15 +52,23 @@ function App() {
   }
   //filter category
   const handleCategory = (value) => {
-    const newItems = products.filter((pro) => pro.category === value)
-    setFilterProducts(newItems);
+    if (value === "All") {
+      setFilterProducts(products);
+    } else {
+      const newItems = products.filter((pro) => pro.category === value)
+      setFilterProducts(newItems);
+    }
   }
 
   //sort
-  const handleSortName = () => {
-    const sortedProduct = [...filterProducts].sort((a, b) => a.name.localeCompare(b.name));
-    setFilterProducts(sortedProduct);
-  }
+  // const handleSortNameAz = () => {
+  //   const sortedProduct = [...filterProducts].sort((a, b) => a.name.localeCompare(b.name));
+  //   setFilterProducts(sortedProduct);
+  // }
+  // const handleSortNameZa = () => {
+  //   const sortedProduct = [...filterProducts].sort((a, b) => b.name.localeCompare(a.name));
+  //   setFilterProducts(sortedProduct);
+  // }
   const handleSortPriceMinMax = () => {
     const sortedPrice = [...filterProducts].sort((a, b) => a.price - b.price);
     setFilterProducts(sortedPrice);
@@ -72,9 +81,12 @@ function App() {
   const clearFilter = () => {
     //reload page xoa dc checkbox nhung cham
     //setfilter thi nhanh nhung ko xoa dc checkbox
-    setFilterProducts(products);
 
-    // window.location.reload()
+
+    // setFilterProducts(products);
+
+
+    window.location.reload()
   };
   return (
     <div className="App">
@@ -88,8 +100,8 @@ function App() {
             <ProductsList products={filterProducts}
               searchValue={searchValue} handleSearch={handleSearch}
               handleCategory={handleCategory}
-
-              handleSortName={handleSortName}
+              // handleSortNameAz={handleSortNameAz}
+              // handleSortNameZa={handleSortNameZa}
               handleSortPriceMinMax={handleSortPriceMinMax} handleSortPriceMaxMin={handleSortPriceMaxMin}
               clearFilter={clearFilter} /></div>
 

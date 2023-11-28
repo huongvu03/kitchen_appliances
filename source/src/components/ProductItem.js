@@ -1,5 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import "../css/ProductItem.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
 function ProductItem({ product }) {
 
@@ -9,12 +11,14 @@ function ProductItem({ product }) {
                 <div className='productitem_card_body'>
                     <div><img src={product.image[0]} /></div>
                     <div className='productitem_card_body_content'>
-                        <div>{product.name}</div>
-                        <div>{product.category}</div>
-                        <div>{product.price}</div></div>
+                        <h6>{product.name}</h6>
+                        <p>{product.category}</p>
+                        <div>${product.price}</div></div>
                 </div>
 
-                <div><button className='productitem_card_body_addcart '>Add to cart</button></div>
+                <div><button className='btn_detail '>More Info</button>
+                    <button className='btn_addcart'><FontAwesomeIcon icon={faCartPlus} className='icon_addcart' /></button>
+                </div>
             </div>
 
 
