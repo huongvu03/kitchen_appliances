@@ -2,11 +2,13 @@
   display: grid;
   grid-template-columns: 1fr 6fr;
   column-gap: 0;
+  text-align: center;
 }
 
 .productslist_category_left {
   padding-top: 50px;
   padding-bottom: 50px;
+  text-align: start;
 }
 
 .productslist_card_item {
@@ -20,4 +22,9 @@
 }
 .productslist_page {
   background-color: grey;
+  text-align: center;
+  margin: 0;
+}
+input[type="radio"] {
+  margin-right: 20px;
 }
