@@ -10,11 +10,10 @@ function ProductItem({ product }) {
                     <div><img src={product.image[0]} /></div>
                     <div className='productitem_card_body_content'>
                         <h6>{product.name}</h6>
-                        <p>{product.category}</p>
+                        {/* <p>{product.category}</p> */}
                         <div>${product.price}</div></div>
                 </div>
-
-                <div><button className='btn_detail '>More Info</button>
+                <div><button className='btn_detail'>More Info</button>
                     <button className='btn_addcart'><Cart3 className='icon_addcart' /></button>
                 </div>
             </div>
