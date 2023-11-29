@@ -1,9 +1,9 @@
 
 import './App.css';
 
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Link, Navigate, useNavigate } from 'react-router-dom';
 import Home from './components/Home';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, } from 'react';
 import ProductsList from './components/ProductList';
 import Login from './components/LogIn';
 import Header from './components/Header';
@@ -89,6 +89,46 @@ function App() {
 
     window.location.reload()
   };
+
+/* CODE cua Tram */
+  const [errorLogin, setErrorLogin] = useState('');
+  const [users, setUsers] = useState([]);
+  const navigator = useNavigate();
+
+  useEffect(()=>{
+    fetch('user.json')
+    .then(response => response.json())
+    .then(data => {
+      setUsers(data);
+      console.log(users);
+    })
+    .catch(error => console.log('error reading json' ,error));
+  }, []);
+
+  const checkLogin = (checkUser) => {
+    console.log(checkUser);
+    const findUser = users.find(u => u.username == checkUser.username 
+              && u.password == checkUser.password); 
+    if(findUser != null){
+      //tìm thấy user
+      console.log("login thanh cong");
+      //đk localStorage
+      //localStorage.getItem('username') ? () : () >>>>> điều kiện (nếu xảy ra) : (k xảy ra)
+      localStorage.setItem('username', checkUser.username);
+      //chuyển đến route product
+      setErrorLogin('');
+      navigator('/');
+    }else{
+      //không tìm thấy user
+      console.log("login khong thanh cong");
+      setErrorLogin('invalid username or password');
+    }
+  }
+  const deleteLocalStorage = () => {
+    localStorage.clear();
+  }
+/* ------------------- */
+
   return (
     <div className="App">
       <Header />
@@ -97,7 +137,11 @@ function App() {
         <Route path='/producthome' element={<ProductHome cook={cooks} app={apps} refridge={refridge} food={foods} />} />
         <Route path="/products" element={
           <div>
-
+            localStorage.getItem('username') ? (
+          <>
+          <ProductsList products={filterProducts} />
+         </>
+           ) : (<Navigate to='/log-in'/>)
             <ProductsList products={filterProducts}
               searchValue={searchValue} handleSearch={handleSearch}
               handleCategory={handleCategory}
@@ -114,7 +158,7 @@ function App() {
             /></div>
 
         } />
-        <Route path='/log-in' element={<Login />} />
+        <Route path='/log-in' element={<Login checkLogin={checkLogin} errorLogin={errorLogin}/>} />
 
       </Routes>
       <Footer />
