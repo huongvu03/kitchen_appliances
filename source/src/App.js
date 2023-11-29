@@ -8,7 +8,8 @@ import ProductsList from './components/ProductList';
 import Login from './components/LogIn';
 import Header from './components/Header';
 import Footer from './components/Footer';
- import ProductHome from './components/ProductHome';
+import ProductHome from './components/ProductHome';
+import ProductDetail from './components/ProductDetails';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -34,7 +35,7 @@ function App() {
         setCooks(productData1.filter(p => p.category === "Cookware").slice(0, 2));
         setRefridge(productData2.filter(p => p.category === "Refrigeration").slice(0, 2));
         setApps(productData3.filter(p => p.category === "Appliances").slice(0, 2));
-        setFoods(productData4.filter(p => p.category === "Food Storage").slice(0,2));
+        setFoods(productData4.filter(p => p.category === "Food Storage").slice(0, 2));
 
       } catch (error) {
         console.log('error reading json');
@@ -108,9 +109,9 @@ function App() {
         } />
         <Route path="/detail/:id" element={
           <div>
-            
+
             <ProductDetail
-               /></div>
+            /></div>
 
         } />
         <Route path='/log-in' element={<Login />} />
