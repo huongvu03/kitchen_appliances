@@ -90,26 +90,26 @@ function App() {
     window.location.reload()
   };
 
-/* CODE cua Tram */
+  /* CODE cua Tram */
   const [errorLogin, setErrorLogin] = useState('');
   const [users, setUsers] = useState([]);
   const navigator = useNavigate();
 
-  useEffect(()=>{
+  useEffect(() => {
     fetch('user.json')
-    .then(response => response.json())
-    .then(data => {
-      setUsers(data);
-      console.log(users);
-    })
-    .catch(error => console.log('error reading json' ,error));
+      .then(response => response.json())
+      .then(data => {
+        setUsers(data);
+        console.log(users);
+      })
+      .catch(error => console.log('error reading json', error));
   }, []);
 
   const checkLogin = (checkUser) => {
     console.log(checkUser);
-    const findUser = users.find(u => u.username == checkUser.username 
-              && u.password == checkUser.password); 
-    if(findUser != null){
+    const findUser = users.find(u => u.username == checkUser.username
+      && u.password == checkUser.password);
+    if (findUser != null) {
       //tìm thấy user
       console.log("login thanh cong");
       //đk localStorage
@@ -118,7 +118,7 @@ function App() {
       //chuyển đến route product
       setErrorLogin('');
       navigator('/');
-    }else{
+    } else {
       //không tìm thấy user
       console.log("login khong thanh cong");
       setErrorLogin('invalid username or password');
@@ -127,7 +127,7 @@ function App() {
   const deleteLocalStorage = () => {
     localStorage.clear();
   }
-/* ------------------- */
+  /* ------------------- */
 
   return (
     <div className="App">
@@ -136,30 +136,17 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path='/producthome' element={<ProductHome cook={cooks} app={apps} refridge={refridge} food={foods} />} />
         <Route path="/products" element={
-          <div>
-            localStorage.getItem('username') ? (
-          <>
-          <ProductsList products={filterProducts} />
-         </>
-           ) : (<Navigate to='/log-in'/>)
-            <ProductsList products={filterProducts}
-              searchValue={searchValue} handleSearch={handleSearch}
-              handleCategory={handleCategory}
-              // handleSortNameAz={handleSortNameAz}
-              // handleSortNameZa={handleSortNameZa}
-              handleSortPriceMinMax={handleSortPriceMinMax} handleSortPriceMaxMin={handleSortPriceMaxMin}
-              clearFilter={clearFilter} /></div>
-
-        } />
+          <ProductsList products={filterProducts}
+            searchValue={searchValue} handleSearch={handleSearch}
+            handleCategory={handleCategory}
+            handleSortPriceMinMax={handleSortPriceMinMax} handleSortPriceMaxMin={handleSortPriceMaxMin}
+            clearFilter={clearFilter} />} />
         <Route path="/detail/:id" element={
           <div>
-
             <ProductDetail
             /></div>
-
         } />
-        <Route path='/log-in' element={<Login checkLogin={checkLogin} errorLogin={errorLogin}/>} />
-
+        <Route path='/log-in' element={<Login checkLogin={checkLogin} errorLogin={errorLogin} />} />
       </Routes>
       <Footer />
     </div>
