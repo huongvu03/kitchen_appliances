@@ -16,6 +16,8 @@
 .productitem_card_body_content {
   height: 150px;
   padding-top: 25px;
+  display: grid;
+  grid-template-rows: 100px 20px 20px;
 }
 
 .btn_detail {

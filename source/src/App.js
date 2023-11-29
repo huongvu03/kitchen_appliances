@@ -106,6 +106,13 @@ function App() {
               clearFilter={clearFilter} /></div>
 
         } />
+        <Route path="/detail/:id" element={
+          <div>
+            
+            <ProductDetail
+               /></div>
+
+        } />
         <Route path='/log-in' element={<Login />} />
 
       </Routes>
