@@ -8,6 +8,7 @@ import ProductsList from './components/ProductList';
 import Login from './components/LogIn';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ProductDetail from './components/ProductDetails';
 // import ProductHome from './components/ProductHome';
 
 function App() {
@@ -104,6 +105,13 @@ function App() {
               // handleSortNameZa={handleSortNameZa}
               handleSortPriceMinMax={handleSortPriceMinMax} handleSortPriceMaxMin={handleSortPriceMaxMin}
               clearFilter={clearFilter} /></div>
+
+        } />
+        <Route path="/detail/:id" element={
+          <div>
+            
+            <ProductDetail
+               /></div>
 
         } />
         <Route path='/log-in' element={<Login />} />
