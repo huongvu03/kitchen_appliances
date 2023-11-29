@@ -8,7 +8,7 @@ import ProductsList from './components/ProductList';
 import Login from './components/LogIn';
 import Header from './components/Header';
 import Footer from './components/Footer';
-// import ProductHome from './components/ProductHome';
+ import ProductHome from './components/ProductHome';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -31,10 +31,10 @@ function App() {
         const productData3 = productData;
         const productData4 = productData;
 
-        setCooks(productData1.filter(p => p.category === "Cookware").slice(0, 1));
-        setRefridge(productData2.filter(p => p.category === "Refrigeration").slice(0, 1));
-        setApps(productData3.filter(p => p.category === "Appliances").slice(0, 1));
-        setFoods(productData4.filter(p => p.category === "Food Storage").slice(0, 1));
+        setCooks(productData1.filter(p => p.category === "Cookware").slice(0, 2));
+        setRefridge(productData2.filter(p => p.category === "Refrigeration").slice(0, 2));
+        setApps(productData3.filter(p => p.category === "Appliances").slice(0, 2));
+        setFoods(productData4.filter(p => p.category === "Food Storage").slice(0,2));
 
       } catch (error) {
         console.log('error reading json');
@@ -93,7 +93,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path='/producthome' element={<ProductHome cook={cooks} app={apps} refridge={refridge} food={foods} />} /> */}
+        <Route path='/producthome' element={<ProductHome cook={cooks} app={apps} refridge={refridge} food={foods} />} />
         <Route path="/products" element={
           <div>
 

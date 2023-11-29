@@ -13,7 +13,7 @@ function Header() {
             <div>  <Link to='/'><img src="./homeimg/Logo-Tashas-Design.png" alt="logo" height="100px" width="100px" /></Link></div>
             <ul>
                 <Link to='/'> <li>HOME</li></Link>
-                <Link to='/products'><li>PRODUCTS</li></Link>
+                <Link to='/producthome'><li>PRODUCTS</li></Link>
                 <Link to='/ourblog'> <li>
                     <NavDropdown title="OUR BLOG" id="collapsible-nav-dropdown">
                         <NavDropdown.Item onClick={() => navigate(`/expert-tips`)} className='headerDown'>Expert Tips</NavDropdown.Item>

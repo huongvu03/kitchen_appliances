@@ -1,0 +1,125 @@
+.ProductHome_top {
+  margin: 60px 60px 60px 60px;
+}
+.ProductHome_top h1 {
+  text-align: center;
+}
+
+.ProductHome_top div {
+  margin-left: 300px;
+  margin-right: 300px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+
+}
+.ProductHome_top h6{
+  text-align: right;
+  margin-right: 20px;
+}
+
+.ProductHome_top .btn {
+  border: none;
+  color: red;
+  
+  text-align: right;
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 32px 0px;
+  background-color: white;
+  border-radius: 8px;
+  
+}
+
+.ProductHome_top .btn:hover {
+  cursor: pointer;
+  background-color:rgba(255, 255, 255, 0.879);
+  color: rgba(255, 0, 0, 0.434);
+}
+
+
+/* 3 section box category*/
+.ProductHomeSec1 {
+  display: grid;
+  /* border: 2px solid blue; */
+  grid-template-columns: auto auto;
+  text-indent: 0%;
+  border-radius: 50px;
+  margin-bottom: 80px;
+ background-image: url(../../public/homeimg/cook2.png) ; 
+  max-width: 100%;
+ background-size: 100% 100%;
+ box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 32px 0px;
+
+ }
+ .ProductHomeSec1 .left  {
+  margin: auto 60px auto 60px;
+  color:white
+}
+
+.ProductHomeSec1 .right ul {
+display: grid;
+grid-template-columns: 45% 45%;
+column-gap: 60px;
+margin-right: 60px; 
+border-radius: 50px;
+}
+
+
+.ProductHomeSec1 .right ul li{
+  list-style: none;
+}
+
+.ProductHomeSecLast{
+  display: grid;
+  grid-template-columns:50% 50%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background-image: url("../../public/homeimg/fridgehome.png");
+}
+.ProductHomeSecLast .seclast {
+  /* border: orange 10px solid; */
+  display: grid;
+  grid-template-rows: 25% 60%;
+  max-width: 100%;
+  text-align: left;
+  margin: 20px 60px 0px 60px;
+  text-indent: 0%;
+  color: white;
+  padding: 0%;
+  max-width: 100%;
+}
+.ProductHomeSecLast .seclast .left{
+  margin-left: 10px;
+}
+.ProductHomeSecLast .seclast .right {
+  max-width: 100%;
+
+}
+.ProductHomeSecLast .seclast .right ul{
+  /* border: 2px red solid; */
+  display: grid;
+  grid-template-columns: auto auto;
+
+  padding-right:0%;
+  padding-left: 0%;
+  text-indent: 0%;
+  margin-bottom: 40px;
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
+
+
+}
+.ProductHomeSecLast .seclast .right ul li{
+  list-style: none;
+}
+.ProductHome h4{
+  font-size: 40px;
+ text-align: center;
+}
+/* .ProductHomeSecLast .seclast .right :hover{
+  transform: none;
+} */
+.productitem :hover.productitem_card{
+  transform: none;
+}
