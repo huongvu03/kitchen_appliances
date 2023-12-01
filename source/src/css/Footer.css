@@ -1,4 +1,61 @@
-.Footer{
+
+
+/*Footer social */
+.FooterSocial{
+    border-top:rgb(228, 226, 226) 5px solid ;
+   
+    padding: 60px;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 50% auto;
+    box-shadow:  rgba(0, 0, 0, 0.1) 0px 0px 40px 0px;
+
+}
+.FooterSocial_leftInput{
+    margin-top: 15px;
+ 
+}
+.FooterSocial_leftInput input{
+    width: 50%;
+ 
+}
+.FooterSocial_leftInput button{
+    margin-left:20px;
+    border-radius: 8px;
+    border:none;
+    color: white;
+    background-color: red;
+}
+.FooterSocial_leftInput button:hover{
+    background-color:rgba(255, 0, 0, 0.541) ;
+    color:white;
+}
+.FooterSocial_right{
+    margin-left:50px;
+}
+.FooterSocial_right h6{
+    border: solid 2px;
+    text-align: left;
+    font-size:20px;
+}
+.FooterSocial_right ul {
+    padding: 0%;
+   display: flex;
+   flex-grow: 1;
+   gap: 15px;
+   font-size: 20px;
+}
+.FooterSocial_right ul a{
+    color:grey;
+   
+}
+.FooterSocial_right ul a:hover{
+    font-size: 25px;;
+   
+}
+
+/* footer info*/
+.Footerrow2{
   
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -25,7 +82,15 @@
 }
 .Footer ul li{
     list-style: none;
+ 
+
 }
 .Footer_c3{
     margin-right:60px;
+    
+}
+.Footer_c3 a{
+   color:black ;
+    font-weight: lighter;
+    text-decoration: none;
 }

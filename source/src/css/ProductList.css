@@ -1,7 +1,7 @@
 .productslist {
   display: grid;
   grid-template-columns: 1fr 6fr;
-  column-gap: 0;
+  column-gap: 20px;
   text-align: center;
 }
 
@@ -13,8 +13,9 @@
 
 .productslist_card_item {
   display: grid;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(4, auto);
   row-gap: 50px;
+  column-gap: 20px;
 
   align-items: center;
   padding-top: 50px;

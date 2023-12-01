@@ -1,9 +1,48 @@
 import { Link } from 'react-router-dom';
 import '../css/Footer.css'
-import { Facebook, Twitter } from 'react-bootstrap-icons';
-function Footer() {
+// import { Facebook, Twitter } from 'react-bootstrap-icons';
+import { Instagram, Twitter, Youtube, Facebook, Google } from 'react-bootstrap-icons';
+import { useState } from "react";
+
+function Footer({onSignUp}) {
+   
+    //handle add email
+    const [email, setEmail] = useState('');
+  
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const newemail = {email};
+        onSignUp(newemail);
+        setEmail('');
+                }
+    
     return (
         <div className='Footer'>
+             <div className="FooterSocial">
+                <div className="FooterSocial_left">
+                    <h5>JOIN OUR COMMUNITY</h5>
+                    <div>Subscribe to receive exclusive discounts, exciting product information, delicious recipes, and helpful tips</div>
+                    
+                    <form className="FooterSocial_leftInput" onSubmit={handleSubmit}>
+                        <input type="text" placeholder='email address' value={email}  
+                        onChange={(e) => setEmail(e.target.value)} />
+                        <button type='submit'value="Add">SIGN UP</button>
+                    </form>
+
+                </div>
+                <div className='FooterSocial_right'>
+                    <h5>STAY CONNECT</h5>
+                    <ul>
+                        <a href='https://www.facebook.com/'><Facebook /></a>
+                        <a href='https://www.google.com/'><Google /></a>
+                        <a href='https://www.instagram.com'><Instagram /></a>
+                        <a href='https://www.twitter.com'><Twitter /></a>
+                        <a href='https://www.youtube.com/'><Youtube /></a>
+                    </ul>
+                </div>
+
+            </div>
+            <div className='Footerrow2'>
 
             <div className='Footer_c1'>
             <div><h5> <Link to="#">Terms of Use</Link>|  <Link to="#"> Privacy Policy </Link></h5></div>   
@@ -37,10 +76,11 @@ function Footer() {
             <div className='Footer_c3'>
                 <ul>
                     <li><h5>Social Support</h5></li>
-                    <li><Facebook />/TASHASupport</li>
-                    <li> <Twitter />@tashasupport</li>
+                    <a href='https://www.facebook.com/'> <li><Facebook />/TASHASupport</li></a>
+                    <a href='https://www.twitter.com'><li> <Twitter />@tashasupport</li></a>
                 </ul>
 
+            </div>
             </div>
 
         </div>

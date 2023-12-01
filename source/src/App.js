@@ -1,7 +1,6 @@
 
 import './App.css';
-
-import { Route, Routes, Link, Navigate, useNavigate } from 'react-router-dom';
+import { Route, Routes, Link, useNavigate } from 'react-router-dom';
 import Home from './components/Home';
 import { useEffect, useState, } from 'react';
 import ProductsList from './components/ProductList';
@@ -10,6 +9,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ProductHome from './components/ProductHome';
 import ProductDetail from './components/ProductDetails';
+import CartList from './components/CartList';
+
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -19,6 +20,8 @@ function App() {
   const [refridge, setRefridge] = useState([]);
   const [apps, setApps] = useState([]);
   const [foods, setFoods] = useState([]);
+  const [carts, setCarts] = useState([]);
+  const navigate = useNavigate('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,7 +38,7 @@ function App() {
 
         setCooks(productData1.filter(p => p.category === "Cookware").slice(0, 2));
         setRefridge(productData2.filter(p => p.category === "Refrigeration").slice(0, 2));
-        setApps(productData3.filter(p => p.category === "Appliances").slice(0, 2));
+        setApps(productData3.filter(p => p.category === "Appliances"));
         setFoods(productData4.filter(p => p.category === "Food Storage").slice(0, 2));
 
       } catch (error) {
@@ -44,6 +47,28 @@ function App() {
     };
     fetchData();
   }, []);
+
+  //handle sign up email
+  const [emailhomes, setEmailhome] = useState('');
+
+  const handleSignUp = (newemail) => {
+    if (newemail == "") {
+      alert('email is required');
+      return false;
+    }
+    else if (!/^[a-zA-Z0-9]{1,3}@[a-zA-Z]{1,3}.com$/.test(newemail)) {
+      alert("email:exampleemail@*****.com");
+      return false;
+    }
+    else {
+      setEmailhome([...emailhomes, newemail]);
+      alert('Sign up successful');
+      navigate(`/producthome`);
+      var data = `email:${newemail}`
+      localStorage.setItem("data", data);
+      return true;
+    }
+  }
 
   //search name
   const [searchValue, setSearchValue] = useState('');
@@ -89,6 +114,13 @@ function App() {
 
     window.location.reload()
   };
+  const addCart = (pro) => {
+    setCarts([...carts, pro]);
+  };
+  const deleteCart = (id) => {
+    const deletedCarts = carts.filter(c => c.id !== id);
+    setCarts(deletedCarts);
+  }
 
   /* CODE cua Tram */
   const [errorLogin, setErrorLogin] = useState('');
@@ -140,15 +172,18 @@ function App() {
             searchValue={searchValue} handleSearch={handleSearch}
             handleCategory={handleCategory}
             handleSortPriceMinMax={handleSortPriceMinMax} handleSortPriceMaxMin={handleSortPriceMaxMin}
-            clearFilter={clearFilter} />} />
+            clearFilter={clearFilter}
+            addCart={addCart}
+          />} />
         <Route path="/detail/:id" element={
           <div>
             <ProductDetail
             /></div>
         } />
         <Route path='/log-in' element={<Login checkLogin={checkLogin} errorLogin={errorLogin} />} />
+        <Route path='/cart' element={<CartList carts={carts} deleteCart={deleteCart} />} />
       </Routes>
-      <Footer />
+      <Footer onSignUp={handleSignUp} />
     </div>
   );
 }
