@@ -9,9 +9,7 @@ function ProductDetail({}){
     const [product, setProducts] = useState(null);
     const [quantity, setQuantity]=useState(1);
     const [showDes, setShowDes]=useState(false);
-    const [showDes1, setShowDes1]=useState(false);
-    const [showDes2, setShowDes2]=useState(false);
-    const [showI_0, setShowI_0]=useState(false);
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -62,29 +60,15 @@ function ProductDetail({}){
           setShowDes(true)
         }
       }
-      const showDescription1 = () => {
-        if(showDes1==true){
-          setShowDes1(false)
-        }else{
-          setShowDes1(true)
-        }
-      }
-      const showDescription2 = () => {
-        if(showDes2==true){
-          setShowDes2(false)
-        }else{
-          setShowDes2(true)
-        }
-      }
       
     return(
       <div className="ProductDetail">
         <div className="ProductDetail_div1">
           <div><Link to='/'>Home</Link> 
           <span>|</span>
-          <Link to='/'>{product.category}</Link>
+          <Link to='/product'>{product.category}</Link>
           <span>|</span>
-          <Link to='/'>{product.name}</Link>
+          <Link>{product.name}</Link>
           </div>
         </div>
       
@@ -130,17 +114,18 @@ function ProductDetail({}){
               
           </div>
         </div>
-        <button onClick={showDescription}>DESCRIPTION</button>
-        <button onClick={showDescription1}>PRODUCT DETAILS</button>
-        <button onClick={showDescription2}>DETAILS INFO</button>
+        <button onClick={showDescription}
+        className="ProductDetail_des1"
+        >DESCRIPTION</button>
+        <hr/>
         {
-          showDes && (<div>{product.description}</div>)
-        }
-        {
-          showDes1 && (<div>{product.description}</div>)
-        }
-        {
-          showDes2 && (<div>{product.description}</div>)
+          showDes && (
+            <ul>
+              {product.description.map((p) => (
+                        <li>{p}</li>
+                    ))}
+            </ul>
+          )
         }
       </div>
     )
