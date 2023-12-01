@@ -9,6 +9,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ProductHome from './components/ProductHome';
 import ProductDetail from './components/ProductDetails';
+import CartList from './components/CartList';
 
 
 function App() {
@@ -16,9 +17,10 @@ function App() {
   const [filterProducts, setFilterProducts] = useState([]);
   const [filterSearch, setfilterSearch] = useState([]);
   const [cooks, setCooks] = useState([]);
-   const [refridge, setRefridge] = useState([]);
+  const [refridge, setRefridge] = useState([]);
   const [apps, setApps] = useState([]);
   const [foods, setFoods] = useState([]);
+  const [carts, setCarts] = useState([]);
   const navigate = useNavigate('');
 
   useEffect(() => {
@@ -47,23 +49,23 @@ function App() {
   }, []);
 
   //handle sign up email
-const[emailhomes,setEmailhome]=useState('');
+  const [emailhomes, setEmailhome] = useState('');
 
   const handleSignUp = (newemail) => {
-   if(newemail==""){
-    alert ('email is required');
-    return false; 
-   }
+    if (newemail == "") {
+      alert('email is required');
+      return false;
+    }
     else if (!/^[a-zA-Z0-9]{1,3}@[a-zA-Z]{1,3}.com$/.test(newemail)) {
       alert("email:exampleemail@*****.com");
-            return false;
+      return false;
     }
     else {
       setEmailhome([...emailhomes, newemail]);
       alert('Sign up successful');
       navigate(`/producthome`);
-      var data=`email:${newemail}`
-      localStorage.setItem("data",data);
+      var data = `email:${newemail}`
+      localStorage.setItem("data", data);
       return true;
     }
   }
@@ -112,6 +114,13 @@ const[emailhomes,setEmailhome]=useState('');
 
     window.location.reload()
   };
+  const addCart = (pro) => {
+    setCarts([...carts, pro]);
+  };
+  const deleteCart = (id) => {
+    const deletedCarts = carts.filter(c => c.id !== id);
+    setCarts(deletedCarts);
+  }
 
   /* CODE cua Tram */
   const [errorLogin, setErrorLogin] = useState('');
@@ -163,13 +172,16 @@ const[emailhomes,setEmailhome]=useState('');
             searchValue={searchValue} handleSearch={handleSearch}
             handleCategory={handleCategory}
             handleSortPriceMinMax={handleSortPriceMinMax} handleSortPriceMaxMin={handleSortPriceMaxMin}
-            clearFilter={clearFilter} />} />
+            clearFilter={clearFilter}
+            addCart={addCart}
+          />} />
         <Route path="/detail/:id" element={
           <div>
             <ProductDetail
             /></div>
         } />
         <Route path='/log-in' element={<Login checkLogin={checkLogin} errorLogin={errorLogin} />} />
+        <Route path='/cart' element={<CartList carts={carts} deleteCart={deleteCart} />} />
       </Routes>
       <Footer onSignUp={handleSignUp} />
     </div>

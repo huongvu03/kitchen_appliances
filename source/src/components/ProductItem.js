@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import "../css/ProductItem.css";
 // import { Cart3 } from 'react-bootstrap-icons';
-function ProductItem({ product }) {
+function ProductItem({ product, addCart }) {
 
     return (
         <div className="productitem">
@@ -10,16 +10,12 @@ function ProductItem({ product }) {
                     <div><img src={product.image[0]} /></div>
                     <div className='productitem_card_body_content'>
                         <h6>{product.name}</h6>
-                        {/* <p>{product.category}</p> */}
+
                         <div>${product.price}</div></div>
                 </div>
                 <div className="productitem_card_control">
-                    <button className='btn_addCart'>ADD TO CART</button>
+                    <button className='btn_addCart' onClick={() => addCart(product)}>ADD TO CART</button>
                     <button className='btn_detail'>DETAILS</button>
-
-
-
-                    {/* <button className='btn_addcart'><Cart3 className='icon_addcart' /></button> */}
                 </div>
             </div>
 
