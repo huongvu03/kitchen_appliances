@@ -4,12 +4,17 @@ import { Link, useParams } from "react-router-dom";
 import '../css/ProductDetail.css';
 import {CheckCircle, Heart,Star,StarFill,StarHalf} from 'react-bootstrap-icons';
 
+
+
+import React from 'react';
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css';
+
 function ProductDetail({}){
     const {id} =useParams();
     const [product, setProducts] = useState(null);
     const [quantity, setQuantity]=useState(1);
     const [showDes, setShowDes]=useState(false);
-
 
     useEffect(() => {
         const fetchData = async () => {
@@ -20,7 +25,6 @@ function ProductDetail({}){
             //lay book dua vao id
             const selectedProduct =data.find((item)=> item.id ==id);
             setProducts(selectedProduct);
-            
           }catch (error){
             console.log('error reading json');
           }
@@ -50,9 +54,6 @@ function ProductDetail({}){
           product_qty:quantity
         }
       }
-
-     
-
       const showDescription = () => {
         if(showDes==true){
           setShowDes(false)
@@ -60,6 +61,52 @@ function ProductDetail({}){
           setShowDes(true)
         }
       }
+      const slideImages  = [
+        {
+          url: "../"+ product.image[0],
+        },
+        {
+          url: "../"+ product.image[1],
+        },
+        {
+          url: "../"+ product.image[2]
+        },
+        {
+          url: "../"+ product.image[3]
+        }
+      ];
+
+      const spanStyle = {
+        padding: '20px',
+        background: '#efefef',
+        color: '#000000'
+      }
+      
+      const divStyle = {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundSize: 'cover',
+        height: '500px',
+        width: '530px',
+        objectFit: 'fill'
+      }
+      const Slideshow = () => {
+        return (
+          <div className="slide-container">
+            <Slide>
+             {slideImages.map((slideImage, index)=> (
+                <div key={index}>
+                  <div style={{ ...divStyle, 'backgroundImage': `url(${slideImage.url})` }}>
+                    {/* <span style={spanStyle}>{slideImage.caption}</span> */}
+                  </div>
+                </div>
+              ))} 
+            </Slide>
+          </div>
+        )
+    }
+    
       
     return(
       <div className="ProductDetail">
@@ -71,23 +118,10 @@ function ProductDetail({}){
           <Link>{product.name}</Link>
           </div>
         </div>
-      
         <div className="ProductDetail_grid1">
-        <div>
-            <div className="ProductDetail_img2">
-            <div ><img src={"../" + product.image[0]}/></div>
-            <div><img src={"../" + product.image[1]}/></div>
-            <div><img src={"../" + product.image[2]}/></div>
-            <div><img src={"../" + product.image[3]}/></div>
-            </div>
-          </div>
-          <div className="ProductDetail_img2">
-          
-            <div ><img src={"../" + product.image[0]}/></div>
-            <div><img src={"../" + product.image[1]}/></div>
-            <div><img src={"../" + product.image[2]}/></div>
-            <div><img src={"../" + product.image[3]}/></div>
-          </div>
+        <div className="ProductDetail_img2">
+          <Slideshow/>
+      </div>
           
           <div>
               <div className="ProductDetail_name">{product.name}</div>
