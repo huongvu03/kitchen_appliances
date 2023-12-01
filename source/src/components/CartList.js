@@ -5,7 +5,7 @@ function CartList({ carts, deleteCart }) {
     return (
         <div className="container text-center">
             <h3>Cart List</h3>
-            <div >
+            <div>
                 <table>
                     <thead>
                         <tr>
