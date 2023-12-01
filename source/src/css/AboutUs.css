@@ -1,0 +1,13 @@
+
+.AboutUs_title{
+    font-size: 50px;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+.AboutUs{
+    margin: 70px 100px 100px 100px;
+}
+.AboutUs div img{
+    width: 100%;
+    box-shadow: inset;
+}

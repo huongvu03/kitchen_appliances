@@ -54,13 +54,13 @@ function ProductDetail({}){
           product_qty:quantity
         }
       }
-      const showDescription = () => {
-        if(showDes==true){
-          setShowDes(false)
-        }else{
-          setShowDes(true)
-        }
-      }
+      // const showDescription = () => {
+      //   if(showDes==true){
+      //     setShowDes(false)
+      //   }else{
+      //     setShowDes(true)
+      //   }
+      // }
       const slideImages  = [
         {
           url: "../"+ product.image[0],
@@ -148,18 +148,18 @@ function ProductDetail({}){
               
           </div>
         </div>
-        <button onClick={showDescription}
+        <button
         className="ProductDetail_des1"
         >DESCRIPTION</button>
         <hr/>
         {
-          showDes && (
+          // showDes && (
             <ul>
               {product.description.map((p) => (
                         <li>{p}</li>
                     ))}
             </ul>
-          )
+          // )
         }
       </div>
     )

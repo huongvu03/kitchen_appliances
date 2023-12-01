@@ -10,6 +10,8 @@ import Footer from './components/Footer';
 import ProductHome from './components/ProductHome';
 import ProductDetail from './components/ProductDetails';
 import CartList from './components/CartList';
+import AboutUs from './components/AboutUs';
+import ContactUs from './components/ContactUs';
 
 
 function App() {
@@ -180,6 +182,8 @@ function App() {
             <ProductDetail
             /></div>
         } />
+        <Route path='/contact' element={<ContactUs/>}/>
+        <Route path='/about-us' element={<AboutUs/>}/>
         <Route path='/log-in' element={<Login checkLogin={checkLogin} errorLogin={errorLogin} />} />
         <Route path='/cart' element={<CartList carts={carts} deleteCart={deleteCart} />} />
       </Routes>
