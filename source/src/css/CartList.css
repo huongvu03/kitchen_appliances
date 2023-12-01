@@ -1,12 +1,6 @@
-.cartlist_th_action {
-  margin-left: 100px;
-}
 table {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 5em;
 }
 thead {
-  background-color: rgba(128, 128, 128, 0.199);
   line-height: 60px;
 }

@@ -1,7 +1,7 @@
 import "../css/CartItem.css"
 function CartItem({ product, deleteCart }) {
     return (
-        <tr className="border_bottom">
+        <tr >
             <td><img src={product.image[0]} alt="image" width="100px" height="100px" /></td>
             <td>{product.name}</td>
             <td>{product.price}</td>
