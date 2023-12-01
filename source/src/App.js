@@ -1,7 +1,6 @@
 
 import './App.css';
-
-import { Route, Routes, Link, Navigate, useNavigate } from 'react-router-dom';
+import { Route, Routes, Link, useNavigate } from 'react-router-dom';
 import Home from './components/Home';
 import { useEffect, useState, } from 'react';
 import ProductsList from './components/ProductList';
@@ -11,13 +10,15 @@ import Footer from './components/Footer';
 import ProductHome from './components/ProductHome';
 import ProductDetail from './components/ProductDetails';
 
+
 function App() {
   const [products, setProducts] = useState([]);
   const [filterProducts, setFilterProducts] = useState([]);
   const [cooks, setCooks] = useState([]);
-  const [refridge, setRefridge] = useState([]);
+   const [refridge, setRefridge] = useState([]);
   const [apps, setApps] = useState([]);
   const [foods, setFoods] = useState([]);
+  const navigate = useNavigate('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -34,7 +35,7 @@ function App() {
 
         setCooks(productData1.filter(p => p.category === "Cookware").slice(0, 2));
         setRefridge(productData2.filter(p => p.category === "Refrigeration").slice(0, 2));
-        setApps(productData3.filter(p => p.category === "Appliances").slice(0, 2));
+        setApps(productData3.filter(p => p.category === "Appliances"));
         setFoods(productData4.filter(p => p.category === "Food Storage").slice(0, 2));
 
       } catch (error) {
@@ -43,6 +44,28 @@ function App() {
     };
     fetchData();
   }, []);
+
+  //handle sign up email
+const[emailhomes,setEmailhome]=useState('');
+
+  const handleSignUp = (newemail) => {
+   if(newemail==""){
+    alert ('email is required');
+    return false; 
+   }
+    else if (!/^[a-zA-Z0-9]{1,3}@[a-zA-Z]{1,3}.com$/.test(newemail)) {
+      alert("email:exampleemail@*****.com");
+            return false;
+    }
+    else {
+      setEmailhome([...emailhomes, newemail]);
+      alert('Sign up successful');
+      navigate(`/producthome`);
+      var data=`email:${newemail}`
+      localStorage.setItem("data",data);
+      return true;
+    }
+  }
 
   //search name
   const [searchValue, setSearchValue] = useState('');
@@ -148,7 +171,7 @@ function App() {
         } />
         <Route path='/log-in' element={<Login checkLogin={checkLogin} errorLogin={errorLogin} />} />
       </Routes>
-      <Footer />
+      <Footer onSignUp={handleSignUp} />
     </div>
   );
 }
