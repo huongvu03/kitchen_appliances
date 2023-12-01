@@ -14,6 +14,7 @@ import ProductDetail from './components/ProductDetails';
 function App() {
   const [products, setProducts] = useState([]);
   const [filterProducts, setFilterProducts] = useState([]);
+  const [filterSearch, setfilterSearch] = useState([]);
   const [cooks, setCooks] = useState([]);
    const [refridge, setRefridge] = useState([]);
   const [apps, setApps] = useState([]);
@@ -71,35 +72,34 @@ const[emailhomes,setEmailhome]=useState('');
   const [searchValue, setSearchValue] = useState('');
   const handleSearch = (value) => {
     setSearchValue(value);
-    const dataSearch = products.filter(pro => pro.name.toLowerCase().includes(value.toLowerCase()));
-    setFilterProducts(dataSearch);
+    if (filterSearch) {
+      const dataSearch = filterSearch.filter(pro => pro.name.toLowerCase().includes(value.toLowerCase()));
+      setFilterProducts(dataSearch);
+    } else {
+      const dataSearch = products.filter(pro => pro.name.toLowerCase().includes(value.toLowerCase()));
+      setFilterProducts(dataSearch);
+    }
   }
   //filter category
   const handleCategory = (value) => {
     if (value === "All") {
       setFilterProducts(products);
+      setfilterSearch(products);
     } else {
       const newItems = products.filter((pro) => pro.category === value)
       setFilterProducts(newItems);
+      setfilterSearch(newItems);
     }
   }
-
-  //sort
-  // const handleSortNameAz = () => {
-  //   const sortedProduct = [...filterProducts].sort((a, b) => a.name.localeCompare(b.name));
-  //   setFilterProducts(sortedProduct);
-  // }
-  // const handleSortNameZa = () => {
-  //   const sortedProduct = [...filterProducts].sort((a, b) => b.name.localeCompare(a.name));
-  //   setFilterProducts(sortedProduct);
-  // }
   const handleSortPriceMinMax = () => {
     const sortedPrice = [...filterProducts].sort((a, b) => a.price - b.price);
     setFilterProducts(sortedPrice);
+    setfilterSearch(sortedPrice);
   }
   const handleSortPriceMaxMin = () => {
     const sortedPrice = [...filterProducts].sort((a, b) => b.price - a.price);
     setFilterProducts(sortedPrice);
+    setfilterSearch(sortedPrice);
   }
   //reset filter
   const clearFilter = () => {

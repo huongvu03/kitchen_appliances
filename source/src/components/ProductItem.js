@@ -4,7 +4,7 @@ import "../css/ProductItem.css";
 function ProductItem({ product }) {
 
     return (
-        <div className="productitem container">
+        <div className="productitem">
             <div className='productitem_card'>
                 <div className='productitem_card_body'>
                     <div><img src={product.image[0]} /></div>
