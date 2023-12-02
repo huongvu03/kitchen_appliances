@@ -10,7 +10,7 @@ function ProductsList({ products,
     handleCategory,
     handleSortPriceMinMax, handleSortPriceMaxMin,
     clearFilter,
-    addCart }) {
+    addToCart }) {
     return (<div className="productslist_page container">
         <Carousel>
             <Carousel.Item>
@@ -45,7 +45,7 @@ function ProductsList({ products,
                 <div className="productslist_card_item">
                     {products.map(p => (
                         <div>
-                            <ProductItem key={p.id} product={p} addCart={addCart} />
+                            <ProductItem key={p.id} product={p} addToCart={addToCart} />
                         </div>
                     ))}
                 </div>

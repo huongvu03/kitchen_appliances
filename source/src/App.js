@@ -116,11 +116,53 @@ function App() {
 
     window.location.reload()
   };
-  const addCart = (pro) => {
-    setCarts([...carts, pro]);
+  const addToCart = (item) => {
+    //kiem tra xem khi add 1 item vao cart thi item do' co' trung voi item trong cart hay khong 
+    const existingItemIndex = carts.findIndex(cartItem => cartItem.id === item.id);
+    // dung findIndex de kiem tra xem cart co' cartItem.id  === voi item.id cua nguoi dung input vao hay ko 
+    //neu co thi tra ve index cua item do trong array // ko thi tra ve -1
+    if (existingItemIndex !== -1) {
+      //neu khac -1 nghia la co cartItem.id trung voi item.id
+      const updatedCarts = carts.map((cartItem, index) => {
+        //tao mot new array giong voi carts , moi phan tu la cartItem va gia tri index
+        if (index === existingItemIndex) {
+          //neu muc ton tai trong gio hang thi tang so luong len 1
+          return { ...cartItem, quantity: cartItem.quantity + 1 };
+        }//neu ko thi tra ve cartItem
+        return cartItem;
+      });
+      setCarts(updatedCarts);
+    } else {
+      setCarts([...carts, { ...item, quantity: 1 }]);
+    }
+
   };
-  const deleteCart = (id) => {
-    const deletedCarts = carts.filter(c => c.id !== id);
+  const decreaseQuantity = (item) => {
+    const existingItemIndex = carts.findIndex(cartItem => cartItem.id === item.id);
+    if (existingItemIndex !== -1) {
+      const updatedCartItems = carts.map((cartItem, index) => {
+        if (index === existingItemIndex) {
+          return { ...cartItem, quantity: cartItem.quantity - 1 };
+        }
+        return cartItem;
+      }).filter(cartItem => cartItem.quantity > 0);
+      setCarts(updatedCartItems);
+    }
+  };
+  const increaseQuantity = (item) => {
+    const existingItemIndex = carts.findIndex(cartItem => cartItem.id === item.id);
+    if (existingItemIndex !== -1) {
+      const updatedCartItems = carts.map((cartItem, index) => {
+        if (index === existingItemIndex) {
+          return { ...cartItem, quantity: cartItem.quantity + 1 };
+        }
+        return cartItem;
+      });
+      setCarts(updatedCartItems);
+    }
+  };
+  const deleteCart = (item) => {
+    const deletedCarts = carts.filter(cartItem => cartItem.id !== item.id);
     setCarts(deletedCarts);
   }
 
@@ -175,17 +217,17 @@ function App() {
             handleCategory={handleCategory}
             handleSortPriceMinMax={handleSortPriceMinMax} handleSortPriceMaxMin={handleSortPriceMaxMin}
             clearFilter={clearFilter}
-            addCart={addCart}
+            addToCart={addToCart}
           />} />
         <Route path="/detail/:id" element={
           <div>
             <ProductDetail
             /></div>
         } />
-        <Route path='/contact' element={<ContactUs/>}/>
-        <Route path='/about-us' element={<AboutUs/>}/>
+        <Route path='/contact' element={<ContactUs />} />
+        <Route path='/about-us' element={<AboutUs />} />
         <Route path='/log-in' element={<Login checkLogin={checkLogin} errorLogin={errorLogin} />} />
-        <Route path='/cart' element={<CartList carts={carts} deleteCart={deleteCart} />} />
+        <Route path='/cart' element={<CartList carts={carts} deleteCart={deleteCart} decreaseQty={decreaseQuantity} increaseQty={increaseQuantity} />} />
       </Routes>
       <Footer onSignUp={handleSignUp} />
     </div>

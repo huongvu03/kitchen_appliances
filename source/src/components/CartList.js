@@ -2,7 +2,7 @@ import CartItem from "./CartItem"
 import "../css/CartList.css";
 import 'bootstrap/dist/css/bootstrap.css';
 
-function CartList({ carts, deleteCart }) {
+function CartList({ carts, deleteCart, decreaseQty, increaseQty, updateQuantity }) {
     return (
         <div className="container text-center ">
             <h3>Cart List</h3>
@@ -18,8 +18,8 @@ function CartList({ carts, deleteCart }) {
                         </tr>
                     </thead>
                     <tbody >
-                        {carts.map(c => (
-                            <CartItem key={c.id} product={c} deleteCart={deleteCart} />
+                        {carts.map(item => (
+                            <CartItem key={item.id} product={item} deleteCart={deleteCart} increaseQty={increaseQty} decreaseQty={decreaseQty} updateQuantity={updateQuantity} />
                         ))}
                     </tbody>
                 </table>
