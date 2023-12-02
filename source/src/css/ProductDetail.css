@@ -12,10 +12,10 @@
 .ProductDetail_img1{
     /* overflow: scroll; */
     height: 700px;
-    object-fit: fill;
+    /* object-fit: fill; */
 }
 .ProductDetail_img2{
-    overflow: scroll; 
+    /* overflow: scroll;  */
     width: 100%;
     /* height: auto; */
     /* object-fit:cover; */

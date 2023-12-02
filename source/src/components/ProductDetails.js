@@ -14,7 +14,7 @@ function ProductDetail({}){
     const {id} =useParams();
     const [product, setProducts] = useState(null);
     const [quantity, setQuantity]=useState(1);
-    const [showDes, setShowDes]=useState(false);
+    // const [showDes, setShowDes]=useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -86,10 +86,10 @@ function ProductDetail({}){
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundSize: 'cover',
-        height: '500px',
-        width: '530px',
-        objectFit: 'fill'
+        // backgroundSize: 'fill',
+        height: '550px',
+        width: '100%',
+        // objectFit: 'fill'
       }
       const Slideshow = () => {
         return (
