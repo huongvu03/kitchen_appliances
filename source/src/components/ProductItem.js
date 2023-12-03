@@ -7,7 +7,7 @@ function ProductItem({ product, addToCart }) {
         <div className="productitem">
             <div className='productitem_card'>
                 <div className='productitem_card_body'>
-                    <div><img src={product.image[0]} /></div>
+                    <div><img src={product.image[0]} alt=''/></div>
                     <div className='productitem_card_body_content'>
                         <h6>{product.name}</h6>
 

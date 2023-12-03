@@ -14,6 +14,8 @@ import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 
 
+
+
 function App() {
   const [products, setProducts] = useState([]);
   const [filterProducts, setFilterProducts] = useState([]);
@@ -86,6 +88,7 @@ function App() {
   }
   //filter category
   const handleCategory = (value) => {
+   
     if (value === "All") {
       setFilterProducts(products);
       setfilterSearch(products);
@@ -95,6 +98,7 @@ function App() {
       setfilterSearch(newItems);
     }
   }
+  //sort price
   const handleSortPriceMinMax = () => {
     const sortedPrice = [...filterProducts].sort((a, b) => a.price - b.price);
     setFilterProducts(sortedPrice);
@@ -106,15 +110,16 @@ function App() {
     setfilterSearch(sortedPrice);
   }
   //reset filter
+ 
   const clearFilter = () => {
-    //reload page xoa dc checkbox nhung cham
-    //setfilter thi nhanh nhung ko xoa dc checkbox
-
-
+ 
     // setFilterProducts(products);
-
-
-    window.location.reload()
+    
+   
+    setFilterProducts(products);
+    
+    
+    // window.location.reload()
   };
   const addToCart = (item) => {
     //kiem tra xem khi add 1 item vao cart thi item do' co' trung voi item trong cart hay khong 
