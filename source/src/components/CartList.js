@@ -1,8 +1,14 @@
 import CartItem from "./CartItem"
 import "../css/CartList.css";
 import 'bootstrap/dist/css/bootstrap.css';
+import { formatCurrency } from "../helpers/currency";
 
-function CartList({ carts, deleteCart, decreaseQty, increaseQty, updateQuantity }) {
+
+function CartList({ carts, deleteCart, decreaseQty, increaseQty, updateQuantity}) {
+     const totalPrice = carts.reduce((total, item) => {
+        return total + (item.price * item.quantity);
+      }, 0);
+     
     return (
         <div className="container text-center ">
             <h3>Cart List</h3>
@@ -14,6 +20,7 @@ function CartList({ carts, deleteCart, decreaseQty, increaseQty, updateQuantity 
                             <th>Name</th>
                             <th>Price</th>
                             <th>Quantity</th>
+                            <th>Total</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -23,6 +30,8 @@ function CartList({ carts, deleteCart, decreaseQty, increaseQty, updateQuantity 
                         ))}
                     </tbody>
                 </table>
+                <div className="total_price"> <h5>Total : {formatCurrency(totalPrice)}</h5></div>
+
             </div>
         </div>
     )

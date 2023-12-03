@@ -25,6 +25,8 @@ function App() {
   const [apps, setApps] = useState([]);
   const [foods, setFoods] = useState([]);
   const [carts, setCarts] = useState([]);
+  
+  
   const navigate = useNavigate('');
 
   useEffect(() => {
@@ -121,6 +123,7 @@ function App() {
     
     // window.location.reload()
   };
+  
   const addToCart = (item) => {
     //kiem tra xem khi add 1 item vao cart thi item do' co' trung voi item trong cart hay khong 
     const existingItemIndex = carts.findIndex(cartItem => cartItem.id === item.id);
