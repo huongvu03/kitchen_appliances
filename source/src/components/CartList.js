@@ -8,10 +8,10 @@ function CartList({ carts, deleteCart, decreaseQty, increaseQty, updateQuantity}
      const totalPrice = carts.reduce((total, item) => {
         return total + (item.price * item.quantity);
       }, 0);
-     
+      const totalQuantity = carts.reduce((total, item) => total + item.quantity, 0);
     return (
         <div className="container text-center ">
-            <h3>Cart List</h3>
+            <h3>Cart List {totalQuantity}</h3>
             <div>
                 <table className="table table-hover">
                     <thead>
