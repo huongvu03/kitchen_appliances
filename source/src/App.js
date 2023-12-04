@@ -12,10 +12,6 @@ import ProductDetail from './components/ProductDetails';
 import CartList from './components/CartList';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
-
-
-
-
 function App() {
   const [products, setProducts] = useState([]);
   const [filterProducts, setFilterProducts] = useState([]);
@@ -25,8 +21,6 @@ function App() {
   const [apps, setApps] = useState([]);
   const [foods, setFoods] = useState([]);
   const [carts, setCarts] = useState([]);
-  
-  
   const navigate = useNavigate('');
 
   useEffect(() => {
@@ -90,7 +84,7 @@ function App() {
   }
   //filter category
   const handleCategory = (value) => {
-   
+
     if (value === "All") {
       setFilterProducts(products);
       setfilterSearch(products);
@@ -112,66 +106,36 @@ function App() {
     setfilterSearch(sortedPrice);
   }
   //reset filter
- 
+
   const clearFilter = () => {
- 
-    // setFilterProducts(products);
-    
-   
     setFilterProducts(products);
-    
-    
     // window.location.reload()
   };
-  
-  const addToCart = (item) => {
-    //kiem tra xem khi add 1 item vao cart thi item do' co' trung voi item trong cart hay khong 
-    const existingItemIndex = carts.findIndex(cartItem => cartItem.id === item.id);
-    // dung findIndex de kiem tra xem cart co' cartItem.id  === voi item.id cua nguoi dung input vao hay ko 
-    //neu co thi tra ve index cua item do trong array // ko thi tra ve -1
-    if (existingItemIndex !== -1) {
-      //neu khac -1 nghia la co cartItem.id trung voi item.id
-      const updatedCarts = carts.map((cartItem, index) => {
-        //tao mot new array giong voi carts , moi phan tu la cartItem va gia tri index
-        if (index === existingItemIndex) {
-          //neu muc ton tai trong gio hang thi tang so luong len 1
-          return { ...cartItem, quantity: cartItem.quantity + 1 };
-        }//neu ko thi tra ve cartItem
-        return cartItem;
-      });
-      setCarts(updatedCarts);
-    } else {
-      setCarts([...carts, { ...item, quantity: 1 }]);
-    }
 
-  };
-  const decreaseQuantity = (item) => {
-    const existingItemIndex = carts.findIndex(cartItem => cartItem.id === item.id);
-    if (existingItemIndex !== -1) {
-      const updatedCartItems = carts.map((cartItem, index) => {
-        if (index === existingItemIndex) {
-          return { ...cartItem, quantity: cartItem.quantity - 1 };
-        }
-        return cartItem;
-      }).filter(cartItem => cartItem.quantity > 0);
-      setCarts(updatedCartItems);
+  const addToCart = (product) => {
+    const existingProduct = carts.find(item => item.id === product.id);
+    if (existingProduct) {
+      const updatedCart = carts.map(item => item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item);
+      setCarts(updatedCart);
+    } else {
+      setCarts([...carts, { ...product, quantity: 1 }]);
     }
   };
-  const increaseQuantity = (item) => {
-    const existingItemIndex = carts.findIndex(cartItem => cartItem.id === item.id);
-    if (existingItemIndex !== -1) {
-      const updatedCartItems = carts.map((cartItem, index) => {
-        if (index === existingItemIndex) {
-          return { ...cartItem, quantity: cartItem.quantity + 1 };
-        }
-        return cartItem;
-      });
-      setCarts(updatedCartItems);
-    }
-  };
-  const deleteCart = (item) => {
-    const deletedCarts = carts.filter(cartItem => cartItem.id !== item.id);
+  const decreaseQuantity = (product) => {
+    const updatedCart = carts.map(item => item.id === product.id ? { ...item, quantity: Math.max(item.quantity - 1, 0) } : item);
+    const filteredCart = updatedCart.filter(item => item.quantity > 0);
+    setCarts(filteredCart);
+
+  }
+  const increaseQuantity = (product) => {
+    const updatedCart = carts.map(item => item.id === product.id ? { ...item, quantity: Math.max(item.quantity + 1, 0) } : item);
+    setCarts(updatedCart);
+
+  }
+  const deleteCart = (product) => {
+    const deletedCarts = carts.filter(item => item.id !== product.id);
     setCarts(deletedCarts);
+
   }
 
   /* CODE cua Tram */
@@ -215,7 +179,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header carts={carts} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path='/producthome' element={<ProductHome cook={cooks} app={apps} refridge={refridge} food={foods} />} />

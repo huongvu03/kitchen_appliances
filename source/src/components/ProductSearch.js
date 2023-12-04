@@ -1,4 +1,3 @@
-
 function ProductSearch({ searchValue, handleSearch }) {
     return (
         <div>
@@ -6,8 +5,6 @@ function ProductSearch({ searchValue, handleSearch }) {
                 onChange={(e) => handleSearch(e.target.value)}
             />
         </div>
-
-
     )
 }
 export default ProductSearch

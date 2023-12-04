@@ -35,7 +35,6 @@ function ProductDetail({ }) {
   if (!product) {
     return <h1> Loading...</h1>
   }
-
   const handleDecrement = () => {
     if (quantity > 1) {
       setQuantity(prevCount => prevCount - 1);
@@ -48,7 +47,6 @@ function ProductDetail({ }) {
   }
   const submitAddToCart = (e) => {
     e.preventtDefault();
-
     const data = {
       product_id: product.id,
       product_qty: quantity

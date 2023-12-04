@@ -1,5 +1,5 @@
-.cartitem_quantity{
-    display: flex;
-    justify-content: space-between;
-    height: 117px;
+.cartitem_quantity {
+  display: flex;
+  justify-content: space-between;
+  height: 117px;
 }

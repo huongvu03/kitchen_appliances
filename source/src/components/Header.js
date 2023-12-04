@@ -6,8 +6,9 @@ import { Cart3 } from 'react-bootstrap-icons';
 import { Person } from 'react-bootstrap-icons';
 import { Telephone } from 'react-bootstrap-icons';
 
-function Header() {
+function Header({ carts }) {
     const navigate = useNavigate();
+    const totalQuantity = carts.reduce((total, product) => total + product.quantity, 0);
     return (
         <div className="headerHome">
             <div>  <Link to='/'><img src="./homeimg/Logo-Tashas-Design.png" alt="logo" height="100px" width="100px" /></Link></div>
@@ -35,7 +36,7 @@ function Header() {
             <div></div>
             <div className='headerHome4'>
                 <Link to='/log-in'> <div><Person /></div></Link>
-                <Link to='/cart'> <div><Cart3 /></div></Link>
+                <Link to='/cart'> <div className='cartQty_container'><Cart3 /><span className='cartQty'>{totalQuantity}</span></div></Link>
                 <div className='headerPhone'><Telephone /> 678 8888</div>
             </div>
 
