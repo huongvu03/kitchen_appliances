@@ -70,7 +70,7 @@ function App() {
     }
   }
 
-  //search name
+  //************************************ SEARCH NAME **********************************
   const [searchValue, setSearchValue] = useState('');
   const handleSearch = (value) => {
     setSearchValue(value);
@@ -82,9 +82,8 @@ function App() {
       setFilterProducts(dataSearch);
     }
   }
-  //filter category
+  //************************************ FILTER CATEGORY **********************************
   const handleCategory = (value) => {
-
     if (value === "All") {
       setFilterProducts(products);
       setfilterSearch(products);
@@ -94,7 +93,7 @@ function App() {
       setfilterSearch(newItems);
     }
   }
-  //sort price
+  //************************************ SORT PRICE **********************************
   const handleSortPriceMinMax = () => {
     const sortedPrice = [...filterProducts].sort((a, b) => a.price - b.price);
     setFilterProducts(sortedPrice);
@@ -105,13 +104,12 @@ function App() {
     setFilterProducts(sortedPrice);
     setfilterSearch(sortedPrice);
   }
-  //reset filter
-
+  //************************************* RESET FILTER ***********************************
   const clearFilter = () => {
     setFilterProducts(products);
     // window.location.reload()
   };
-
+  //************************************ ADD CART ************************************
   const addToCart = (product) => {
     const existingProduct = carts.find(item => item.id === product.id);
     if (existingProduct) {
@@ -121,17 +119,18 @@ function App() {
       setCarts([...carts, { ...product, quantity: 1 }]);
     }
   };
+  //************************************ DECREASE QUANTITY CART ************************************
   const decreaseQuantity = (product) => {
     const updatedCart = carts.map(item => item.id === product.id ? { ...item, quantity: Math.max(item.quantity - 1, 0) } : item);
     const filteredCart = updatedCart.filter(item => item.quantity > 0);
     setCarts(filteredCart);
-
   }
+  //************************************ INCREASE QUANTITY CART ************************************
   const increaseQuantity = (product) => {
     const updatedCart = carts.map(item => item.id === product.id ? { ...item, quantity: Math.max(item.quantity + 1, 0) } : item);
     setCarts(updatedCart);
-
   }
+  //************************************  DELETE CART   ************************************ 
   const deleteCart = (product) => {
     const deletedCarts = carts.filter(item => item.id !== product.id);
     setCarts(deletedCarts);
