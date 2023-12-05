@@ -12,7 +12,7 @@ function ProductsList({ products,
     handleCategory,
     handleSortPriceMinMax, handleSortPriceMaxMin,
     clearFilter,
-    addToCart,error
+    addToCart, error
 }) {
     const [activePage, setActivePage] = useState(1);
     const productsPerPage = 8;
@@ -47,11 +47,11 @@ function ProductsList({ products,
             </Carousel.Item>
         </Carousel>
         <div>
-        <h1 style={{color:"black",fontSize:"20px"}}>{error}</h1>
+            <h1 style={{ color: "black", fontSize: "20px" }}>{error}</h1>
         </div>
-       
+
         <div className='productslist container'>
-       
+
             <div className='productslist_category_left'>
                 <div><ProductSearch searchValue={searchValue} handleSearch={handleSearch} /></div>
                 <hr></hr>

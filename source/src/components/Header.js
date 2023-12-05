@@ -6,11 +6,11 @@ import { Telephone } from 'react-bootstrap-icons';
 
 import HeaderSearch from './HeaderSearch';
 
-function Header({ checkHeader }) {
+function Header({ checkHeader, carts }) {
     const deleteLocalStorage = () => {
         localStorage.clear();
     }
-
+    const totalQuantity = carts.reduce((total, product) => total + product.quantity, 0);
     return (
         <div className="headerHome">
             <div>  <Link to='/'><img src="./homeimg/Logo-Tashas-Design.png" alt="logo" height="100px" width="100px" /></Link></div>
@@ -42,13 +42,13 @@ function Header({ checkHeader }) {
             <div className='headerHome4'>
                 <div class="headersearch" ><HeaderSearch checkHeader={checkHeader} /></div>
 
-                <div className='headerUser'>  
+                <div className='headerUser'>
                     {localStorage.getItem('username') ?
-                    (<span> Hello {localStorage.getItem('username')}, <Link to="/log-in" onClick={() => deleteLocalStorage()}><h6>Log out</h6></Link> </span>) :
-                    (<Link to="/log-in"><div><Person /></div></Link>)
-                }
+                        (<span> Hello {localStorage.getItem('username')}, <Link to="/log-in" onClick={() => deleteLocalStorage()}><h6>Log out</h6></Link> </span>) :
+                        (<Link to="/log-in"><div><Person /></div></Link>)
+                    }
                 </div>
-                <Link to='/cart'> <div><Cart3 /></div></Link>
+                <Link to='/cart'> <div className='cartQty_container'><Cart3 /><span className='cartQty'>{totalQuantity}</span></div></Link>
 
 
 

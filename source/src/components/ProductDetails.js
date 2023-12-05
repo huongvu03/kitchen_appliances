@@ -7,13 +7,13 @@ import { CheckCircle, Heart, Star, StarFill, StarHalf } from 'react-bootstrap-ic
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
-function ProductDetail({addToCart}) {
+function ProductDetail({ addToCart }) {
   const { id } = useParams();
   const [product, setProducts] = useState(null);
   const [quantity, setQuantity] = useState(1);
-  const [like,setLike]=useState(456);
-  const[isLike,setIsLike] =useState(false);
-  const [showDes, setShowDes]=useState(<Star/>);
+  const [like, setLike] = useState(456);
+  const [isLike, setIsLike] = useState(false);
+  const [showDes, setShowDes] = useState(<Star />);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -47,7 +47,7 @@ function ProductDetail({addToCart}) {
   }
 
 
-  const onLikeButtonClick =() => {
+  const onLikeButtonClick = () => {
     setLike(like + (isLike ? -1 : 1));
     setIsLike(!isLike);
   }
@@ -64,21 +64,21 @@ function ProductDetail({addToCart}) {
       </div>
       <div className="ProductDetail_grid1">
         <div className="ProductDetail_img2">
-        <Carousel>
+          <Carousel>
             {product.image.map((p) => (
               <Carousel.Item>
-              <img src={"../"+p} alt="img"/>
+                <img src={"../" + p} alt="img" />
               </Carousel.Item>
-          ))}
-        </Carousel>
+            ))}
+          </Carousel>
         </div>
         <div className="ProductDetail_info">
           <div className="ProductDetail_name">{product.name}</div>
           <div className="ProductDetail_price"> ${product.price}</div>
-          <br/>
+          <br />
           <div><CheckCircle /> In stock {product.quantity}</div>
           <p><hr /></p>
-          
+
           <div>QUANTITY</div>
           <div className="ProductDetail_qty1">
             <div className="ProductDetail_qty2">
@@ -86,13 +86,13 @@ function ProductDetail({addToCart}) {
               <div>{quantity}</div>
               <button onClick={handleIncrement}>+</button>
             </div>
-              <center className="ProductDetail_heart">
-              <div className={""+(isLike ? "text-primary": "")}>
-                <i onClick={onLikeButtonClick} ><Heart/></i>
-                <br/>
+            <center className="ProductDetail_heart">
+              <div className={"" + (isLike ? "text-primary" : "")}>
+                <i onClick={onLikeButtonClick} ><Heart /></i>
+                <br />
                 <div>Like {like}</div>
               </div>
-              </center>
+            </center>
           </div>
           <div>
             <button className="ProductDetail_submit2"
@@ -116,7 +116,7 @@ function ProductDetail({addToCart}) {
             <li>{p}</li>
           ))}
         </ul>
-        
+
       }
     </div>
   )

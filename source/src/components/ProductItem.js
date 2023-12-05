@@ -1,7 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import "../css/ProductItem.css";
 import { useNavigate } from 'react-router-dom';
-// import { Cart3 } from 'react-bootstrap-icons';
 function ProductItem({ product, addToCart }) {
     const navigate = useNavigate();
     return (
@@ -15,7 +14,7 @@ function ProductItem({ product, addToCart }) {
                 </div>
                 <div className="productitem_card_control">
                     <button className='btn_addCart' onClick={() => addToCart(product)}>ADD TO CART</button>
-                    <button className='btn_detail'onClick={() => navigate(`/detail/${product.id}`)}>DETAILS</button>
+                    <button className='btn_detail' onClick={() => navigate(`/detail/${product.id}`)}>DETAILS</button>
                 </div>
             </div>
         </div>

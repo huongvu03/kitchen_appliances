@@ -145,17 +145,17 @@ function App() {
       localStorage.setItem('username', checkUser.username);
       setErrorLogin('');
       navigator('/');
-     
-    } else if( !checkUser.username || !checkUser.password) {
+
+    } else if (!checkUser.username || !checkUser.password) {
       setErrorLogin('Email and Password is required');
       return false;
     }
     else {
       setErrorLogin('The Email or Password is incorrect. ');
       return false;
-    }        return true;
+    } return true;
 
-  }  
+  }
 
   // Reset Password
   const handleReset = (checkReset) => {
@@ -186,13 +186,13 @@ function App() {
   }
 
   //function for register (Huong)
-  const handleAdd =(onAddUser) => {
+  const handleAdd = (onAddUser) => {
     setUsers([...users, onAddUser]);
   }
 
   return (
     <div className="App">
-      <Header checkHeader={handleHeader} />
+      <Header checkHeader={handleHeader} carts={carts} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path='/promotion' element={<ProductHome cook={cooks} app={apps} refridge={refridge} food={foods} addCart={addToCart} />} />
@@ -209,13 +209,13 @@ function App() {
             <ProductDetail addToCart={addToCart}
             /></div>
         } />
-        <Route path ="/register" element={<Register onAddUser={handleAdd}/>}/>
+        <Route path="/register" element={<Register onAddUser={handleAdd} />} />
         <Route path='/contact' element={<ContactUs />} />
         <Route path='/about-us' element={<AboutUs />} />
         <Route path='/log-in' element={<Login checkLogin={checkLogin} errorLogin={errorLogin} resetPass={handleReset} />} />
         <Route path='/cart' element={<CartList carts={carts} deleteCart={deleteCart} decreaseQty={decreaseQuantity} increaseQty={increaseQuantity} />} />
 
-        <Route path='/email-data' element={<EmailData/>} /> {/* // storeage data */}
+        <Route path='/email-data' element={<EmailData />} /> {/* // storeage data */}
       </Routes>
       <Footer />
     </div>
