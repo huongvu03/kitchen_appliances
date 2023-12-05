@@ -7,7 +7,7 @@ import { CheckCircle, Heart, Star, StarFill, StarHalf } from 'react-bootstrap-ic
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
-function ProductDetail({ addToCart }) {
+function ProductDetail({ sendQtyDetail, addToCart }) {
   const { id } = useParams();
   const [product, setProducts] = useState(null);
   const [quantity, setQuantity] = useState(1);
@@ -30,7 +30,6 @@ function ProductDetail({ addToCart }) {
     };
     fetchData();
   }, []);
-  console.log(product);
   if (!product) {
     return <h1> Loading...</h1>
   }
@@ -44,6 +43,10 @@ function ProductDetail({ addToCart }) {
     if (quantity < (product.quantity)) {
       setQuantity(prevCount => prevCount + 1);
     }
+  }
+  const handleSubmitQty = (quantity) => {
+    sendQtyDetail(quantity);
+    setQuantity(0);
   }
 
 
@@ -96,7 +99,7 @@ function ProductDetail({ addToCart }) {
           </div>
           <div>
             <button className="ProductDetail_submit2"
-              onClick={() => addToCart(product)}>ADD TO CART</button>
+              onClick={() => { handleSubmitQty(quantity); addToCart(product) }}>ADD TO CART</button>
             <br />
             {/* <button className="ProductDetail_submit1">BUY IT NOW</button> */}
           </div>

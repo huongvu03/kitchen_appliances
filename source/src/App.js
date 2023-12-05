@@ -25,6 +25,7 @@ function App() {
   const [apps, setApps] = useState([]);
   const [foods, setFoods] = useState([]);
   const [carts, setCarts] = useState([]);
+  const [qtyDetail, setQtyDetail] = useState(0);
   const navigate = useNavigate('');
 
   useEffect(() => {
@@ -104,6 +105,11 @@ function App() {
       setCarts([...carts, { ...product, quantity: 1 }]);
     }
   };
+  //lay dc quantity tu trang detail ra ngoai app 
+  const sendQtyDetail = (quantity) => {
+    setQtyDetail(quantity);
+    console.log("qtyDetail", qtyDetail);
+  }
   //************************************ DECREASE QUANTITY CART ************************************
   const decreaseQuantity = (product) => {
     const updatedCart = carts.map(item => item.id === product.id ? { ...item, quantity: Math.max(item.quantity - 1, 0) } : item);
@@ -206,7 +212,7 @@ function App() {
           />} />
         <Route path="/detail/:id" element={
           <div>
-            <ProductDetail addToCart={addToCart}
+            <ProductDetail sendQtyDetail={sendQtyDetail} addToCart={addToCart}
             /></div>
         } />
         <Route path="/register" element={<Register onAddUser={handleAdd} />} />
