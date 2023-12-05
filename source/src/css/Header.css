@@ -43,25 +43,14 @@
 
 /* text */
 .headerHome a {
-    text-decoration: none;
-    color: black;
-    list-style: none;
-    font-size:28px;
-    text-align: center;
-    margin: auto;
-    font-weight: 500;
+  text-decoration: none;
+  color: black;
+  list-style: none;
+  font-size: 28px;
+  text-align: center;
+  margin: auto;
+  font-weight: 500;
 }
-
-
-/* item dropdown */
-/* .headerHome .headerDown{
-    font-size: 20px;
-    font-weight: lighter;
-    text-align: left;
-}
-.headerHome .headerDown:hover{
-    font-weight:400;
-} */
 
 .dropbtn {
      color:black;

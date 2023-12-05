@@ -1,3 +1,4 @@
+
 function ProductFilterCategory({ handleCategory }) {
     return (
         <><div><input className="radio-cat" type="radio" name="cat" value={"All"} onClick={(e) => handleCategory
@@ -10,7 +11,6 @@ function ProductFilterCategory({ handleCategory }) {
                 (e.target.value)} />Appliances</div>
             <div><input className="radio-cat" type="radio" name="cat" value={"Food Storage"} onClick={(e) => handleCategory
                 (e.target.value)} />Food Storage</div></>
-
     )
 }
 export default ProductFilterCategory;

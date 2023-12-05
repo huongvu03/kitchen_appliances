@@ -1,4 +1,3 @@
-
 import { useNavigate } from "react-router-dom";
 import '../css/ProductHome.css';
 
@@ -16,10 +15,7 @@ function ProductHome({ cook, refridge, app, food,addCart }) {
                 </div>
                 <h6><button onClick={() => navigate(`/products`)} className="btn">VIEW ALL</button></h6>
             </div>
-
-
             <div className="ProductHomeSec1" >
-
                 <div className='ProductHomeSec1_left'>
                     <h3 className='title'>COOKWARE</h3>
                     <h5>EXPLORE THE COOKWARE COLLECTION SAVE UP TO 25% OFF</h5>
@@ -27,12 +23,10 @@ function ProductHome({ cook, refridge, app, food,addCart }) {
                     <h6><button onClick={() => navigate(`/products`)} className="ProductHome_btn">View All</button></h6>
 
                 </div>
-
                 <div className='ProductHomeSec1_right'>
                     <ul>
                         {cook.map(c => (
                             <li>
-
                                 <div className='ProductHomeItem'>
 
                                     <div><img src={c.image[0]} alt="cookware" /></div>
@@ -44,20 +38,15 @@ function ProductHome({ cook, refridge, app, food,addCart }) {
                                     <div className="productitem_bottom">
                                         <button className='btn_add' onClick={()=>addCart(c)}>ADD TO CART</button>
                                         <button className='btn_details'>DETAILS</button>
-
                                     </div>
                                 </div>
-
                             </li>
                         ))}
                     </ul>
                 </div>
-
             </div>
-
             <div className="ProductHomeSec1">
                 <div className='ProductHomeSec1_right'>
-
                     <ul>
                         {app.map(c => (
                             <li>
@@ -72,7 +61,6 @@ function ProductHome({ cook, refridge, app, food,addCart }) {
                                     <div className="productitem_bottom">
                                         <button className='btn_add'>ADD TO CART</button>
                                         <button className='btn_details'>DETAILS</button>
-
                                     </div>
                                 </div>
 
@@ -80,7 +68,6 @@ function ProductHome({ cook, refridge, app, food,addCart }) {
                         ))}
                     </ul>
                 </div>
-
                 <div className='ProductHomeSec1_left'>
                     <h3 className='title'>APPLIANCES</h3>
                     <h5>Save $100</h5>
@@ -90,13 +77,9 @@ function ProductHome({ cook, refridge, app, food,addCart }) {
                 <h6><button onClick={() => navigate(`/products`)} className="ProductHome_btn">View All</button></h6>
 
                 </div>
-
-
             </div>
             <h4>Our latest innovations for your holiday</h4>
-
             <div className="ProductHomeLast">
-
                 <div className="ProductHomeLastItem">
                     <div className='ProductHomeLast_itemtop'>
                         <h3 className='title'>REFRIDGERATION</h3>
@@ -122,7 +105,6 @@ function ProductHome({ cook, refridge, app, food,addCart }) {
                                         <div className="productitem_bottom">
                                             <button className='btn_add'>ADD TO CART</button>
                                             <button className='btn_details'>DETAILS</button>
-
                                         </div>
                                     </div>
 
@@ -157,7 +139,6 @@ function ProductHome({ cook, refridge, app, food,addCart }) {
                                         <div className="productitem_bottom">
                                             <button className='btn_add'>ADD TO CART</button>
                                             <button className='btn_details'>DETAILS</button>
-
                                         </div>
                                     </div>
 

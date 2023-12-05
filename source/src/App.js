@@ -52,7 +52,7 @@ function App() {
   }, []);
 
 
-  //search name
+  //************************************ SEARCH NAME **********************************
   const [searchValue, setSearchValue] = useState('');
   const handleSearch = (value) => {
     setSearchValue(value);
@@ -77,6 +77,7 @@ function App() {
       setfilterSearch(newItems);
     }
   }
+  //************************************ SORT PRICE **********************************
   const handleSortPriceMinMax = () => {
     const sortedPrice = [...filterProducts].sort((a, b) => a.price - b.price);
     setFilterProducts(sortedPrice);
@@ -87,23 +88,37 @@ function App() {
     setFilterProducts(sortedPrice);
     setfilterSearch(sortedPrice);
   }
-  //reset filter
+  //************************************* RESET FILTER ***********************************
   const clearFilter = () => {
-    //reload page xoa dc checkbox nhung cham
-    //setfilter thi nhanh nhung ko xoa dc checkbox
-
-
-    // setFilterProducts(products);
-
-
-    window.location.reload()
+    setFilterProducts(products);
+    // window.location.reload()
   };
-  const addCart = (pro) => {
-    setCarts([...carts, pro]);
+  //************************************ ADD CART ************************************
+  const addToCart = (product) => {
+    const existingProduct = carts.find(item => item.id === product.id);
+    if (existingProduct) {
+      const updatedCart = carts.map(item => item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item);
+      setCarts(updatedCart);
+    } else {
+      setCarts([...carts, { ...product, quantity: 1 }]);
+    }
   };
-  const deleteCart = (id) => {
-    const deletedCarts = carts.filter(c => c.id !== id);
+  //************************************ DECREASE QUANTITY CART ************************************
+  const decreaseQuantity = (product) => {
+    const updatedCart = carts.map(item => item.id === product.id ? { ...item, quantity: Math.max(item.quantity - 1, 0) } : item);
+    const filteredCart = updatedCart.filter(item => item.quantity > 0);
+    setCarts(filteredCart);
+  }
+  //************************************ INCREASE QUANTITY CART ************************************
+  const increaseQuantity = (product) => {
+    const updatedCart = carts.map(item => item.id === product.id ? { ...item, quantity: Math.max(item.quantity + 1, 0) } : item);
+    setCarts(updatedCart);
+  }
+  //************************************  DELETE CART   ************************************ 
+  const deleteCart = (product) => {
+    const deletedCarts = carts.filter(item => item.id !== product.id);
     setCarts(deletedCarts);
+
   }
 
   // Log in
@@ -170,7 +185,7 @@ function App() {
   }
   return (
     <div className="App">
-      <Header checkHeader={handleHeader} />
+      <Header carts={carts} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path='/promotion' element={<ProductHome cook={cooks} app={apps} refridge={refridge} food={foods} addCart={addCart} />} />
@@ -180,7 +195,7 @@ function App() {
             handleCategory={handleCategory}
             handleSortPriceMinMax={handleSortPriceMinMax} handleSortPriceMaxMin={handleSortPriceMaxMin}
             clearFilter={clearFilter}
-            addCart={addCart} error={error}
+            addToCart={addToCart}
           />} />
         {/* <Route path="/detail/:id" element={
           <div>
