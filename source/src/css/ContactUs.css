@@ -3,7 +3,9 @@
  grid-template-columns: 50% 50%;
  background-color: #333;
  color: white;
- 
+}
+.ContactUs_title div img{
+    width: 100%;
 }
 .ContactUs_title_r_1{
     font-size: 30px;

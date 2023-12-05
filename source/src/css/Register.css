@@ -33,3 +33,32 @@
     font-size: 12px;
     margin-bottom: 10px;
 }
+.Register_checkbox{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    row-gap: 10px;
+}
+
+.Register_error{
+    color: rgb(165, 0, 52);
+}
+.Register_button{
+    text-align: center;
+}
+.Register_button button{
+    border-radius: 5px;
+    border: none;
+    background-color:rgb(165, 0, 52);
+    width: 30%;
+    height: 45px;
+    margin: 5px;
+    color: white;
+}
+.Register_button .cancel{
+    
+    background-color: grey;
+}
+.Register_button .cancel a{
+    text-decoration: none;
+    color: white;
+}

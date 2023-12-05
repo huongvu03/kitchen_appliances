@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../css/ContactUs.css';
-function ContactUs({onAdd}){
+function ContactUs({onAddContact}){
     const [name,setName] = useState('');
     const [contact, setContact] = useState('');
     const [email, setEmail] = useState('');
@@ -10,29 +10,26 @@ function ContactUs({onAdd}){
     const handleSubmit = (e) => {
         e.preventDefault();
         if(!name){
-            alert(' Product Name cannot left blank');
+            alert(' Please Input Your Name ');
         }else if(!contact){
-            alert(' Product Name cannot left blank');
+            alert(' Please Input Your Contact');
         }
         else if(!email){
-            alert('Price cannot left blank');
-        }
-        else if(!location){
-            alert(' Category pcannot left blank');
+            alert('Please Input Your Contact');
         }
         else if(!feedback){
-            alert(' Category pcannot left blank');
+            alert(' Please Input Your Comment/Feedback/Remarks..');
         }
         else{
-        alert("The Product is added to list sucessfully");
-        const newProduct ={name,contact, email, location,feedback};
-        onAdd(newProduct);
-        setName('');
-        setContact('');
-        setEmail('');
-        setLocation('');
-        setFeedback('');
-        alert("The Product is added to list sucessfully");
+        // const newProduct ={name,contact, email, location,feedback};
+        // onAddContact(newProduct);
+        // setName('');
+        // setContact('');
+        // setEmail('');
+        // setLocation('');
+        // setFeedback('');
+        alert("Send Successful");
+        
         }
     }
     return(
@@ -60,9 +57,9 @@ function ContactUs({onAdd}){
                     <div>
                         <form className='ContactUs_form' onSubmit={handleSubmit}> 
                             <div className='ContactUs_form_grid1'>
-                                <input value={name} type="text" placeholder='Name..' onChange={(e)=> setName(e.target.value)}/>
-                                <input value={contact} type="number" placeholder='Contact No..' onChange={(e)=> setContact(e.target.value)}/>
-                                <input value={email} type="email" placeholder='Email Address' onChange={(e)=> setEmail(e.target.value)}/>
+                                <input value={name} type="text" placeholder='Name*..' onChange={(e)=> setName(e.target.value)}/>
+                                <input value={contact} type="number" placeholder='Contact No*..' onChange={(e)=> setContact(e.target.value)}/>
+                                <input value={email} type="email" placeholder='Email Address*' onChange={(e)=> setEmail(e.target.value)}/>
                                 <select  value={location} name="location" onChange={(e)=> setLocation(e.target.value)}>
                                     <option value="0">Location..</option>
                                     <option value="1">Sai Gon</option>
@@ -72,7 +69,7 @@ function ContactUs({onAdd}){
                                 </select>
                             </div>
                             <div  className='ContactUs_form_text' >
-                                <textarea value={feedback} name="" id=""  placeholder='Comment/Feedback/Remarks..' onChange={(e)=>setFeedback(e.target.value)}></textarea>
+                                <textarea value={feedback} name="" id=""  placeholder='Comment/Feedback/Remarks*..' onChange={(e)=>setFeedback(e.target.value)}></textarea>
                             </div>
                             <div><button  className='ContactUs_submit' type='submit'>SUBMIT</button></div>
                         </form>

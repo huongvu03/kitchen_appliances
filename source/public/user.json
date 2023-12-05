@@ -3,12 +3,18 @@
         "id": 1,
         "username": "user1",
         "password": "123",
-        "email":"user1@gmail.com"
+        "cpassword":"123",
+        "email":"user1@gmail.com",
+        "fname": "111",
+        "datebirth":"20231205"
     },
     {
         "id": 2,
         "username": "user2",
         "password": "123",
-        "email":"user2@gmail.com"
+        "cpassword":"123",
+        "email":"user2@gmail.com",
+        "fname": "222",
+        "datebirth":"20231205"
     }
 ]
