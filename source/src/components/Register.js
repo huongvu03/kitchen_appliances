@@ -24,21 +24,29 @@ import '../css/Register.css';
             if(!email){
                 setErrorEmail('Email is required');
             }
-            if(email){
+            else if(email){
                 setErrorEmail('');
             }
-            
-            else if(!password){
+             if(!password){
                 setErrorPassword('Password is required');
             }
-            else if(password!==cpassword){
+            else if(password){
+                setErrorPassword('');
+            }
+            if(password!==cpassword){
                 setErrorCPassword('Confirm Password isn\'t match');
             }
-            else if(!username){
+            else if(password===cpassword){
+                setErrorCPassword('');
+            }
+            if(!username){
                 setErrorUsername('Full Name is required');
             }
             else if(username.length<5){
                 setErrorUsername('User Name >=5 characters');
+            }
+            else if(username.length>=5){
+                setErrorUsername('');
             }
             
             else{
