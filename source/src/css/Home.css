@@ -1,31 +1,38 @@
 .HomeBody{
 margin: 60px 60px 0px 60px;
- 
+
 }
+
 .HomeBody_title{
     text-align:center;
     font-size: 30px;
     font-weight: 600;
 }
-.HomeBody button{
-    background-color: white;
-    border-radius:20px;
-    height: 40px;
-    color:red;
-    box-shadow:  rgba(0, 0, 0, 0.1) 0px 0px 40px 0px;
-    font-weight: 600;
+.HomeBody_button button, .HomeBody_contentitem_btn button{
     border: none;
-    text-align:center;
-    margin-right:0%;
-   width: 200px;
-
-}   
-.HomeBody button:hover{
-    color:rgba(255, 0, 0, 0.501);
+    background-color: red;
+    color:white;
+    border-radius: 30px;
+    font-weight: 600;
+    width: 200px;
+    height:max-content;
+    
 }
-.HomeBody_btn{
+
+.HomeBody_button{
     text-align: right;
 }
+.HomeBody_contentitem_btn{
+    text-align: center;
+}
+ 
+.HomeBody_button button:hover , .HomeBody_contentitem_btn button:hover{
+    background-color:rgb(175, 4, 4);
+    color: white;
+    transition: 0.35s ease;
+}
+
+
 .HomeBody_content{
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -63,58 +70,7 @@ margin: 60px 60px 0px 60px;
  
    
 }
-
-
-/*home social */
-.HomeSocial{
-    border-top:rgb(228, 226, 226) 5px solid ;
-   
-    padding: 60px;
-    margin-top: 60px;
-    display: grid;
-    grid-template-columns: 50% auto;
-    box-shadow:  rgba(0, 0, 0, 0.1) 0px 0px 40px 0px;
-
-}
-.HomeSocial_leftInput{
-    margin-top: 15px;
- 
-}
-.HomeSocial_leftInput input{
-    width: 50%;
- 
-}
-.HomeSocial_leftInput button{
-    margin-left:20px;
-    border-radius: 8px;
-    border:none;
-    color: white;
-    background-color: red;
-}
-.HomeSocial_leftInput button:hover{
-    background-color:rgba(255, 0, 0, 0.541) ;
-    color:white;
-}
-.HomeSocial_right{
-    margin-left:50px;
-}
-.HomeSocial_right h6{
-    border: solid 2px;
-    text-align: left;
-    font-size:20px;
-}
-.HomeSocial_right ul {
-    padding: 0%;
-   display: flex;
-   flex-grow: 1;
-   gap: 15px;
-   font-size: 20px;
-}
-.HomeSocial_right ul a{
-    color:grey;
-   
-}
-.HomeSocial_right ul a:hover{
-    font-size: 25px;;
-   
+.HomeBody_contentitem_btn {
+    margin-left: auto;
+    margin-right: auto;
 }

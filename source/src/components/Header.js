@@ -1,42 +1,59 @@
 import '../css/Header.css';
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Cart3 } from 'react-bootstrap-icons';
 import { Person } from 'react-bootstrap-icons';
 import { Telephone } from 'react-bootstrap-icons';
 
-function Header() {
-    const navigate = useNavigate();
+import HeaderSearch from './HeaderSearch';
+
+function Header({ checkHeader }) {
+    const deleteLocalStorage = () => {
+        localStorage.clear();
+    }
+
     return (
         <div className="headerHome">
             <div>  <Link to='/'><img src="./homeimg/Logo-Tashas-Design.png" alt="logo" height="100px" width="100px" /></Link></div>
             <ul>
                 <Link to='/'> <li>HOME</li></Link>
-                <Link to='/producthome'><li>PRODUCTS</li></Link>
-                <Link to='/ourblog'> <li>
-                    <NavDropdown title="OUR BLOG" id="collapsible-nav-dropdown">
-                        <NavDropdown.Item onClick={() => navigate(`/expert-tips`)} className='headerDown'>Expert Tips</NavDropdown.Item>
-                    </NavDropdown> </li></Link>
-                <Link to='/manuals'> <li>
-                    <NavDropdown title="SUPPORT" id="collapsible-nav-dropdown">
-                        <NavDropdown.Item onClick={() => navigate(`/contact`)} className='headerDown'> Contact Us</NavDropdown.Item>
-                        <NavDropdown.Item onClick={() => navigate(`/feedback`)} className='headerDown'>Feedback</NavDropdown.Item>
-                        <NavDropdown.Item onClick={() => navigate(`/register-complain`)} className='headerDown'>Register Complain</NavDropdown.Item>
+                <Link to='/promotion'> <li>PROMOTION</li></Link>
 
+                <Link to='/products'><li>PRODUCTS</li></Link>
+                <Link to='/ourblog'> <li><div class="headerHome_dropdown">
+                    <div className='dropbtn'>OUR BLOG</div>
+                    <div class="dropdown-content">
+                        <a href="/expert-tips">Expert Tips</a>
+                    </div>
+                </div> </li></Link>
+                <Link to='/contact'> <li>
+                    <div class="headerHome_dropdown">
+                        <div className='dropbtn'>SUPPORT</div>
+                        <div class="dropdown-content">
+                            <a href="/manuals">Manuals</a>
+                            <a href="/feedback">Feedback</a>
+                            <a href="/register-complain">Register Complain</a>
+                        </div>
+                    </div>
 
-                        {/* <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item> */}
-                    </NavDropdown>
                 </li></Link>
                 <Link to='/about-us'><li>ABOUT US</li></Link>
             </ul>
             <div></div>
             <div className='headerHome4'>
-                <Link to='/log-in'> <div><Person /></div></Link>
+                <div class="headersearch" ><HeaderSearch checkHeader={checkHeader} /></div>
+
+                <div className='headerUser'>  
+                    {localStorage.getItem('username') ?
+                    (<span> Hello {localStorage.getItem('username')}, <Link to="/log-in" onClick={() => deleteLocalStorage()}><h6>Log out</h6></Link> </span>) :
+                    (<Link to="/log-in"><div><Person /></div></Link>)
+                }
+                </div>
                 <Link to='/cart'> <div><Cart3 /></div></Link>
-                <div className='headerPhone'><Telephone /> 678 8888</div>
+
+
+
+
+
             </div>
 
         </div>

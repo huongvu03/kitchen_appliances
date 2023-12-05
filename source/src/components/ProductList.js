@@ -10,7 +10,7 @@ function ProductsList({ products,
     handleCategory,
     handleSortPriceMinMax, handleSortPriceMaxMin,
     clearFilter,
-    addCart }) {
+    addCart,error }) {
     return (<div className="productslist_page container">
         <Carousel>
             <Carousel.Item>
@@ -26,10 +26,15 @@ function ProductsList({ products,
             <Carousel.Item>
                 <img className="d-block w-100 "
                     src="./homeimg/carousel_3.jpg" height={"400px"}
-                    alt="Third slide" />
+                    alt="Third slide" />s
             </Carousel.Item>
         </Carousel>
+        <div>
+        <h1 style={{color:"black",fontSize:"20px"}}>{error}</h1>
+        </div>
+       
         <div className='productslist container'>
+       
             <div className='productslist_category_left'>
                 <div><ProductSearch searchValue={searchValue} handleSearch={handleSearch} /></div>
                 <hr></hr>
