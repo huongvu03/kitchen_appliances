@@ -4,17 +4,16 @@ import { Link, useParams } from "react-router-dom";
 import '../css/ProductDetail.css';
 import { CheckCircle, Heart, Star, StarFill, StarHalf } from 'react-bootstrap-icons';
 
-
-
 import React from 'react';
-// import { Slide } from 'react-slideshow-image';
-// import 'react-slideshow-image/dist/styles.css';
+import Carousel from 'react-bootstrap/Carousel';
 
-function ProductDetail({ }) {
+function ProductDetail({addToCart}) {
   const { id } = useParams();
   const [product, setProducts] = useState(null);
   const [quantity, setQuantity] = useState(1);
-  // const [showDes, setShowDes]=useState(false);
+  const [like,setLike]=useState(456);
+  const[isLike,setIsLike] =useState(false);
+  const [showDes, setShowDes]=useState(<Star/>);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,6 +34,7 @@ function ProductDetail({ }) {
   if (!product) {
     return <h1> Loading...</h1>
   }
+
   const handleDecrement = () => {
     if (quantity > 1) {
       setQuantity(prevCount => prevCount - 1);
@@ -45,87 +45,40 @@ function ProductDetail({ }) {
       setQuantity(prevCount => prevCount + 1);
     }
   }
-  const submitAddToCart = (e) => {
-    e.preventtDefault();
-    const data = {
-      product_id: product.id,
-      product_qty: quantity
-    }
-  }
-  // const showDescription = () => {
-  //   if(showDes==true){
-  //     setShowDes(false)
-  //   }else{
-  //     setShowDes(true)
-  //   }
-  // }
-  const slideImages = [
-    {
-      url: "../" + product.image[0],
-    },
-    {
-      url: "../" + product.image[1],
-    },
-    {
-      url: "../" + product.image[2]
-    },
-    {
-      url: "../" + product.image[3]
-    }
-  ];
 
-  const spanStyle = {
-    padding: '20px',
-    background: '#efefef',
-    color: '#000000'
-  }
 
-  const divStyle = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    // backgroundSize: 'fill',
-    height: '550px',
-    width: '100%',
-    // objectFit: 'fill'
+  const onLikeButtonClick =() => {
+    setLike(like + (isLike ? -1 : 1));
+    setIsLike(!isLike);
   }
-  //   const Slideshow = () => {
-  //     return (
-  //       <div className="slide-container">
-  //         <Slide>
-  //          {slideImages.map((slideImage, index)=> (
-  //             <div key={index}>
-  //               <div style={{ ...divStyle, 'backgroundImage': `url(${slideImage.url})` }}>
-  //                 {/* <span style={spanStyle}>{slideImage.caption}</span> */}
-  //               </div>
-  //             </div>
-  //           ))} 
-  //         </Slide>
-  //       </div>
-  //     )
-  // }
-
 
   return (
     <div className="ProductDetail">
       <div className="ProductDetail_div1">
         <div><Link to='/'>Home</Link>
           <span>|</span>
-          <Link to='/product'>{product.category}</Link>
+          <Link to='/products'>{product.category}</Link>
           <span>|</span>
           <Link>{product.name}</Link>
         </div>
       </div>
       <div className="ProductDetail_grid1">
         <div className="ProductDetail_img2">
-          {/* <Slideshow/> */}
+        <Carousel>
+            {product.image.map((p) => (
+              <Carousel.Item>
+              <img src={"../"+p} alt="img"/>
+              </Carousel.Item>
+          ))}
+        </Carousel>
         </div>
-
-        <div>
+        <div className="ProductDetail_info">
           <div className="ProductDetail_name">{product.name}</div>
           <div className="ProductDetail_price"> ${product.price}</div>
+          <br/>
           <div><CheckCircle /> In stock {product.quantity}</div>
-          <hr />
+          <p><hr /></p>
+          
           <div>QUANTITY</div>
           <div className="ProductDetail_qty1">
             <div className="ProductDetail_qty2">
@@ -133,13 +86,19 @@ function ProductDetail({ }) {
               <div>{quantity}</div>
               <button onClick={handleIncrement}>+</button>
             </div>
-            <div><Heart /></div>
+              <center className="ProductDetail_heart">
+              <div className={""+(isLike ? "text-primary": "")}>
+                <i onClick={onLikeButtonClick} ><Heart/></i>
+                <br/>
+                <div>Like {like}</div>
+              </div>
+              </center>
           </div>
           <div>
-            <button className="ProductDetail_submit1"
-              onClick={submitAddToCart}>ADD TO CART</button>
+            <button className="ProductDetail_submit2"
+              onClick={() => addToCart(product)}>ADD TO CART</button>
             <br />
-            <button className="ProductDetail_submit1">BUY IT NOW</button>
+            {/* <button className="ProductDetail_submit1">BUY IT NOW</button> */}
           </div>
           <div className="ProductDetail_like" ><StarFill /><StarFill /><StarFill /><StarFill /><StarHalf /></div>
 
@@ -151,13 +110,13 @@ function ProductDetail({ }) {
       >DESCRIPTION</button>
       <hr />
       {
-        // showDes && (
+
         <ul>
           {product.description.map((p) => (
             <li>{p}</li>
           ))}
         </ul>
-        // )
+        
       }
     </div>
   )

@@ -80,7 +80,8 @@ Register your appliance for easy access to product updates, warranty information
 
                 <div className="Loginright">
                     <h4>Register today and get up to <span>35% off</span> your first purchase <Link to="/product-home">on Our Best Deal*.</Link> </h4>
-                    <p className="Login-btn"><input type="submit" value="REGISTER NOW"  /></p>
+                    {/* <p className="Login-btn"><input type="submit" value="REGISTER NOW"  /></p> */}
+                    <p className="Login-btn"><Link to="/register">REGISTER NOW</Link></p>
                     <h5>Membership Benefits</h5>
                     <ul>
                         <li>    Special offers and deals on your next purchase on TASHA.com</li>

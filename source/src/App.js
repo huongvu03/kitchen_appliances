@@ -7,12 +7,13 @@ import ProductsList from './components/ProductList';
 import Login from './components/LogIn';
 import Header from './components/Header';
 import Footer from './components/Footer';
-// import ProductDetail from './components/ProductDetails';
+import ProductDetail from './components/ProductDetails';
 import CartList from './components/CartList';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import ProductHome from './components/ProductHome';
 import EmailData from './components/EmailData';
+import Register from './components/Register';
 
 
 function App() {
@@ -183,6 +184,12 @@ function App() {
       navigate('/products');
     }
   }
+
+  //function for register (Huong)
+  const handleAdd =(onAddUser) => {
+    setUsers([...users, onAddUser]);
+  }
+
   return (
     <div className="App">
       <Header checkHeader={handleHeader} />
@@ -197,15 +204,16 @@ function App() {
             clearFilter={clearFilter}
             addToCart={addToCart} error={error}
           />} />
-        {/* <Route path="/detail/:id" element={
+        <Route path="/detail/:id" element={
           <div>
-            <ProductDetail
+            <ProductDetail addToCart={addToCart}
             /></div>
-        } /> */}
+        } />
+        <Route path ="/register" element={<Register onAddUser={handleAdd}/>}/>
         <Route path='/contact' element={<ContactUs />} />
         <Route path='/about-us' element={<AboutUs />} />
         <Route path='/log-in' element={<Login checkLogin={checkLogin} errorLogin={errorLogin} resetPass={handleReset} />} />
-        <Route path='/cart' element={<CartList carts={carts} deleteCart={deleteCart} />} />
+        <Route path='/cart' element={<CartList carts={carts} deleteCart={deleteCart} decreaseQty={decreaseQuantity} increaseQty={increaseQuantity} />} />
 
         <Route path='/email-data' element={<EmailData/>} /> {/* // storeage data */}
       </Routes>

@@ -1,0 +1,35 @@
+.Register span{
+    color: rgb(165, 0, 52);
+}
+.Register{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Register_title{
+   text-align: center;
+   margin-top: 50px;
+   margin-bottom: 50px;
+}
+.Register_right{
+    text-align: right;
+}
+.Register_box{
+    border: solid;
+    border-color: rgb(225, 225, 225);
+    background-color:rgb(245, 245, 245);   
+    padding: 50px 200px 50px 200px;
+}
+.Register_grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+}
+.Register_grid input{
+    width: 90%;
+    height: 40px;
+}
+.Register_passvali{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
