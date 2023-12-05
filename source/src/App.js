@@ -185,17 +185,17 @@ function App() {
   }
   return (
     <div className="App">
-      <Header carts={carts} />
+      <Header checkHeader={handleHeader} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path='/promotion' element={<ProductHome cook={cooks} app={apps} refridge={refridge} food={foods} addCart={addCart} />} />
+        <Route path='/promotion' element={<ProductHome cook={cooks} app={apps} refridge={refridge} food={foods} addCart={addToCart} />} />
         <Route path="/products" element={
           <ProductsList products={filterProducts}
             searchValue={searchValue} handleSearch={handleSearch}
             handleCategory={handleCategory}
             handleSortPriceMinMax={handleSortPriceMinMax} handleSortPriceMaxMin={handleSortPriceMaxMin}
             clearFilter={clearFilter}
-            addToCart={addToCart}
+            addToCart={addToCart} error={error}
           />} />
         {/* <Route path="/detail/:id" element={
           <div>

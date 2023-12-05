@@ -12,7 +12,7 @@ function ProductsList({ products,
     handleCategory,
     handleSortPriceMinMax, handleSortPriceMaxMin,
     clearFilter,
-    addToCart,
+    addToCart,error
 }) {
     const [activePage, setActivePage] = useState(1);
     const productsPerPage = 8;
