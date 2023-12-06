@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import '../css/ProductHome.css';
 
 
-function ProductHome({ cook, refridge, app, food,addCart }) {
+function ProductHome({ cook, refridge, app, food,addCart}) {
     const navigate = useNavigate();
     return (
         <div className="ProductHome">
@@ -37,7 +37,7 @@ function ProductHome({ cook, refridge, app, food,addCart }) {
 
                                     <div className="productitem_bottom">
                                         <button className='btn_add' onClick={()=>addCart(c)}>ADD TO CART</button>
-                                        <button className='btn_details'>DETAILS</button>
+                                        <button className='btn_details'onClick={()=>navigate(`/detail/${c.id}`)}>DETAILS</button>
                                     </div>
                                 </div>
                             </li>
@@ -59,8 +59,8 @@ function ProductHome({ cook, refridge, app, food,addCart }) {
                                     <div className='productitem_price'>${c.price}</div>
 
                                     <div className="productitem_bottom">
-                                        <button className='btn_add'>ADD TO CART</button>
-                                        <button className='btn_details'>DETAILS</button>
+                                        <button className='btn_add' onClick={()=>addCart(c)}>ADD TO CART</button>
+                                        <button className='btn_details' onClick={()=>navigate(`/detail/${c.id}`)}>DETAILS</button>
                                     </div>
                                 </div>
 
@@ -103,8 +103,8 @@ function ProductHome({ cook, refridge, app, food,addCart }) {
                                         <div className='productitem_price'>${c.price}</div>
 
                                         <div className="productitem_bottom">
-                                            <button className='btn_add'>ADD TO CART</button>
-                                            <button className='btn_details'>DETAILS</button>
+                                            <button className='btn_add' onClick={()=>addCart(c)}>ADD TO CART</button>
+                                            <button className='btn_details'  onClick={()=>navigate(`/detail/${c.id}`)}>DETAILS</button>
                                         </div>
                                     </div>
 
@@ -137,8 +137,8 @@ function ProductHome({ cook, refridge, app, food,addCart }) {
                                         <div className='productitem_price'>${c.price}</div>
 
                                         <div className="productitem_bottom">
-                                            <button className='btn_add'>ADD TO CART</button>
-                                            <button className='btn_details'>DETAILS</button>
+                                            <button className='btn_add' onClick={()=>addCart(c)}>ADD TO CART</button>
+                                            <button className='btn_details'  onClick={()=>navigate(`/detail/${c.id}`)}>DETAILS</button>
                                         </div>
                                     </div>
 
