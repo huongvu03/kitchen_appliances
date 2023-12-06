@@ -45,10 +45,6 @@ import '../css/Register.css';
             else if(username.length<5){
                 setErrorUsername('User Name >=5 characters');
             }
-            else if(username.length>=5){
-                setErrorUsername('');
-            }
-            
             else{
                 const newUser ={email, password, username};
                 onAddUser(newUser);
@@ -60,7 +56,6 @@ import '../css/Register.css';
                 navigate('/log-in');
             }
         }
-
         return(
             <div className="Register">
                 <div className="Register_title">
@@ -89,7 +84,7 @@ import '../css/Register.css';
                             </div>
                             <div>
                                 <div>Confirm Password<span>*</span></div>
-                                <input type="password"  name="confirm_password"  value ={cpassword}onChange={(e)=> setCPassword(e.target.value)} />
+                                <input type="password"  name="confirm_password"  value ={cpassword} onChange={(e)=> setCPassword(e.target.value)} />
                                 <div className="Register_error">{errorCPassword}</div>
                             </div>
                             <div>
