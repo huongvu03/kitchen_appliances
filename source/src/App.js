@@ -14,6 +14,7 @@ import ContactUs from './components/ContactUs';
 import ProductHome from './components/ProductHome';
 import EmailData from './components/EmailData';
 import Register from './components/Register';
+import BackToTopButton from './components/BackToTopButton';
 
 
 function App() {
@@ -223,6 +224,7 @@ function App() {
 
         <Route path='/email-data' element={<EmailData />} /> {/* // storeage data */}
       </Routes>
+      <BackToTopButton/>
       <Footer />
     </div>
   );

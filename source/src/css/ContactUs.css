@@ -64,7 +64,7 @@
 .ContactUs_submit{
     border: 1px solid #46b8da;
     border-radius: 20px;
-    background-color: red;
+    background-color: rgb(165, 0, 52);
     padding: 5px 20px 5px 20px;
     color: white;
 }
@@ -83,7 +83,7 @@
     margin-top: 10px;
 }
 .ContactUs_info2{
-    color: red;
+    color: rgb(165, 0, 52);
     padding-left: 5px;
     border-radius: 5px;
 }
