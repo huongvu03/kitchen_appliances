@@ -1,6 +1,6 @@
 
 import './App.css';
-import { Route, Routes, Link, useNavigate } from 'react-router-dom';
+import { Route, Routes, Link, useNavigate, Navigate } from 'react-router-dom';
 import Home from './components/Home';
 import { useEffect, useState, } from 'react';
 import ProductsList from './components/ProductList';
@@ -151,7 +151,7 @@ function App() {
       alert('Log in successfull !')
       localStorage.setItem('username', checkUser.username);
       setErrorLogin('');
-      navigator('/');
+      navigator('/products');
 
     } else if (!checkUser.username || !checkUser.password) {
       setErrorLogin('Email and Password is required');
@@ -220,7 +220,13 @@ function App() {
         <Route path='/contact' element={<ContactUs />} />
         <Route path='/about-us' element={<AboutUs />} />
         <Route path='/log-in' element={<Login checkLogin={checkLogin} errorLogin={errorLogin} resetPass={handleReset} />} />
-        <Route path='/cart' element={<CartList carts={carts} deleteCart={deleteCart} decreaseQty={decreaseQuantity} increaseQty={increaseQuantity} />} />
+        <Route path='/cart' element={
+          localStorage.getItem('username') ? (
+            <>
+        <CartList carts={carts} deleteCart={deleteCart} decreaseQty={decreaseQuantity} increaseQty={increaseQuantity} />
+        </>
+          ) : (< Navigate to='/log-in'/>)
+        } />
 
         <Route path='/email-data' element={<EmailData />} /> {/* // storeage data */}
       </Routes>
