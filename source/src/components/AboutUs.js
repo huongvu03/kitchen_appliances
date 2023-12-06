@@ -2,7 +2,7 @@ import '../css/AboutUs.css';
 function AboutUs(){
     return(
         <div>
-            <div><img src="about_us_img/banner1.jpg" alt="banner"/></div>
+            <div className='AboutUs_image'><img src="about_us_img/banner1.jpg" alt="banner"/></div>
             <div className='AboutUs'>
                 <div className='AboutUs_title'>93 years of professional experience 
                                                 <br/>in Creating lifestyle</div>
