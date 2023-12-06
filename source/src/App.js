@@ -96,8 +96,6 @@ function App() {
   };
   //************************************ ADD CART ************************************
 
-
-
   //sau khi click add button từ detail page thì sẽ gửi 1 object newProd .
   const sendqtyDetail=(newProd)=>{
     console.log("newProdQty",newProd.quantity);
@@ -115,12 +113,6 @@ function App() {
       setCarts([...carts,{...newProd}])
     }
   }
-
-
-
-
-
-
   const addToCart = (product) => {
     const existingProduct = carts.find(item => item.id === product.id);
     if (existingProduct) {
@@ -130,8 +122,6 @@ function App() {
       setCarts([...carts, { ...product, quantity: 1 }]);
     }
   };
-  //lay dc quantity tu trang detail ra ngoai app 
- 
   //************************************ DECREASE QUANTITY CART ************************************
   const decreaseQuantity = (product) => {
     const updatedCart = carts.map(item => item.id === product.id ? { ...item, quantity: Math.max(item.quantity - 1, 0) } : item);

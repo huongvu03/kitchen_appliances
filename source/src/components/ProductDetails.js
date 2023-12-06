@@ -11,10 +11,7 @@ function ProductDetail({ products,sendqtyDetail }) {
   const [isLike, setIsLike] = useState(false);
   
   //********************************************************* */
-  
   const product=products.find(item=>item.id===parseInt(id));
-
-
   const [mainImage, setMainImage] = useState(0);
   const decreaseQtyDt = () => {
     if (quantitydt > 1) {
@@ -26,15 +23,13 @@ function ProductDetail({ products,sendqtyDetail }) {
       setQuantityDt(prevCount => prevCount + 1);
     }
   }
-  //đoạn này là e muốn chuyển một object mới là newProd đến app.js để xử lý
+  //chuyển một object mới là newProd đến app.js để xử lý
   const handleProdQty=()=>{
       const newProd={...product,quantity:quantitydt};
       sendqtyDetail(newProd);
       //sau khi chuyển newProd đi thì e reset quantity ở trang detail về lại 1
       setQuantityDt(1);
   }
-  
-
 //********************************************************* */
   const onLikeButtonClick = () => {
     setLike(like + (isLike ? -1 : 1));
