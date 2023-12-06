@@ -1,57 +1,49 @@
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import '../css/ProductDetail.css';
 import { CheckCircle, Heart, Star, StarFill, StarHalf } from 'react-bootstrap-icons';
 import React from 'react';
-function ProductDetail({ addToCart }) {
+function ProductDetail({ products,sendqtyDetail }) {
   const { id } = useParams();
-  const [product, setProducts] = useState(null);
-  const [quantity, setQuantity] = useState(1);
+  const [quantitydt, setQuantityDt] = useState(1);
   const [like, setLike] = useState(456);
   const [isLike, setIsLike] = useState(false);
   
+  //********************************************************* */
+  
+  const product=products.find(item=>item.id===parseInt(id));
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        //đọc file json thứ nhất
-        const dataJson = await fetch('../products.json');
-        const data = await dataJson.json();
-        //lay book dua vao id
-        const selectedProduct = data.find((item) => item.id == id);
-        setProducts(selectedProduct);
-      } catch (error) {
-        console.log('error reading json');
-      }
-    };
-    fetchData();
-  }, []);
+
   const [mainImage, setMainImage] = useState(0);
-
-  console.log(product);
-  if (!product) {
-    return <h1> Loading...</h1>
-  }
-
-  const handleDecrement = () => {
-    if (quantity > 1) {
-      setQuantity(prevCount => prevCount - 1);
+  const decreaseQtyDt = () => {
+    if (quantitydt > 1) {
+      setQuantityDt(prevCount => prevCount - 1);
     }
   }
-  const handleIncrement = () => {
-    if (quantity < (product.quantity)) {
-      setQuantity(prevCount => prevCount + 1);
+  const increaseQtyDt = () => {
+    if (quantitydt < (product.quantity)) {
+      setQuantityDt(prevCount => prevCount + 1);
     }
   }
+  //đoạn này là e muốn chuyển một object mới là newProd đến app.js để xử lý
+  const handleProdQty=()=>{
+      const newProd={...product,quantity:quantitydt};
+      sendqtyDetail(newProd);
+      //sau khi chuyển newProd đi thì e reset quantity ở trang detail về lại 1
+      setQuantityDt(1);
+  }
+  
 
-
+//********************************************************* */
   const onLikeButtonClick = () => {
     setLike(like + (isLike ? -1 : 1));
     setIsLike(!isLike);
   }
   
-  
+  if (!product) {
+    return <h1> no product</h1>
+  }
   return (
     <div className="ProductDetail">
       <div className="ProductDetail_div1">
@@ -85,9 +77,9 @@ function ProductDetail({ addToCart }) {
           <div>QUANTITY</div>
           <div className="ProductDetail_qty1">
             <div className="ProductDetail_qty2">
-              <button onClick={handleDecrement}>-</button>
-              <div>{quantity}</div>
-              <button onClick={handleIncrement}>+</button>
+              <button onClick={decreaseQtyDt}>-</button>
+              <div>{quantitydt}</div>
+              <button onClick={increaseQtyDt}>+</button>
             </div>
             <center className="ProductDetail_heart">
               <div className={"" + (isLike ? "text-primary" : "")}>
@@ -99,7 +91,7 @@ function ProductDetail({ addToCart }) {
           </div>
           <div>
             <button className="ProductDetail_submit2"
-              onClick={() => addToCart(product)}>ADD TO CART</button>
+              onClick={() => handleProdQty()}>ADD TO CART</button>
             <br />
             {/* <button className="ProductDetail_submit1">BUY IT NOW</button> */}
           </div>

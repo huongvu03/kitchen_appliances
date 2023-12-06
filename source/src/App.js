@@ -26,7 +26,6 @@ function App() {
   const [apps, setApps] = useState([]);
   const [foods, setFoods] = useState([]);
   const [carts, setCarts] = useState([]);
-  const [qtyDetail, setQtyDetail] = useState(0);
   const navigate = useNavigate('');
 
   useEffect(() => {
@@ -46,7 +45,6 @@ function App() {
         setRefridge(productData2.filter(p => p.category === "Refrigeration").slice(0, 2));
         setApps(productData3.filter(p => p.category === "Appliances").slice(0, 2));
         setFoods(productData4.filter(p => p.category === "Food Storage").slice(0, 2));
-
       } catch (error) {
         console.log('error reading json');
       }
@@ -97,6 +95,32 @@ function App() {
     // window.location.reload()
   };
   //************************************ ADD CART ************************************
+
+
+  
+  //sau khi click add button từ detail page thì sẽ gửi 1 object newProd .
+  const sendqtyDetail=(newProd)=>{
+    console.log("newProdQty",newProd.quantity);
+    const existingProduct = carts.find(item => item.id === newProd.id);
+    //kiểm tra giỏ hàng có sản phẩm nào có trùng id với newProd.id 
+    if(existingProduct){
+      //nếu trùng thì giỏ hàng có sản phẩm trùng id với newProd id  thì số lượng của item có trong giỏ hàng đó + thêm số lượng từ newProd
+      const updatedCart=carts.map(item=>item === newProd.id ? {...item, quantity: item.quantity + newProd.quantity} :item);
+      console.log("carts",carts);
+      console.log("updatedcart",updatedCart);
+      //sau đó cập nhật lại giỏ hàng
+      setCarts(updatedCart);
+    }else{
+      //nếu ko có sản phẩm nào tồn tại thì sẽ add thẳng newProd vào giỏ hàng
+      setCarts([...carts,{...newProd}])
+    }
+  }
+
+
+
+
+
+
   const addToCart = (product) => {
     const existingProduct = carts.find(item => item.id === product.id);
     if (existingProduct) {
@@ -107,10 +131,7 @@ function App() {
     }
   };
   //lay dc quantity tu trang detail ra ngoai app 
-  const sendQtyDetail = (quantity) => {
-    setQtyDetail(quantity);
-    console.log("qtyDetail", qtyDetail);
-  }
+ 
   //************************************ DECREASE QUANTITY CART ************************************
   const decreaseQuantity = (product) => {
     const updatedCart = carts.map(item => item.id === product.id ? { ...item, quantity: Math.max(item.quantity - 1, 0) } : item);
@@ -213,7 +234,7 @@ function App() {
           />} />
         <Route path="/detail/:id" element={
           <div>
-            <ProductDetail sendQtyDetail={sendQtyDetail} addToCart={addToCart}
+            <ProductDetail  addToCart={addToCart} products={products} sendqtyDetail={sendqtyDetail}
             /></div>
         } />
         <Route path="/register" element={<Register onAddUser={handleAdd} />} />
