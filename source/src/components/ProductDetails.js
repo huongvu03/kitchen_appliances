@@ -3,17 +3,14 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import '../css/ProductDetail.css';
 import { CheckCircle, Heart, Star, StarFill, StarHalf } from 'react-bootstrap-icons';
-
 import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-
-function ProductDetail({ sendQtyDetail, addToCart }) {
+function ProductDetail({ addToCart }) {
   const { id } = useParams();
   const [product, setProducts] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const [like, setLike] = useState(456);
   const [isLike, setIsLike] = useState(false);
-  const [showDes, setShowDes] = useState(<Star />);
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,6 +27,9 @@ function ProductDetail({ sendQtyDetail, addToCart }) {
     };
     fetchData();
   }, []);
+  const [mainImage, setMainImage] = useState(0);
+
+  console.log(product);
   if (!product) {
     return <h1> Loading...</h1>
   }
@@ -44,17 +44,14 @@ function ProductDetail({ sendQtyDetail, addToCart }) {
       setQuantity(prevCount => prevCount + 1);
     }
   }
-  const handleSubmitQty = (quantity) => {
-    sendQtyDetail(quantity);
-    setQuantity(0);
-  }
 
 
   const onLikeButtonClick = () => {
     setLike(like + (isLike ? -1 : 1));
     setIsLike(!isLike);
   }
-
+  
+  
   return (
     <div className="ProductDetail">
       <div className="ProductDetail_div1">
@@ -66,14 +63,17 @@ function ProductDetail({ sendQtyDetail, addToCart }) {
         </div>
       </div>
       <div className="ProductDetail_grid1">
+        <div className="ProductDetail_img1">
+          
+          <img src={"../"+product.image[0]} alt={product.image[0]}  onClick={()=> setMainImage(0)}/>
+          <img src={"../"+product.image[1]} alt={product.image[1]}  onClick={()=> setMainImage(1)}/>
+          <img src={"../"+product.image[2]} alt={product.image[1]}  onClick={()=> setMainImage(2)}/>
+          <img src={"../"+product.image[3]} alt={product.image[1]}  onClick={()=> setMainImage(3)}/>
+        </div>
         <div className="ProductDetail_img2">
-          <Carousel>
-            {product.image.map((p) => (
-              <Carousel.Item>
-                <img src={"../" + p} alt="img" />
-              </Carousel.Item>
-            ))}
-          </Carousel>
+          
+          <img src={"../"+product.image[mainImage]} alt={product.image[mainImage]}/>
+          
         </div>
         <div className="ProductDetail_info">
           <div className="ProductDetail_name">{product.name}</div>
@@ -99,7 +99,7 @@ function ProductDetail({ sendQtyDetail, addToCart }) {
           </div>
           <div>
             <button className="ProductDetail_submit2"
-              onClick={() => { handleSubmitQty(quantity); addToCart(product) }}>ADD TO CART</button>
+              onClick={() => addToCart(product)}>ADD TO CART</button>
             <br />
             {/* <button className="ProductDetail_submit1">BUY IT NOW</button> */}
           </div>
