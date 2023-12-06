@@ -97,7 +97,7 @@ function App() {
   //************************************ ADD CART ************************************
 
 
-  
+
   //sau khi click add button từ detail page thì sẽ gửi 1 object newProd .
   const sendqtyDetail=(newProd)=>{
     console.log("newProdQty",newProd.quantity);
@@ -105,7 +105,7 @@ function App() {
     //kiểm tra giỏ hàng có sản phẩm nào có trùng id với newProd.id 
     if(existingProduct){
       //nếu trùng thì giỏ hàng có sản phẩm trùng id với newProd id  thì số lượng của item có trong giỏ hàng đó + thêm số lượng từ newProd
-      const updatedCart=carts.map(item=>item === newProd.id ? {...item, quantity: item.quantity + newProd.quantity} :item);
+      const updatedCart=carts.map(item=> item.id == newProd.id ? {...item, quantity: item.quantity + newProd.quantity} :item);
       console.log("carts",carts);
       console.log("updatedcart",updatedCart);
       //sau đó cập nhật lại giỏ hàng
@@ -149,7 +149,6 @@ function App() {
     setCarts(deletedCarts);
 
   }
-
   // Log in
   const [errorLogin, setErrorLogin] = useState('');
   const [users, setUsers] = useState([]);
@@ -159,7 +158,6 @@ function App() {
       .then(response => response.json())
       .then(data => {
         setUsers(data);
-        console.log(users);
       })
       .catch(error => console.log('error reading json', error));
   }, []);
