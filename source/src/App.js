@@ -130,8 +130,11 @@ function App() {
   }
   //************************************ INCREASE QUANTITY CART ************************************
   const increaseQuantity = (product) => {
-    const updatedCart = carts.map(item => item.id === product.id ? { ...item, quantity: Math.max(item.quantity + 1, 0) } : item);
-    setCarts(updatedCart);
+    const maxQtyProd=products.find(item=>item.id== product.id);
+    if(product.quantity<maxQtyProd.quantity){
+      const updatedCart = carts.map(item => item.id === product.id ? { ...item, quantity: Math.max(item.quantity + 1 , 0) } : item);
+      setCarts(updatedCart);
+    }
   }
   //************************************  DELETE CART   ************************************ 
   const deleteCart = (product) => {
