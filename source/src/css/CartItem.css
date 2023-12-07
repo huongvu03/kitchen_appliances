@@ -1,5 +1,23 @@
 .cartitem_quantity {
   display: flex;
   justify-content: space-between;
-  height: 117px;
+ 
+  
+}
+.cartitem_quantity button{
+  border: none;
+  width: 30px;
+  margin-bottom: 80px;
+  padding:0px;
+  border-radius: 5px;
+}
+.cartitem_quantity button:hover{
+  background-color:rgba(128, 128, 128, 0.24);
+  transition: 0.5s ease;
+}
+
+.cartitem_remove button{
+  border: none;
+  background-color: white;
+  
 }

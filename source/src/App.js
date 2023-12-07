@@ -64,7 +64,7 @@ function App() {
       const dataSearch = products.filter(pro => pro.name.toLowerCase().includes(value.toLowerCase()));
       setFilterProducts(dataSearch);
     }
-  }
+}
 
 
   //filter category
@@ -187,7 +187,7 @@ function App() {
     }
   }
 
-  // header bar search
+  //header bar search
   const [error, setError] = useState('');
   const handleHeader = (data) => {
     const datatSearch = products.filter(pro => pro.name.toLowerCase().includes(data.value.toLowerCase()));
@@ -195,7 +195,6 @@ function App() {
       setError('Not Found ! Please view all products below !');
       setFilterProducts(products);
       navigate('/products');
-
     }
     else if (datatSearch) {
       setFilterProducts(datatSearch);
@@ -211,7 +210,9 @@ function App() {
 
   return (
     <div className="App">
-      <Header checkHeader={handleHeader} carts={carts} />
+      <Header 
+      checkHeader={handleHeader} 
+      carts={carts} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path='/promotion' element={<ProductHome cook={cooks} app={apps} refridge={refridge} food={foods} addCart={addToCart} />} />
@@ -221,7 +222,8 @@ function App() {
             handleCategory={handleCategory}
             handleSortPriceMinMax={handleSortPriceMinMax} handleSortPriceMaxMin={handleSortPriceMaxMin}
             clearFilter={clearFilter}
-            addToCart={addToCart} error={error}
+            addToCart={addToCart} 
+            error={error}
           />} />
         <Route path="/detail/:id" element={
           <div>

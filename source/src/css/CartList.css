@@ -4,10 +4,36 @@ table {
 thead {
   line-height: 60px;
 }
+.text_noprod{
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
 .total_price {
-  margin-left: 80%;
+  
+  margin-right: 10%;
+}
+.total_price h5{
+  padding-top: 10px;
 }
 .cartlist_title {
   margin-top: 50px;
   margin-bottom: 50px;
+}
+.cartlist_payment_wrap{
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.cartlist_payment_btn{
+  margin-left: 40%;
+  width: 200px;
+  border:solid 1px;
+  color: white;
+  background-color: rgba(255, 0, 0, 0.614);
+  border-radius: 10px;
+  padding-top: 5px;
+}
+.cartlist_payment_btn:hover{
+  background-color: rgba(255, 0, 0, 0.925);
+  transition: 0.5s ease;
 }

@@ -6,11 +6,18 @@ function CartList({ carts, deleteCart, decreaseQty, increaseQty }) {
     const totalPrice = carts.reduce((total, product) => {
         return total + (product.price * product.quantity);
     }, 0);
+    if (!carts || carts.length === 0) {
+        return (
+            <div className="container text-center ">
+                <h3 className="text_noprod">No products in the cart</h3>
+            </div>
+        );
+    }
     return (
         <div className="container text-center ">
             <h3 className="cartlist_title">Cart List </h3>
             <div>
-                <table className="table table-hover">
+                <table className="table ">
                     <thead>
                         <tr>
                             <th>Image</th>
@@ -21,13 +28,18 @@ function CartList({ carts, deleteCart, decreaseQty, increaseQty }) {
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody >
+                    <tbody>
                         {carts.map(product => (
                             <CartItem key={product.id} product={product} deleteCart={deleteCart} increaseQty={increaseQty} decreaseQty={decreaseQty} />
                         ))}
                     </tbody>
                 </table>
-                <div className="total_price"> <h5>Total : {formatCurrency(totalPrice)}</h5></div>
+                <div className="cartlist_payment_wrap">
+                <button className="cartlist_payment_btn"><h5>Payment</h5></button>
+                    <div className="total_price"> <h5>Total : {formatCurrency(totalPrice)}</h5></div>
+                    
+                </div>
+                
             </div>
         </div>
     )
