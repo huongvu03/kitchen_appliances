@@ -235,11 +235,9 @@ function App() {
         <Route path='/about-us' element={<AboutUs />} />
         <Route path='/log-in' element={<Login checkLogin={checkLogin} errorLogin={errorLogin} resetPass={handleReset} />} />
         <Route path='/cart' element={
-          localStorage.getItem('username') ? (
-            <>
+          
         <CartList carts={carts} deleteCart={deleteCart} decreaseQty={decreaseQuantity} increaseQty={increaseQuantity} />
-        </>
-          ) : (< Navigate to='/log-in'/>)
+
         } />
 
         <Route path='/email-data' element={<EmailData />} /> {/* // storeage data */}
