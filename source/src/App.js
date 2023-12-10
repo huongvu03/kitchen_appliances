@@ -15,7 +15,10 @@ import ProductHome from './components/ProductHome';
 import EmailData from './components/EmailData';
 import Register from './components/Register';
 import BackToTopButton from './components/BackToTopButton';
-import Payment from './components/Payment';
+import Blog from './components/Blog';
+import BlogDetail from './components/BlogDetails';
+
+
 
 
 function App() {
@@ -27,6 +30,9 @@ function App() {
   const [apps, setApps] = useState([]);
   const [foods, setFoods] = useState([]);
   const [carts, setCarts] = useState([]);
+  const [blogs, setBlogs] = useState([]);
+  const [filterblogs, setFilterBlogs] = useState([]);
+
   const navigate = useNavigate('');
 
   useEffect(() => {
@@ -46,6 +52,21 @@ function App() {
         setRefridge(productData2.filter(p => p.category === "Refrigeration").slice(0, 2));
         setApps(productData3.filter(p => p.category === "Appliances").slice(0, 2));
         setFoods(productData4.filter(p => p.category === "Food Storage").slice(0, 2));
+      } catch (error) {
+        console.log('error reading json');
+      }
+    };
+    fetchData();
+  }, []);
+  //DATA BLOG
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const blogsJson = await fetch('blogs.json');
+        const blogsData = await blogsJson.json();
+        setBlogs(blogsData);
+        setFilterBlogs(blogsData);
+        console.log(blogs);
       } catch (error) {
         console.log('error reading json');
       }
@@ -242,7 +263,8 @@ function App() {
         <Route path='/cart' element={
           <CartList carts={carts} deleteCart={deleteCart} decreaseQty={decreaseQuantity} increaseQty={increaseQuantity} handlePaymentData={handlePaymentData} />
         } />
-        {/* <Route path='/payment' element={<Payment />} /> */}
+        <Route path="/blogdetail/:id" element={<BlogDetail blogs={blogs} />} />
+        <Route path="/blogs" element={<Blog blogs={blogs} />} />
 
         <Route path='/email-data' element={<EmailData />} /> {/* // storeage data */}
       </Routes>

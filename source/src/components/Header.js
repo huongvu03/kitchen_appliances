@@ -19,12 +19,7 @@ function Header({ checkHeader, carts }) {
                 <Link to='/promotion'> <li>PROMOTION</li></Link>
 
                 <Link to='/products'><li>PRODUCTS</li></Link>
-                <Link to='/ourblog'> <li><div class="headerHome_dropdown">
-                    <div className='dropbtn'>OUR BLOG</div>
-                    <div class="dropdown-content">
-                        <a href="/expert-tips">Expert Tips</a>
-                    </div>
-                </div> </li></Link>
+                <Link to='/blogs'> <li>OUR BLOG </li></Link>
                 <Link to='/contact'> <li>
                     <div class="headerHome_dropdown">
                         <div className='dropbtn'>SUPPORT</div>
