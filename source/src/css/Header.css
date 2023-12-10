@@ -105,3 +105,6 @@
 .cartQty_container {
   position: relative;
 }
+.hidden {
+  display: none;
+}

@@ -11,6 +11,7 @@ function Header({ checkHeader, carts }) {
         localStorage.clear();
     }
     const totalQuantity = carts.reduce((total, product) => total + product.quantity, 0);
+    console.log(totalQuantity);
     return (
         <div className="headerHome">
             <div>  <Link to='/'><img src="./homeimg/Logo-Tashas-Design.png" alt="logo" height="100px" width="100px" /></Link></div>
@@ -43,7 +44,11 @@ function Header({ checkHeader, carts }) {
                         (<Link to="/log-in"><div><Person /></div></Link>)
                     }
                 </div>
-                <Link to='/cart'> <div className='cartQty_container'><Cart3 /><span className='cartQty'>{totalQuantity}</span></div></Link>
+
+                <Link to='/cart'> <div className='cartQty_container'><Cart3 />{totalQuantity === 0 ?
+                    <span className='cartQty hidden' disabled>{totalQuantity}</span> :
+                    <span className='cartQty'>{totalQuantity}</span>
+                }</div></Link>
 
 
 
