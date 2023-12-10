@@ -10,6 +10,10 @@
   background-color: white;
   border-bottom: rgb(228, 226, 226) 5px solid;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 32px 0px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 .headerHome ul {
   /* border: red 2px solid; */
