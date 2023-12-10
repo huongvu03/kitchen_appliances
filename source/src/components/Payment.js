@@ -6,6 +6,11 @@ function Payment({ handlePaymentData }) {
     const [address, setAddress] = useState('');
     const [tel, setTel] = useState('');
 
+    // const [errorName, setErrorName] = useState('');
+    // const [errorEmail, setErrorEmail] = useState('');
+    // const [errorAddress, setErrorAddress] = useState('');
+    // const [errorTel, setErrorTel] = useState('');
+
     const submit = (e) => {
         e.preventDefault();
         const paymentData = { name, email, address, tel }
@@ -29,18 +34,22 @@ function Payment({ handlePaymentData }) {
                         <div className="form-group">
                             <div>Your Name </div>
                             <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} />
+                            {/* <div className="payment_error">{errorName}</div> */}
                         </div>
                         <div className="form-group">
                             <div>Email</div>
                             <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                            {/* <div className="payment_error">{errorEmail}</div> */}
                         </div>
                         <div className="form-group">
                             <div>Address</div>
                             <input type="text" name="address" value={address} onChange={(e) => setAddress(e.target.value)} />
+                            {/* <div className="payment_error">{errorAddress}</div> */}
                         </div>
                         <div className="form-group">
                             <div>Phone</div>
                             <input type="tel" name="tel" value={tel} onChange={(e) => setTel(e.target.value)} />
+                            {/* <div className="payment_error">{errorTel}</div> */}
                         </div>
 
                     </div>
