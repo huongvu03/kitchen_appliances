@@ -52,16 +52,13 @@
   transition: 0.35s ease;
 }
 
-
 .swal2-popup {
   font-size: 13px !important;
-  width:200px !important;
+  width: 200px !important;
   line-height: 3px !important;
-  
 }
 .swal2-popup .swal2-styled.swal2-confirm {
   background-color: #0a7725 !important;
- 
 }
 .swal2-html-container {
   font-weight: bold !important;
