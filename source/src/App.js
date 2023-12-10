@@ -15,6 +15,7 @@ import ProductHome from './components/ProductHome';
 import EmailData from './components/EmailData';
 import Register from './components/Register';
 import BackToTopButton from './components/BackToTopButton';
+import Payment from './components/Payment';
 
 
 function App() {
@@ -57,14 +58,14 @@ function App() {
   const [searchValue, setSearchValue] = useState('');
   const handleSearch = (value) => {
     setSearchValue(value);
-    if (filterSearch) {
+    if (filterSearch.length > 0) {
       const dataSearch = filterSearch.filter(pro => pro.name.toLowerCase().includes(value.toLowerCase()));
       setFilterProducts(dataSearch);
     } else {
       const dataSearch = products.filter(pro => pro.name.toLowerCase().includes(value.toLowerCase()));
       setFilterProducts(dataSearch);
     }
-}
+  }
 
 
   //filter category
@@ -97,20 +98,18 @@ function App() {
   //************************************ ADD CART ************************************
 
   //sau khi click add button từ detail page thì sẽ gửi 1 object newProd .
-  const sendqtyDetail=(newProd)=>{
-    console.log("newProdQty",newProd.quantity);
+  const sendqtyDetail = (newProd) => {
+    console.log("newProdQty", newProd.quantity);
     const existingProduct = carts.find(item => item.id === newProd.id);
     //kiểm tra giỏ hàng có sản phẩm nào có trùng id với newProd.id 
-    if(existingProduct){
+    if (existingProduct) {
       //nếu trùng thì giỏ hàng có sản phẩm trùng id với newProd id  thì số lượng của item có trong giỏ hàng đó + thêm số lượng từ newProd
-      const updatedCart=carts.map(item=> item.id == newProd.id ? {...item, quantity: item.quantity + newProd.quantity} :item);
-      console.log("carts",carts);
-      console.log("updatedcart",updatedCart);
+      const updatedCart = carts.map(item => item.id == newProd.id ? { ...item, quantity: item.quantity + newProd.quantity } : item);
       //sau đó cập nhật lại giỏ hàng
       setCarts(updatedCart);
-    }else{
+    } else {
       //nếu ko có sản phẩm nào tồn tại thì sẽ add thẳng newProd vào giỏ hàng
-      setCarts([...carts,{...newProd}])
+      setCarts([...carts, { ...newProd }])
     }
   }
   const addToCart = (product) => {
@@ -130,9 +129,9 @@ function App() {
   }
   //************************************ INCREASE QUANTITY CART ************************************
   const increaseQuantity = (product) => {
-    const maxQtyProd=products.find(item=>item.id== product.id);
-    if(product.quantity<maxQtyProd.quantity){
-      const updatedCart = carts.map(item => item.id === product.id ? { ...item, quantity: Math.max(item.quantity + 1 , 0) } : item);
+    const maxQtyProd = products.find(item => item.id == product.id);
+    if (product.quantity < maxQtyProd.quantity) {
+      const updatedCart = carts.map(item => item.id === product.id ? { ...item, quantity: Math.max(item.quantity + 1, 0) } : item);
       setCarts(updatedCart);
     }
   }
@@ -141,6 +140,12 @@ function App() {
     const deletedCarts = carts.filter(item => item.id !== product.id);
     setCarts(deletedCarts);
 
+  }
+
+  //************************************** PAYMENT ************************** */
+  const handlePaymentData = (paymentData) => {
+    alert(`THANH TOAN THANH CONG \nName: ${paymentData.name}\nEmail: ${paymentData.email}\nAddress: ${paymentData.address}\nTel: ${paymentData.tel}`);
+    setCarts([]);
   }
   // Log in
   const [errorLogin, setErrorLogin] = useState('');
@@ -210,9 +215,9 @@ function App() {
 
   return (
     <div className="App">
-      <Header 
-      checkHeader={handleHeader} 
-      carts={carts} />
+      <Header
+        checkHeader={handleHeader}
+        carts={carts} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path='/promotion' element={<ProductHome cook={cooks} app={apps} refridge={refridge} food={foods} addCart={addToCart} />} />
@@ -222,12 +227,12 @@ function App() {
             handleCategory={handleCategory}
             handleSortPriceMinMax={handleSortPriceMinMax} handleSortPriceMaxMin={handleSortPriceMaxMin}
             clearFilter={clearFilter}
-            addToCart={addToCart} 
+            addToCart={addToCart}
             error={error}
           />} />
         <Route path="/detail/:id" element={
           <div>
-            <ProductDetail  addToCart={addToCart} products={products} sendqtyDetail={sendqtyDetail}
+            <ProductDetail addToCart={addToCart} products={products} sendqtyDetail={sendqtyDetail}
             /></div>
         } />
         <Route path="/register" element={<Register onAddUser={handleAdd} />} />
@@ -235,14 +240,13 @@ function App() {
         <Route path='/about-us' element={<AboutUs />} />
         <Route path='/log-in' element={<Login checkLogin={checkLogin} errorLogin={errorLogin} resetPass={handleReset} />} />
         <Route path='/cart' element={
-          
-        <CartList carts={carts} deleteCart={deleteCart} decreaseQty={decreaseQuantity} increaseQty={increaseQuantity} />
-
+          <CartList carts={carts} deleteCart={deleteCart} decreaseQty={decreaseQuantity} increaseQty={increaseQuantity} handlePaymentData={handlePaymentData} />
         } />
+        {/* <Route path='/payment' element={<Payment />} /> */}
 
         <Route path='/email-data' element={<EmailData />} /> {/* // storeage data */}
       </Routes>
-      <BackToTopButton/>
+      <BackToTopButton />
       <Footer />
     </div>
   );

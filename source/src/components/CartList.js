@@ -2,7 +2,15 @@ import CartItem from "./CartItem"
 import "../css/CartList.css";
 import 'bootstrap/dist/css/bootstrap.css';
 import { formatCurrency } from "../helpers/currency";
-function CartList({ carts, deleteCart, decreaseQty, increaseQty }) {
+import { useState } from "react";
+import Payment from "./Payment";
+
+function CartList({ carts, deleteCart, decreaseQty, increaseQty, handlePaymentData, clearCart }) {
+    const [showPaymentForm, setShowPaymentForm] = useState(false);
+
+    const togglePaymentForm = () => {
+        setShowPaymentForm(!showPaymentForm);
+    };
     const totalPrice = carts.reduce((total, product) => {
         return total + (product.price * product.quantity);
     }, 0);
@@ -34,14 +42,16 @@ function CartList({ carts, deleteCart, decreaseQty, increaseQty }) {
                         ))}
                     </tbody>
                 </table>
+
+
                 <div className="cartlist_payment_wrap">
-                <button className="cartlist_payment_btn"><h5>Payment</h5></button>
+                    <button className="cartlist_payment_btn" onClick={togglePaymentForm}><h5>Payment</h5></button>
                     <div className="total_price"> <h5>Total : {formatCurrency(totalPrice)}</h5></div>
-                    
                 </div>
-                
+                <div className="payment_form">{showPaymentForm && <Payment handlePaymentData={handlePaymentData} />}</div>
+
             </div>
-        </div>
+        </div >
     )
 }
 export default CartList
