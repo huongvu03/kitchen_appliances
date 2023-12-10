@@ -32,7 +32,6 @@ function App() {
   const [carts, setCarts] = useState([]);
   const [blogs, setBlogs] = useState([]);
   const [filterblogs, setFilterBlogs] = useState([]);
-
   const navigate = useNavigate('');
 
   useEffect(() => {
@@ -167,6 +166,7 @@ function App() {
   const handlePaymentData = (paymentData) => {
     alert(`THANH TOAN THANH CONG \nName: ${paymentData.name}\nEmail: ${paymentData.email}\nAddress: ${paymentData.address}\nTel: ${paymentData.tel}`);
     setCarts([]);
+    navigator('/products');
   }
   // Log in
   const [errorLogin, setErrorLogin] = useState('');

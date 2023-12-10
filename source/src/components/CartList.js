@@ -5,7 +5,7 @@ import { formatCurrency } from "../helpers/currency";
 import { useState } from "react";
 import Payment from "./Payment";
 
-function CartList({ carts, deleteCart, decreaseQty, increaseQty, handlePaymentData, clearCart }) {
+function CartList({ carts, deleteCart, decreaseQty, increaseQty, handlePaymentData }) {
     const [showPaymentForm, setShowPaymentForm] = useState(false);
 
     const togglePaymentForm = () => {

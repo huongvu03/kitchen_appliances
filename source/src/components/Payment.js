@@ -27,7 +27,6 @@ function Payment({ handlePaymentData }) {
 
         <div className="container payment">
             <hr></hr>
-            {/* <h3 className="payment_title">Payment </h3> */}
             <div>
                 <form onSubmit={submit} className="payment_form">
                     <div >
