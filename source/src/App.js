@@ -164,7 +164,6 @@ function App() {
 
   //************************************** PAYMENT ************************** */
   const handlePaymentData = (paymentData) => {
-    alert(`THANH TOAN THANH CONG \nName: ${paymentData.name}\nEmail: ${paymentData.email}\nAddress: ${paymentData.address}\nTel: ${paymentData.tel}`);
     setCarts([]);
     navigator('/products');
   }
