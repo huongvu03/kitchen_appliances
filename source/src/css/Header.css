@@ -108,3 +108,14 @@
 .hidden {
   display: none;
 }
+
+/*Hoang*/
+.navbar-link:hover,
+.navbar-link:active,
+.navbar-link:focus {
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #a50034;
+  transition: 0.3s ease;
+}
