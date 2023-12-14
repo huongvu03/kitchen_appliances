@@ -11,11 +11,13 @@ import ProductDetail from './components/ProductDetails';
 import CartList from './components/CartList';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
-import ProductHome from './components/ProductHome';
 import EmailData from './components/EmailData';
 import Register from './components/Register';
 import BackToTopButton from './components/BackToTopButton';
-
+import ModalConfirm from './components/ModalConfirm';
+import Promotion from './components/Promotion';
+import TermsOfUse from './components/TermsOfUse';
+import Privacy from './components/Privacy';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -42,9 +44,9 @@ function App() {
         const productData3 = productData;
         const productData4 = productData;
 
-        setCooks(productData1.filter(p => p.category === "Cookware").slice(0, 2));
+        setCooks(productData1.filter(p => p.category === "Cookware").slice(0,2));
         setRefridge(productData2.filter(p => p.category === "Refrigeration").slice(0, 2));
-        setApps(productData3.filter(p => p.category === "Appliances").slice(0, 2));
+        setApps(productData3.filter(p => p.category === "Appliances").slice(1, 3));
         setFoods(productData4.filter(p => p.category === "Food Storage").slice(0, 2));
 
       } catch (error) {
@@ -131,8 +133,12 @@ function App() {
 
   // Log in
   const [errorLogin, setErrorLogin] = useState('');
+  const [errorName, setErrorName] = useState('');
+  const [errorPass, setErrorPass] = useState('');
   const [users, setUsers] = useState([]);
-  const navigator = useNavigate();
+  const [showModal, setShowModal] = useState(false);
+  const [textmodal, setTextModal] = useState('');
+
   useEffect(() => {
     fetch('user.json')
       .then(response => response.json())
@@ -147,38 +153,56 @@ function App() {
     console.log(checkUser);
     const findUser = users.find(u => u.username == checkUser.username
       && u.password == checkUser.password);
-    if (findUser != null) {
-      alert('Log in successfull !')
-      localStorage.setItem('username', checkUser.username);
-      setErrorLogin('');
-      navigator('/products');
 
-    } else if (!checkUser.username || !checkUser.password) {
-      setErrorLogin('Email and Password is required');
+    if (findUser != null) {
+      setTextModal("Log in successful !");
+      setShowModal(true);
+      localStorage.setItem('username', checkUser.username);
+      setErrorLogin('');setErrorName('');setErrorPass('');
+      // navigator('/products');
+     
+    } 
+    else if (!checkUser.username || !checkUser.password) {
+      setErrorName('Username is required');
+      setErrorPass('Password is required');
       return false;
     }
     else {
       setErrorLogin('The Email or Password is incorrect. ');
+      setErrorName('');setErrorPass('');
       return false;
-    } return true;
+    }  return false;
+  }
 
+  const handleClose = () => {
+    setShowModal(false);
   }
 
   // Reset Password
+  const[errorReset,setErrorReset]=useState('');
   const handleReset = (checkReset) => {
     console.log(checkReset);
     const findEmail = users.find(e => e.email == checkReset.email);
     if (findEmail != null) {
-      alert('Please check your mailbox for reset password');
-    } else {
-      alert('Email is not Register yet ! Please Register');
+      setTextModal('Please check your mailbox for reset password');
+      setShowModal(true);
+      setErrorReset('');
+    }else if(!checkReset.email){
+      setErrorReset('Email is required.')
+    }
+    else {
+      setTextModal('Email is not Register yet ! Please Register');
+      setShowModal(true);
+      setErrorReset('');
     }
   }
 
   // header bar search
+  const [headersearchValue, setHeaderSearchValue] = useState('');
   const [error, setError] = useState('');
-  const handleHeader = (data) => {
-    const datatSearch = products.filter(pro => pro.name.toLowerCase().includes(data.value.toLowerCase()));
+  const handleHeader = (value) => {
+    setHeaderSearchValue(value);
+    const datatSearch = products.filter(pro => pro.name.toLowerCase().includes(value.toLowerCase()));
     if (datatSearch == "") {
       setError('Not Found ! Please view all products below !');
       setFilterProducts(products);
@@ -197,12 +221,19 @@ function App() {
     setUsers([...users, onAddUser]);
   }
 
+  
+
   return (
     <div className="App">
-      <Header checkHeader={handleHeader} carts={carts} />
+      <Header value={headersearchValue} handleSubmit={handleHeader} carts={carts} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path='/promotion' element={<ProductHome cook={cooks} app={apps} refridge={refridge} food={foods} addCart={addToCart} />} />
+        <Route path='/promotion' element={<Promotion cook={cooks} app={apps} refridge={refridge} food={foods} addCart={addToCart} />} />
+        <Route path='/promotion#app' element={<Promotion cook={cooks} app={apps} refridge={refridge} food={foods} addCart={addToCart} />} />
+        <Route path='/promotion#cook' element={<Promotion cook={cooks} app={apps} refridge={refridge} food={foods} addCart={addToCart} />} />
+        <Route path='/promotion#fridge' element={<Promotion cook={cooks} app={apps} refridge={refridge} food={foods} addCart={addToCart} />} />
+
+
         <Route path="/products" element={
           <ProductsList products={filterProducts}
             searchValue={searchValue} handleSearch={handleSearch}
@@ -219,18 +250,27 @@ function App() {
         <Route path="/register" element={<Register onAddUser={handleAdd} />} />
         <Route path='/contact' element={<ContactUs />} />
         <Route path='/about-us' element={<AboutUs />} />
-        <Route path='/log-in' element={<Login checkLogin={checkLogin} errorLogin={errorLogin} resetPass={handleReset} />} />
+        <Route path='/log-in' element={
+          <div>
+            <ModalConfirm show={showModal} handleClose={handleClose} textmodal={textmodal} />
+            <Login checkLogin={checkLogin} errorLogin={errorLogin} errorName={errorName} errorPass={errorPass}
+             resetPass={handleReset} errorReset={errorReset} />
+
+          </div>
+        } />
         <Route path='/cart' element={
           localStorage.getItem('username') ? (
             <>
-        <CartList carts={carts} deleteCart={deleteCart} decreaseQty={decreaseQuantity} increaseQty={increaseQuantity} />
-        </>
-          ) : (< Navigate to='/log-in'/>)
+              <CartList carts={carts} deleteCart={deleteCart} decreaseQty={decreaseQuantity} increaseQty={increaseQuantity} />
+            </>
+          ) : (< Navigate to='/log-in' />)
         } />
-
+      
+        <Route path='/terms-of-use' element={<TermsOfUse/>} />
+        <Route path='/privacy-policy' element={<Privacy/>} />
         <Route path='/email-data' element={<EmailData />} /> {/* // storeage data */}
       </Routes>
-      <BackToTopButton/>
+      <BackToTopButton />
       <Footer />
     </div>
   );

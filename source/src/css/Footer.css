@@ -4,11 +4,12 @@
 .FooterSocial{
     border-top:rgb(228, 226, 226) 5px solid ;
     padding: 60px;
-    margin-top: 60px;
+    /* background-color: #f0ece4; */
     display: grid;
     grid-template-columns: 50% auto;
     box-shadow:  rgba(0, 0, 0, 0.1) 0px 0px 40px 0px;
-
+    font-size: 17px;
+    background-color:rgb(230, 230, 230) ;
 }
 .FooterSocial_leftInput{
     margin-top: 15px;
@@ -16,6 +17,7 @@
 }
 .FooterSocial_leftInput input{
     width: 50%;
+    font-size: 17px;
  
 }
 .FooterSocial_title{
@@ -82,7 +84,7 @@
 }
 .Footer ul li{
     list-style: none;
- 
+    font-size: 17px;
 
 }
 .Footer_c3{
@@ -93,4 +95,26 @@
    color:black ;
     font-weight: lighter;
     text-decoration: none;
+}
+/*term of use */
+.TermsOfUse,.Privacy{
+    margin:80px
+}
+.TermsOfUse h1, .Privacy h1{
+    text-align: center;
+}
+.TermsOfUse ul li, .Privacy ul li{
+    list-style: none;
+    line-height: 30px;
+    font-size: 18px;
+
+}
+.TermsTitle,.PrivacyTitle{
+    margin-top: 20px;
+    text-indent: 50px;
+   font-size: 20px;
+    list-style: circle;
+    color: grey;
+    font-weight: bold;
+    
 }

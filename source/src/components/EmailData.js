@@ -1,15 +1,15 @@
-
+import '../css/LogIn.css';
 function EmailData(){
    
     return(
-        <div>
-            <h5>Email Data From Home Page For Promotion information</h5>
+        <div className="EmailData">
+            <h1>Email Data </h1>
             <table>
                 <tr>
-                    <th>customer email</th>
+                    <th><h4>Customer Email</h4></th>
                 </tr>
                 <tr>
-                    <td>{localStorage.getItem('data')}</td>
+                    <td><h5>{localStorage.getItem('data')}</h5></td>
                 </tr>
             </table>
         </div>

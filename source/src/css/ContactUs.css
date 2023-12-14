@@ -1,27 +1,59 @@
-.ContactUs_title{
- display: grid;
- grid-template-columns: 50% 50%;
- background-color: #333;
- color: white;
-}
-.ContactUs_title div img{
+
+.ContactUs_top div img{
     width: 100%;
+    object-fit: fill;
 }
-.ContactUs_title_r_1{
+.ContactUs_topcontent{
     font-size: 30px;
+    position: absolute;
+    top:40%;
+   left:30%;
+    color:white;
+    text-align: center;
+    font-weight: lighter;
 }
-.ContactUs_title_r{
-    width: 500px;
-    height: 120px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
-.ContactUs_grid1{
+
+.Contact_info{
     display: grid;
-    grid-template-columns: 70% 30%;
-    margin: 30px 100px 50px 100px;
+    grid-template-columns: 33% 33% 33% ;
+    margin:60px;
+    column-gap: 60px;
+    text-align: center;
+
+
+}
+.Contact_infoCol{
+   max-width: 100%;
+    border-radius: 50px;
+    width: 400px;
+      box-shadow:  rgba(0, 0, 0, 0.1) 0px 0px 40px 0px;
+}
+  
+.Contact_infoCol ul {
+    border: red solid;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+ 
+
+.Contact_infoCol ul li{
+    border: blue solid;
+    
+  
+}
+.ContactUs_bottom{
+    display: grid;
+    grid-template-columns: 55% 45%;
+    border: red solid;
+}
+.ContactUs_bottomLeft {
+    max-width: 100%;
+    border: red solid;
+}
+.ContactUs_bottomLeft iframe{
+width: 100%;
+height: 100%;
 }
 .ContactUs_form_grid1{
     display: grid;
@@ -81,14 +113,15 @@
     font-size: 20px;
     color: black;
     margin-top: 10px;
+    font-weight: 600;
 }
 .ContactUs_info2{
-    color: rgb(165, 0, 52);
+    color: black;
     padding-left: 5px;
     border-radius: 5px;
 }
 .ContactUs_info2_title2{
-    font-size: 15px;
+    font-size: 20px;
     color: black;
     margin-top: 10px;
 }

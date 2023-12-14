@@ -6,7 +6,7 @@ import { Telephone } from 'react-bootstrap-icons';
 
 import HeaderSearch from './HeaderSearch';
 
-function Header({ checkHeader, carts }) {
+function Header({ handleSubmit,value, carts }) {
     const deleteLocalStorage = () => {
         localStorage.clear();
     }
@@ -40,7 +40,7 @@ function Header({ checkHeader, carts }) {
             </ul>
             <div></div>
             <div className='headerHome4'>
-                <div class="headersearch" ><HeaderSearch checkHeader={checkHeader} /></div>
+                <div class="headersearch" ><HeaderSearch value={value} handleSubmit={handleSubmit} /></div>
 
                 <div className='headerUser'>
                     {localStorage.getItem('username') ?

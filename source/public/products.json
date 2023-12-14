@@ -1,5 +1,25 @@
 [
   {
+    "id":0,
+    "name": "Vancasso Enameled Cast Iron Dutch Oven, Non Stick Coating. All Heat Source",
+    "category": "Cookware",
+    "description":[
+      "【One Pot for Multiple Use - Suitable for Families of 3-5 People】",
+       "This 6-Quart vancasso enameled cast iron dutch oven is great for beginners or pros.",
+       "It is resistant to acidic and alkaline substances, and you can use it to marinate food before cooking (prepare, cook, and serve food in the same pot).",
+       " Safe for braising, simmering, baking, broiling, and roasting on gas, electric, ceramic, glass top, and induction stoves (not including microwave ovens); oven safe to 500°F."
+    ],
+    "quantity": 19,
+    "price": 62.99,
+    "image":[
+      "img/cook/cook_cooking_pots_5.jpg",
+      "img/cook/cook_cooking_pots_6.jpg",
+      "img/cook/cook_cooking_pots_7.jpg",
+      "img/cook/cook_cooking_pots_8.jpg"
+    ]
+   
+  },
+  {
     "id": 1,
     "name": "Cooking pots Metal Utensil Oven & Dishwasher Safe, 100% Toxin Free",
     "category": "Cookware",
@@ -10,13 +30,14 @@
       "Oven & Stovetop Safe: Gotham Steel cookware is oven safe up to 500 degrees and compatible with all types of stovetops- Gas, electric, halogen & ceramic, besides induction  allowing you to cook virtually anywhere you'd like."
   ],
     "quantity": 19,
-    "price": 91.29,
+    "price": 44.99,
     "image": [
       "img/cook/cook_cooking_pots_1.jpg",
       "img/cook/cook_cooking_pots_2.jpg",
       "img/cook/cook_cooking_pots_3.jpg",
       "img/cook/cook_cooking_pots_4.jpg"
     ]
+   
   },
   {
     "id": 2,
@@ -29,13 +50,14 @@
       "MULTI STYLE COOKING OPTIONS: Pan fry, sauté, sear, boil, simmer, blanche, braise, poach, deep fry, stew and then serve in style. No matter what you’re cooking, this pan is always up for the task. Also compatible with all cooktops: electric, gas, glass, or induction cooktop."
     ],
     "quantity": 22,
-    "price": 49.99,
+    "price": 37.49,
     "image": [
       "img/cook/cook_cooking_pans_1.jpg",
       "img/cook/cook_cooking_pans_2.jpg",
       "img/cook/cook_cooking_pans_3.jpg",
       "img/cook/cook_cooking_pans_4.jpg"
     ]
+   
   },
   {
     "id": 3,
@@ -49,7 +71,7 @@
       "Versatile Cooking Options: This set can withstand oven temperatures up to 400°F (lids up to 350°F) and is suitable for all stove tops, excluding induction, making it a versatile and reliable addition to your kitchen. Limited lifetime warranty."
     ],
     "quantity": 6,
-    "price": 72.46,
+    "price": 72.49,
     "image": [
       "img/cook/cook_frying_pans_1.jpg",
       "img/cook/cook_frying_pans_2.jpg",
@@ -76,6 +98,7 @@
       "img/cook/cook_cookware_sets_3.jpg",
       "img/cook/cook_cookware_sets_4.jpg"
     ]
+   
   },
   {
     "id": 5,
@@ -96,6 +119,7 @@
       "img/cook/cook_handis_3.jpg",
       "img/cook/cook_handis_4.jpg"
     ]
+   
   },
   {
     "id": 6,
@@ -110,13 +134,14 @@
       "ERGONOMICALLY DESIGNED HANDLES: The handles are designed to be ergonomic, ensuring a secure and comfortable grip while carrying and serving the kadai.",
       "THE PERFECT GIFT IDEA: Apart from offering you a versatile experience, you can use this classy-looking set as a gift on any occasion. Any cooking enthusiast would love to have this set. It will truly be a thoughtful present for your loved ones."
     ],
-    "price": 22.9,
+    "price": 22.99,
     "image": [
       "img/cook/cook_kadais_1.jpg",
       "img/cook/cook_kadais_2.jpg",
       "img/cook/cook_kadais_3.jpg",
       "img/cook/cook_kadais_4.jpg"
     ]
+   
   },
   {
     "id": 7,
@@ -136,6 +161,7 @@
       "img/cook/cook_grillPans_3.jpg",
       "img/cook/cook_grillPans_4.jpg"
     ]
+  
   },
   {
     "id": 8,
@@ -149,13 +175,14 @@
       "Stay-cool Bakelite handles which are Ideal, heat resistant and designed to fit the curve of your palm"
     ],
     "quantity": 14,
-    "price": 45.0,
+    "price": 45.99,
     "image": [
       "img/cook/cook_tawas_1.jpg",
       "img/cook/cook_tawas_2.jpg",
       "img/cook/cook_tawas_3.jpg",
       "img/cook/cook_tawas_4.jpg"
     ]
+   
   },
   {
     "id": 9,
@@ -168,13 +195,14 @@
       "Multi-Purpose Use: Doubles as a regular fry pan so you can be more efficient and versatile in the kitchen. Get back to cooking to create a wider selection of foods without needing a 2nd pan."
     ],
     "quantity": 25,
-    "price": 29.95,
+    "price": 29.99,
     "image": [
       "img/cook/cook_eggPoachers_1.jpg",
       "img/cook/cook_eggPoachers_2.jpg",
       "img/cook/cook_eggPoachers_3.jpg",
       "img/cook/cook_eggPoachers_4.jpg"
     ]
+   
   },
   {
     "id": 10,
@@ -198,6 +226,7 @@
       "img/cook/cook_steamers_3.jpg",
       "img/cook/cook_steamers_4.jpg"
     ]
+    
   },
   {
     "id": 11,
@@ -213,13 +242,14 @@
       "Inverter Technology: Inverter Refrigerator"
     ],
     "quantity": 26,
-    "price": 1599.0,
-    "image": [
+    "price": 1399.00,
+      "image": [
       "img/ref/ref_refrigerators_1.jpg",
       "img/ref/ref_refrigerators_2.jpg",
       "img/ref/ref_refrigerators_3.jpg",
       "img/ref/ref_refrigerators_4.jpg"
     ]
+   
   },
   {
     "id": 12,
@@ -236,17 +266,39 @@
       "Fast freeze functionality"
     ],
     "quantity": 18,
-    "price": 635.0,
+    "price": 434.99,
     "image": [
       "img/ref/ref_freezers_1.jpg",
       "img/ref/ref_freezers_2.jpg",
       "img/ref/ref_freezers_3.jpg",
       "img/ref/ref_freezers_4.jpg"
     ]
+   
+  },
+  {
+    "id": 13,
+    "category": "Appliances",
+    "name":  "Hibiscus K400 Blender",
+    "description":[
+      " KitchenAid Color of the Year",
+      " Blend the Toughest Ingredients",
+      " Easy to Clean",
+      " Easily Create a Range of Textures",
+      " Soft Start® Feature"
+    ],
+    "quantity": 20,
+    "price": 219.99,
+    "image": [
+      "img/app/app_blender_5.jpg",
+      "img/app/app_blender_6.jpg",
+      "img/app/app_blender_7.jpg",
+      "img/app/app_blender_8.jpg"
+    ]
+   
   },
 
   {
-    "id": 13,
+    "id": 14,
     "category": "Appliances",
     "name": "Hamilton Beach MultiBlend® Kitchen System with Blender and Food Processor",
     "description":[
@@ -259,16 +311,17 @@
       "Drip-free pouring"
     ],
     "quantity": 20,
-    "price": 59.99,
+    "price": 53.99,
     "image": [
       "img/app/app_blender_1.jpg",
       "img/app/app_blender_2.jpg",
       "img/app/app_blender_3.jpg",
       "img/app/app_blender_4.jpg"
     ]
+
   },
   {
-    "id": 14,
+    "id": 15,
     "category": "Appliances",
     "name": " Hamilton Beach Premium Bread Maker",
     "description":[
@@ -280,16 +333,17 @@
       "Countdown timer and auto keep warm"
     ],
     "quantity": 20,
-    "price": 139.99,
+    "price": 118.99,
     "image": [
       "img/app/app_breadMaker_1.jpg",
       "img/app/app_breadMaker_2.jpg",
       "img/app/app_breadMaker_3.jpg",
       "img/app/app_breadMaker_4.jpg"
     ]
+   
   },
   {
-    "id": 15,
+    "id": 16,
     "category": "Appliances",
     "name": " Hamilton Beach 8 Cup Convenient Craft™ Pour-Over Coffee Brewer, Whiter",
     "description":[
@@ -311,9 +365,10 @@
       "img/app/app_coffeeMakers_3.jpg",
       "img/app/app_coffeeMakers_4.jpg"
     ]
+   
   },
   {
-    "id": 16,
+    "id": 17,
     "category": "Appliances",
     "name": " Hamilton Beach 1.5 Quart Ice Cream Maker",
     "description":[
@@ -334,7 +389,7 @@
     ]
   },
   {
-    "id": 17,
+    "id": 18,
     "category": "Appliances",
     "name": "  Hamilton Beach Variable Temperature Electric Kettle, Stainless Stee",
     "description":[
@@ -359,7 +414,7 @@
     ]
   },
   {
-    "id": 18,
+    "id": 19,
     "category": "Appliances",
     "name": " Hamilton Beach 3 Cup Stack & Press™ Food Chopper",
     "description":[
@@ -381,7 +436,7 @@
     ]
   },
   {
-    "id": 19,
+    "id": 20,
     "name": "Hamilton Beach Professional Professional 2 Slice Toaster",
     "category": "Appliances",
     "price": 77.99,
@@ -401,10 +456,10 @@
     "quantity": 10
   },
   {
-    "id": 20,
+    "id": 21,
     "name": "THERMOS Stainless King Vacuum-Insulated Food Jar, 24 Ounce, Matte Steel",
     "category": "Food Storage",
-    "price": 35.99,
+    "price": 23.39,
     "image": [
       "img/food/food_vacuumBottles_1.jpg",
       "img/food/food_vacuumBottles_2.jpg",
@@ -421,10 +476,11 @@
     "quantity": 10
   },
   {
-    "id": 21,
+    "id": 22,
     "name": "Stanley Legendary Classic Canteen Water",
     "category": "Food Storage",
-    "price": 46.99,
+    "price": 30.54,
+    "priceOri": 46.99,
     "image": [
       "img/food/food_flask_1.jpg",
       "img/food/food_flask_2.jpg",
@@ -441,7 +497,7 @@
     "quantity": 10
   },
   {
-    "id": 22,
+    "id": 23,
     "name": "Nordic Seasoning Jar Ceramic Oil & Vinegar Bottles Sugar Bowl Salt & Pepper",
     "category": "Food Storage",
     "price": 34.99,
@@ -462,9 +518,10 @@
       "Notice:Due to the different monitor and light effect,the actual color maybe a slight different from the picture color. Please allow 1-3cm differs due to manual measurement."
     ],
     "quantity": 10
+
   },
   {
-    "id": 23,
+    "id": 24,
     "name": "Reusable Silicone Food Storage Bag Set of 3 - Large Size 50 OZ",
     "category": "Food Storage",
     "price": 25.99,
@@ -484,7 +541,7 @@
     "quantity": 10
   },
   {
-    "id": 24,
+    "id": 25,
     "name": "Maelstrom Lunch Box for Men, Insulated Lunch Bag",
     "category": "Food Storage",
     "price": 10.99,

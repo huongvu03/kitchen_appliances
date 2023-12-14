@@ -24,7 +24,6 @@
     padding: 60px 100px;
 }
 .Loginleft{
- border-right:  rgb(228, 226, 226) 2px solid ;
  max-width: 100%;
  line-height: 30px;
 padding-left: 80px;
@@ -33,72 +32,80 @@ margin-bottom: 60px;
 
 }
 .Login h6{
- font-size: 13px;
+ font-size: 15px;
  font-weight: lighter;
 }
 .LoginError{
 color: rgb(158, 11, 11);
 text-align: center;
-font-size: 14px;
+font-size: 16px;
 }
 .LoginleftLabel, .LoginlefPass{
     font-weight: 600;
-    font-size: 15px;
+    font-size: 18px;
 }
 .LoginlefPass{
     text-align: center;
     margin-top: 30px;
-   
+   cursor: pointer;
 
 }
-.LoginleftInput, .LoginleftInput-bottom{
+.LoginlefPass:hover{
+color: rgb(158, 11, 11);
+
+}
+.LoginleftInput, .LoginleftBottom{
     height: 30px;
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
 }
-.LoginleftInput-bottom, .Loginbottom-btn {
+.LoginleftBottom, .Loginbottom-btn {
   text-align: center;
   margin-top: 20px;
+  font-size: 16px;
 }
 
-.Login-btn input{
+.Login-btn, .Loginright-btn{ 
     background-color: #a50034;
     color: white;
     font-weight: 500;
     border: none;
     width: 100%;
-    margin: 30px 0px 5px 0px;
-}
-.Loginright .Login-btn{
-    background-color: #a50034;
-    /* color: white; */
-    font-weight: 500;
-    border: none;
-    width: 100%;
-    margin: 30px 0px 5px 0px;
-    /* text-decoration: none; */
-}
-.Loginright .Login-btn a{
-    background-color: #a50034;
-    color: white;
-    font-weight: 500;
-    border: none;
-    width: 100%;
-    margin: 30px 0px 5px 0px;
-    text-decoration: none;
-}
-.Login-btn{
+    margin: 30px 0px 30px 0px;
+    height: fit-content;
     text-align: center;
- 
 }
+
+.Loginright-btn a{
+   color:white;
+   text-decoration: none;
+}
+
+
 .Loginright{
     max-width: 100%;
     line-height: 30px;
     padding-right: 80px;
    padding-left: 100px;
+ border-left:  rgb(228, 226, 226) 2px solid ;
     
 }
 
 .Loginright ul li{
   font-weight: lighter;
+  font-size: 18px;
+}
+.Login-btn:hover{
+   color:rgba(255, 255, 255, 0.796);
+}
+.Loginright-btn:hover, .Login-btn:hover{
+    background-color:#a50034cf;
+
+
+}
+
+/*email data */
+.EmailData{
+    padding: 60px;
+    text-align: center;
 }

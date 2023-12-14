@@ -3,6 +3,8 @@ import '../css/Footer.css'
 // import { Facebook, Twitter } from 'react-bootstrap-icons';
 import { Instagram, Twitter, Youtube, Facebook, Google } from 'react-bootstrap-icons';
 import { useState } from "react";
+import ModalConfirm from './ModalConfirm';
+
 
 function Footer() {
 
@@ -12,31 +14,39 @@ function Footer() {
     //store email input
     const [emailadd, setEmailAdd] = useState('');
 
-    const onSignUp = (newemail) => {
+    const [showModal, setShowModal] = useState(false);
+    const [textmodal, setTextModal] = useState('');
+   
 
-        if (!emailadd) {
-            setErrorEmail('email is required');
-            return false;
-        }
-        else if (!/^[a-zA-Z0-9]{1,20}@[a-zA-Z]{1,5}.com$/.test(emailadd)) {
-            setErrorEmail("email:example@*****.com");
-            return false;
-        }
-        else {
-            setErrorEmail('');
-            alert('Register successful !')
-            var dataemail = `email:${emailadd}`;
-            localStorage.setItem('data', dataemail);
-            return true;
-        }
-    }
-
-    const handleSubmit = (e) => {
+      const handleSubmit = (e) => {
         e.preventDefault();
         const newemail = { emailadd };
         onSignUp(newemail);
         setEmailAdd('');
     }
+    const onSignUp = () => {
+
+        if (!emailadd) {
+            setErrorEmail('Email is required !');
+            return false;
+        }
+        else if (!/^[a-zA-Z0-9]{1,20}@[a-zA-Z]{1,5}.com$/.test(emailadd)) {
+            setErrorEmail("Email:example@*****.com");
+            return false;
+        }
+        else {
+            setErrorEmail('');
+            setTextModal('Register successful !');
+            setShowModal(true);
+            var dataemail = `${emailadd}`;
+            localStorage.setItem('data', dataemail);
+            return true;
+        }
+    }
+
+    const handleClose = () => {
+        setShowModal(false);
+     }
 
     return (
         <div className='Footer'>
@@ -69,7 +79,7 @@ function Footer() {
             <div className='Footerrow2'>
 
                 <div className='Footer_c1'>
-                    <div><h5> <Link to="#">Terms of Use</Link>|  <Link to="#"> Privacy Policy </Link></h5></div>
+                    <div><h5> <Link to="/terms-of-use">Terms of Use</Link>|  <Link to="/privacy-policy"> Privacy Policy </Link></h5></div>
 
                     <div>
                         | Don't Sell or Share My Information
@@ -81,7 +91,7 @@ function Footer() {
                 <div>
                     <ul>
                         <li><h5>Customer Support</h5></li>
-                        <li> 800-243-0000 or 850-999-4934</li>
+                        <li>1800 678 8888</li>
                         <li>(Mon. to Sun. 8AM - 9PM EST)</li>
 
                     </ul>
@@ -106,6 +116,7 @@ function Footer() {
 
                 </div>
             </div>
+            <ModalConfirm show={showModal} handleClose={handleClose} textmodal={textmodal} />
 
         </div>
 
