@@ -9,6 +9,10 @@
   background-color: white;
   border-bottom: rgb(228, 226, 226) 5px solid;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 32px 0px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 .headerHome img{
   margin-left: 10px;
@@ -103,4 +107,18 @@
 }
 .cartQty_container {
   position: relative;
+}
+.hidden {
+  display: none;
+}
+
+/*Hoang*/
+.navbar-link:hover,
+.navbar-link:active,
+.navbar-link:focus {
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #a50034;
+  transition: 0.3s ease;
 }

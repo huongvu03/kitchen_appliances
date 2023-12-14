@@ -18,6 +18,11 @@ import ModalConfirm from './components/ModalConfirm';
 import Promotion from './components/Promotion';
 import TermsOfUse from './components/TermsOfUse';
 import Privacy from './components/Privacy';
+import Blog from './components/Blog';
+import BlogDetail from './components/BlogDetails';
+
+
+
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -28,7 +33,8 @@ function App() {
   const [apps, setApps] = useState([]);
   const [foods, setFoods] = useState([]);
   const [carts, setCarts] = useState([]);
-  const [qtyDetail, setQtyDetail] = useState(0);
+  const [blogs, setBlogs] = useState([]);
+  const [filterblogs, setFilterBlogs] = useState([]);
   const navigate = useNavigate('');
 
   useEffect(() => {
@@ -48,7 +54,21 @@ function App() {
         setRefridge(productData2.filter(p => p.category === "Refrigeration").slice(0, 2));
         setApps(productData3.filter(p => p.category === "Appliances").slice(1, 3));
         setFoods(productData4.filter(p => p.category === "Food Storage").slice(0, 2));
-
+      } catch (error) {
+        console.log('error reading json');
+      }
+    };
+    fetchData();
+  }, []);
+  //DATA BLOG
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const blogsJson = await fetch('blogs.json');
+        const blogsData = await blogsJson.json();
+        setBlogs(blogsData);
+        setFilterBlogs(blogsData);
+        console.log(blogs);
       } catch (error) {
         console.log('error reading json');
       }
@@ -61,7 +81,7 @@ function App() {
   const [searchValue, setSearchValue] = useState('');
   const handleSearch = (value) => {
     setSearchValue(value);
-    if (filterSearch) {
+    if (filterSearch.length > 0) {
       const dataSearch = filterSearch.filter(pro => pro.name.toLowerCase().includes(value.toLowerCase()));
       setFilterProducts(dataSearch);
     } else {
@@ -99,6 +119,22 @@ function App() {
     // window.location.reload()
   };
   //************************************ ADD CART ************************************
+
+  //sau khi click add button từ detail page thì sẽ gửi 1 object newProd .
+  const sendqtyDetail = (newProd) => {
+    console.log("newProdQty", newProd.quantity);
+    const existingProduct = carts.find(item => item.id === newProd.id);
+    //kiểm tra giỏ hàng có sản phẩm nào có trùng id với newProd.id 
+    if (existingProduct) {
+      //nếu trùng thì giỏ hàng có sản phẩm trùng id với newProd id  thì số lượng của item có trong giỏ hàng đó + thêm số lượng từ newProd
+      const updatedCart = carts.map(item => item.id == newProd.id ? { ...item, quantity: item.quantity + newProd.quantity } : item);
+      //sau đó cập nhật lại giỏ hàng
+      setCarts(updatedCart);
+    } else {
+      //nếu ko có sản phẩm nào tồn tại thì sẽ add thẳng newProd vào giỏ hàng
+      setCarts([...carts, { ...newProd }])
+    }
+  }
   const addToCart = (product) => {
     const existingProduct = carts.find(item => item.id === product.id);
     if (existingProduct) {
@@ -108,11 +144,6 @@ function App() {
       setCarts([...carts, { ...product, quantity: 1 }]);
     }
   };
-  //lay dc quantity tu trang detail ra ngoai app 
-  const sendQtyDetail = (quantity) => {
-    setQtyDetail(quantity);
-    console.log("qtyDetail", qtyDetail);
-  }
   //************************************ DECREASE QUANTITY CART ************************************
   const decreaseQuantity = (product) => {
     const updatedCart = carts.map(item => item.id === product.id ? { ...item, quantity: Math.max(item.quantity - 1, 0) } : item);
@@ -121,8 +152,11 @@ function App() {
   }
   //************************************ INCREASE QUANTITY CART ************************************
   const increaseQuantity = (product) => {
-    const updatedCart = carts.map(item => item.id === product.id ? { ...item, quantity: Math.max(item.quantity + 1, 0) } : item);
-    setCarts(updatedCart);
+    const maxQtyProd = products.find(item => item.id == product.id);
+    if (product.quantity < maxQtyProd.quantity) {
+      const updatedCart = carts.map(item => item.id === product.id ? { ...item, quantity: Math.max(item.quantity + 1, 0) } : item);
+      setCarts(updatedCart);
+    }
   }
   //************************************  DELETE CART   ************************************ 
   const deleteCart = (product) => {
@@ -131,6 +165,11 @@ function App() {
 
   }
 
+  //************************************** PAYMENT ************************** */
+  const handlePaymentData = (paymentData) => {
+    setCarts([]);
+    navigator('/products');
+  }
   // Log in
   const [errorLogin, setErrorLogin] = useState('');
   const [errorName, setErrorName] = useState('');
@@ -144,7 +183,6 @@ function App() {
       .then(response => response.json())
       .then(data => {
         setUsers(data);
-        console.log(users);
       })
       .catch(error => console.log('error reading json', error));
   }, []);
@@ -207,7 +245,6 @@ function App() {
       setError('Not Found ! Please view all products below !');
       setFilterProducts(products);
       navigate('/products');
-
     }
     else if (datatSearch) {
       setFilterProducts(datatSearch);
@@ -240,11 +277,12 @@ function App() {
             handleCategory={handleCategory}
             handleSortPriceMinMax={handleSortPriceMinMax} handleSortPriceMaxMin={handleSortPriceMaxMin}
             clearFilter={clearFilter}
-            addToCart={addToCart} error={error}
+            addToCart={addToCart}
+            error={error}
           />} />
         <Route path="/detail/:id" element={
           <div>
-            <ProductDetail sendQtyDetail={sendQtyDetail} addToCart={addToCart}
+            <ProductDetail addToCart={addToCart} products={products} sendqtyDetail={sendqtyDetail}
             /></div>
         } />
         <Route path="/register" element={<Register onAddUser={handleAdd} />} />
@@ -268,6 +306,11 @@ function App() {
       
         <Route path='/terms-of-use' element={<TermsOfUse/>} />
         <Route path='/privacy-policy' element={<Privacy/>} />
+          <CartList carts={carts} deleteCart={deleteCart} decreaseQty={decreaseQuantity} increaseQty={increaseQuantity} handlePaymentData={handlePaymentData} />
+
+        <Route path="/blogdetail/:id" element={<BlogDetail blogs={blogs} />} />
+        <Route path="/blogs" element={<Blog blogs={blogs} />} />
+
         <Route path='/email-data' element={<EmailData />} /> {/* // storeage data */}
       </Routes>
       <BackToTopButton />

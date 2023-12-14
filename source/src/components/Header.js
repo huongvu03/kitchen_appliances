@@ -11,32 +11,28 @@ function Header({ handleSubmit,value, carts }) {
         localStorage.clear();
     }
     const totalQuantity = carts.reduce((total, product) => total + product.quantity, 0);
+    console.log(totalQuantity);
     return (
         <div className="headerHome">
             <div>  <Link to='/'><img src="./homeimg/Logo-Tashas-Design.png" alt="logo" height="100px" width="100px" /></Link></div>
             <ul>
-                <Link to='/'> <li>HOME</li></Link>
-                <Link to='/promotion'> <li>PROMOTION</li></Link>
+                <Link to='/' className="navbar-link"> <li>HOME</li></Link>
+                <Link to='/promotion' className="navbar-link"> <li>PROMOTION</li></Link>
 
-                <Link to='/products'><li>PRODUCTS</li></Link>
-                <Link to='/ourblog'> <li><div class="headerHome_dropdown">
-                    <div className='dropbtn'>OUR BLOG</div>
-                    <div class="dropdown-content">
-                        <a href="/expert-tips">Expert Tips</a>
-                    </div>
-                </div> </li></Link>
-                <Link to='/contact'> <li>
-                    <div class="headerHome_dropdown">
-                        <div className='dropbtn'>SUPPORT</div>
+                <Link to='/products' className="navbar-link"><li>PRODUCTS</li></Link>
+                <Link to='/blogs' className="navbar-link"> <li>OUR BLOG </li></Link>
+                <Link to='/contact' className="navbar-link">SUPPORT <li>
+                    {/* <div class="headerHome_dropdown">
+                        <div className='dropbtn navbar-link'>SUPPORT</div>
                         <div class="dropdown-content">
                             <a href="/manuals">Manuals</a>
                             <a href="/feedback">Feedback</a>
                             <a href="/register-complain">Register Complain</a>
                         </div>
-                    </div>
+                    </div> */}
 
                 </li></Link>
-                <Link to='/about-us'><li>ABOUT US</li></Link>
+                <Link to='/about-us' className="navbar-link"><li>ABOUT US</li></Link>
             </ul>
             <div></div>
             <div className='headerHome4'>
@@ -48,7 +44,11 @@ function Header({ handleSubmit,value, carts }) {
                         (<Link to="/log-in"><div><Person /></div></Link>)
                     }
                 </div>
-                <Link to='/cart'> <div className='cartQty_container'><Cart3 /><span className='cartQty'>{totalQuantity}</span></div></Link>
+
+                <Link to='/cart'> <div className='cartQty_container'><Cart3 />{totalQuantity === 0 ?
+                    <span className='cartQty hidden' disabled>{totalQuantity}</span> :
+                    <span className='cartQty'>{totalQuantity}</span>
+                }</div></Link>
 
 
 

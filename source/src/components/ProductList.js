@@ -43,7 +43,7 @@ function ProductsList({ products,
             <Carousel.Item>
                 <img className="d-block w-100 "
                     src="./homeimg/carousel_3.jpg" height={"400px"}
-                    alt="Third slide" />s
+                    alt="Third slide" />
             </Carousel.Item>
         </Carousel>
         <div>
