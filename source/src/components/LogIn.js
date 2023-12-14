@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Login({ resetPass, checkLogin, errorLogin,errorReset,errorName,errorPass}) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-
+   
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -21,9 +21,11 @@ function Login({ resetPass, checkLogin, errorLogin,errorReset,errorName,errorPas
         const checkReset = { email };
         resetPass(checkReset);
         setEmail('');
+        showReset(false);
     }
 const showReset=(e)=>{
-    document.getElementById("resetform").removeAttribute("hidden")
+    document.getElementById("resetform").removeAttribute("hidden");
+    return true;
 }
 
 
@@ -49,7 +51,7 @@ const showReset=(e)=>{
 
                         <table>
                             <tr>
-                                <td className="LoginleftLabel">*User Name</td>
+                                <td className="LoginleftLabel">User Name*</td>
                             </tr>
                             <tr>
                                 <td ><input type="text" value={username} placeholder="User name" className="LoginleftInput"
@@ -59,7 +61,7 @@ const showReset=(e)=>{
                             <tr className="LoginError">{errorName}</tr>
 
                             <tr>
-                                <td className="LoginleftLabel">*Password</td>
+                                <td className="LoginleftLabel">Password*</td>
 
                             </tr>
                             <tr>

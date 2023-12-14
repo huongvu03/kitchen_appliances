@@ -26,7 +26,7 @@ function HomeCarousel() {
         <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
       </Carousel.Caption>
     </Carousel.Item>
-    <Carousel.Item onClick={()=>navigate(`/detail/15`)}>
+    <Carousel.Item onClick={()=>navigate(`/detail/16`)}>
       <img
         className="d-block w-100"
         src="./homeimg/carousel_2.jpg" 

@@ -299,15 +299,15 @@ function App() {
         <Route path='/cart' element={
           localStorage.getItem('username') ? (
             <>
-              <CartList carts={carts} deleteCart={deleteCart} decreaseQty={decreaseQuantity} increaseQty={increaseQuantity} />
+              <CartList carts={carts} deleteCart={deleteCart} decreaseQty={decreaseQuantity} increaseQty={increaseQuantity} handlePaymentData={handlePaymentData} />
+
             </>
           ) : (< Navigate to='/log-in' />)
         } />
       
-        <Route path='/terms-of-use' element={<TermsOfUse/>} />
+       
+          <Route path='/terms-of-use' element={<TermsOfUse/>} />
         <Route path='/privacy-policy' element={<Privacy/>} />
-          <CartList carts={carts} deleteCart={deleteCart} decreaseQty={decreaseQuantity} increaseQty={increaseQuantity} handlePaymentData={handlePaymentData} />
-
         <Route path="/blogdetail/:id" element={<BlogDetail blogs={blogs} />} />
         <Route path="/blogs" element={<Blog blogs={blogs} />} />
 
