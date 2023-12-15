@@ -22,8 +22,8 @@ import Blog from './components/Blog';
 import BlogDetail from './components/BlogDetails';
 import Feedback from './components/Feedback';
 import FeedbackData from './components/FeedbackData';
-import ManualItem from './components/ManualItem';
-import ManualDetail from './components/ManualDetail';
+// import ManualItem from './components/ManualItem';
+// import ManualDetail from './components/ManualDetail';
 
 
 
@@ -323,19 +323,18 @@ function App() {
             </>
           ) : (< Navigate to='/log-in' />)
         } />
-        <Route path='/manual' element={<ManualItem />} />
+   
         <Route path='/feedback' element={<Feedback />} />
         <Route path='/feedbackdata' element={<FeedbackData />} />
         <Route path='/terms-of-use' element={<TermsOfUse />} />
         <Route path='/privacy-policy' element={<Privacy />} />
         <Route path="/blogdetail/:id" element={<BlogDetail blogs={blogs} />} />
         {/* <Route path="/manualdetail/:id" element={<ManualDetail products={products} />} /> */}
-      <Route path="/manualdetail" element={<ManualDetail  />} /> 
+      {/* <Route path="/manualdetail" element={<ManualDetail  />} />  */}
 
 
         <Route path="/blogs" element={<Blog blogs={blogs} />} />
-        <Route path="/manual" element={<ManualItem manual={manuals} />} />
-
+      
         <Route path='/email-data' element={<EmailData />} /> {/* // storeage data */}
       </Routes>
       <BackToTopButton />
