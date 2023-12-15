@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../css/Payment.css";
 import { Modal } from 'react-bootstrap';
+import { Navigate, useNavigate } from "react-router-dom";
 function Payment({ handlePaymentData }) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -10,6 +11,8 @@ function Payment({ handlePaymentData }) {
     const [errorEmail, setErrorEmail] = useState('');
     const [errorAddress, setErrorAddress] = useState('');
     const [errorTel, setErrorTel] = useState('');
+    const [paymentdata, setPaymentdata] = useState('');
+    const navigate = useNavigate('');
     // *******************************
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -52,10 +55,9 @@ function Payment({ handlePaymentData }) {
             setErrorTel('Telephone number at least 9 number and start with 0')
         } else {
             setErrorTel('');
-            const paymentData = { name, email, address, tel }
+            setPaymentdata({ name, email, address, tel });
             handleShow();
             // alert(`THANH TOAN THANH CONG \nName: ${paymentData.name}\nEmail: ${paymentData.email}\nAddress: ${paymentData.address}\nTel: ${paymentData.tel}`);
-            handlePaymentData(paymentData);
             setName('');
             setEmail('');
             setAddress('');
@@ -71,6 +73,7 @@ function Payment({ handlePaymentData }) {
             <hr></hr>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Body><h3 className='alert_modal text-center' >Success !!!</h3></Modal.Body>
+                <button className='payment_button_close' onClick={() => handlePaymentData(paymentdata)}>Close</button>
             </Modal>
             <div>
                 <form onSubmit={submit} className="payment_form">

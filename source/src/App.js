@@ -38,7 +38,7 @@ function App() {
   const [carts, setCarts] = useState([]);
   const [blogs, setBlogs] = useState([]);
   const [filterblogs, setFilterBlogs] = useState([]);
-  const[manuals,setManuals]=useState([]);
+  const [manuals, setManuals] = useState([]);
   const navigate = useNavigate('');
 
   useEffect(() => {
@@ -80,14 +80,14 @@ function App() {
     fetchData();
   }, []);
 
-   //DATA manual
-   useEffect(() => {
+  //DATA manual
+  useEffect(() => {
     const fetchData = async () => {
       try {
         const manualJson = await fetch('manual.json');
         const manualData = await manualJson.json();
         setManuals(manualData);
-      
+
         console.log(manuals);
       } catch (error) {
         console.log('error reading json');
@@ -187,7 +187,7 @@ function App() {
   //************************************** PAYMENT ************************** */
   const handlePaymentData = (paymentData) => {
     setCarts([]);
-    navigator('/products');
+    navigate('/products');
   }
   // Log in
   const [errorLogin, setErrorLogin] = useState('');
@@ -323,18 +323,18 @@ function App() {
             </>
           ) : (< Navigate to='/log-in' />)
         } />
-   
+
         <Route path='/feedback' element={<Feedback />} />
         <Route path='/feedbackdata' element={<FeedbackData />} />
         <Route path='/terms-of-use' element={<TermsOfUse />} />
         <Route path='/privacy-policy' element={<Privacy />} />
         <Route path="/blogdetail/:id" element={<BlogDetail blogs={blogs} />} />
         <Route path="/manualdetail/:id" element={<ManualDetail products={products} />} />
-      {/* <Route path="/manualdetail" element={<ManualDetail  />} />  */}
+        {/* <Route path="/manualdetail" element={<ManualDetail  />} />  */}
 
 
         <Route path="/blogs" element={<Blog blogs={blogs} />} />
-      
+
         <Route path='/email-data' element={<EmailData />} /> {/* // storeage data */}
       </Routes>
       <BackToTopButton />
