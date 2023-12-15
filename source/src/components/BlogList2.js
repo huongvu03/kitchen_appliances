@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import Carousel from 'react-bootstrap/Carousel';
 import '../css/BlogList2.css';
-import BlogItem from "./BlogItem2";
+import BlogItem2 from "./BlogItem2";
 import { Pagination } from "react-bootstrap";
 import { useState } from 'react';
 import { Link } from "react-router-dom";
@@ -29,7 +29,7 @@ function BlogList({blogs}){
             <div className='BlogList_grid'>
                     <div className='BlogList_grid_left'>
                         <div>Give your home a festive scent with a slow cooker holiday simmer</div>
-                        <button><Link to='/blog-detail/2'>Learn More »</Link></button>
+                        <button><Link to='/blog-detail2/2'>Learn More »</Link></button>
                     </div>
                     <img className="d-block w-100 "
                         src="../blog_img/blog_img_2_1.jpg" height={"450px"}
@@ -40,7 +40,7 @@ function BlogList({blogs}){
                 <div className='BlogList_grid'>
                     <div className='BlogList_grid_left'>
                         <div>Give your home a festive scent with a slow cooker holiday simmer</div>
-                        <button><Link to='/blog-detail/3'>Learn More »</Link></button>
+                        <button><Link to='/blog-detail2/3'>Learn More »</Link></button>
                     </div>
                     <img className="d-block w-100 "
                         src="../blog_img/blog_img_3_1.jpg" height={"450px"}
@@ -51,7 +51,7 @@ function BlogList({blogs}){
                 <div className='BlogList_grid'>
                     <div className='BlogList_grid_left'>
                         <div>Give your home a festive scent with a slow cooker holiday simmer</div>
-                        <button><Link to='/blog-detail/4'>Learn More »</Link></button>
+                        <button><Link to='/blog-detail2/4'>Learn More »</Link></button>
                     </div>
                     <img className="d-block w-100 "
                         src="../blog_img/blog_img_4_1.jpg" height={"450px"}
@@ -66,7 +66,7 @@ function BlogList({blogs}){
                 <div>
                     {currentBlog.map(b => (
                         <div >
-                            <BlogItem key={b.id} blog={b} />
+                            <BlogItem2 key={b.id} blog={b} />
                         </div>
                     ))}
                 </div>

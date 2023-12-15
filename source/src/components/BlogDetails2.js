@@ -37,7 +37,7 @@ function BlogDetails2(){
             <div className='BlogList_grid'>
                     <div className='BlogList_grid_left'>
                         <div>Give your home a festive scent with a slow cooker holiday simmer</div>
-                        <button><Link to='/blog-detail/2'>Learn More »</Link></button>
+                        <button><Link to='/blog-detail2/2'>Learn More »</Link></button>
                     </div>
                     <img className="d-block w-100 "
                         src="../blog_img/blog_img_2_1.jpg" height={"450px"}
@@ -48,7 +48,7 @@ function BlogDetails2(){
                 <div className='BlogList_grid'>
                     <div className='BlogList_grid_left'>
                         <div>Give your home a festive scent with a slow cooker holiday simmer</div>
-                        <button><Link to='/blog-detail/3'>Learn More »</Link></button>
+                        <button><Link to='/blog-detail2/3'>Learn More »</Link></button>
                     </div>
                     <img className="d-block w-100 "
                         src="../blog_img/blog_img_3_1.jpg" height={"450px"}
@@ -59,7 +59,7 @@ function BlogDetails2(){
                 <div className='BlogList_grid'>
                     <div className='BlogList_grid_left'>
                         <div>Give your home a festive scent with a slow cooker holiday simmer</div>
-                        <button><Link to='/blog-detail/4'>Learn More »</Link></button>
+                        <button><Link to='/blog-detail2/4'>Learn More »</Link></button>
                     </div>
                     <img className="d-block w-100 "
                         src="../blog_img/blog_img_4_1.jpg" height={"450px"}

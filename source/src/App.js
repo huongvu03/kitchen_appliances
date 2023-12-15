@@ -24,8 +24,9 @@ import Feedback from './components/Feedback';
 import FeedbackData from './components/FeedbackData';
 // import ManualItem from './components/ManualItem';
 import ManualDetail from './components/ManualDetail';
-import BlogDetails2 from './components/BlogDetails2';
 import BlogList2 from './components/BlogList2';
+import BlogDetails2 from './components/BlogDetails2';
+
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
   const [manuals, setManuals] = useState([]);
   const navigate = useNavigate('');
   const [blogs2, setBlogs2] = useState([]);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -60,11 +62,12 @@ function App() {
         setRefridge(productData2.filter(p => p.category === "Refrigeration").slice(0, 2));
         setApps(productData3.filter(p => p.category === "Appliances").slice(1, 3));
         setFoods(productData4.filter(p => p.category === "Food Storage").slice(0, 2));
-        
-        //blog 2
+
+        //Blog 2
         const dataJson = await fetch('blogs2.json');
-        const data = await dataJson.json();
-        setBlogs2(data);
+        const blogdata2 = await dataJson.json();
+        setBlogs2(blogdata2);
+
       } catch (error) {
         console.log('error reading json');
       }
@@ -341,9 +344,9 @@ function App() {
 
 
         <Route path="/expert-tips" element={<Blog blogs={blogs} />} />
-        <Route path='/blogs' element={<BlogList2 blogs={blogs2}/>}/>
-        <Route path='/blog-detail/:id' element={<BlogDetails2/>}/>
-
+        <Route path="/blogs" element={<BlogList2 blogs={blogs2} />} />
+        <Route path="/blog-detail2/:id" element={<BlogDetails2 />} />
+      
         <Route path='/email-data' element={<EmailData />} /> {/* // storeage data */}
       </Routes>
       <BackToTopButton />
