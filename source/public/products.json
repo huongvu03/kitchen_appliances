@@ -16,7 +16,8 @@
       "img/cook/cook_cooking_pots_6.jpg",
       "img/cook/cook_cooking_pots_7.jpg",
       "img/cook/cook_cooking_pots_8.jpg"
-    ]
+    ], 
+    "manual":"../file/ceramicCookware.pdf"
    
   },
   {
@@ -37,7 +38,8 @@
       "img/cook/cook_cooking_pots_3.jpg",
       "img/cook/cook_cooking_pots_4.jpg"
     ]
-   
+   ,     "manual":"../file/ceramicCookware.pdf"
+
   },
   {
     "id": 2,
@@ -56,7 +58,9 @@
       "img/cook/cook_cooking_pans_2.jpg",
       "img/cook/cook_cooking_pans_3.jpg",
       "img/cook/cook_cooking_pans_4.jpg"
-    ]
+    ],
+      "manual":"../file/nonstickCookware.pdf"
+
    
   },
   {
@@ -77,7 +81,9 @@
       "img/cook/cook_frying_pans_2.jpg",
       "img/cook/cook_frying_pans_3.jpg",
       "img/cook/cook_frying_pans_4.jpg"
-    ]
+    ],
+    "manual":"../file/nonstickCookware.pdf"
+
   },
   {
     "id": 4,
@@ -97,7 +103,9 @@
       "img/cook/cook_cookware_sets_2.jpg",
       "img/cook/cook_cookware_sets_3.jpg",
       "img/cook/cook_cookware_sets_4.jpg"
-    ]
+    ],
+    "manual":"../file/ceramicCookware.pdf"
+
    
   },
   {
@@ -118,7 +126,9 @@
       "img/cook/cook_handis_2.jpg",
       "img/cook/cook_handis_3.jpg",
       "img/cook/cook_handis_4.jpg"
-    ]
+    ],
+    "manual":"../file/stainlessCookware.pdf"
+
    
   },
   {
@@ -140,7 +150,9 @@
       "img/cook/cook_kadais_2.jpg",
       "img/cook/cook_kadais_3.jpg",
       "img/cook/cook_kadais_4.jpg"
-    ]
+    ],
+    "manual":"../file/stainlessCookware.pdf"
+
    
   },
   {
@@ -160,7 +172,9 @@
       "img/cook/cook_grillPans_2.jpg",
       "img/cook/cook_grillPans_3.jpg",
       "img/cook/cook_grillPans_4.jpg"
-    ]
+    ],
+    "manual":"../file/stainlessCookware.pdf"
+
   
   },
   {
@@ -181,8 +195,9 @@
       "img/cook/cook_tawas_2.jpg",
       "img/cook/cook_tawas_3.jpg",
       "img/cook/cook_tawas_4.jpg"
-    ]
-   
+    ],
+    "manual":"../file/nonstickCookware.pdf"
+
   },
   {
     "id": 9,
@@ -201,7 +216,9 @@
       "img/cook/cook_eggPoachers_2.jpg",
       "img/cook/cook_eggPoachers_3.jpg",
       "img/cook/cook_eggPoachers_4.jpg"
-    ]
+    ],
+    "manual":"../file/nonstickCookware.pdf"
+
    
   },
   {
@@ -225,7 +242,9 @@
       "img/cook/cook_steamers_2.jpg",
       "img/cook/cook_steamers_3.jpg",
       "img/cook/cook_steamers_4.jpg"
-    ]
+    ],
+    "manual":"../file/stainlessCookware.pdf"
+
     
   },
   {
@@ -248,7 +267,9 @@
       "img/ref/ref_refrigerators_2.jpg",
       "img/ref/ref_refrigerators_3.jpg",
       "img/ref/ref_refrigerators_4.jpg"
-    ]
+    ],
+    "manual":"../file/stainlessCookware.pdf"
+
    
   },
   {
@@ -272,7 +293,9 @@
       "img/ref/ref_freezers_2.jpg",
       "img/ref/ref_freezers_3.jpg",
       "img/ref/ref_freezers_4.jpg"
-    ]
+    ],
+    "manual":"../file/fridge.pdf"
+
    
   },
   {
@@ -293,7 +316,9 @@
       "img/app/app_blender_6.jpg",
       "img/app/app_blender_7.jpg",
       "img/app/app_blender_8.jpg"
-    ]
+    ],
+    "manual":"../file/fridge.pdf"
+
    
   },
 
@@ -317,7 +342,9 @@
       "img/app/app_blender_2.jpg",
       "img/app/app_blender_3.jpg",
       "img/app/app_blender_4.jpg"
-    ]
+    ],
+    "manual":"../file/blenders.pdf"
+
 
   },
   {
@@ -339,7 +366,9 @@
       "img/app/app_breadMaker_2.jpg",
       "img/app/app_breadMaker_3.jpg",
       "img/app/app_breadMaker_4.jpg"
-    ]
+    ],
+    "manual":"../file/blenders.pdf"
+
    
   },
   {
@@ -364,7 +393,10 @@
       "img/app/app_coffeeMakers_2.jpg",
       "img/app/app_coffeeMakers_3.jpg",
       "img/app/app_coffeeMakers_4.jpg"
-    ]
+    ],
+
+    "manual":"../file/blenders.pdf"
+
    
   },
   {
@@ -386,7 +418,9 @@
       "img/app/app_iceCreamMaker_2.jpg",
       "img/app/app_iceCreamMaker_3.jpg",
       "img/app/app_iceCreamMaker_4.jpg"
-    ]
+    ],
+    "manual":"../file/blenders.pdf"
+
   },
   {
     "id": 18,
@@ -411,7 +445,9 @@
       "img/app/app_electricKettles_2.jpg",
       "img/app/app_electricKettles_3.jpg",
       "img/app/app_electricKettles_4.jpg"
-    ]
+    ],
+    "manual":"../file/blenders.pdf"
+
   },
   {
     "id": 19,
@@ -433,7 +469,9 @@
       "img/app/app_foodChopper_2.jpg",
       "img/app/app_foodChopper_3.jpg",
       "img/app/app_foodChopper_4.jpg"
-    ]
+    ],
+    "manual":"../file/blenders.pdf"
+
   },
   {
     "id": 20,
@@ -453,7 +491,10 @@
       "TOAST BOOST: The toaster has a toast boost feature that lifts foods a little higher when you need it for easy removal, great for smaller items like English muffins.",
       "CRUMB TRAY: The 2 slice toaster features a convenient crumb tray that easily slides out, making cleanup simple."
     ],
-    "quantity": 10
+    
+    "quantity": 10,
+    "manual":"../file/blenders.pdf"
+
   },
   {
     "id": 21,
@@ -473,7 +514,9 @@
       "BUILT IN SERVING BOWL: The insulated lid doubles as a built-in serving bowl. The lid is leak proof when closed",
       "OTHER CAPACITIES: Love the food jar but looking for a different size? The STAINLESS KING food jar also comes in a 16 ounce and 47 ounce capacity"
     ],
-    "quantity": 10
+    "quantity": 10,
+    "manual":"../file/blenders.pdf"
+
   },
   {
     "id": 22,
@@ -494,7 +537,9 @@
 "DISHWASHER SAFE: Cleaning your canteen will be easy - just pop it into the dishwasher. It’s also simple to wash it by hand when away from home. And as you hydrate after a long trek, successful fishing trip, or intense climb, the BPA-free design will punctuate each sip with confidence.",
 "LIFETIME WARRANTY: Since 1913 we’ve promised to provide rugged, capable gear for food and drink - accessories built to last a lifetime. It’s a promise we still keep. Stanley products purchased from Stanley come with a lifetime warranty. Rest easy knowing we’ve got your back through it all."
     ],
-    "quantity": 10
+    "quantity": 10,
+    "manual":"../file/blenders.pdf"
+
   },
   {
     "id": 23,
@@ -517,7 +562,10 @@
       "Product list: 1 set * Seasoning Bottle",
       "Notice:Due to the different monitor and light effect,the actual color maybe a slight different from the picture color. Please allow 1-3cm differs due to manual measurement."
     ],
-    "quantity": 10
+    "quantity": 10,
+    "manual":"../file/blenders.pdf"
+
+
 
   },
   {
@@ -538,7 +586,9 @@
       "REUSABLE FREEZER BAGS are flexible, strong & washable. Reuse them for many years. Hermetically sealed closure preserves the freshness of your food for healthy nutrition, money saving & less food waste.",
       "WARRANTY only available from AUTHORIZED SELLER KIVA.WORLD! Kiva.World helps alleviate daily household duties and free up time for happy families. MONEY BACK GUARANTEE!"
     ],
-    "quantity": 10
+    "quantity": 10,
+    "manual":"../file/blenders.pdf"
+
   },
   {
     "id": 25,
@@ -558,6 +608,8 @@
       "Unique Design - Maelstrom Designed An Insulated Front Pocket. The Inside Of The Front Pocket Is Made Of Food-Grade Thick Aluminum Foil, Sewn With One Elastic Band To Hold Cutlery, And Four Little Foil Pockets Are Sewn For Knives And Forks. It Is Specially Designed To Put Oily Tableware In To Clean Later. Very Useful And Cleanable.",
       "MULTI-POCKETS - Main compartment is used for lunch, bread, etc. The top layer is more suitable for storing fruits, cakes, salad, or drinks. The Maelstrom portable lunch bag is equipped with one front pocket for storing dirty tableware, and two mesh side pockets to stash extra snacks. One of them is specially zipped to hold small items. One mesh pocket on the cover of the bag can hold disposable tableware and towels, and finally one large pocket on the back to hold plates and napkins."
     ],
-    "quantity": 10
+    "quantity": 10,
+    "manual":"../file/blenders.pdf"
+
   }
 ]

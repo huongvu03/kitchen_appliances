@@ -9,8 +9,8 @@ const [error,setError]=useState('');
     const handleSubmit = (e) => {
         e.preventDefault();
       
-        var purpose=document.getElementById('purpose').name;
-        var satisfied=document.getElementById('satisfied').value;
+        var purpose=document.getElementsByName('purpose').value;
+        var satisfied=document.getElementsByName('satisfied').value;
         if( !improve || !cpurpose || !purpose ){
             setError('Type is required');
             return false;
@@ -35,8 +35,8 @@ const [error,setError]=useState('');
  <p>Q1. *Required section What is the purpose of your visit to LG's support website?(*Support: After-sales)</p>
 <li>{error}</li>
             </li>
-            <li> <input type="radio" name="product registration" id="purpose" />Product registration.</li>
-            <li> <input type="radio"  name="update and upgrade software" id="purpose"/>Update and upgrade software.</li>
+            <li> <input type="radio" value="product registration" name="purpose" />Product registration.</li>
+            <li> <input type="radio"  value="update and upgrade software" name="purpose"/>Update and upgrade software.</li>
             <li> <input type="radio"/>See instructions for use.</li>
             <li> <input type="radio"/>Find out the warranty policy.</li>
             <li> <input type="radio"/>Find product support information in the Help Library and How-To Videos section.</li>
@@ -54,8 +54,8 @@ Q2. *Required section How satisfied are you with the availability and quality of
 
             </li>
             <li>{error}</li>
-            <li> <input type="radio" id="satisfied" value={"very satisfied"}/>Very satisfied</li>
-            <li> <input type="radio"  id="satisfied" value={"satisfied"}/>Satisfied</li>
+            <li> <input type="radio" name="satisfied" value={"very satisfied"}/>Very satisfied</li>
+            <li> <input type="radio"  name="satisfied" value={"satisfied"}/>Satisfied</li>
             <li> <input type="radio"/>Normal</li>
             <li> <input type="radio"/>Dissatisfied</li>
             <li> <input type="radio"/>Very dissatisfied</li>

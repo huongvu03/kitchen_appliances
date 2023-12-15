@@ -20,16 +20,31 @@ function Header({ handleSubmit,value, carts }) {
                 <Link to='/promotion' className="navbar-link"> <li>PROMOTION</li></Link>
 
                 <Link to='/products' className="navbar-link"><li>PRODUCTS</li></Link>
-                <Link to='/blogs' className="navbar-link"> <li>OUR BLOG </li></Link>
-                <Link to='/contact' className="navbar-link">SUPPORT <li>
-                    {/* <div class="headerHome_dropdown">
+                {/* <Link to='/blogs' className="navbar-link"> <li>OUR BLOG </li></Link> */}
+                <Link to='/blogs' className="navbar-link"> <li>
+                    <div class="headerHome_dropdown">
+                        <div className='dropbtn navbar-link'>OUR BLOG</div>
+                        <div class="dropdown-content">
+                            {/* <a href="/manuals">Manuals</a> */}
+                            <Link to="/expert-tips">Expert Tips</Link>
+
+                            {/* <Link to="/feedback">Feedback</Link> */}
+                        </div>
+                    </div>
+
+                </li></Link>
+                {/* <Link to="/contact">Contact Us</Link> */}
+
+                <Link to='#'className="navbar-link"> <li>
+                    <div class="headerHome_dropdown">
                         <div className='dropbtn navbar-link'>SUPPORT</div>
                         <div class="dropdown-content">
-                            <a href="/manuals">Manuals</a>
-                            <a href="/feedback">Feedback</a>
-                            <a href="/register-complain">Register Complain</a>
+                            {/* <a href="/manuals">Manuals</a> */}
+                            <Link to="/contact">Contact Us</Link>
+
+                            <Link to="/feedback">Feedback</Link>
                         </div>
-                    </div> */}
+                    </div>
 
                 </li></Link>
                 <Link to='/about-us' className="navbar-link"><li>ABOUT US</li></Link>

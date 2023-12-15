@@ -23,7 +23,7 @@ import BlogDetail from './components/BlogDetails';
 import Feedback from './components/Feedback';
 import FeedbackData from './components/FeedbackData';
 // import ManualItem from './components/ManualItem';
-// import ManualDetail from './components/ManualDetail';
+import ManualDetail from './components/ManualDetail';
 
 
 
@@ -329,7 +329,7 @@ function App() {
         <Route path='/terms-of-use' element={<TermsOfUse />} />
         <Route path='/privacy-policy' element={<Privacy />} />
         <Route path="/blogdetail/:id" element={<BlogDetail blogs={blogs} />} />
-        {/* <Route path="/manualdetail/:id" element={<ManualDetail products={products} />} /> */}
+        <Route path="/manualdetail/:id" element={<ManualDetail products={products} />} />
       {/* <Route path="/manualdetail" element={<ManualDetail  />} />  */}
 
 

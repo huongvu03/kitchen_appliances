@@ -1,14 +1,16 @@
 
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import '../css/ProductDetail.css';
 import { CheckCircle, Heart, Star, StarFill, StarHalf } from 'react-bootstrap-icons';
 import React from 'react';
+
 function ProductDetail({ products,sendqtyDetail }) {
   const { id } = useParams();
   const [quantitydt, setQuantityDt] = useState(1);
   const [like, setLike] = useState(456);
   const [isLike, setIsLike] = useState(false);
+  const navigate=useNavigate('');
   
   //********************************************************* */
   const product=products.find(item=>item.id===parseInt(id));
@@ -89,6 +91,8 @@ function ProductDetail({ products,sendqtyDetail }) {
               onClick={() => handleProdQty()}>ADD TO CART</button>
             <br />
             {/* <button className="ProductDetail_submit1">BUY IT NOW</button> */}
+            <button  onClick={() => navigate(`/manualdetail/${product.id}`)}>view manual</button>
+
           </div>
           <div className="ProductDetail_like" ><StarFill /><StarFill /><StarFill /><StarFill /><StarHalf /></div>
 
