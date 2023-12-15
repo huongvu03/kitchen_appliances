@@ -140,7 +140,7 @@ function ContactUs() {
             <h2>WHERE TO FIND US</h2>
 
             <div className='ContactUs_branches'>
-               <div className='ContactUs_branchesimg'><img src="./contact_us_img/contact.png" /></div> 
+               <div className='ContactUs_branchesimg'><img src="./contact_us_img/contact.png"  alt="branches"/></div> 
                 <ul >
                     <li className='ContactUs_branches_title'>Head Office</li>
                     <li  className='ContactUs_branches_add'>Tasha's Company Limited. Pirojshanagar, Vikhroli, Mumbai, Maharashtra 400079</li>

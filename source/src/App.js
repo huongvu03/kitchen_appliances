@@ -20,6 +20,8 @@ import TermsOfUse from './components/TermsOfUse';
 import Privacy from './components/Privacy';
 import Blog from './components/Blog';
 import BlogDetail from './components/BlogDetails';
+import Feedback from './components/Feedback';
+import FeedbackData from './components/FeedbackData';
 
 
 
@@ -305,6 +307,8 @@ function App() {
           ) : (< Navigate to='/log-in' />)
         } />
       
+      <Route path='/feedback' element={<Feedback/>} />
+      <Route path='/feedbackdata' element={<FeedbackData/>} />
        
           <Route path='/terms-of-use' element={<TermsOfUse/>} />
         <Route path='/privacy-policy' element={<Privacy/>} />
