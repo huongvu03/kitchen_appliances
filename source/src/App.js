@@ -22,7 +22,8 @@ import Blog from './components/Blog';
 import BlogDetail from './components/BlogDetails';
 import Feedback from './components/Feedback';
 import FeedbackData from './components/FeedbackData';
-
+import ManualItem from './components/ManualItem';
+import ManualDetail from './components/ManualDetail';
 
 
 
@@ -37,6 +38,7 @@ function App() {
   const [carts, setCarts] = useState([]);
   const [blogs, setBlogs] = useState([]);
   const [filterblogs, setFilterBlogs] = useState([]);
+  const[manuals,setManuals]=useState([]);
   const navigate = useNavigate('');
 
   useEffect(() => {
@@ -52,7 +54,7 @@ function App() {
         const productData3 = productData;
         const productData4 = productData;
 
-        setCooks(productData1.filter(p => p.category === "Cookware").slice(0,2));
+        setCooks(productData1.filter(p => p.category === "Cookware").slice(0, 2));
         setRefridge(productData2.filter(p => p.category === "Refrigeration").slice(0, 2));
         setApps(productData3.filter(p => p.category === "Appliances").slice(1, 3));
         setFoods(productData4.filter(p => p.category === "Food Storage").slice(0, 2));
@@ -78,6 +80,21 @@ function App() {
     fetchData();
   }, []);
 
+   //DATA manual
+   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const manualJson = await fetch('manual.json');
+        const manualData = await manualJson.json();
+        setManuals(manualData);
+      
+        console.log(manuals);
+      } catch (error) {
+        console.log('error reading json');
+      }
+    };
+    fetchData();
+  }, []);
 
   //************************************ SEARCH NAME **********************************
   const [searchValue, setSearchValue] = useState('');
@@ -198,10 +215,10 @@ function App() {
       setTextModal("Log in successful !");
       setShowModal(true);
       localStorage.setItem('username', checkUser.username);
-      setErrorLogin('');setErrorName('');setErrorPass('');
+      setErrorLogin(''); setErrorName(''); setErrorPass('');
       // navigator('/products');
-     
-    } 
+
+    }
     else if (!checkUser.username || !checkUser.password) {
       setErrorName('Username is required');
       setErrorPass('Password is required');
@@ -209,9 +226,9 @@ function App() {
     }
     else {
       setErrorLogin('The Email or Password is incorrect. ');
-      setErrorName('');setErrorPass('');
+      setErrorName(''); setErrorPass('');
       return false;
-    }  return false;
+    } return false;
   }
 
   const handleClose = () => {
@@ -219,7 +236,7 @@ function App() {
   }
 
   // Reset Password
-  const[errorReset,setErrorReset]=useState('');
+  const [errorReset, setErrorReset] = useState('');
   const handleReset = (checkReset) => {
     console.log(checkReset);
     const findEmail = users.find(e => e.email == checkReset.email);
@@ -227,7 +244,7 @@ function App() {
       setTextModal('Please check your mailbox for reset password');
       setShowModal(true);
       setErrorReset('');
-    }else if(!checkReset.email){
+    } else if (!checkReset.email) {
       setErrorReset('Email is required.')
     }
     else {
@@ -260,7 +277,7 @@ function App() {
     setUsers([...users, onAddUser]);
   }
 
-  
+
 
   return (
     <div className="App">
@@ -294,7 +311,7 @@ function App() {
           <div>
             <ModalConfirm show={showModal} handleClose={handleClose} textmodal={textmodal} />
             <Login checkLogin={checkLogin} errorLogin={errorLogin} errorName={errorName} errorPass={errorPass}
-             resetPass={handleReset} errorReset={errorReset} />
+              resetPass={handleReset} errorReset={errorReset} />
 
           </div>
         } />
@@ -306,14 +323,18 @@ function App() {
             </>
           ) : (< Navigate to='/log-in' />)
         } />
-      
-      <Route path='/feedback' element={<Feedback/>} />
-      <Route path='/feedbackdata' element={<FeedbackData/>} />
-       
-          <Route path='/terms-of-use' element={<TermsOfUse/>} />
-        <Route path='/privacy-policy' element={<Privacy/>} />
+        <Route path='/manual' element={<ManualItem />} />
+        <Route path='/feedback' element={<Feedback />} />
+        <Route path='/feedbackdata' element={<FeedbackData />} />
+        <Route path='/terms-of-use' element={<TermsOfUse />} />
+        <Route path='/privacy-policy' element={<Privacy />} />
         <Route path="/blogdetail/:id" element={<BlogDetail blogs={blogs} />} />
+        {/* <Route path="/manualdetail/:id" element={<ManualDetail products={products} />} /> */}
+      <Route path="/manualdetail" element={<ManualDetail  />} /> 
+
+
         <Route path="/blogs" element={<Blog blogs={blogs} />} />
+        <Route path="/manual" element={<ManualItem manual={manuals} />} />
 
         <Route path='/email-data' element={<EmailData />} /> {/* // storeage data */}
       </Routes>
