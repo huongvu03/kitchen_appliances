@@ -7,7 +7,6 @@
     box-shadow:  rgba(0, 0, 0, 0.1) 0px 0px 40px 0px;
     padding: 10px 10px 10px 10px;
     margin-bottom: 10px;
-  
 }
 .ProductDetail_img1 div img{
     width: 100%;
@@ -46,9 +45,11 @@
 .ProductDetail_name{
     font-size: 35px;
     height: 200px;
+    text-align: justify;
 }
 .ProductDetail_price{
  color: red;
+ font-size: 18px;
 }
 .ProductDetail  div a{
     text-decoration: none;
@@ -124,6 +125,19 @@
     text-align: left;
     margin: 5px;
     background-color: white;
+    font-size: 20px;
+}
+.ProductDetail ul li p {
+    font-size: 18px;
+    text-indent: 15px;
+    list-style-type:Square;
+    text-align: justify;
+} 
+.ProductDetail ul  {
+    list-style-type:Square;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .ProductDetail hr{
     margin: 0;

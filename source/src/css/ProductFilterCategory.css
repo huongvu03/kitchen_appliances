@@ -1,0 +1,24 @@
+.productfilter_category_tablet{
+    display: none;
+
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .productfilter_category_tablet{
+    display: block;
+}
+.productfilter_category_full{
+    display: none;
+}
+}
+@media screen and (max-width: 767px){
+
+    .productfilter_category_tablet{
+        display: block;
+        
+    
+    }
+    .productfilter_category_full{
+        display: none;
+    }
+
+}

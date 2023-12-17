@@ -24,6 +24,8 @@ import Feedback from './components/Feedback';
 import FeedbackData from './components/FeedbackData';
 import ManualDetail from './components/ManualDetail';
 import NotFound from './components/NotFound';
+import BlogList2 from './components/BlogList2';
+import BlogDetails2 from './components/BlogDetails2';
 
 
 
@@ -38,8 +40,10 @@ function App() {
   const [carts, setCarts] = useState([]);
   const [blogs, setBlogs] = useState([]);
   const [filterblogs, setFilterBlogs] = useState([]);
-  const[manuals,setManuals]=useState([]);
+  const [manuals, setManuals] = useState([]);
   const navigate = useNavigate('');
+  const [blogs2, setBlogs2] = useState([]);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -58,6 +62,12 @@ function App() {
         setRefridge(productData2.filter(p => p.category === "Refrigeration").slice(0, 2));
         setApps(productData3.filter(p => p.category === "Appliances").slice(1, 3));
         setFoods(productData4.filter(p => p.category === "Food Storage").slice(0, 2));
+
+        //Blog 2
+        const dataJson = await fetch('blogs2.json');
+        const blogdata2 = await dataJson.json();
+        setBlogs2(blogdata2);
+
       } catch (error) {
         console.log('error reading json');
       }
@@ -107,15 +117,16 @@ function App() {
     }
   }
   //************************************ SORT PRICE **********************************
-  const handleSortPriceMinMax = () => {
-    const sortedPrice = [...filterProducts].sort((a, b) => a.price - b.price);
-    setFilterProducts(sortedPrice);
-    setfilterSearch(sortedPrice);
-  }
-  const handleSortPriceMaxMin = () => {
-    const sortedPrice = [...filterProducts].sort((a, b) => b.price - a.price);
-    setFilterProducts(sortedPrice);
-    setfilterSearch(sortedPrice);
+  const handlePrice=(value)=>{
+    if(value==="mintomax"){
+      const sortedPrice = [...filterProducts].sort((a, b) => a.price - b.price);
+      setFilterProducts(sortedPrice);
+      setfilterSearch(sortedPrice);
+    }else if(value==="maxtomin"){
+      const sortedPrice = [...filterProducts].sort((a, b) => b.price - a.price);
+      setFilterProducts(sortedPrice);
+      setfilterSearch(sortedPrice);
+    }
   }
   //************************************* RESET FILTER ***********************************
   const clearFilter = () => {
@@ -172,7 +183,7 @@ function App() {
   //************************************** PAYMENT ************************** */
   const handlePaymentData = (paymentData) => {
     setCarts([]);
-    navigator('/products');
+    navigate('/products');
   }
   // Log in
   const [errorLogin, setErrorLogin] = useState('');
@@ -285,7 +296,7 @@ function App() {
           <ProductsList products={filterProducts}
             searchValue={searchValue} handleSearch={handleSearch}
             handleCategory={handleCategory}
-            handleSortPriceMinMax={handleSortPriceMinMax} handleSortPriceMaxMin={handleSortPriceMaxMin}
+            handlePrice={handlePrice}
             clearFilter={clearFilter}
             addToCart={addToCart}
             error={error}
@@ -314,7 +325,7 @@ function App() {
             </>
           ) : (< Navigate to='/log-in' />)
         } />
-   
+
         <Route path='/feedback' element={<Feedback />} />
         <Route path='/feedbackdata' element={<FeedbackData />} />
         <Route path='/terms-of-use' element={<TermsOfUse />} />
@@ -323,6 +334,12 @@ function App() {
         <Route path="/manualdetail/:id" element={<ManualDetail products={products} />} />
         <Route path="/blogs" element={<Blog blogs={blogs} />} />
         <Route path="/notfound" element={<NotFound />} />
+        {/* <Route path="/manualdetail" element={<ManualDetail  />} />  */}
+
+
+        <Route path="/expert-tips" element={<Blog blogs={blogs} />} />
+        <Route path="/blogs" element={<BlogList2 blogs={blogs2} />} />
+        <Route path="/blog-detail2/:id" element={<BlogDetails2 />} />
       
         <Route path='/data' element={
         localStorage.getItem('username') ? (

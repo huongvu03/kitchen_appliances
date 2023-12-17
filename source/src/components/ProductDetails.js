@@ -66,6 +66,7 @@ function ProductDetail({ products,sendqtyDetail }) {
         </div>
         <div className="ProductDetail_info">
           <div className="ProductDetail_name">{product.name}</div>
+          <div className="ProductDetail_like" ><StarFill /><StarFill /><StarFill /><StarFill /><StarHalf /></div>
           <div className="ProductDetail_price"> ${product.price}</div>
           <br />
           <div><CheckCircle /> In stock {product.quantity}</div>
@@ -94,7 +95,7 @@ function ProductDetail({ products,sendqtyDetail }) {
             <button  onClick={() => navigate(`/manualdetail/${product.id}`)}>view manual</button>
 
           </div>
-          <div className="ProductDetail_like" ><StarFill /><StarFill /><StarFill /><StarFill /><StarHalf /></div>
+         
 
 
         </div>
@@ -105,11 +106,11 @@ function ProductDetail({ products,sendqtyDetail }) {
       <hr />
       {
 
-        <ul>
+          <ul>
           {product.description.map((p) => (
-            <li>{p}</li>
-          ))}
-        </ul>
+            <li><p>{p}</p></li>
+          ))} 
+          </ul>
 
       }
     </div>

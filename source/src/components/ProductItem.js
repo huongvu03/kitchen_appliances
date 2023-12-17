@@ -13,30 +13,19 @@ function ProductItem({ product, addToCart }) {
     return (
         <div>
             <Modal show={show} onHide={handleClose}>
-                {/* <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
-                </Modal.Header> */}
-
                 <Modal.Body><h3 className='alert_modal text-center' >Success !!!</h3></Modal.Body>
-                {/* <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Close
-                    </Button>
-                    <Button variant="primary" onClick={handleClose}>
-                        Save Changes
-                    </Button>
-                </Modal.Footer> */}
             </Modal>
             <div className="productitem">
                 <div className='productitem_card'>
                     <div className='productitem_card_body'>
                         <div><img src={product.image[0]} alt='' /></div>
                         <div className='productitem_card_body_content'>
-                            <h6>{product.name}</h6>
-                            <div>${product.price}</div></div>
+                            <div><h6>{product.name}</h6></div>
+                            <div>${product.price}</div>
+                        </div>
                     </div>
                     <div className="productitem_card_control">
-                        <button className='btn_addCart' onClick={() => { addToCart(product); handleShow() }}>ADD TO CART</button>
+                        <button className='btn_addCart' onClick={() => { addToCart(product); handleShow() }}>ADD CART</button>
                         <button className='btn_detail' onClick={() => navigate(`/detail/${product.id}`)}>DETAILS</button>
                    
                     </div>

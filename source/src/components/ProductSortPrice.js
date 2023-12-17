@@ -1,7 +1,21 @@
-function ProductSortPrice({ handleSortPriceMaxMin, handleSortPriceMinMax }) {
+import"../css/ProductSortPrice.css"
+function ProductSortPrice({handlePrice}) {
     return (
-        <> <div><input type="radio" name="sort" onChange={handleSortPriceMinMax} />Price min to max</div>
-            <div><input type="radio" name="sort" onChange={handleSortPriceMaxMin} />Price max to min</div></>
+        <div> 
+            <div className="productsort_price_full">
+                <div><input type="radio" name="sort" value={"mintomax"}onClick={(e) => handlePrice
+                (e.target.value)} /> Min to Max</div>
+                <div><input type="radio" name="sort" value={"maxtomin"} onClick={(e) => handlePrice
+                (e.target.value)} /> Max to Min</div>
+            </div>
+            
+            <div className="productsort_price_tablet">
+            <select id="sort" onChange={(e)=>handlePrice(e.target.value)} >
+                <option value="mintomax"> Min to Max</option>
+                <option value="maxtomin">Max to Min</option>
+            </select>
+            </div>
+        </div>
     )
 }
 export default ProductSortPrice;
