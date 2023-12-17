@@ -1,3 +1,4 @@
+
 function Privacy(){
     return(
         <div className="Privacy">

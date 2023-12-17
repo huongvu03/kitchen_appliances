@@ -45,3 +45,9 @@ a.page-link{
 .active>.page-link{
   border-color: black !important;
 }
+
+/* searching notice of header search*/
+.productslist_error h3{
+  color:black;
+  margin-top: 50px;
+}

@@ -173,7 +173,7 @@
       "img/cook/cook_grillPans_3.jpg",
       "img/cook/cook_grillPans_4.jpg"
     ],
-    "manual":"../file/stainlessCookware.pdf"
+    "manual":"../file/nonstickCookware.pdf"
 
   
   },
@@ -217,7 +217,7 @@
       "img/cook/cook_eggPoachers_3.jpg",
       "img/cook/cook_eggPoachers_4.jpg"
     ],
-    "manual":"../file/nonstickCookware.pdf"
+    "manual":"../file/stainlessCookware.pdf"
 
    
   },
@@ -268,7 +268,7 @@
       "img/ref/ref_refrigerators_3.jpg",
       "img/ref/ref_refrigerators_4.jpg"
     ],
-    "manual":"../file/stainlessCookware.pdf"
+    "manual":"../file/fridge.pdf"
 
    
   },
@@ -317,7 +317,7 @@
       "img/app/app_blender_7.jpg",
       "img/app/app_blender_8.jpg"
     ],
-    "manual":"../file/fridge.pdf"
+    "manual":"../file/blenders.pdf"
 
    
   },
@@ -367,7 +367,7 @@
       "img/app/app_breadMaker_3.jpg",
       "img/app/app_breadMaker_4.jpg"
     ],
-    "manual":"../file/blenders.pdf"
+    "manual":"../file/breamaker_toaster.pdf"
 
    
   },
@@ -395,7 +395,7 @@
       "img/app/app_coffeeMakers_4.jpg"
     ],
 
-    "manual":"../file/blenders.pdf"
+    "manual":"../file/tashapp.pdf"
 
    
   },
@@ -419,7 +419,7 @@
       "img/app/app_iceCreamMaker_3.jpg",
       "img/app/app_iceCreamMaker_4.jpg"
     ],
-    "manual":"../file/blenders.pdf"
+    "manual":"../file/tashapp.pdf"
 
   },
   {
@@ -446,7 +446,7 @@
       "img/app/app_electricKettles_3.jpg",
       "img/app/app_electricKettles_4.jpg"
     ],
-    "manual":"../file/blenders.pdf"
+    "manual":"../file/tashapp.pdf"
 
   },
   {
@@ -470,7 +470,7 @@
       "img/app/app_foodChopper_3.jpg",
       "img/app/app_foodChopper_4.jpg"
     ],
-    "manual":"../file/blenders.pdf"
+    "manual":"../file/tashapp.pdf"
 
   },
   {
@@ -493,7 +493,7 @@
     ],
     
     "quantity": 10,
-    "manual":"../file/blenders.pdf"
+    "manual":"../file/breadmaker_toaster.pdf"
 
   },
   {
@@ -515,7 +515,7 @@
       "OTHER CAPACITIES: Love the food jar but looking for a different size? The STAINLESS KING food jar also comes in a 16 ounce and 47 ounce capacity"
     ],
     "quantity": 10,
-    "manual":"../file/blenders.pdf"
+    "manual":"../file/stainlessFood.pdf"
 
   },
   {
@@ -538,7 +538,7 @@
 "LIFETIME WARRANTY: Since 1913 we’ve promised to provide rugged, capable gear for food and drink - accessories built to last a lifetime. It’s a promise we still keep. Stanley products purchased from Stanley come with a lifetime warranty. Rest easy knowing we’ve got your back through it all."
     ],
     "quantity": 10,
-    "manual":"../file/blenders.pdf"
+    "manual":"../file/stainlessFood.pdf"
 
   },
   {
@@ -563,7 +563,7 @@
       "Notice:Due to the different monitor and light effect,the actual color maybe a slight different from the picture color. Please allow 1-3cm differs due to manual measurement."
     ],
     "quantity": 10,
-    "manual":"../file/blenders.pdf"
+    "manual":"../file/tashfoodstorage.pdf"
 
 
 
@@ -587,7 +587,7 @@
       "WARRANTY only available from AUTHORIZED SELLER KIVA.WORLD! Kiva.World helps alleviate daily household duties and free up time for happy families. MONEY BACK GUARANTEE!"
     ],
     "quantity": 10,
-    "manual":"../file/blenders.pdf"
+    "manual":"../file/tashfoodstorage.pdf"
 
   },
   {
@@ -609,7 +609,7 @@
       "MULTI-POCKETS - Main compartment is used for lunch, bread, etc. The top layer is more suitable for storing fruits, cakes, salad, or drinks. The Maelstrom portable lunch bag is equipped with one front pocket for storing dirty tableware, and two mesh side pockets to stash extra snacks. One of them is specially zipped to hold small items. One mesh pocket on the cover of the bag can hold disposable tableware and towels, and finally one large pocket on the back to hold plates and napkins."
     ],
     "quantity": 10,
-    "manual":"../file/blenders.pdf"
+    "manual":"../file/tashfoodstorage.pdf"
 
   }
 ]

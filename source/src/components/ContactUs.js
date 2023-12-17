@@ -35,7 +35,7 @@ function ContactUs() {
             setLName('');
             setEmail('');
             setMess('');
-            setTextModal("Send Successful");
+            setTextModal("Thank you for contact us! We will get back to you soon!" );
             setShowModal(true);
             setError('');
             setemailError('');
@@ -63,36 +63,36 @@ function ContactUs() {
             <div className='Contact_info'>
 
                 <div className='Contact_infoCol' >
-                    <ul>
-                        <li className='Contact_infoColIcon'><TelephoneOutbound /></li>
-                        <li><h4>Call Us</h4></li>
-                        <li> +91 -22 -6788 8888</li>
-                        <li><h5>Customer Support</h5></li>
-                        <li>1800 678 8888</li>
-                        <li>(Mon. to Sun. 8AM - 9PM EST)</li>
-                    </ul>
+                    <div>
+                        <div className='Contact_infoColIcon'><TelephoneOutbound /></div>
+                        <div><h4>Call Us</h4></div>
+                        <div> +91 -22 -6788 8888</div>
+                        <div><h5>Customer Support</h5></div>
+                        <div>1800 678 8888</div>
+                        <div>(Mon. to Sun. 8AM - 9PM EST)</div>
+                    </div>
                 </div>
 
                 <div className='Contact_infoCol'>
-                    <ul>
-                        <li className='Contact_infoColIcon'><People /></li>
-                        <li><h4>Contact Us on Social Media</h4></li>
-                        <a href='https://www.facebook.com/'> <li><Facebook />/TASHASupport</li></a>
-                        <a href='https://www.twitter.com'><li> <Twitter />@tashasupport</li></a>
+                    <div>
+                        <div className='Contact_infoColIcon'><People /></div>
+                        <div><h4>Contact Us on Social Media</h4></div>
+                        <a href='https://www.facebook.com/'> <div><Facebook />/TASHASupport</div></a>
+                        <a href='https://www.twitter.com'><div> <Twitter />@tashasupport</div></a>
 
-                    </ul>
+                    </div>
 
                 </div>
 
                 <div className='Contact_infoCol'>
-                    <ul>
-                        <li className='Contact_infoColIcon'><EnvelopeCheck /></li>
+                    <div>
+                        <div className='Contact_infoColIcon'><EnvelopeCheck /></div>
 
-                        <li><h4>FeedBack</h4></li>
-                        <a href='https://www.gmail.com'><li> <Google />customercare@tashaindia.com</li></a>
+                        <div><h4>FeedBack</h4></div>
+                        <a href='https://www.gmail.com'><div> <Google />customercare@tashaindia.com</div></a>
 
 
-                    </ul>
+                    </div>
                 </div>
             </div>
 

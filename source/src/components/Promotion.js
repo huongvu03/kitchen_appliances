@@ -9,14 +9,14 @@ function Promotion({ cook, refridge, app, food, addCart }) {
 
        return (
         <div className="Promotion">
-            <div><video src="./homeimg/giftidea.mp4" controls loop width={'100%'} height={"auto"} /></div>
+            <div><video src="./homeimg/giftidea.mp4" autoPlay controls loop width={'100%'} height={"auto"} /></div>
 
             <div className='Promotion_top'>
                 <h1>BIG SAVING FOR A BIG DREAMS</h1>
                 <div className="Promotion_topcontent">
                     Our Complete the Suite savings program brings you a whole lot closer to the kitchen of your dreams. Reach out to your local sales representative to see how we have sweetened this deal to save you up to 35% even more.
                 </div>
-                <h6><button onClick={() => navigate(`/products`)} className="btn">VIEW ALL</button></h6>
+                <h6 className="Promotion_topbtn"><button onClick={() => navigate(`/products`)} >VIEW ALL</button></h6>
             </div>
 
                     <div className="PromotionSec1" id="cook" >
@@ -52,8 +52,8 @@ function Promotion({ cook, refridge, app, food, addCart }) {
                     </div>
                     </div>
               
-                    <div className="PromotionSec1" id="app">
-                    <div className='PromotionSec1_right'>
+                    <div className="PromotionSec2" id="appliances">
+                    <div className='PromotionSec2_right'>
                         <ul>
                             {app.map(c => (
                                 <li>
@@ -78,7 +78,7 @@ function Promotion({ cook, refridge, app, food, addCart }) {
                             ))}
                         </ul>
                     </div>
-                    <div className='PromotionSec1_left'>
+                    <div className='PromotionSec2_left'>
                         <h3 className='title'>APPLIANCES</h3>
                         <h5>Save 15% OFF</h5>
                         <p>When you purchase  Hamilton Beach MultiBlend® Kitchen System with Blender and Food Processor or Hamilton Beach Premium Bread Maker . Offer valid through 12/31/23. </p>

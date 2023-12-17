@@ -34,16 +34,16 @@
 }
 
 .Contact_infoCol ul {
-    /* border: red solid; */
+    border: red solid;
     text-align: center;
     padding: 0%;
-    margin-top: 40px;
-    margin-bottom: auto;
+   height: 250px;
+   
 }
 
 
 .Contact_infoCol ul li,.Contact_infoCol ul a {
-    /* border: blue solid; */
+    border: blue solid;
     list-style: none;
     color:black;
     font-weight: lighter;
@@ -184,16 +184,43 @@ font-size: 18px;
 .Feedback{
     margin:80px 150px 80px 150px;
     line-height: 30px;
+   
+}
+.Feedback form{
+    border: 0.5px solid;
+    /* background-color: rgb(228, 226, 226) ; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 32px 0px;
 }
 .Feedback h1{
 text-align: center;
 }
+.Feedback ul {
+    margin-left: 200px;
+ 
+}
 .Feedback ul li{
+   
     list-style: none;
     color: gray;
+  
 }
 .Feedback_Q{
     font-size: 20px;
     color: black;
     margin-top: 40px;
 }
+.Feedback ul .Feedbackerror{
+    font-size: 16px;
+    color: red;
+
+
+}
+.Feedback h6{
+    font-size: 16px;
+    font-weight: lighter;
+    text-align: right;
+    margin-right: 100px;
+   }
+   .Feedback ul  .Feedbackcustomer{
+    max-width:  80%;
+   }

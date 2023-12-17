@@ -2,44 +2,93 @@ import '../css/Header.css';
 import { Link } from 'react-router-dom';
 import { Cart3 } from 'react-bootstrap-icons';
 import { Person } from 'react-bootstrap-icons';
-import { Telephone } from 'react-bootstrap-icons';
+import { Telephone, List } from 'react-bootstrap-icons';
 
 import HeaderSearch from './HeaderSearch';
 
-function Header({ handleSubmit,value, carts }) {
+function Header({ handleSubmit, value, carts }) {
     const deleteLocalStorage = () => {
         localStorage.clear();
     }
     const totalQuantity = carts.reduce((total, product) => total + product.quantity, 0);
     console.log(totalQuantity);
+
+    const showMenu=(e)=>{
+        document.getElementById("headerContent").removeAttribute("hidden");
+        return true;
+    }
     return (
         <div className="headerHome">
-            <div>  <Link to='/'><img src="./homeimg/Logo-Tashas-Design.png" alt="logo" height="100px" width="100px" /></Link></div>
-            <ul>
-                <Link to='/' className="navbar-link"> <li>HOME</li></Link>
-                <Link to='/promotion' className="navbar-link"> <li>PROMOTION</li></Link>
+            <Link to='#' >
+                <li>
+                    <div className='headerHomemedia_dropdown' >
+                        <div className='headerHomemedia_dropdownbtn'><List /></div>
 
-                <Link to='/products' className="navbar-link"><li>PRODUCTS</li></Link>
-                {/* <Link to='/blogs' className="navbar-link"> <li>OUR BLOG </li></Link> */}
-                <Link to='/blogs' className="navbar-link"> <li>
-                    <div class="headerHome_dropdown">
-                        <div className='dropbtn navbar-link'>OUR BLOG</div>
-                        <div class="dropdown-content">
-                            {/* <a href="/manuals">Manuals</a> */}
-                            <Link to="/expert-tips">Expert Tips</Link>
+                        <div className='headerHomemedia_dropdown-content' >
+                            <ul >
+                                {/* <Link to='/' className="navbar-link"> <li>HOME</li></Link> */}
+                                <Link to='/promotion' > <li>PROMOTION</li></Link>
 
-                            {/* <Link to="/feedback">Feedback</Link> */}
+                                <Link to='/products' ><li>PRODUCTS</li></Link>
+                                <Link to='/blogs' >
+                                    <li>
+                                        {/* <div class="headerHome_dropdown"> */}
+                                            {/* <div className='dropbtn'> */}
+                                                OUR BLOG
+                                                {/* </div> */}
+                                            {/* <div class="dropdown-content">
+                                                <Link to="/expert-tips">Expert Tips</Link>
+
+                                            </div>
+                                        </div> */}
+
+                                    </li>
+                                    </Link>
+
+
+                                <Link to='/contact' > <li>
+                                    {/* <div class="headerHome_dropdown"> */}
+                                        {/* <div className='dropbtn'> */}
+                                            SUPPORT
+                                            {/* </div>
+                                        {/* <div class="dropdown-content" hidden id="headerContent"> */}
+                                            {/* <Link to="/contact">Contact Us</Link> */}
+
+                                            {/* <Link to="/feedback">Feedback</Link> */}
+                                        {/* </div> */}
+                                    {/* </div>  */}
+
+                                </li>
+                                </Link>
+                                <Link to='/about-us' ><li>ABOUT US</li></Link>
+                            </ul>
                         </div>
                     </div>
-
                 </li></Link>
-                {/* <Link to="/contact">Contact Us</Link> */}
+            <div>  <Link to='/'><img src="./homeimg/Logo-Tashas-Design.png" alt="logo" height="100px" width="100px" /></Link></div>
 
-                <Link to='#'className="navbar-link"> <li>
+            <ul className='headerHomeTab'>
+                {/* <Link to='/' > <li>HOME</li></Link> */}
+                <Link to='/promotion' > <li>PROMOTION</li></Link>
+
+                <Link to='/products' ><li>PRODUCTS</li></Link>
+                <Link to='/blogs' >
+                    <li>
+                        <div class="headerHome_dropdown">
+                            <div className='dropbtn '>OUR BLOG</div>
+                            <div class="dropdown-content">
+                                <Link to="/expert-tips">Expert Tips</Link>
+
+                            </div>
+                        </div>
+
+                    </li></Link>
+
+
+                <Link to='/contact' > <li>
                     <div class="headerHome_dropdown">
-                        <div className='dropbtn navbar-link'>SUPPORT</div>
+                        <div className='dropbtn '>SUPPORT</div>
                         <div class="dropdown-content">
-                            {/* <a href="/manuals">Manuals</a> */}
                             <Link to="/contact">Contact Us</Link>
 
                             <Link to="/feedback">Feedback</Link>
@@ -47,9 +96,11 @@ function Header({ handleSubmit,value, carts }) {
                     </div>
 
                 </li></Link>
-                <Link to='/about-us' className="navbar-link"><li>ABOUT US</li></Link>
+                <Link to='/about-us' ><li>ABOUT US</li></Link>
             </ul>
+
             <div></div>
+
             <div className='headerHome4'>
                 <div class="headersearch" ><HeaderSearch value={value} handleSubmit={handleSubmit} /></div>
 

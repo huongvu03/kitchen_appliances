@@ -1,4 +1,33 @@
+/* Carousel */
+.HomeCarouselItem {
+/* background-color: rgba(0, 0, 0, 0.344); */
+width: max-content;
+text-align: center;
+margin-left: auto; 
+margin-right: auto;
+}
+.HomeCarouselItem p{
+    color:black;
+    padding: 5px;
+    font-size: 20px;
+}
+.HomeCarouselContent3 div {
+position: absolute;
+top:70%;
+left:6%;
+width: 600px;
+font-size: 20px;
 
+}
+.HomeCarouselContent3 .HomeCarousel_shop{
+    font-size: 40px;
+    text-align: left;
+    margin-top: 0%;
+    font-weight: bold;
+}
+.HomeCarouselContent3 :hover, .HomeCarouselItem{
+    cursor: pointer;
+}
 .HomeBody_title {
     text-align: center;
     font-size: 30px;
@@ -11,7 +40,7 @@
 .HomeNew1-btn button,
 .HomeNew2-btn button {
     border: none;
-    background-color: red;
+    background-color: #a50034;
     color: white;
     border-radius: 30px;
     font-weight: 600;
@@ -33,7 +62,7 @@
 .HomeBody_contentitem_btn button:hover,
 .HomeNew1-btn button:hover,
 .HomeNew2-btn button:hover {
-    background-color: rgb(175, 4, 4);
+    background-color: #7a0027;
     color: white;
     transition: 0.35s ease;
 }

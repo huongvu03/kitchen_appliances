@@ -16,5 +16,14 @@
         "email":"user2@gmail.com",
         "fname": "222",
         "datebirth":"20231205"
+    },
+    {
+        "id": 0,
+        "username": "admin",
+        "password": "admin123",
+        "cpassword":"admin123",
+        "email":"admin@gmail.com",
+        "fname": "admin",
+        "datebirth":"20102412"
     }
 ]

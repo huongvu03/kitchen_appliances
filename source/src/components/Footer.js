@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../css/Footer.css'
 // import { Facebook, Twitter } from 'react-bootstrap-icons';
 import { Instagram, Twitter, Youtube, Facebook, Google } from 'react-bootstrap-icons';
@@ -16,7 +16,7 @@ function Footer() {
 
     const [showModal, setShowModal] = useState(false);
     const [textmodal, setTextModal] = useState('');
-   
+    const navigate=useNavigate('');
 
       const handleSubmit = (e) => {
         e.preventDefault();
@@ -46,6 +46,7 @@ function Footer() {
 
     const handleClose = () => {
         setShowModal(false);
+        navigate(`/products`);
      }
 
     return (
@@ -89,7 +90,7 @@ function Footer() {
                 </div>
 
                 <div>
-                    <ul>
+                    <ul  className='Footer_c1'>
                         <li><h5>Customer Support</h5></li>
                         <li>1800 678 8888</li>
                         <li>(Mon. to Sun. 8AM - 9PM EST)</li>
@@ -98,9 +99,9 @@ function Footer() {
 
                 </div>
                 <div >
-                    <ul>
+                    <ul  className='Footer_c1'>
 
-                        <li><h5>Have Tasha Premium Care?</h5></li>
+                        <li ><h5>Have Tasha Premium Care?</h5></li>
                         <li>1-855-549-0540</li>
                         <li>(Mon. to Fri. 8AM - 11PM EST / Sat. to Sun. 9AM - 6PM EST)</li>
                     </ul>

@@ -26,9 +26,9 @@ function Home() {
     }
 
     const navigateToApp = () => {
-        navigate("/promotion#app");
+        navigate("/promotion#appliances");
         setTimeout(() => {
-            const productSection = document.getElementById("app");
+            const productSection = document.getElementById("appliances");
             if (productSection) {
                 productSection.scrollIntoView({ behavior: "smooth" });
             }
@@ -61,7 +61,7 @@ function Home() {
 
                     <div className="HomeBody_contentitem" onClick={navigateToFridge}>
                         <img src="./homeimg/home_fridge.jpg" alt="fridge " />
-                        <div className="HomeBody_contentitemRow1">   Buy a fridge, get 200$ CashBack.</div>
+                        <div className="HomeBody_contentitemRow1">   Buy a Fridge, get 200$ CashBack.</div>
                         <div className="HomeBody_contentitemRow2">   Purchase an eligible Counter-Depth MAX refrigerator or 295L Solid Door Hybrid Chest Freezer . Offer valid through 12/31/2023.</div>
                         <div className="HomeBody_contentitem_btn">
                             <button onClick={navigateToFridge}>SHOP NOW</button>
@@ -84,7 +84,7 @@ function Home() {
 
                     <div className="HomeBody_contentitem" onClick={navigateToFridge}>
                         <img src="./homeimg/home_storage.png" alt="food storage " />
-                        <div className="HomeBody_contentitemRow1">  Save up to 35% on select vacuum bottles</div>
+                        <div className="HomeBody_contentitemRow1">  Save up to 35% on select Vacuum Bottles</div>
                         <div className="HomeBody_contentitemRow2">  Huge "Christmas Sale" with up to 35% off its popular line of drinkware, including vacuum bottles and more.  Offer valid through 12/31/2023.</div>
                         <div className="HomeBody_contentitem_btn"> <button onClick={navigateToFridge}>SHOP NOW</button> </div>
                     </div>

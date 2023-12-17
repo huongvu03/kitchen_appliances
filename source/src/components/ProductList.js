@@ -7,6 +7,7 @@ import ProductSortPrice from "./ProductSortPrice";
 import { Pagination } from "react-bootstrap";
 import { useState } from "react";
 import '../css/ProductList.css';
+
 function ProductsList({ products,
     searchValue, handleSearch,
     handleCategory,
@@ -37,7 +38,7 @@ function ProductsList({ products,
             </Carousel.Item>
             <Carousel.Item>
                 <img className="d-block w-100 "
-                    src="./homeimg/carousel_2.jpg" height={"400px"}
+                    src="./homeimg/carousel_2.png" height={"400px"}
                     alt="Second slide" />
             </Carousel.Item>
             <Carousel.Item>
@@ -46,8 +47,8 @@ function ProductsList({ products,
                     alt="Third slide" />
             </Carousel.Item>
         </Carousel>
-        <div>
-            <h1 style={{ color: "black", fontSize: "20px" }}>{error}</h1>
+        <div className="productslist_error">
+            <h3>{error}</h3>
         </div>
 
         <div className='productslist container'>

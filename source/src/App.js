@@ -11,7 +11,7 @@ import ProductDetail from './components/ProductDetails';
 import CartList from './components/CartList';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
-import EmailData from './components/EmailData';
+import Data from './components/Data';
 import Register from './components/Register';
 import BackToTopButton from './components/BackToTopButton';
 import ModalConfirm from './components/ModalConfirm';
@@ -22,8 +22,8 @@ import Blog from './components/Blog';
 import BlogDetail from './components/BlogDetails';
 import Feedback from './components/Feedback';
 import FeedbackData from './components/FeedbackData';
-// import ManualItem from './components/ManualItem';
 import ManualDetail from './components/ManualDetail';
+import NotFound from './components/NotFound';
 
 
 
@@ -64,6 +64,7 @@ function App() {
     };
     fetchData();
   }, []);
+
   //DATA BLOG
   useEffect(() => {
     const fetchData = async () => {
@@ -73,22 +74,6 @@ function App() {
         setBlogs(blogsData);
         setFilterBlogs(blogsData);
         console.log(blogs);
-      } catch (error) {
-        console.log('error reading json');
-      }
-    };
-    fetchData();
-  }, []);
-
-   //DATA manual
-   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const manualJson = await fetch('manual.json');
-        const manualData = await manualJson.json();
-        setManuals(manualData);
-      
-        console.log(manuals);
       } catch (error) {
         console.log('error reading json');
       }
@@ -196,7 +181,7 @@ function App() {
   const [users, setUsers] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [textmodal, setTextModal] = useState('');
-
+ 
   useEffect(() => {
     fetch('user.json')
       .then(response => response.json())
@@ -216,7 +201,6 @@ function App() {
       setShowModal(true);
       localStorage.setItem('username', checkUser.username);
       setErrorLogin(''); setErrorName(''); setErrorPass('');
-      // navigator('/products');
 
     }
     else if (!checkUser.username || !checkUser.password) {
@@ -233,6 +217,13 @@ function App() {
 
   const handleClose = () => {
     setShowModal(false);
+  
+
+  if( localStorage.getItem('username')==="admin"){
+      navigate (`/data`);
+    }else{
+      navigate (`/products`);
+    }
   }
 
   // Reset Password
@@ -261,13 +252,13 @@ function App() {
     setHeaderSearchValue(value);
     const datatSearch = products.filter(pro => pro.name.toLowerCase().includes(value.toLowerCase()));
     if (datatSearch == "") {
-      setError('Not Found ! Please view all products below !');
+      setError('NOT FOUND ! Please view all products below !');
       setFilterProducts(products);
       navigate('/products');
     }
     else if (datatSearch) {
       setFilterProducts(datatSearch);
-      setError('Searching Result');
+      setError('SEARCH RESULTS');
       navigate('/products');
     }
   }
@@ -285,7 +276,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path='/promotion' element={<Promotion cook={cooks} app={apps} refridge={refridge} food={foods} addCart={addToCart} />} />
-        <Route path='/promotion#app' element={<Promotion cook={cooks} app={apps} refridge={refridge} food={foods} addCart={addToCart} />} />
+        <Route path='/promotion#appliances' element={<Promotion cook={cooks} app={apps} refridge={refridge} food={foods} addCart={addToCart} />} />
         <Route path='/promotion#cook' element={<Promotion cook={cooks} app={apps} refridge={refridge} food={foods} addCart={addToCart} />} />
         <Route path='/promotion#fridge' element={<Promotion cook={cooks} app={apps} refridge={refridge} food={foods} addCart={addToCart} />} />
 
@@ -330,12 +321,14 @@ function App() {
         <Route path='/privacy-policy' element={<Privacy />} />
         <Route path="/blogdetail/:id" element={<BlogDetail blogs={blogs} />} />
         <Route path="/manualdetail/:id" element={<ManualDetail products={products} />} />
-      {/* <Route path="/manualdetail" element={<ManualDetail  />} />  */}
-
-
         <Route path="/blogs" element={<Blog blogs={blogs} />} />
+        <Route path="/notfound" element={<NotFound />} />
       
-        <Route path='/email-data' element={<EmailData />} /> {/* // storeage data */}
+        <Route path='/data' element={
+        localStorage.getItem('username') ? (
+        <><Data /></>) :
+         (< Navigate to='/log-in' />)
+        } /> 
       </Routes>
       <BackToTopButton />
       <Footer />

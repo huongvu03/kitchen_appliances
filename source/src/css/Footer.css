@@ -96,7 +96,7 @@
 }
 /*term of use */
 .TermsOfUse,.Privacy{
-    margin:80px
+    margin:80px;
 }
 .TermsOfUse h1, .Privacy h1{
     text-align: center;
@@ -116,3 +116,29 @@
     font-weight: bold;
     
 }
+
+@media (max-width:767px){
+  .FooterSocial{
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: 55% auto;
+
+  }
+  .FooterSocial_leftInput input{
+
+    font-size: 17px;
+ 
+}
+.FooterSocial_title {
+  font-size: 20px;
+
+}
+.Footer_c1 a,.Footer_c1 h5, .Footer_c3 h5 {
+font-size:16px ;
+color:blue;
+}
+
+
+}
+  
+

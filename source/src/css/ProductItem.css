@@ -1,10 +1,21 @@
 .productitem_card {
+  display: grid;
+  grid-template-rows:85% auto;
   background-color: rgb(255, 255, 255);
   overflow: hidden;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
   height: 500px;
+}
+
+
+.productitem_card_body {
+  padding:10px;
+  display: grid;
+  grid-template-rows:60% auto;
+  max-width: 100%;
+ 
 }
 .productitem_card_body img {
   width: 100%;
@@ -13,6 +24,8 @@
 .productitem_card_body {
   padding: 30px;
 }
+
+
 .productitem_card_body_content {
   height: 150px;
   padding-top: 25px;
@@ -20,12 +33,14 @@
   grid-template-rows: 100px 20px 20px;
 }
 
+
 .btn_detail {
   color: black;
   background-color: #ffffff;
   line-height: 30px;
   border: none;
 }
+
 .btn_detail:hover {
   color: rgba(0, 0, 0, 0.616);
   transition: 0.35s ease;

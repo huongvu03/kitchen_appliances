@@ -1,83 +1,99 @@
 import { useState } from "react";
 import '../css/ContactUs.css';
-function Feedback(){
+import ModalConfirm from "./ModalConfirm";
+import { useNavigate } from "react-router-dom";
+
+function Feedback() {
+    const[purpose,setPurpose]=useState('');
+    const[satisfied,setSatisfied]=useState('');
     const [improve, setImprove] = useState('');
     const [cpurpose, setCPurpose] = useState('');
-const [error,setError]=useState('');
 
+    const [error, setError] = useState('');
+        const [showModal, setShowModal] = useState(false);
+    const [textmodal, setTextModal] = useState('');
+    const navigate = useNavigate('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-      
-        var purpose=document.getElementsByName('purpose').value;
-        var satisfied=document.getElementsByName('satisfied').value;
-        if( !improve || !cpurpose || !purpose ){
+    
+        if (!purpose || !satisfied || !improve) {
             setError('Type is required');
             return false;
-        }
-            var data=`purpose: ${purpose}, 
+        }else{
+        var feedback = `purpose: ${purpose}, 
             custom purpose:${cpurpose} , 
             improved:${improve}, 
             satisfies: ${satisfied} `
-        localStorage.setItem("data",data);
-       
-        setImprove('');
-        setCPurpose('');
+        localStorage.setItem("feedback", feedback);
+        setTextModal('Thank you for your Feedback !');
+        setShowModal(true);
+        setError('');
+        setCPurpose('');setImprove ('');setPurpose('');setSatisfied('');
         return true;
     }
-  
-    return(
-     <div className="Feedback">
-      <h1>  We'd love to hear from you</h1>
-        <form onSubmit={handleSubmit}>
-        <ul>
-            <li className="Feedback_Q" style={{color:"black"}}>
- <p>Q1. *Required section What is the purpose of your visit to LG's support website?(*Support: After-sales)</p>
-<li>{error}</li>
-            </li>
-            <li> <input type="radio" value="product registration" name="purpose" />Product registration.</li>
-            <li> <input type="radio"  value="update and upgrade software" name="purpose"/>Update and upgrade software.</li>
-            <li> <input type="radio"/>See instructions for use.</li>
-            <li> <input type="radio"/>Find out the warranty policy.</li>
-            <li> <input type="radio"/>Find product support information in the Help Library and How-To Videos section.</li>
-            <li> <input type="radio"/>Find the warranty center address.</li>
-            <li> <input type="radio"/>Find warranty contact information</li>
-            <li> <input type="radio"/>Find a place to buy parts and replacement accessories.</li>
-            <li> <input type="radio"/>Repairs (delays, technician skills and attitudes)</li>
-            <li> <input type="radio"/>Call center (connection, operator attitude and knowledge)</li>
-            <li> <input type="radio"/>Products (quality, features, price)</li>
-            <li> <input type="radio"/>Other (please provide specific information about our Services)</li>
-            <li><input type="text" value={cpurpose} onChange={(e)=>setCPurpose(e.target.value)}/></li>
-            <li>{error}</li>
-            <li  className="Feedback_Q" style={{color:"black"}}>
-Q2. *Required section How satisfied are you with the availability and quality of the information you sought?
+}
 
-            </li>
-            <li>{error}</li>
-            <li> <input type="radio" name="satisfied" value={"very satisfied"}/>Very satisfied</li>
-            <li> <input type="radio"  name="satisfied" value={"satisfied"}/>Satisfied</li>
-            <li> <input type="radio"/>Normal</li>
-            <li> <input type="radio"/>Dissatisfied</li>
-            <li> <input type="radio"/>Very dissatisfied</li>
-            <li  className="Feedback_Q" style={{color:"black"}}>
-            Q3. What do you think our website needs to improve? Please share your thoughts with us.
+    const handleClose = () => {
+        setShowModal(false);
+        navigate(`/`);
+    }
 
-            </li>
-            <li>{error}</li>
-            <li  >
+    return (
+        <div className="Feedback">
+            <h1>  We'd love to hear from you</h1>
+            <h6>* Required Information</h6>
 
-                                <textarea value={improve} name="" id="" placeholder='' onChange={(e) => setImprove(e.target.value)}></textarea>
+            <form onSubmit={handleSubmit}>
+                <ul>
+                    <li className="Feedback_Q" style={{ color: "black" }}>
+                        <p>Q1. *What is the purpose of your visit to Tasha's support website?(*Support: After-sales)</p>
+                        <li className="Feedbackerror">{error}</li>
+                    </li>
+                    <li> <input type="radio" value="product registration" name={purpose}  onClick={(e) => setPurpose(e.target.value)} />Product registration.</li>
+                    <li> <input type="radio" value="update and upgrade software" name={purpose}  onClick={(e) => setPurpose(e.target.value)}/>Update and upgrade software.</li>
+                    <li> <input type="radio" />See instructions for use.</li>
+                    <li> <input type="radio" />Find out the warranty policy.</li>
+                    <li> <input type="radio" />Find product support information in the Help Library and How-To Videos section.</li>
+                    <li> <input type="radio" />Find the warranty center address.</li>
+                    <li> <input type="radio" />Find warranty contact information</li>
+                    <li> <input type="radio" />Find a place to buy parts and replacement accessories.</li>
+                    <li> <input type="radio" />Repairs (delays, technician skills and attitudes)</li>
+                    <li> <input type="radio" />Call center (connection, operator attitude and knowledge)</li>
+                    <li> <input type="radio" />Products (quality, features, price)</li>
+                    <li> <input type="radio" />Other (please provide specific information about our Services)</li>
+                    <li  className="Feedbackcustomer" ><input type="text" value={cpurpose} onChange={(e) => setCPurpose(e.target.value)}/></li>
+                    
+                    <li className="Feedback_Q" style={{ color: "black" }}>
+                        Q2. *How satisfied are you with the availability and quality of the information you sought?
+                    <li className="Feedbackerror">{error}</li>
 
-                            </li>
-                            <li>{error}</li>
-                            <button>Submit</button>
-                          
-        </ul>
-        </form>
+                    </li>
+                    <li> <input type="radio" name={satisfied} value="very satisfied"  onClick={(e) => setSatisfied(e.target.value)}/>Very satisfied</li>
+                    <li> <input type="radio" name={satisfied} value="satisfied"  onClick={(e) => setSatisfied(e.target.value)}/>Satisfied</li>
+                    <li> <input type="radio" />Normal</li>
+                    <li> <input type="radio" />Dissatisfied</li>
+                    <li> <input type="radio" />Very dissatisfied</li>
 
-        <div><textarea name id="comment" cols="30" rows="10"></textarea></div>
-        
-     </div>
+                    <li className="Feedback_Q" style={{ color: "black" }}>
+                        Q3. *What do you think our website needs to improve? Please share your thoughts with us.
+                    <li className="Feedbackerror">{error}</li>
+
+                    </li>
+                    <li  >
+
+                        <textarea value={improve} name="" id="" cols="105" placeholder='' onChange={(e) => setImprove(e.target.value)} ></textarea>
+
+                    </li>
+
+                    <button> Submit</button>
+
+                </ul>
+
+            </form>
+            <ModalConfirm show={showModal} handleClose={handleClose} textmodal={textmodal} />
+
+        </div>
     );
 
-}export default Feedback;
+} export default Feedback;
