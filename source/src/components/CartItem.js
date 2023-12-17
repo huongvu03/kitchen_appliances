@@ -6,7 +6,7 @@ function CartItem({ product, deleteCart, decreaseQty, increaseQty }) {
         <tr >
             <td className="cartitem_image"><img src={product.image[0]} alt="image" width="100px" height="100px" /></td>
             <td>{product.name}</td>
-            <td>$ {product.price}</td>
+            <td>${product.price}</td>
             <td className="cartitem_quantity">
                 <button onClick={() => decreaseQty(product)}>-</button>
                 {product.quantity}
