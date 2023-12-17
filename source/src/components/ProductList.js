@@ -10,7 +10,7 @@ import '../css/ProductList.css';
 function ProductsList({ products,
     searchValue, handleSearch,
     handleCategory,
-    handleSortPriceMinMax, handleSortPriceMaxMin,
+    handlePrice,
     clearFilter,
     addToCart, error
 }) {
@@ -29,7 +29,7 @@ function ProductsList({ products,
         );
     }
     return (<div className="productslist_page container">
-        <Carousel>
+        <Carousel className="productslist_carousel">
             <Carousel.Item>
                 <img className="d-block w-100 "
                     src="./homeimg/carousel_1.jpg" height={"400px"}
@@ -53,13 +53,13 @@ function ProductsList({ products,
         <div className='productslist container'>
 
             <div className='productslist_category_left'>
-                <div><ProductSearch searchValue={searchValue} handleSearch={handleSearch} /></div>
+                <div className="productslist_search_bar"><ProductSearch searchValue={searchValue} handleSearch={handleSearch} /></div>
                 <hr></hr>
                 <div><h4>Category</h4></div>
                 <div><ProductFilterCategory handleCategory={handleCategory} /></div>
                 <hr></hr>
                 <div><h4>Price</h4></div>
-                <div><ProductSortPrice handleSortPriceMinMax={handleSortPriceMinMax} handleSortPriceMaxMin={handleSortPriceMaxMin} /></div>
+                <div><ProductSortPrice handlePrice={handlePrice}/></div>
                 <hr></hr>
                 <div><button className="btn btn-success" onClick={() => {
                     clearFilter();

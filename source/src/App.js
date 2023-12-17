@@ -132,15 +132,16 @@ function App() {
     }
   }
   //************************************ SORT PRICE **********************************
-  const handleSortPriceMinMax = () => {
-    const sortedPrice = [...filterProducts].sort((a, b) => a.price - b.price);
-    setFilterProducts(sortedPrice);
-    setfilterSearch(sortedPrice);
-  }
-  const handleSortPriceMaxMin = () => {
-    const sortedPrice = [...filterProducts].sort((a, b) => b.price - a.price);
-    setFilterProducts(sortedPrice);
-    setfilterSearch(sortedPrice);
+  const handlePrice=(value)=>{
+    if(value==="mintomax"){
+      const sortedPrice = [...filterProducts].sort((a, b) => a.price - b.price);
+      setFilterProducts(sortedPrice);
+      setfilterSearch(sortedPrice);
+    }else if(value==="maxtomin"){
+      const sortedPrice = [...filterProducts].sort((a, b) => b.price - a.price);
+      setFilterProducts(sortedPrice);
+      setfilterSearch(sortedPrice);
+    }
   }
   //************************************* RESET FILTER ***********************************
   const clearFilter = () => {
@@ -304,7 +305,7 @@ function App() {
           <ProductsList products={filterProducts}
             searchValue={searchValue} handleSearch={handleSearch}
             handleCategory={handleCategory}
-            handleSortPriceMinMax={handleSortPriceMinMax} handleSortPriceMaxMin={handleSortPriceMaxMin}
+            handlePrice={handlePrice}
             clearFilter={clearFilter}
             addToCart={addToCart}
             error={error}

@@ -1,0 +1,28 @@
+.productsort_price_tablet{
+    display: none;
+
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .productsort_price_tablet{
+    display: block;
+    
+
+}
+.productsort_price_full{
+    display: none;
+}
+
+}
+
+@media screen and (max-width: 767px){
+
+    .productsort_price_tablet{
+        display: block;
+        
+    
+    }
+    .productsort_price_full{
+        display: none;
+    }
+}
