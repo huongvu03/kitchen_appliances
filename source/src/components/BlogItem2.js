@@ -11,7 +11,7 @@ function BlogItem2({ blog }) {
                     <div className='BlogItem_text'>
                         <br/>
                         <h3>{blog.title}</h3>
-                        <div>{blog.desc}</div>
+                        <div className='BlogItem_des'>{blog.desc}</div>
                         <div className='BlogItem_button'>
                         <button onClick={() => navigate(`/blog-detail2/${blog.id}`)}>KEEP READING → </button>
                         </div>

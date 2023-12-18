@@ -51,21 +51,24 @@ function ProductDetail({ products,sendqtyDetail }) {
           <Link>{product.name}</Link>
         </div>
       </div>
+      <div>
+      <div className="ProductDetail_name">{product.name}</div>
       <div className="ProductDetail_grid1">
-        <div className="ProductDetail_img1">
-          
-          <img src={"../"+product.image[0]} alt={product.image[0]}  onClick={()=> setMainImage(0)}/>
-          <img src={"../"+product.image[1]} alt={product.image[1]}  onClick={()=> setMainImage(1)}/>
-          <img src={"../"+product.image[2]} alt={product.image[1]}  onClick={()=> setMainImage(2)}/>
-          <img src={"../"+product.image[3]} alt={product.image[1]}  onClick={()=> setMainImage(3)}/>
-        </div>
-        <div className="ProductDetail_img2">
-          
-          <img src={"../"+product.image[mainImage]} alt={product.image[mainImage]}/>
-          
+        <div className="ProductDetail_grid1img">
+          <div className="ProductDetail_img1">
+            <img src={"../"+product.image[0]} alt={product.image[0]}  onClick={()=> setMainImage(0)}/>
+            <img src={"../"+product.image[1]} alt={product.image[1]}  onClick={()=> setMainImage(1)}/>
+            <img src={"../"+product.image[2]} alt={product.image[1]}  onClick={()=> setMainImage(2)}/>
+            <img src={"../"+product.image[3]} alt={product.image[1]}  onClick={()=> setMainImage(3)}/>
+          </div>
+          <div className="ProductDetail_img2">
+            
+            <img src={"../"+product.image[mainImage]} alt={product.image[mainImage]}/>
+            
+          </div>
         </div>
         <div className="ProductDetail_info">
-          <div className="ProductDetail_name">{product.name}</div>
+          <div className="ProductDetail_name1">{product.name}</div>
           <div className="ProductDetail_like" ><StarFill /><StarFill /><StarFill /><StarFill /><StarHalf /></div>
           <div className="ProductDetail_price"> ${product.price}</div>
           <br />
@@ -92,7 +95,9 @@ function ProductDetail({ products,sendqtyDetail }) {
               onClick={() => handleProdQty()}>ADD TO CART</button>
             <br />
             {/* <button className="ProductDetail_submit1">BUY IT NOW</button> */}
-            <button  onClick={() => navigate(`/manualdetail/${product.id}`)}>view manual</button>
+            <button className="ProductDetail_submit1"  onClick={() => navigate(`/manualdetail/${product.id}`)}>view manual</button>
+
+          </div>
 
           </div>
          
