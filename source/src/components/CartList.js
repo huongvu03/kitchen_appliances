@@ -24,29 +24,33 @@ function CartList({ carts, deleteCart, decreaseQty, increaseQty, handlePaymentDa
     return (
         <div className="container text-center ">
             <h3 className="cartlist_title">Cart List </h3>
-            <div>
-                <table className="table ">
-                    <thead>
-                        <tr>
-                            <th>Image</th>
-                            <th>Name</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {carts.map(product => (
-                            <CartItem key={product.id} product={product} deleteCart={deleteCart} increaseQty={increaseQty} decreaseQty={decreaseQty} />
-                        ))}
-                    </tbody>
-                </table>
+            <div className="cartlist_content_payment_wrap">
+                <div className="table_responsive-sm">
+                    <table className="table ">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {carts.map(product => (
+                                <CartItem key={product.id} product={product} deleteCart={deleteCart} increaseQty={increaseQty} decreaseQty={decreaseQty} />
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+
 
 
                 <div className="cartlist_payment_wrap">
-                    <button className="cartlist_payment_btn" onClick={togglePaymentForm}><h5>Payment</h5></button>
-                    <div className="total_price"> <h5>Total : {formatCurrency(totalPrice)}</h5></div>
+                    <div> <button className="cartlist_payment_btn" onClick={togglePaymentForm}><h5>Payment</h5></button></div>
+
+                    <div className="total_price"> <h5>Total: {formatCurrency(totalPrice)}</h5></div>
                 </div>
                 <div className="payment_form">{showPaymentForm && <Payment handlePaymentData={handlePaymentData} />}</div>
 

@@ -1,23 +1,28 @@
-.cartitem_quantity {
-  display: flex;
-  justify-content: space-between;
- 
-  
+.cartitem_image img {
+  width: 100px;
+  height: 100px;
 }
-.cartitem_quantity button{
+
+.cartitem_quantity {
+  width: 20%;
+}
+.cartitem_quantity button {
   border: none;
   width: 30px;
-  margin-bottom: 80px;
-  padding:0px;
   border-radius: 5px;
 }
-.cartitem_quantity button:hover{
-  background-color:rgba(128, 128, 128, 0.24);
+.cartitem_quantity button:hover {
+  background-color: rgba(128, 128, 128, 0.24);
   transition: 0.5s ease;
 }
 
-.cartitem_remove button{
+.cartitem_remove button {
   border: none;
   background-color: white;
-  
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 767px) {
 }

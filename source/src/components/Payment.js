@@ -50,7 +50,7 @@ function Payment({ handlePaymentData }) {
         } else {
             setErrorAddress('')
         } if (!tel) {
-            setErrorTel('Tel isrequired');
+            setErrorTel('Tel is required');
         } else if (!isValidTel(tel)) {
             setErrorTel('Telephone number at least 9 number and start with 0')
         } else {
@@ -69,7 +69,7 @@ function Payment({ handlePaymentData }) {
 
     return (
 
-        <div className="container payment">
+        <div className="payment">
             <hr></hr>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Body><h3 className='alert_modal text-center' >Success !!!</h3></Modal.Body>
@@ -77,34 +77,32 @@ function Payment({ handlePaymentData }) {
             </Modal>
             <div>
                 <form onSubmit={submit} className="payment_form">
-                    <div >
+                    <div>
                         <div className="form-group">
                             <div>Your Name </div>
-                            <div><input type="text" name="name" value={name} placeholder='Your name' onChange={(e) => setName(e.target.value)} />
+                            <div ><input className="payment_field_input" type="text" name="name" value={name} placeholder='Your name' onChange={(e) => setName(e.target.value)} />
                                 <div className="payment_error">{errorName}</div></div>
 
                         </div>
                         <div className="form-group">
                             <div>Email</div>
-                            <div> <input type="text" name="email" value={email} placeholder='Example@gmail.com' onChange={(e) => setEmail(e.target.value)} />
+                            <div className="payment_field_input"> <input type="text" name="email" value={email} placeholder='Example@*****.com' onChange={(e) => setEmail(e.target.value)} />
                                 <div className="payment_error">{errorEmail}</div></div>
 
                         </div>
                         <div className="form-group">
                             <div>Address</div>
-                            <div> <input type="text" name="address" value={address} placeholder='Address' onChange={(e) => setAddress(e.target.value)} />
+                            <div className="payment_field_input"> <input type="text" name="address" value={address} placeholder='Address' onChange={(e) => setAddress(e.target.value)} />
                                 <div className="payment_error">{errorAddress}</div></div>
 
                         </div>
                         <div className="form-group">
                             <div>Phone</div>
-                            <div> <input type="tel" name="tel" value={tel} placeholder='0xxxxxxxx' onChange={(e) => setTel(e.target.value)} />
+                            <div className="payment_field_input"> <input type="tel" name="tel" value={tel} placeholder='0xxxxxxxx' onChange={(e) => setTel(e.target.value)} />
                                 <div className="payment_error">{errorTel}</div></div>
-
                         </div>
-
+                        <div className="payment_button_wrap"> <button type="submit" className="btn_checkout"><h5>Check out</h5></button></div>
                     </div>
-                    <button type="submit" className="btn_checkout"><h5>Check out</h5></button>
 
                 </form>
             </div>

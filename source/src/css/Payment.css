@@ -5,15 +5,21 @@
   margin: auto auto;
   margin-bottom: 1px;
 }
+.payment_field_input {
+  max-width: 100%;
+}
 .payment {
   margin-top: 5%;
 }
-
-.btn_checkout {
-  margin: auto auto;
+.payment_form {
   margin-top: 5%;
-  margin-left: 28%;
-  width: 500px;
+}
+.payment_button_wrap {
+  /* text-align: center; */
+}
+.btn_checkout {
+  width: 300px;
+  margin: auto auto;
   height: 50px;
   background-color: #a50034;
   color: white;
@@ -27,10 +33,7 @@
   background-color: #7a0027;
   transition: 0.35s ease;
 }
-.payment_form {
-  margin-top: 5%;
-  text-align: start;
-}
+
 .payment_error {
   color: red;
   font-size: 15px;
@@ -41,4 +44,10 @@
   padding-bottom: 10px;
   padding-top: 10px;
   background-color: white;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 767px) {
 }
