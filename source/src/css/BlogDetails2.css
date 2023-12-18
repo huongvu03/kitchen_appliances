@@ -1,36 +1,112 @@
-
-.BlogDetals {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify;
-    font-size: 18px;
+/* laptop */
+@media(min-width: 1025px){
+    .BlogDetals {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+        font-size: 18px;
+    }
+    .BlogDetals_text{
+        text-indent:20px;
+    }
+    .BlogDetals img{
+        width: 100%;
+        box-shadow:  rgba(0, 0, 0, 0.1) 0px 0px 40px 0px;
+    }
+    .BlogDetals_food{
+        width: 90%;
+        border: 1px solid #ccc;
+        box-shadow:  rgba(0, 0, 0, 0.1) 0px 0px 40px 0px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+    }
+    .BlogDetals_food1{
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+    .BlogDetail_a{
+        text-decoration: none;
+        text-align: right;
+    }
+    .BlogDetail_a a{
+        text-decoration: none;
+        color: blue;
+    }
 }
-.BlogDetals_text{
-    text-indent:20px;
+@media(min-width: 768px) and (max-width: 1024px){
+    .BlogDetals {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+        font-size: 18px;
+    }
+    .BlogDetals_text{
+        text-indent:20px;
+    }
+    .BlogDetals img{
+        width: 100%;
+        box-shadow:  rgba(0, 0, 0, 0.1) 0px 0px 40px 0px;
+    }
+    .BlogDetals_food{
+        width: 90%;
+        border: 1px solid #ccc;
+        box-shadow:  rgba(0, 0, 0, 0.1) 0px 0px 40px 0px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+    }
+    .BlogDetals_food1{
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+    .BlogDetail_a{
+        text-decoration: none;
+        text-align: right;
+    }
+    .BlogDetail_a a{
+        text-decoration: none;
+        color: blue;
+    }
 }
-.BlogDetals img{
-    width: 100%;
-    box-shadow:  rgba(0, 0, 0, 0.1) 0px 0px 40px 0px;
-}
-.BlogDetals_food{
-    width: 90%;
-    border: 1px solid #ccc;
-    box-shadow:  rgba(0, 0, 0, 0.1) 0px 0px 40px 0px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify;
-}
-.BlogDetals_food1{
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-}
-.BlogDetail_a{
-    text-decoration: none;
-    text-align: right;
-}
-.BlogDetail_a a{
-    text-decoration: none;
-    color: blue;
+@media(max-width: 767px){
+    .BlogDetals {
+        width: 96%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+        font-size: 14px;
+    }
+    .BlogDetals_text{
+        text-indent:20px;
+    }
+    .BlogDetals img{
+        width: 100%;
+        box-shadow:  rgba(0, 0, 0, 0.1) 0px 0px 40px 0px;
+    }
+    .BlogDetals_food{
+        width: 99%;
+        border: 1px solid #ccc;
+        box-shadow:  rgba(0, 0, 0, 0.1) 0px 0px 40px 0px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+    }
+    .BlogDetals_food1{
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
+    }
+    .BlogDetail_a{
+        text-decoration: none;
+        text-align: right;
+    }
+    .BlogDetail_a a{
+        text-decoration: none;
+        color: blue;
+    }
 }

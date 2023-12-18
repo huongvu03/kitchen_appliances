@@ -21,29 +21,37 @@ import '../css/Register.css';
         
         function handleVatlidation(e){
             e.preventDefault();
-            if(!email){
-                setErrorEmail('Email is required');
-            }
-            else if(email){
-                setErrorEmail('');
-            }
-             if(!password){
-                setErrorPassword('Password is required');
-            }
-            else if(password){
-                setErrorPassword('');
-            }
-            if(password!==cpassword){
-                setErrorCPassword('Confirm Password isn\'t match');
-            }
-            else if(password===cpassword){
-                setErrorCPassword('');
-            }
-            if(!username){
-                setErrorUsername('Full Name is required');
-            }
-            else if(username.length<5){
+            if(!email||!password||!cpassword||!username ||password!==cpassword ||username.length<5){
+                if(!email){
+                    setErrorEmail('Email is required');
+                }
+                else if(email){
+                    setErrorEmail('');
+                }
+                if(!password){
+                    setErrorPassword('Password is required');
+                }
+                else if(password){
+                    setErrorPassword('');
+                }
+                if(!cpassword){
+                    setErrorCPassword('Confirm Password is required');
+                }
+                else if(password!==cpassword){
+                    setErrorCPassword('Confirm Password isn\'t match');
+                }
+                else if(cpassword){
+                    setErrorCPassword('');
+                }
+                if(!username){
+                    setErrorUsername('Full Name is required');
+                }
+                else if(username.length<5){
                 setErrorUsername('User Name >=5 characters');
+                }
+                else if(username){
+                    setErrorUsername('');
+                }
             }
             else{
                 const newUser ={email, password, username};
@@ -52,20 +60,35 @@ import '../css/Register.css';
                 setPassword('');
                 setUsername('');
                 console.log(email, password, username);
-                alert("Register Successful")
                 navigate('/log-in');
+                // setIsOpen(true);
             }
+            // return navigate('/log-in');
         }
+        
         return(
+            <div>
+                <div className="Register_img">
+                <img src='./homeimg/Homepage-Register.jpg' alt="" width={"100%"} height={"100%"} />
+                <div >
+                    <p className="Register_Content">
+                        PRODUCT REGISTRATION<br></br>
+                        <h2>THERE’S GOOD REASON TO REGISTER</h2>
+                        Register your appliance for easy access to product updates, warranty information, special offers, recipes and more.
+                    </p>
+                </div>
+
+            </div>
             <div className="Register">
+                
                 <div className="Register_title">
                 <h1>Register</h1>
-                <p></p>
-                <div>Create an account to view your activity and receive personalized product information</div>
+                {/* <p></p> */}
+                {/* <div>Create an account to view your activity and receive personalized product information</div> */}
                 </div>
                 <div className="Register_right"><span>*</span> Required fields</div>
                 <div className="Register_box" >
-                    <div>Simply enter your email and basic information to create an account. Not sure if your already have an account? Enter your email to find your account.</div>
+                    <div>Simply enter your email and basic information to create an account. </div>
                     <hr></hr>
                     <form onSubmit={handleVatlidation}>
                         <div className="Register_grid">
@@ -108,11 +131,11 @@ import '../css/Register.css';
                         <div>
                             <hr></hr>
                             <div className="Register_checkbox">
-                                <input type="checkbox" checked="true"/>
+                                <input type="checkbox" />
                                 <div>Sign me up to receive product tips and tricks, special offers and more from Tasha.</div>
-                                <input type="checkbox"/>
+                                <input type="checkbox"checked="true"/>
                                 <div>I have read and agree to the TASHA PRIVACY POLICY.<span>*</span></div>
-                                <input type="checkbox"/>
+                                <input type="checkbox" checked="true"/>
                                 <div>I have read and agree to the TASHA TERMS AND CONDITIONS.<span>*</span></div>
                             </div>
                             <hr></hr>
@@ -124,6 +147,7 @@ import '../css/Register.css';
                         
                     </form>
                 </div>
+            </div>
             </div>
             );
     }

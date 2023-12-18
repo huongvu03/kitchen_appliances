@@ -1,64 +1,276 @@
-.Register span{
-    color: rgb(165, 0, 52);
-}
-.Register{
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-}
-.Register_title{
-   text-align: center;
-   margin-top: 50px;
-   margin-bottom: 50px;
-}
-.Register_right{
-    text-align: right;
-}
-.Register_box{
-    border: solid;
-    border-color: rgb(225, 225, 225);
-    background-color:rgb(245, 245, 245);   
-    padding: 50px 200px 50px 200px;
-}
-.Register_grid{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    
-}
-.Register_grid input{
-    width: 90%;
-    height: 40px;
-}
-.Register_passvali{
-    font-size: 12px;
-    margin-bottom: 10px;
-}
-.Register_checkbox{
-    display: grid;
-    grid-template-columns: 10% 90%;
-    row-gap: 10px;
-}
 
-.Register_error{
-    color: rgb(165, 0, 52);
-}
-.Register_button{
-    text-align: center;
-}
-.Register_button button{
-    border-radius: 5px;
-    border: none;
-    background-color:rgb(165, 0, 52);
-    width: 30%;
-    height: 45px;
-    margin: 5px;
-    color: white;
-}
-.Register_button .cancel{
+@media(max-width: 767px){
+    .Register span{
+        color: rgb(165, 0, 52);
+    }
+    .Register{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .Register_title{
+       text-align: center;
+       margin-top: 20px;
+       margin-bottom: 10px;
+    }
+    .Register_right{
+        text-align: right;
+    }
+    .Register_box{
+        border: solid;
+        border-color: rgb(225, 225, 225);
+        background-color:rgb(245, 245, 245);   
+        padding: 10px 10px 10px 10px;
+    }
+    .Register_grid{
+        display: grid;
+        grid-template-columns: 100%;
+        
+    }
+    .Register_grid input{
+        width: 90%;
+        height: 40px;
+    }
+    .Register_passvali{
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .Register_checkbox{
+        display: grid;
+        grid-template-columns: 10% 90%;
+        row-gap: 10px;
+    }
+    .Register_checkbox input{
+        width: 25px;
+    }
     
-    background-color: grey;
-}
-.Register_button .cancel a{
-    text-decoration: none;
-    color: white;
-}
+    .Register_error{
+        color: rgb(165, 0, 52);
+    }
+    .Register_button{
+        text-align: center;
+    }
+    .Register_button button{
+        border-radius: 5px;
+        border: none;
+        background-color:rgb(165, 0, 52);
+        width: 30%;
+        height: 45px;
+        margin: 5px;
+        color: white;
+    }
+    .Register_button .cancel{
+        
+        background-color: grey;
+    }
+    .Register_button .cancel a{
+        text-decoration: none;
+        color: white;
+    }
+    .Register_Content{
+        position: absolute;
+        color:white;
+        width: fit-content;
+        font-size: 13px;
+        top:2%;
+        /* left:30%; */
+        width: 300px;
+        /* padding: 10px; */
+        background-color: rgba(0, 0, 0, 0.427);
+        /* height: 500px; */
+        /* display: none; */
+    }
+    .Register_Content h2{
+        display: none;
+    }
+    .Register_img div{
+        width: 300px;
+        /* width: fit-content; */
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    .Register_img{
+        object-fit: cover;
+        height: auto;
+        
+    }
+
+    }
+@media(min-width: 768px) and (max-width: 1024px){
+    .Register span{
+        color: rgb(165, 0, 52);
+    }
+    .Register{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .Register_title{
+       text-align: center;
+       margin-top: 50px;
+       margin-bottom: 50px;
+    }
+    .Register_right{
+        text-align: right;
+    }
+    .Register_box{
+        border: solid;
+        border-color: rgb(225, 225, 225);
+        background-color:rgb(245, 245, 245);   
+        padding: 50px 50px 50px 50px;
+    }
+    .Register_grid{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        
+    }
+    .Register_grid input{
+        width: 90%;
+        height: 40px;
+    }
+    .Register_passvali{
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .Register_checkbox{
+        display: grid;
+        grid-template-columns: 10% 90%;
+        row-gap: 10px;
+    }
+    
+    .Register_error{
+        color: rgb(165, 0, 52);
+    }
+    .Register_button{
+        text-align: center;
+    }
+    .Register_button button{
+        border-radius: 5px;
+        border: none;
+        background-color:rgb(165, 0, 52);
+        width: 30%;
+        height: 45px;
+        margin: 5px;
+        color: white;
+    }
+    .Register_button .cancel{
+        
+        background-color: grey;
+    }
+    .Register_button .cancel a{
+        text-decoration: none;
+        color: white;
+    }
+    .Register_Content{
+        position: absolute;
+        color:white;
+        /* width: fit-content; */
+        font-size: 17px;
+        top:15%;
+        /* left:10%; */
+        width: 400px;
+        
+        /* padding: 10px; */
+        background-color: rgba(0, 0, 0, 0.427);
+        /* height: 500px; */
+    }
+    .Register_img div{
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    .Register_img{
+        object-fit: cover;
+        height: 400px;
+    }
+    }
+@media(min-width: 1025px){
+    .Register span{
+        color: rgb(165, 0, 52);
+    }
+    .Register{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .Register_title{
+       text-align: center;
+       margin-top: 50px;
+       margin-bottom: 50px;
+    }
+    .Register_right{
+        text-align: right;
+    }
+    .Register_box{
+        border: solid;
+        border-color: rgb(225, 225, 225);
+        background-color:rgb(245, 245, 245);   
+        padding: 50px 200px 50px 200px;
+    }
+    .Register_grid{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        
+    }
+    .Register_grid input{
+        width: 90%;
+        height: 40px;
+    }
+    .Register_passvali{
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .Register_checkbox{
+        display: grid;
+        grid-template-columns: 10% 90%;
+        row-gap: 10px;
+    }
+    
+    .Register_error{
+        color: rgb(165, 0, 52);
+    }
+    .Register_button{
+        text-align: center;
+    }
+    .Register_button button{
+        border-radius: 5px;
+        border: none;
+        background-color:rgb(165, 0, 52);
+        width: 30%;
+        height: 45px;
+        margin: 5px;
+        color: white;
+    }
+    .Register_button .cancel{
+        
+        background-color: grey;
+    }
+    .Register_button .cancel a{
+        text-decoration: none;
+        color: white;
+    }
+    .Register_Content{
+        position: absolute;
+        color:white;
+        width: fit-content;
+        font-size: 20px;
+        top:30%;
+        /* left:30%; */
+        width: 600px;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.427);
+        /* height: 500px; */
+    }
+    .Register_img div{
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    .Register_img{
+        object-fit: cover;
+        height: 500px;
+    }
+    }

@@ -1,20 +1,65 @@
 
-.AboutUs_title{
-    font-size: 50px;
-    margin-bottom: 30px;
-    font-weight: 300;
-}
-.AboutUs{
-    margin: 70px 100px 100px 100px;
-    font-size: 18px;
-    text-indent:20px;
-    text-align: justify;
 
+@media(max-width: 767px){
+    .AboutUs_title{
+        font-size: 20px;
+        margin-bottom: 30px;
+        font-weight: 300;
+    }
+    .AboutUs{
+        margin:10px 20px 10px 10px;
+        font-size: 14px;
+        text-indent:10px;
+        text-align: justify;
+    
+    }
+    .AboutUs div img{
+        width: 100%;
+        box-shadow: inset;
+    }
+    .AboutUs_image img{
+        width: 100%;
+    }
 }
-.AboutUs div img{
-    width: 100%;
-    box-shadow: inset;
+@media(min-width: 768px) and (max-width: 1024px){
+    .AboutUs_title{
+        font-size: 30px;
+        margin-bottom: 30px;
+        font-weight: 300;
+    }
+    .AboutUs{
+        margin: 70px 70px 100px 50px;
+        font-size: 18px;
+        text-indent:20px;
+        text-align: justify;
+    
+    }
+    .AboutUs div img{
+        width: 100%;
+        box-shadow: inset;
+    }
+    .AboutUs_image img{
+        width: 100%;
+    }
 }
-.AboutUs_image img{
-    width: 100%;
+@media(min-width: 1025px){
+    .AboutUs_title{
+        font-size: 50px;
+        margin-bottom: 30px;
+        font-weight: 300;
+    }
+    .AboutUs{
+        margin: 70px 100px 100px 100px;
+        font-size: 18px;
+        text-indent:20px;
+        text-align: justify;
+    
+    }
+    .AboutUs div img{
+        width: 100%;
+        box-shadow: inset;
+    }
+    .AboutUs_image img{
+        width: 100%;
+    }
 }
