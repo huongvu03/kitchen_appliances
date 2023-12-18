@@ -13,7 +13,7 @@ function Header({ handleSubmit, value, carts }) {
     const totalQuantity = carts.reduce((total, product) => total + product.quantity, 0);
     console.log(totalQuantity);
 
-    const showMenu=(e)=>{
+    const showMenu = (e) => {
         document.getElementById("headerContent").removeAttribute("hidden");
         return true;
     }
@@ -33,29 +33,29 @@ function Header({ handleSubmit, value, carts }) {
                                 <Link to='/blogs' >
                                     <li>
                                         {/* <div class="headerHome_dropdown"> */}
-                                            {/* <div className='dropbtn'> */}
-                                                OUR BLOG
-                                                {/* </div> */}
-                                            {/* <div class="dropdown-content">
+                                        {/* <div className='dropbtn'> */}
+                                        OUR BLOG
+                                        {/* </div> */}
+                                        {/* <div class="dropdown-content">
                                                 <Link to="/expert-tips">Expert Tips</Link>
 
                                             </div>
                                         </div> */}
 
                                     </li>
-                                    </Link>
+                                </Link>
 
 
                                 <Link to='/contact' > <li>
                                     {/* <div class="headerHome_dropdown"> */}
-                                        {/* <div className='dropbtn'> */}
-                                            SUPPORT
-                                            {/* </div>
+                                    {/* <div className='dropbtn'> */}
+                                    SUPPORT
+                                    {/* </div>
                                         {/* <div class="dropdown-content" hidden id="headerContent"> */}
-                                            {/* <Link to="/contact">Contact Us</Link> */}
+                                    {/* <Link to="/contact">Contact Us</Link> */}
 
-                                            {/* <Link to="/feedback">Feedback</Link> */}
-                                        {/* </div> */}
+                                    {/* <Link to="/feedback">Feedback</Link> */}
+                                    {/* </div> */}
                                     {/* </div>  */}
 
                                 </li>
@@ -64,18 +64,20 @@ function Header({ handleSubmit, value, carts }) {
                             </ul>
                         </div>
                     </div>
-                </li></Link>
+                </li>
+            </Link>
+            
             <div>  <Link to='/'><img src="./homeimg/Logo-Tashas-Design.png" alt="logo" height="100px" width="100px" /></Link></div>
 
             <ul className='headerHomeTab'>
                 {/* <Link to='/' > <li>HOME</li></Link> */}
-                <Link to='/promotion' > <li>PROMOTION</li></Link>
+                <Link to='/promotion' headerHomeTab> <li>PROMOTION</li></Link>
 
                 <Link to='/products' ><li>PRODUCTS</li></Link>
                 <Link to='/blogs' >
                     <li>
                         <div class="headerHome_dropdown">
-                            <div className='dropbtn '>OUR BLOG</div>
+                            <div className='dropbtn'>OUR BLOG</div>
                             <div class="dropdown-content">
                                 <Link to="/expert-tips">Expert Tips</Link>
 

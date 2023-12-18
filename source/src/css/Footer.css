@@ -59,11 +59,17 @@
   margin: 0px 0px 60px 0px;
   font-weight: lighter;
   border-top: rgb(228, 226, 226) 5px solid;
+  column-gap: 30px;
 }
 .Footer_c1 {
   margin-left: 60px;
 }
-.Footer_c1 a {
+/* .Footer_c1 div{
+  margin-left: 30px;
+} */
+
+.Footer_c2 a, .Footer_c1 a {
+
   font-size: 18px;
   color: black;
   text-decoration: none;
@@ -119,26 +125,33 @@
 
 @media (max-width:767px){
   .FooterSocial{
-    font-size: 16px;
     display: grid;
-    grid-template-columns: 55% auto;
-
+   grid-template-columns: auto;
+   row-gap: 40px;
+   
   }
-  .FooterSocial_leftInput input{
+  .FooterSocial_right {
+    margin-left: 0px;
+  }
 
-    font-size: 17px;
- 
-}
 .FooterSocial_title {
   font-size: 20px;
 
 }
-.Footer_c1 a,.Footer_c1 h5, .Footer_c3 h5 {
-font-size:16px ;
-color:blue;
-}
+.Footerrow2{
+display: grid;
+grid-template-columns: auto ;
 
 
 }
+.Footer_c1 {
+
+  margin-left: 30px;
+  margin-right: 10px;
   
+  }
+  .Footercopyright{
+font-size: 15px;
+  }
+}
 

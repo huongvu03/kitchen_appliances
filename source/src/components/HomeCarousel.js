@@ -1,6 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
 import { useNavigate } from 'react-router-dom';
-import { ChevronDoubleRight } from 'react-bootstrap-icons' ;
+
 import '../css/Home.css';
 
 function HomeCarousel() {
@@ -35,26 +35,19 @@ function HomeCarousel() {
         src="./homeimg/carousel_2.png" 
         alt="Second slide"
       />
-      <Carousel.Caption >
-                <p>For the coffee connoisseur, every cup is a moment to savor.
-          <br/>
-           So, why not surprise them with a gift as coveted as their daily brew? .</p>
-      </Carousel.Caption>
+      {/* <Carousel.Caption >
+              
+      </Carousel.Caption> */}
     </Carousel.Item>
 
-    <Carousel.Item onClick={()=>navigate(`/products`)} className='HomeCarouselContent3'>
+    <Carousel.Item onClick={()=>navigate(`/products`)} className='HomeCarouselItem'>
       <img height={"600px"}
         className="d-block w-100"
-        src="./homeimg/carousel_3.jpg"
+        src="./homeimg/carousel_3.png"
         alt="Third slide"
       />
       {/* <Carousel.Caption> */}
-     <div>
-        <p >
-        From lavish holiday dinners to casual celebrations, Tasha has all the small kitchen appliances you need for creating crowd-pleasing dishes with ease.
-        </p>
-       <p className='HomeCarousel_shop'>Shop Now<ChevronDoubleRight/></p>
-        </div>
+  
       {/* </Carousel.Caption> */}
     </Carousel.Item>
   </Carousel>

@@ -1,7 +1,7 @@
 /* Carousel */
 .HomeCarouselItem {
 /* background-color: rgba(0, 0, 0, 0.344); */
-width: max-content;
+max-width: 100%;
 text-align: center;
 margin-left: auto; 
 margin-right: auto;
@@ -11,23 +11,16 @@ margin-right: auto;
     padding: 5px;
     font-size: 20px;
 }
-.HomeCarouselContent3 div {
-position: absolute;
-top:70%;
-left:6%;
-width: 600px;
-font-size: 20px;
+.HomeCarouselItem .d-block{
+width: 100%;
 
-}
-.HomeCarouselContent3 .HomeCarousel_shop{
-    font-size: 40px;
-    text-align: left;
-    margin-top: 0%;
-    font-weight: bold;
+
 }
 .HomeCarouselContent3 :hover, .HomeCarouselItem{
     cursor: pointer;
 }
+
+/*homebody*/
 .HomeBody_title {
     text-align: center;
     font-size: 30px;
@@ -45,7 +38,7 @@ font-size: 20px;
     border-radius: 30px;
     font-weight: 600;
     width: 200px;
-    height: max-content;
+    height:30px;
 
 }
 
@@ -53,12 +46,15 @@ font-size: 20px;
     text-align: right;
     margin-right: 70px;
 }
+.HomeBody_buttonmedia{
+    visibility: hidden;
+}
 
 .HomeBody_contentitem_btn {
     text-align: center;
 }
 
-.HomeBody_button button:hover,
+.HomeBody_button button:hover,.HomeBody_buttonmedia button:hover,
 .HomeBody_contentitem_btn button:hover,
 .HomeNew1-btn button:hover,
 .HomeNew2-btn button:hover {
@@ -106,7 +102,7 @@ font-size: 20px;
 }
 .HomeBody_contentitemRow2{
     color: rgb(74, 70, 70);
-    font-size: 18px;
+    font-size: 20px;
 }
 .HomeBody_contentitemRow1,
 .HomeBody_contentitemRow2 {
@@ -130,7 +126,9 @@ font-size: 20px;
 .HomeNew1,
 .HomeNew2 {
     position: relative;
+ 
 }
+
 .HomeNew1-content {
     padding: 30px;
     position: absolute;
@@ -141,7 +139,7 @@ font-size: 20px;
     width: 350px;
     height: 300px;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .HomeNew1-content h4 {
@@ -201,7 +199,7 @@ font-size: 20px;
 .HomeNew2-content {
     padding: 40px;
     color: black;
-
+    font-size: 20px;
 }
 
 .HomeNew2-btn {
@@ -216,4 +214,86 @@ font-size: 20px;
     transform-origin: center;
     transform: scale(1.005);
     -webkit-transform:scale(1.005) ease-in-out;
+}
+
+@media (max-width:767px){
+.HomeCarouselItem img{
+object-fit: scale-down;
+height: 100%;   
+} 
+      
+.HomeBody_title h1{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.HomeBody_button{
+    visibility: hidden;
+}
+
+/* homebody content 4 rows */
+.HomeBody_content {
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: auto;
+   row-gap: 60px;
+    margin-top: 0%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+ }
+
+/*button */
+.HomeBody_buttonmedia{
+    visibility: visible;
+   }
+   .HomeBody_buttonmedia button{
+    border: none;
+    color: #a50034;
+    font-weight: 600;
+    background-color: white;
+    font-size: 18px;
+}
+.HomeBody_buttonmedia{
+    text-align: left;
+    margin-left: 1rem;
+    margin-top: 20px;
+}
+
+/* new arrival */
+.HomeBody h2{
+    font-size: 30px;
+     padding: 60px;
+
+}
+.HomeNew1-content {
+    position: relative;
+    top: 0px;
+    left:auto;
+    right: auto;
+    width: 100%;
+    height: 140px;
+    text-align: center;
+    font-size: 18px;
+}
+.HomeNew2-title {
+    margin: 200px 1rem 50px 1rem;
+   font-size: 23px;
+}
+
+.HomeNew2-title p {
+    font-size: 32px;
+    font-weight: 500;
+   }
+.HomeNew2{
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0px;
+    
+}
+.HomeNew2-content{
+ font-size: 18px;
+}
+.HomeNew2-btn{
+    text-align: center;
+}
 }

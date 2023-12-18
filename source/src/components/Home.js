@@ -1,6 +1,7 @@
 import HomeCarousel from "./HomeCarousel";
 import '../css/Home.css';
 import { useNavigate } from "react-router-dom";
+import { ChevronDoubleRight } from 'react-bootstrap-icons' ;
 
 
 function Home() {
@@ -42,7 +43,7 @@ function Home() {
 
                 <div className="HomeBody_title"><h1>CHRISTMAST FEATURED DEALS</h1></div>
 
-                <h6 className="HomeBody_button"><button onClick={() => navigate(`/promotion`)} className="btn">EXPLOSER MORE</button></h6>
+               <div><h6 className="HomeBody_button"><button onClick={() => navigate(`/promotion`)} >EXPLOSER MORE</button></h6></div> 
 
                 <div className="HomeBody_content">
 
@@ -93,11 +94,13 @@ function Home() {
 
 
                 </div>
+               <div><h6 className="HomeBody_buttonmedia"><button onClick={() => navigate(`/promotion`)} >EXPLOSER MORE<ChevronDoubleRight/></button></h6></div> 
+
 
                 <h2>NEW ARRIVAL</h2>
 
                 <div className="HomeNew1">
-                    <div className="HomeNew1video"><video src="./homeimg/blenderArrival - Trim.mp4" controls autoPlay loop width="100%"  /></div>
+                    <div className="HomeNew1video"><video src="./homeimg/blenderArrival - Trim.mp4" controls autoPlay loop width="100%" height={"100%"}/></div>
                     <div className="HomeNew1-content">
                         <h4> HI, HIBISCUS! </h4>
                         <div>
