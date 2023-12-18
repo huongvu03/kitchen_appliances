@@ -15,7 +15,7 @@
   margin-top: 5%;
 }
 .payment_button_wrap {
-  /* text-align: center; */
+  margin-top: 5%;
 }
 .btn_checkout {
   width: 300px;
@@ -45,9 +45,26 @@
   padding-top: 10px;
   background-color: white;
 }
+.cartitem_quantity_res {
+  display: none;
+}
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  .form-group {
+    width: 100%;
+    grid-template-columns: 100%;
+  }
 }
 
 @media screen and (max-width: 767px) {
+  .form-group {
+    width: 100%;
+    grid-template-columns: 100%;
+  }
+  .cartitem_quantity_res {
+    display: block;
+  }
+  .cartitem_quantity_res2 {
+    display: none;
+  }
 }

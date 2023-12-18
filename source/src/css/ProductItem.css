@@ -1,6 +1,6 @@
 .productitem_card {
   display: grid;
-  grid-template-rows:85% auto;
+  grid-template-rows: 85% auto;
   background-color: rgb(255, 255, 255);
   overflow: hidden;
   border-radius: 15px;
@@ -9,74 +9,69 @@
   height: 500px;
 }
 
-
 .productitem_card_body {
-  padding:10px;
+  padding: 30px;
   display: grid;
-  grid-template-rows:60% auto;
+  grid-template-rows: 50% auto;
   max-width: 100%;
- 
 }
 .productitem_card_body img {
   width: 100%;
   height: 150px;
 }
-.productitem_card_body {
-  padding: 30px;
-}
-
 
 .productitem_card_body_content {
   height: 150px;
   padding-top: 25px;
-
 }
-.productitem_card_body_content h6{
+.productitem_card_body_content h6 {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   display: -webkit-box;
 }
-
+.productitem_card_body_content_price {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(0, 190, 0);
+}
 
 .btn_detail {
-  color: black;
-  background-color: #ffffff;
+  background-color: rgb(241, 241, 241);
   border: none;
 }
 
 .btn_detail:hover {
-  color: rgba(0, 0, 0, 0.616);
-  transition: 0.35s ease;
+  border-bottom: 3px solid #c41239;
+  transition: 0.2s ease;
 }
 .btn_addCart {
-  background-color: #a50034;
-  padding: 5px;
-  color: white;
+  background-color: rgb(241, 241, 241);
   border: none;
-  border-radius: 5px;
 }
 .btn_addCart:hover {
-  color: rgb(255, 255, 255);
-  background-color: #7a0027;
-  transition: 0.35s ease;
+  border-bottom: 3px solid #c41239;
+  transition: 0.2s ease;
 }
+
 .productitem_card_control {
   display: grid;
   grid-template-columns: auto auto;
-  padding: 10px;
+  padding-top: 22px;
+  padding-bottom: 30px;
+  background-color: rgb(241, 241, 241);
 }
 
 .productitem :hover.productitem_card {
   transform: translateY(-15px) scale(1.005) translateZ(0);
-  transition: 0.35s ease;
+  transition: 0.3s ease;
 }
 
 .alert_modal {
   color: rgb(0, 122, 0);
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-
   .productitem_card_body img {
     width: 100%;
     height: 200px;
@@ -84,10 +79,8 @@
   .productitem_card_body_content {
     padding-top: 25px;
   }
-  
 }
-@media screen and (max-width: 767px){
-
+@media screen and (max-width: 767px) {
   .productitem_card_body img {
     width: 100%;
     height: 200px;

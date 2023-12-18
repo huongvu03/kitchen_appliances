@@ -18,16 +18,16 @@ function ProductItem({ product, addToCart }) {
             <div className="productitem">
                 <div className='productitem_card'>
                     <div className='productitem_card_body'>
-                        <div><img src={product.image[0]} alt='' /></div>
-                        <div className='productitem_card_body_content'>
+                        <div onClick={() => navigate(`/detail/${product.id}`)}><img src={product.image[0]} alt='' /></div>
+                        <div className='productitem_card_body_content' onClick={() => navigate(`/detail/${product.id}`)}>
                             <div><h6>{product.name}</h6></div>
-                            <div>${product.price}</div>
+                            <div className='productitem_card_body_content_price'>${product.price}</div>
                         </div>
                     </div>
                     <div className="productitem_card_control">
                         <button className='btn_addCart' onClick={() => { addToCart(product); handleShow() }}>ADD CART</button>
                         <button className='btn_detail' onClick={() => navigate(`/detail/${product.id}`)}>DETAILS</button>
-                   
+
                     </div>
                 </div>
             </div>
