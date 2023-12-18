@@ -64,9 +64,6 @@
 .Footer_c1 {
   margin-left: 60px;
 }
-/* .Footer_c1 div{
-  margin-left: 30px;
-} */
 
 .Footer_c2 a, .Footer_c1 a {
 
@@ -122,7 +119,25 @@
     font-weight: bold;
     
 }
+/* MEDIA tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+  .Footerrow2{
+    display: grid;
+    grid-template-columns: auto auto;
+    
+  }
+  .Footer_c4{
+margin-left: 30px;
+  }
 
+  /* term + policy */
+  .TermsOfUse,.Privacy{
+    margin:40px;
+}
+}
+
+
+/* Phone */
 @media (max-width:767px){
   .FooterSocial{
     display: grid;
@@ -152,6 +167,11 @@ grid-template-columns: auto ;
   }
   .Footercopyright{
 font-size: 15px;
+  }
+    /* term + policy */
+    .TermsOfUse,.Privacy{
+      margin:40px 5px 40px 5px;
+      
   }
 }
 

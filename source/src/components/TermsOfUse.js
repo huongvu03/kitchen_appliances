@@ -4,7 +4,7 @@ function TermsOfUse(){
         <div className="TermsOfUse">
             <h1>TERMS OF USES</h1>
             <ul>
-                <li className="TermsTitle"> OWNERSHIP OF SITE ; AGREEMENT TO TERNS & CONDITIONS OF SERVICE & USE</li>
+                <li className="TermsTitle"> OWNERSHIP OF SITE ; AGREEMENT TO TERNS AND CONDITIONS OF SERVICE & USE</li>
            
 <li>These Terms & Conditions of Service and Use ("Terms of Service") apply to the Tasha Brands, Inc. ("TB") Web Site located at www.tasha.com, and all associated sites linked to www.tasha.com by TB, its subsidiaries and affiliates (the "Web Site"). The Web Site is the property of TB. BY USING THE WEB SITE, YOU AGREE TO THESE TERMS OF USE; IF YOU DO NOT AGREE, DO NOT USE THE WEB SITE.</li>
 

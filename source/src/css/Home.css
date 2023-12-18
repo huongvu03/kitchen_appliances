@@ -1,22 +1,26 @@
 /* Carousel */
 .HomeCarouselItem {
-/* background-color: rgba(0, 0, 0, 0.344); */
-max-width: 100%;
-text-align: center;
-margin-left: auto; 
-margin-right: auto;
+    /* background-color: rgba(0, 0, 0, 0.344); */
+    max-width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
-.HomeCarouselItem p{
-    color:black;
+
+.HomeCarouselItem p {
+    color: black;
     padding: 5px;
     font-size: 20px;
 }
-.HomeCarouselItem .d-block{
-width: 100%;
+
+.HomeCarouselItem .d-block {
+    width: 100%;
 
 
 }
-.HomeCarouselContent3 :hover, .HomeCarouselItem{
+
+.HomeCarouselContent3 :hover,
+.HomeCarouselItem {
     cursor: pointer;
 }
 
@@ -38,7 +42,7 @@ width: 100%;
     border-radius: 30px;
     font-weight: 600;
     width: 200px;
-    height:30px;
+    height: 30px;
 
 }
 
@@ -46,7 +50,8 @@ width: 100%;
     text-align: right;
     margin-right: 70px;
 }
-.HomeBody_buttonmedia{
+
+.HomeBody_buttonmedia {
     visibility: hidden;
 }
 
@@ -54,7 +59,8 @@ width: 100%;
     text-align: center;
 }
 
-.HomeBody_button button:hover,.HomeBody_buttonmedia button:hover,
+.HomeBody_button button:hover,
+.HomeBody_buttonmedia button:hover,
 .HomeBody_contentitem_btn button:hover,
 .HomeNew1-btn button:hover,
 .HomeNew2-btn button:hover {
@@ -69,14 +75,14 @@ width: 100%;
     grid-template-columns: auto auto auto auto;
     max-width: 100%;
     column-gap: 25px;
-    margin:60px 60px 0px 60px;
- }
+    margin: 60px 60px 0px 60px;
+}
 
 .HomeBody_contentitem {
     /* border: 2px solid; */
     display: grid;
     grid-template-rows: 45% 15% 23% auto;
-      row-gap: 10px;
+    row-gap: 10px;
     border-radius: 20px;
     max-width: 100%;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px 0px;
@@ -85,10 +91,11 @@ width: 100%;
 }
 
 .HomeBody_contentitem img {
-     width: 100%;
+    width: 100%;
     height: 100%;
-    border-radius: 20px; 
-    transition-duration: 0.4s;;
+    border-radius: 20px;
+    transition-duration: 0.4s;
+    ;
     vertical-align: middle;
     transform: scale(0.99);
 
@@ -100,10 +107,12 @@ width: 100%;
     font-size: 27px;
     font-weight: 500;
 }
-.HomeBody_contentitemRow2{
+
+.HomeBody_contentitemRow2 {
     color: rgb(74, 70, 70);
     font-size: 20px;
 }
+
 .HomeBody_contentitemRow1,
 .HomeBody_contentitemRow2 {
     padding: 20px;
@@ -126,7 +135,7 @@ width: 100%;
 .HomeNew1,
 .HomeNew2 {
     position: relative;
- 
+
 }
 
 .HomeNew1-content {
@@ -165,17 +174,17 @@ width: 100%;
 .HomeNew2-title p {
     font-size: 35px;
     font-weight: 500;
-   
+
 }
 
 .HomeNew2 {
-     display: grid;
+    display: grid;
     grid-template-columns: 60% auto;
     column-gap: 30px;
     row-gap: 30px;
-     margin: 0px 80px 0px 80px;
-    
-    }
+    margin: 0px 80px 0px 80px;
+
+}
 
 .HomeNew2Left {
     max-width: 100%;
@@ -189,7 +198,7 @@ width: 100%;
     height: 100%;
     font-size: 18px;
     cursor: pointer;
-   
+
 }
 
 .HomeNew2-content {
@@ -207,93 +216,143 @@ width: 100%;
     padding-left: auto;
     padding-right: auto;
 }
+
 .HomeBody_contentitem:hover img {
 
     border-radius: 20px;
-    transition-duration: 0.4s;;
+    transition-duration: 0.4s;
+    ;
     transform-origin: center;
     transform: scale(1.005);
-    -webkit-transform:scale(1.005) ease-in-out;
+    -webkit-transform: scale(1.005) ease-in-out;
 }
 
-@media (max-width:767px){
-.HomeCarouselItem img{
-object-fit: scale-down;
-height: 100%;   
-} 
-      
-.HomeBody_title h1{
-    margin-left: auto;
-    margin-right: auto;
-  }
 
-.HomeBody_button{
-    visibility: hidden;
+/* MEDIA tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+   
+.HomeBody_button {
+        margin-right: 30px;
 }
 
-/* homebody content 4 rows */
-.HomeBody_content {
-    display: grid;
-    grid-template-columns: auto ;
-    grid-template-rows: auto;
-   row-gap: 60px;
-    margin-top: 0%;
-    margin-left: 1rem;
-    margin-right: 1rem;
- }
+    .HomeBody_content {
+        display: grid;
+        grid-template-columns: auto auto;
+        max-width: 100%;
+        row-gap: 60px;
+        margin: 60px 30px 0px 30px;
+    }
 
-/*button */
-.HomeBody_buttonmedia{
-    visibility: visible;
-   }
-   .HomeBody_buttonmedia button{
-    border: none;
-    color: #a50034;
-    font-weight: 600;
-    background-color: white;
-    font-size: 18px;
-}
-.HomeBody_buttonmedia{
-    text-align: left;
-    margin-left: 1rem;
-    margin-top: 20px;
-}
+    .HomeNew1-content {
 
-/* new arrival */
-.HomeBody h2{
-    font-size: 30px;
-     padding: 60px;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: fit-content;
+        text-align: center;
+        font-size: 23px;
 
-}
-.HomeNew1-content {
-    position: relative;
-    top: 0px;
-    left:auto;
-    right: auto;
-    width: 100%;
-    height: 140px;
-    text-align: center;
-    font-size: 18px;
-}
-.HomeNew2-title {
-    margin: 200px 1rem 50px 1rem;
-   font-size: 23px;
-}
 
-.HomeNew2-title p {
-    font-size: 32px;
-    font-weight: 500;
-   }
-.HomeNew2{
-    display: grid;
-    grid-template-columns: auto;
-    margin: 0px;
+    }
+    .HomeNew2-title {
+        margin: 50px 1rem 50px 1rem;
+           
+    }
+    .HomeNew2{
+        margin-left: 2rem;
+       
+    }
     
+     
 }
-.HomeNew2-content{
- font-size: 18px;
-}
-.HomeNew2-btn{
-    text-align: center;
-}
+
+/*Phone*/
+@media (max-width:767px) {
+    .HomeCarouselItem img {
+        object-fit: scale-down;
+        height: 100%;
+    }
+
+    .HomeBody_title h1 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .HomeBody_button {
+        visibility: hidden;
+    }
+
+    /* homebody content 4 rows */
+    .HomeBody_content {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        row-gap: 60px;
+        margin-top: 0%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    /*button */
+    .HomeBody_buttonmedia {
+        visibility: visible;
+    }
+
+    .HomeBody_buttonmedia button {
+        border: none;
+        color: #a50034;
+        font-weight: 600;
+        background-color: white;
+        font-size: 18px;
+    }
+
+    .HomeBody_buttonmedia {
+        text-align: left;
+        margin-left: 1rem;
+        margin-top: 20px;
+    }
+
+    /* new arrival */
+    .HomeBody h2 {
+        font-size: 30px;
+        padding: 60px;
+
+    }
+
+    .HomeNew1-content {
+        position: relative;
+        top: 0px;
+        left: auto;
+        right: auto;
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .HomeNew2-title {
+        margin: 200px 1rem 50px 1rem;
+        font-size: 23px;
+    }
+
+    .HomeNew2-title p {
+        font-size: 32px;
+        font-weight: 500;
+    }
+
+    .HomeNew2 {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0px;
+
+    }
+
+    .HomeNew2-content {
+        font-size: 18px;
+    }
+
+    .HomeNew2-btn {
+        text-align: center;
+    }
 }

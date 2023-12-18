@@ -34,13 +34,13 @@ function Header({ handleSubmit, value, carts }) {
                                     <li>
                                         {/* <div class="headerHome_dropdown"> */}
                                         {/* <div className='dropbtn'> */}
-                                        OUR BLOG
+                                         BLOG
                                         {/* </div> */}
                                         {/* <div class="dropdown-content">
                                                 <Link to="/expert-tips">Expert Tips</Link>
 
                                             </div>
-                                        </div> */}
+                                        </div> */}s
 
                                     </li>
                                 </Link>
@@ -77,7 +77,7 @@ function Header({ handleSubmit, value, carts }) {
                 <Link to='/blogs' >
                     <li>
                         <div class="headerHome_dropdown">
-                            <div className='dropbtn'>OUR BLOG</div>
+                            <div className='dropbtn'>BLOG</div>
                             <div class="dropdown-content">
                                 <Link to="/expert-tips">Expert Tips</Link>
 

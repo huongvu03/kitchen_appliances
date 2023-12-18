@@ -99,7 +99,7 @@ function Footer() {
 
                 </div>
                 <div >
-                    <ul  className='Footer_c2'>
+                    <ul  className='Footer_c4'>
 
                         <li ><h5>Have Tasha Premium Care?</h5></li>
                         <li>1-855-549-0540</li>
