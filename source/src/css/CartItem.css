@@ -25,4 +25,10 @@
 }
 
 @media screen and (max-width: 767px) {
+  .cartitem_price {
+    display: none;
+  }
+  .cartitem_remove {
+    display: none;
+  }
 }

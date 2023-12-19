@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "../css/Payment.css";
+import Button from 'react-bootstrap/Button';
 import { Modal } from 'react-bootstrap';
 import { Navigate, useNavigate } from "react-router-dom";
-function Payment({ handlePaymentData }) {
+function Payment({ handlePaymentData, totalpayment }) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [address, setAddress] = useState('');
@@ -71,10 +72,39 @@ function Payment({ handlePaymentData }) {
 
         <div className="payment">
             <hr></hr>
-            <Modal show={show} onHide={handleClose}>
+            <>
+                <Modal
+                    show={show}
+                    onHide={handleClose}
+                    backdrop="static"
+                    keyboard={false}
+                >
+                    <Modal.Header >
+                        <Modal.Title>Check Out Success</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <div>Name: {paymentdata.name}</div>
+                        <div>Email: {paymentdata.email}</div>
+                        <div>Address: {paymentdata.address}</div>
+                        <div>Tel: {paymentdata.tel}</div>
+                        <div>Pay: {totalpayment}</div>
+
+
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={() => { handleClose(); handlePaymentData(paymentdata) }}>
+                            Close
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
+            </>
+
+
+
+            {/* <Modal show={show} onHide={handleClose} keyboard={false}>
                 <Modal.Body><h3 className='alert_modal text-center' >Success !!!</h3></Modal.Body>
                 <button className='payment_button_close' onClick={() => handlePaymentData(paymentdata)}>Close</button>
-            </Modal>
+            </Modal> */}
             <div>
                 <form onSubmit={submit} className="payment_form">
                     <div>

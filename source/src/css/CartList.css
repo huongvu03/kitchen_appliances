@@ -18,10 +18,9 @@ thead {
 }
 .cartlist_payment_wrap {
   margin-top: 60px;
-  display: grid;
-  grid-template-columns: 80% 20%;
 }
 .cartlist_payment_btn {
+  margin-top: 5%;
   width: 200px;
   background-color: #a50034;
   color: white;
@@ -36,12 +35,15 @@ thead {
   background-color: #7a0027;
   transition: 0.35s ease;
 }
-.cartlist_content_payment_wrap {
-  width: 100%;
-}
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 }
 
 @media screen and (max-width: 767px) {
+  .cartlist_price {
+    display: none;
+  }
+  .cartlist_action {
+    display: none;
+  }
 }

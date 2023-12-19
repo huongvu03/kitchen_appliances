@@ -31,10 +31,10 @@ function CartList({ carts, deleteCart, decreaseQty, increaseQty, handlePaymentDa
                             <tr>
                                 <th>Image</th>
                                 <th>Name</th>
-                                <th>Price</th>
+                                <th className="cartlist_price">Price</th>
                                 <th>Quantity</th>
                                 <th>Total</th>
-                                <th>Action</th>
+                                <th className="cartlist_action">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -48,11 +48,12 @@ function CartList({ carts, deleteCart, decreaseQty, increaseQty, handlePaymentDa
 
 
                 <div className="cartlist_payment_wrap">
-                    <div> <button className="cartlist_payment_btn" onClick={togglePaymentForm}><h5>Payment</h5></button></div>
-
                     <div className="total_price"> <h5>Total: {formatCurrency(totalPrice)}</h5></div>
+                    <div className="cartlist_payment_btn_wrap"> <button className="cartlist_payment_btn" onClick={togglePaymentForm}><h5>Payment</h5></button></div>
+
+
                 </div>
-                <div className="payment_form">{showPaymentForm && <Payment handlePaymentData={handlePaymentData} />}</div>
+                <div className="payment_form">{showPaymentForm && <Payment handlePaymentData={handlePaymentData} totalpayment={formatCurrency(totalPrice)} />}</div>
 
             </div>
         </div >

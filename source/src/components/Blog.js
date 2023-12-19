@@ -21,9 +21,6 @@ function Blog({ blogs }) {
     }
 
     return (<div className="bloglist_page container">
-        {/* <div className='searchBlog'>
-            <p>Search input</p>
-        </div> */}
         <div className='bloglist container'>
             <div className="bloglist_card_item">
                 {currentBlog.map(blog => (
@@ -32,7 +29,7 @@ function Blog({ blogs }) {
                     </div>
                 ))}
             </div>
-            <div className="bloglist_pagination"><Pagination>{pageItems}</Pagination></div>
+            <div className="bloglist_pagination1"><Pagination>{pageItems}</Pagination></div>
         </div>
     </div>
     )
