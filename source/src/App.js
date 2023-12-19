@@ -318,12 +318,12 @@ function App() {
           </div>
         } />
         <Route path='/cart' element={
-          localStorage.getItem('username') ? (
+          // localStorage.getItem('username') ? (
             <>
               <CartList carts={carts} deleteCart={deleteCart} decreaseQty={decreaseQuantity} increaseQty={increaseQuantity} handlePaymentData={handlePaymentData} />
 
             </>
-          ) : (< Navigate to='/log-in' />)
+          // ) : (< Navigate to='/log-in' />)
         } />
 
         <Route path='/feedback' element={<Feedback />} />
