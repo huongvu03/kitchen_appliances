@@ -51,8 +51,8 @@ function Feedback() {
                         <li className="Feedbackerror">{error}</li>
                     </li>
                     <li> <input type="radio" value="product registration" name={purpose}  onClick={(e) => setPurpose(e.target.value)} />Product registration.</li>
-                    <li> <input type="radio" value="update and upgrade software" name={purpose}  onClick={(e) => setPurpose(e.target.value)}/>Update and upgrade software.</li>
-                    <li> <input type="radio"  value="See instructions for use" name={purpose}  onClick={(e) => setPurpose(e.target.value)}/>See instructions for use.</li>
+                    <li> <input type="radio"  value="update and upgrade software" name={purpose}  onClick={(e) => setPurpose(e.target.value)}/>Update and upgrade software.</li>
+                    <li> <input type="radio"  value="See instructions for use"    name={purpose}  onClick={(e) => setPurpose(e.target.value)}/>See instructions for use.</li>
                     <li> <input type="radio"  value="Find out the warranty policy." name={purpose}  onClick={(e) => setPurpose(e.target.value)}/>Find out the warranty policy.</li>
                     <li> <input type="radio"  value="Find product support information in the Help Library and How-To Videos section." name={purpose}  onClick={(e) => setPurpose(e.target.value)}/>Find product support information in the Help Library and How-To Videos section.</li>
                     <li> <input type="radio"  value="Find the warranty center address." name={purpose}  onClick={(e) => setPurpose(e.target.value)}/>Find the warranty center address.</li>
@@ -62,7 +62,8 @@ function Feedback() {
                     <li> <input type="radio"  value="Call center (connection, operator attitude and knowledge)" name={purpose}  onClick={(e) => setPurpose(e.target.value)}/>Call center (connection, operator attitude and knowledge)</li>
                     <li> <input type="radio"  value="Products (quality, features, price)" name={purpose}  onClick={(e) => setPurpose(e.target.value)}/>Products (quality, features, price)</li>
                     <li> <input type="radio"  value="Other (please provide specific information about our Services)" name={purpose}  onClick={(e) => setPurpose(e.target.value)}/>Other (please provide specific information about our Services)</li>
-                    <li  className="Feedbackcustomer" ><input type="text" value={cpurpose} onChange={(e) => setCPurpose(e.target.value)}/></li>
+                    
+                    <li ><input type="text" value={cpurpose} onChange={(e) => setCPurpose(e.target.value) } className="Feedbackcustomer"/></li>
                     
                     <li className="Feedback_Q" style={{ color: "black" }}>
                         Q2. *How satisfied are you with the availability and quality of the information you sought?
@@ -86,7 +87,7 @@ function Feedback() {
 
                     </li>
 
-                    <button> Submit</button>
+                    <button className="Feedback_btn"> Submit</button>
 
                 </ul>
 

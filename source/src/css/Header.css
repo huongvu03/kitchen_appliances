@@ -163,8 +163,9 @@
   }
 
   .headerHome4 {
+    color: red;
     display: grid;
-    grid-template-columns: 50% 20% 25%;
+    grid-template-columns: 50% 15% 20%;
   }
 
   .headerHome4 input {
@@ -173,7 +174,7 @@
   }
 
   .cartQty_container {
-    margin-right: 20px;
+    margin-right: 10px;
   }
 }
 
@@ -192,8 +193,17 @@
     max-width: 100%;
   }
 
+  .headerHome4 {
+    display: grid;
+    grid-template-columns: 65% 20% 20%;
+  }
+
+  .headerHome4 input {
+    width: 100%;
+    height: 100%;
+  }
   .cartQty_container {
-    margin-right: 10px;
+    margin-right: 20px;
   }
 
   .headerHomemedia_dropdown {

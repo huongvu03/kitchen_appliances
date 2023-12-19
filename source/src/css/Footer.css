@@ -72,7 +72,8 @@
   text-decoration: none;
 }
 .Footer_c1 a:hover {
-  color: rgba(0, 0, 0, 0.464);
+  color: #7e0028;
+
 }
 .Footer h5 {
   font-size: 18px;
@@ -92,11 +93,10 @@
   font-weight: lighter;
   text-decoration: none;
 }
-.Footer_c3 a{
-   color:black ;
-    font-weight: lighter;
-    text-decoration: none;
+.Footer_c3 a:hover{
+  color: #7e0028;
 }
+
 /*term of use */
 .TermsOfUse,.Privacy{
     margin:80px;

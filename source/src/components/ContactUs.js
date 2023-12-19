@@ -3,6 +3,7 @@ import '../css/ContactUs.css';
 import { Twitter, Facebook, Google } from 'react-bootstrap-icons';
 import { TelephoneOutbound, People, EnvelopeCheck } from 'react-bootstrap-icons';
 import ModalConfirm from './ModalConfirm';
+import { useNavigate } from 'react-router-dom';
 
 function ContactUs() {
     const [fname, setFName] = useState('');
@@ -13,7 +14,7 @@ function ContactUs() {
     const [textmodal, setTextModal] = useState('');
     const [error, setError] = useState('');
     const [emailerror, setemailError] = useState('');
-
+    const navigate=useNavigate('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -35,7 +36,7 @@ function ContactUs() {
             setLName('');
             setEmail('');
             setMess('');
-            setTextModal("Thank you for contact us! We will get back to you soon!" );
+            setTextModal("Thank you for contact us! We will get back to you soon!");
             setShowModal(true);
             setError('');
             setemailError('');
@@ -44,6 +45,7 @@ function ContactUs() {
     }
     const handleClose = () => {
         setShowModal(false);
+        navigate(`/`);
     }
 
     return (
@@ -63,18 +65,18 @@ function ContactUs() {
             <div className='Contact_info'>
 
                 <div className='Contact_infoCol' >
-                    <div>
-                        <div className='Contact_infoColIcon'><TelephoneOutbound /></div>
-                        <div><h4>Call Us</h4></div>
-                        <div> +91 -22 -6788 8888</div>
-                        <div><h5>Customer Support</h5></div>
-                        <div>1800 678 8888</div>
-                        <div>(Mon. to Sun. 8AM - 9PM EST)</div>
+                <div className='Contact_infoColContent'>
+                    <div className='Contact_infoColIcon'><TelephoneOutbound /></div>
+                    <div><h4>Call Us</h4></div>
+                    <div> +91 -22 -6788 8888</div>
+                    <div><h5>Customer Support</h5></div>
+                    <div>1800 678 8888</div>
+                    <div>(Mon. to Sun. 8AM - 9PM EST)</div>
                     </div>
                 </div>
 
-                <div className='Contact_infoCol'>
-                    <div>
+                <div className='Contact_infoCol2'>
+                    <div  className='Contact_infoColContent2'>
                         <div className='Contact_infoColIcon'><People /></div>
                         <div><h4>Contact Us on Social Media</h4></div>
                         <a href='https://www.facebook.com/'> <div><Facebook />/TASHASupport</div></a>
@@ -84,15 +86,14 @@ function ContactUs() {
 
                 </div>
 
-                <div className='Contact_infoCol'>
-                    <div>
+                <div className='Contact_infoCol3'>
+                    <div >
                         <div className='Contact_infoColIcon'><EnvelopeCheck /></div>
 
                         <div><h4>FeedBack</h4></div>
                         <a href='https://www.gmail.com'><div> <Google />customercare@tashaindia.com</div></a>
-
-
                     </div>
+
                 </div>
             </div>
 
@@ -137,37 +138,39 @@ function ContactUs() {
 
                 </div>
             </div>
-            <h2>WHERE TO FIND US</h2>
+            <h2 className='ContactUsdisplay1'>WHERE TO FIND US</h2>
 
             <div className='ContactUs_branches'>
-               <div className='ContactUs_branchesimg'><img src="./contact_us_img/contact.png"  alt="branches"/></div> 
+            <h2 className='ContactUsdisplay2'>WHERE TO FIND US</h2>
+
+                <div className='ContactUs_branchesimg'><img src="./contact_us_img/contact.png" alt="branches" /></div>
                 <ul >
                     <li className='ContactUs_branches_title'>Head Office</li>
-                    <li  className='ContactUs_branches_add'>Tasha's Company Limited. Pirojshanagar, Vikhroli, Mumbai, Maharashtra 400079</li>
-                 
+                    <li className='ContactUs_branches_add'>Tasha's Company Limited. Pirojshanagar, Vikhroli, Mumbai, Maharashtra 400079</li>
+
                     <li className='ContactUs_branches_title'>Our Registered Offices</li>
-                
-                    <li  className='ContactUs_branchesbranches'>
-                    <li className='ContactUs_branches_title'>Delhi Branch</li>
-                                       <li  className='ContactUs_branches_add'>Tasha's Co. Ltd. , Sher Shah Suri Marg, Okhla, New Delhi, Delhi 110065, India.</li>
-                                 
-                    <li className='ContactUs_branches_title'>Kolkata Branch</li>
-                    <li  className='ContactUs_branches_add'>Tasha's Co. Ltd. , Block GN, Sector-V, Salt Lake City, Kolkata, West Bengal 700091, India.</li>
-              
-                    <li className='ContactUs_branches_title'> Bhubaneswar Branch</li>
-                    <li  className='ContactUs_branches_add'>Tasha's Co. Ltd. , NH-5, Highway Complex Rudrapur, P.O. Pahala, Bhubaneswar, Odisha 752101, India.</li>
-              
-                    <li className='ContactUs_branches_title'>Patna Branch</li>
-                    <li  className='ContactUs_branches_add'>Tasha's Co. Ltd. , Grand Plaza,6th floor, 6001 - 6004& 6006, Frazer Road,Dak Bunglow Crossing, Patna, Bihar 800001, India. </li>
-              
-                   <li className='ContactUs_branches_title'>Guwahati Branch</li>
-                    <li  className='ContactUs_branches_add'>Tasha's Co. Ltd. , 2nd Floor Basundhara Eclave, Dr BK Kakati Rd, Ulubari, Guwahati, Assam 781007, India. </li>
-              
-                    <li className='ContactUs_branches_title'>Ranchi Branch</li>
-                    <li  className='ContactUs_branches_add'>Tasha's Co. Ltd. , Plot No.236/237, Pandra, P.O, Kamre Ranchi, Jharkhand 835222, India. </li>
-                    
-                  </li>
-                   
+
+                    <li className='ContactUs_branchesbranches'>
+                        <li className='ContactUs_branches_title'>Delhi Branch</li>
+                        <li className='ContactUs_branches_add'>Tasha's Co. Ltd. , Sher Shah Suri Marg, Okhla, New Delhi, Delhi 110065, India.</li>
+
+                        <li className='ContactUs_branches_title'>Kolkata Branch</li>
+                        <li className='ContactUs_branches_add'>Tasha's Co. Ltd. , Block GN, Sector-V, Salt Lake City, Kolkata, West Bengal 700091, India.</li>
+
+                        <li className='ContactUs_branches_title'> Bhubaneswar Branch</li>
+                        <li className='ContactUs_branches_add'>Tasha's Co. Ltd. , NH-5, Highway Complex Rudrapur, P.O. Pahala, Bhubaneswar, Odisha 752101, India.</li>
+
+                        <li className='ContactUs_branches_title'>Patna Branch</li>
+                        <li className='ContactUs_branches_add'>Tasha's Co. Ltd. , Grand Plaza,6th floor, 6001 - 6004& 6006, Frazer Road,Dak Bunglow Crossing, Patna, Bihar 800001, India. </li>
+
+                        <li className='ContactUs_branches_title'>Guwahati Branch</li>
+                        <li className='ContactUs_branches_add'>Tasha's Co. Ltd. , 2nd Floor Basundhara Eclave, Dr BK Kakati Rd, Ulubari, Guwahati, Assam 781007, India. </li>
+
+                        <li className='ContactUs_branches_title'>Ranchi Branch</li>
+                        <li className='ContactUs_branches_add'>Tasha's Co. Ltd. , Plot No.236/237, Pandra, P.O, Kamre Ranchi, Jharkhand 835222, India. </li>
+
+                    </li>
+
                 </ul>
             </div>
             <ModalConfirm show={showModal} handleClose={handleClose} textmodal={textmodal} />

@@ -1,7 +1,9 @@
-/*top*/
+
+    /*top*/
 .ContactUs_top div img {
     width: 100%;
     object-fit: fill;
+    position: relative;
 }
 
 .ContactUs_topcontent {
@@ -12,6 +14,8 @@
     color: white;
     text-align: center;
     font-weight: lighter;
+    display: flexbox;
+    
 }
 
 /* contact columns */
@@ -21,49 +25,51 @@
     margin: 100px;
     column-gap: 80px;
     text-align: center;
+    height: 250px;
 
 }
 
-.Contact_infoCol {
-
+.Contact_infoCol, .Contact_infoCol2,  .Contact_infoCol3 {
+    border: 0.1px solid;
     border-radius: 50px;
     max-width: 100%;
     height: auto;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px 0px;
-
-}
-
-.Contact_infoCol ul {
-    border: red solid;
     text-align: center;
-    padding: 0%;
-   height: 250px;
-   
+    padding: 10px;
+ 
 }
 
-
-.Contact_infoCol ul li,.Contact_infoCol ul a {
-    border: blue solid;
+.Contact_infoCol div, .Contact_infoCol2 a,.Contact_infoCol3 a {
+   line-height: 30px;
     list-style: none;
     color:black;
     font-weight: lighter;
     text-decoration: none;
+    width: 100%;
 
-    
+     
 }
 .Contact_infoColIcon{
+    margin-top: 20px;
     font-size: 30px;
+    margin-bottom: 10px;
   
+}
+.Contact_infoCol2 a{
+    line-height: 50px;
 }
 .Contact_infoCol h4{
 font-weight: 500;
 }
+.Contact_infoCol2:hover a, .Contact_infoCol3:hover a{
+color: rgb(158, 5, 53);
+}
 
-/*bottom */
+/*map + form*/
 .ContactUs_bottom {
     display: grid;
     grid-template-columns: 55% 45%;
-
     height: min-content;
     margin-left: 100px;
     margin-right: 100px;
@@ -75,7 +81,6 @@ font-weight: 500;
     /* border: blue solid; */
     margin-top: none;
     margin-left: 100px;
-
     line-height: 35px;
 
 }
@@ -86,7 +91,6 @@ font-weight: 500;
 
 .ContactUs_bottomR ul li {
     list-style: none;
-
 }
 
 .ContactUs_bottomR input {
@@ -95,7 +99,6 @@ font-weight: 500;
     border-radius: 0px 20px 0px 0px;
     border-color: none;
     font-size: 16px;
-
 }
 
 .ContactUs_bottomR textarea {
@@ -117,15 +120,18 @@ font-weight: 500;
 .ContactUslabel {
     font-size: 18px;
     font-weight: 600;
-
 }
 
-.ContactUs_submit button {
+.ContactUs_submit button, .Feedback_btn {
     border: none;
     border-radius: 20px;
     background-color: rgb(165, 0, 52);
     padding: 5px 20px 5px 20px;
     color: white;
+
+}
+.ContactUs_submit button:hover , .Feedback_btn :hover{
+  background-color: #7e0028;
 
 }
 
@@ -142,7 +148,6 @@ height: 550px;
 .ContactUs_branches img {
     width: 100%;
     height: 100%;
-
 }
 
 .ContactUs_branches {
@@ -152,7 +157,7 @@ height: 550px;
 .ContactUs_branches ul {
     position: absolute;
     top: 50px;
-    left: 80px;
+    left: 250px;
 }
 
 .ContactUs h2 {
@@ -163,7 +168,7 @@ height: 550px;
 .ContactUs_branches ul li {
     list-style: none;
     color: white;
-    
+  
 }
 
 .ContactUs_branches_title {
@@ -221,6 +226,154 @@ text-align: center;
     text-align: right;
     margin-right: 100px;
    }
-   .Feedback ul  .Feedbackcustomer{
-    max-width:  80%;
+   .Feedback ul li .Feedbackcustomer,  
+   .Feedback ul li textarea{
+    width:  80%;
+    margin-top: 10px;
    }
+.ContactUsdisplay2{
+    visibility: hidden;
+    display: none;
+}
+
+   /* MEDIA tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+    .ContactUs_topcontent {
+         position: absolute;
+        top: 22%;
+        left: 10%;
+        display: flexbox;
+            }
+  
+    .Contact_info{
+        grid-template-columns: 33% 33% 33%;
+        column-gap: 10px;
+        margin-left: 20px;
+        margin-right: 30px;
+        text-indent: 0%;
+        padding: 0%;
+    }
+    /*map + info */
+.ContactUs_bottom {
+        margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* form */
+.ContactUs_bottomR {
+    margin-left: 50px;
+ }
+ 
+ /* bracnhes */
+ .ContactUs_branches ul {
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    
+}
+.Feedback ul {
+    margin-left: 20px;
+ 
+}
+}
+
+
+/* Phone */
+@media (max-width:767px){
+    .ContactUs_topcontent{
+        left: 3%;
+        top:20%;
+        font-size: 27px;
+        display: flexbox;
+    }
+    .ContactUs_top img{
+        object-fit: scale-down;
+        height: 300px;
+    }
+    .Contact_info{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        row-gap: 30px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+              margin-top: 40px;
+        height: max-content;
+        margin-bottom: 80px;
+       
+    }
+    /*map */
+.ContactUs_bottom {
+    display: grid;
+    grid-template-columns: auto;
+    height: max-content;
+   margin-right: 0%;
+    margin-left: 0%;
+   }
+   .ContactUs_bottom iframe{
+      width: 100%;
+    height: 300px;
+    border-radius: 20px;
+
+   }
+
+/* form */
+.ContactUs_bottomR {
+    max-width: 100%;
+    /* border: blue solid; */
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 100px;
+    line-height: 35px;
+
+}
+ /* bracnhes */
+ .ContactUs_branchesimg {
+margin-top: 80px;
+height: 300px;
+object-fit: cover;
+ }
+ 
+.ContactUsdisplay2 {
+    visibility: visible;
+    display: block;
+    position: absolute;
+   left:-10%;
+   right: -10%;
+    top:4%;
+    color: white;
+    margin-left: 1rem;
+    margin: 1rem;
+}
+
+ .ContactUs_branches ul {
+    position: relative;
+    color: black;
+   height: max-content;
+  margin-top: 0%;
+ margin-right: 1rem;
+  left: 0;
+    
+}
+.ContactUs_branches ul li{
+    color:black;
+    font-size: 18px;
+}
+.ContactUsdisplay1{
+    visibility: hidden;
+    display: none;
+}
+
+.Feedback{
+    margin:20px ;
+   
+}
+.Feedback ul{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.Feedback ul li{
+    font-size: 16px;
+
+}
+}
