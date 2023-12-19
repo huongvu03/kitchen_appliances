@@ -332,7 +332,7 @@ function App() {
         <Route path='/privacy-policy' element={<Privacy />} />
         <Route path="/blogdetail/:id" element={<BlogDetail blogs={blogs} />} />
         <Route path="/manualdetail/:id" element={<ManualDetail products={products} />} />
-        <Route path="/blogs" element={<Blog blogs={blogs} />} />
+   
         <Route path="/notfound" element={<NotFound />} />
         {/* <Route path="/manualdetail" element={<ManualDetail  />} />  */}
 
