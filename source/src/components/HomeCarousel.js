@@ -32,12 +32,13 @@ function HomeCarousel() {
     <Carousel.Item onClick={()=>navigate(`/detail/16`)}  className='HomeCarouselItem'>
       <img height={"600px"}
         className="d-block w-100"
-        src="./homeimg/carousel_2.png" 
+        src="./homeimg/carousel_2_edit.png" 
         alt="Second slide"
       />
-      {/* <Carousel.Caption >
-              
-      </Carousel.Caption> */}
+      <Carousel.Caption >
+    
+         
+      </Carousel.Caption>
     </Carousel.Item>
 
     <Carousel.Item onClick={()=>navigate(`/products`)} className='HomeCarouselItem'>

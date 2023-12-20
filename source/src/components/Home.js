@@ -36,6 +36,16 @@ function Home() {
         }, 150);
     }
 
+    const navigateToFood = () => {
+        navigate("/promotion#food");
+        setTimeout(() => {
+            const productSection = document.getElementById("food");
+            if (productSection) {
+                productSection.scrollIntoView({ behavior: "smooth" });
+            }
+        }, 150);
+    }
+
     return (
         <div className="Home">
             <HomeCarousel />
@@ -83,7 +93,7 @@ function Home() {
 
 
 
-                    <div className="HomeBody_contentitem" onClick={navigateToFridge}>
+                    <div className="HomeBody_contentitem" onClick={navigateToFood}>
                         <img src="./homeimg/home_storage.png" alt="food storage " />
                         <div className="HomeBody_contentitemRow1">  Save up to 35% on select Vacuum Bottles</div>
                         <div className="HomeBody_contentitemRow2">  Huge "Christmas Sale" with up to 35% off its popular line of drinkware, including vacuum bottles and more.  Offer valid through 12/31/2023.</div>
@@ -99,8 +109,8 @@ function Home() {
 
                 <h2>NEW ARRIVAL</h2>
 
-                <div className="HomeNew1">
-                    <div className="HomeNew1video"><video src="./homeimg/blenderArrival - Trim.mp4" controls autoPlay loop width="100%" height={"100%"}/></div>
+                <div className="HomeNew1"  id="newarrival">
+                    <div className="HomeNew1video"><video src="./homeimg/blenderArrival - Trim.mp4" controls autoPlay  loop width="100%" height={"100%"}/></div>
                     <div className="HomeNew1-content">
                         <h4> HI, HIBISCUS! </h4>
                         <div>

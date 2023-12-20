@@ -18,112 +18,150 @@ function Header({ handleSubmit, value, carts }) {
         return true;
     }
     return (
-        <div className="headerHome">
-            <Link to='#' >
-                <li>
-                    <div className='headerHomemedia_dropdown' >
-                        <div className='headerHomemedia_dropdownbtn'><List /></div>
+        <div className='Header'>
 
-                        <div className='headerHomemedia_dropdown-content' >
-                            <ul >
-                                {/* <Link to='/' className="navbar-link"> <li>HOME</li></Link> */}
-                                <Link to='/promotion' > <li>PROMOTION</li></Link>
 
-                                <Link to='/products' ><li>PRODUCTS</li></Link>
-                                <Link to='/blogs' >
-                                    <li>
-                                        {/* <div class="headerHome_dropdown"> */}
-                                        {/* <div className='dropbtn'> */}
-                                         BLOG
-                                        {/* </div> */}
-                                        {/* <div class="dropdown-content">
+            <div className="headerHome">
+                <Link to='#' >
+                    <li>
+                        <div className='headerHomemedia_dropdown' >
+                            <div className='headerHomemedia_dropdownbtn'><List /></div>
+
+                            <div className='headerHomemedia_dropdown-content' >
+                                <ul >
+                                    {/* <Link to='/' className="navbar-link"> <li>HOME</li></Link> */}
+                                    <Link to='/promotion' > <li>Promotion</li></Link>
+
+                                    <Link to='/products' ><li>Products</li></Link>
+                                    <Link to='/blogs' >
+                                        <li>
+                                            {/* <div class="headerHome_dropdown"> */}
+                                            {/* <div className='dropbtn'> */}
+                                            Blog
+                                            {/* </div> */}
+                                            {/* <div class="dropdown-content">
                                                 <Link to="/expert-tips">Expert Tips</Link>
 
                                             </div>
-                                        </div> */}s
+                                        </div> */}
+
+                                        </li>
+                                    </Link>
+
+
+                                    <Link to='/contact' > <li>
+                                        {/* <div class="headerHome_dropdown"> */}
+                                        {/* <div className='dropbtn'> */}
+                                        Support
+                                        {/* </div>
+                                        {/* <div class="dropdown-content" hidden id="headerContent"> */}
+                                        {/* <Link to="/contact">Contact Us</Link> */}
+
+                                        {/* <Link to="/feedback">Feedback</Link> */}
+                                        {/* </div> */}
+                                        {/* </div>  */}
 
                                     </li>
-                                </Link>
-
-
-                                <Link to='/contact' > <li>
-                                    {/* <div class="headerHome_dropdown"> */}
-                                    {/* <div className='dropbtn'> */}
-                                    SUPPORT
-                                    {/* </div>
-                                        {/* <div class="dropdown-content" hidden id="headerContent"> */}
-                                    {/* <Link to="/contact">Contact Us</Link> */}
-
-                                    {/* <Link to="/feedback">Feedback</Link> */}
-                                    {/* </div> */}
-                                    {/* </div>  */}
-
-                                </li>
-                                </Link>
-                                <Link to='/about-us' ><li>ABOUT US</li></Link>
-                            </ul>
+                                    </Link>
+                                    <Link to='/about-us' ><li>About Us</li></Link>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                </li>
-            </Link>
-            
-            <div>  <Link to='/'><img src="./homeimg/Logo-Tashas-Design.png" alt="logo" height="100px" width="100px" /></Link></div>
+                    </li>
+                </Link>
 
+<<<<<<< Updated upstream
             <ul className='headerHomeTab'>
                 <Link to='/' > <li>HOME</li></Link>
                 {/* <Link to='/promotion' headerHomeTab> <li>PROMOTION</li></Link> */}
+=======
+                <div>  <Link to='/'><img src="./homeimg/Logo-Tashas-Design.png" alt="logo" height="100px" width="100px" /></Link></div>
+>>>>>>> Stashed changes
 
-                <Link to='/products' ><li>PRODUCTS</li></Link>
-                <Link to='/blogs' >
-                    <li>
+                <div className='headerHomeTab'>  <ul>
+                    {/* <Link to='/' > <li>HOME</li></Link> */}
+                    <Link to='/promotion' headerHomeTab> <li>PROMOTION</li></Link>
+
+                    <Link to='/products' ><li>PRODUCTS</li></Link>
+                    <Link to='/blogs' >
+                        <li>
+                            <div class="headerHome_dropdown">
+                                <div className='dropbtn'>BLOG</div>
+                                <div class="dropdown-content">
+                                    <Link to="/expert-tips">Expert Tips</Link>
+
+                                </div>
+                            </div>
+
+                        </li></Link>
+
+
+                    <Link to='/contact' > <li>
                         <div class="headerHome_dropdown">
-                            <div className='dropbtn'>BLOG</div>
+                            <div className='dropbtn '>SUPPORT</div>
                             <div class="dropdown-content">
-                                <Link to="/expert-tips">Expert Tips</Link>
+                                <Link to="/contact">Contact Us</Link>
 
+                                <Link to="/feedback">Feedback</Link>
                             </div>
                         </div>
 
                     </li></Link>
+                    <Link to='/about-us' ><li>ABOUT US</li></Link>
+                </ul>
+                </div>
+                <div></div>
 
-
-                <Link to='/contact' > <li>
-                    <div class="headerHome_dropdown">
-                        <div className='dropbtn '>SUPPORT</div>
-                        <div class="dropdown-content">
-                            <Link to="/contact">Contact Us</Link>
-
-                            <Link to="/feedback">Feedback</Link>
-                        </div>
+                <div className='headerHome4'>
+                    <div class="headersearch" ><HeaderSearch value={value} handleSubmit={handleSubmit} /></div>
+                    <div className='headerUser'>
+                        {localStorage.getItem('username') ?
+                            (<span> Hi, {localStorage.getItem('username')} | <Link to="/log-in" onClick={() => deleteLocalStorage()}>LOG OUT</Link> </span>) :
+                            (<Link to="/log-in"><div><Person /></div></Link>)
+                        }
                     </div>
 
-                </li></Link>
-                <Link to='/about-us' ><li>ABOUT US</li></Link>
-            </ul>
-
-            <div></div>
-
-            <div className='headerHome4'>
-                <div class="headersearch" ><HeaderSearch value={value} handleSubmit={handleSubmit} /></div>
-
-                <div className='headerUser'>
-                    {localStorage.getItem('username') ?
-                        (<span> Hello {localStorage.getItem('username')}, <Link to="/log-in" onClick={() => deleteLocalStorage()}><h6>Log out</h6></Link> </span>) :
-                        (<Link to="/log-in"><div><Person /></div></Link>)
-                    }
+                    <Link to='/cart'> <div className='cartQty_container'><Cart3 />{totalQuantity === 0 ?
+                        <span className='cartQty hidden' disabled>{totalQuantity}</span> :
+                        <span className='cartQty'>{totalQuantity}</span>
+                    }</div></Link>
                 </div>
-
-                <Link to='/cart'> <div className='cartQty_container'><Cart3 />{totalQuantity === 0 ?
-                    <span className='cartQty hidden' disabled>{totalQuantity}</span> :
-                    <span className='cartQty'>{totalQuantity}</span>
-                }</div></Link>
-
-
-
-
 
             </div>
 
+            <div className='headerHomeTabmedia'>
+                <ul >
+                    {/* <Link to='/' > <li>HOME</li></Link> */}
+                    <Link to='/promotion' headerHomeTab> <li>PROMOTION</li></Link>
+
+                    <Link to='/products' ><li>PRODUCTS</li></Link>
+                    <Link to='/blogs' >
+                        <li>
+                            <div class="headerHome_dropdown">
+                                <div className='dropbtn'>BLOG</div>
+                                <div class="dropdown-content">
+                                    <Link to="/expert-tips">Expert Tips</Link>
+
+                                </div>
+                            </div>
+
+                        </li></Link>
+
+
+                    <Link to='/contact' > <li>
+                        <div class="headerHome_dropdown">
+                            <div className='dropbtn '>SUPPORT</div>
+                            <div class="dropdown-content">
+                                <Link to="/contact">Contact Us</Link>
+
+                                <Link to="/feedback">Feedback</Link>
+                            </div>
+                        </div>
+
+                    </li></Link>
+                    <Link to='/about-us' ><li>ABOUT US</li></Link>
+                </ul>
+            </div>
         </div>
     );
 }
