@@ -95,7 +95,7 @@ function ProductDetail({ products,sendqtyDetail }) {
               onClick={() => handleProdQty()}>ADD TO CART</button>
             <br />
             {/* <button className="ProductDetail_submit1">BUY IT NOW</button> */}
-            <button className="ProductDetail_submit1"  onClick={() => navigate(`/manualdetail/${product.id}`)}>view manual</button>
+            <button className="ProductDetail_submit1"  onClick={() => navigate(`/manualdetail/${product.id}`)}>VIEW MANUAL</button>
 
           </div>
 

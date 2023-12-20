@@ -62,9 +62,9 @@ function ProductsList({ products,
                 <div><h4>Price</h4></div>
                 <div><ProductSortPrice handlePrice={handlePrice}/></div>
                 <hr></hr>
-                <div><button className="btn btn-success" onClick={() => {
+                <div><button className="ProductList_clear" onClick={() => {
                     clearFilter();
-                }}>Reset filter</button></div>
+                }}>RESET FILTER</button></div>
             </div>
             <div className='productslist_category_right'>
                 <div className="productslist_card_item">

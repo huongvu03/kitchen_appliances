@@ -45,6 +45,14 @@ a.page-link{
 .active>.page-link{
   border-color: black !important;
 }
+.ProductList_clear{
+  color:brown;
+  background-color:white;
+  border: none;
+  font-weight: 900px;
+  text-decoration: underline;
+}
+
 
 /* searching notice of header search*/
 .productslist_error h3{

@@ -4,9 +4,9 @@ function ProductSortPrice({handlePrice}) {
         <div> 
             <div className="productsort_price_full">
                 <div><input type="radio" name="sort" value={"mintomax"}onClick={(e) => handlePrice
-                (e.target.value)} /> Min to Max</div>
+                (e.target.value)} /> Low - High </div>
                 <div><input type="radio" name="sort" value={"maxtomin"} onClick={(e) => handlePrice
-                (e.target.value)} /> Max to Min</div>
+                (e.target.value)} /> High - Low </div>
             </div>
             
             <div className="productsort_price_tablet">

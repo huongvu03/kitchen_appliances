@@ -50,7 +50,7 @@ function Home() {
                     <div className="HomeBody_contentitem" onClick={navigateToCook} >
                         <img src="./homeimg/home_cook.jpg" alt="cookware " />
                         <div className="HomeBody_contentitemRow1">Elevate your X-mas with up to 25% Off Cookware.</div>
-                        <div className="HomeBody_contentitemRow2"> Shop Our X-mas sale is a great opportunity to pick up must-have cookware for upcoming holiday festivities or score an incredible gift for the home chef in your life. Offer valid through 12/31/2023. </div>
+                        <div className="HomeBody_contentitemRow2"> Shop Our X-mas sale is a great opportunity to pick up must-have cookware for upcoming holiday festivities .... Offer valid through 12/31/2023. </div>
                         <div className="HomeBody_contentitem_btn">
                             <button onClick={navigateToCook}>SHOP NOW</button>
 

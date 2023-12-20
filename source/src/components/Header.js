@@ -70,8 +70,8 @@ function Header({ handleSubmit, value, carts }) {
             <div>  <Link to='/'><img src="./homeimg/Logo-Tashas-Design.png" alt="logo" height="100px" width="100px" /></Link></div>
 
             <ul className='headerHomeTab'>
-                {/* <Link to='/' > <li>HOME</li></Link> */}
-                <Link to='/promotion' headerHomeTab> <li>PROMOTION</li></Link>
+                <Link to='/' > <li>HOME</li></Link>
+                {/* <Link to='/promotion' headerHomeTab> <li>PROMOTION</li></Link> */}
 
                 <Link to='/products' ><li>PRODUCTS</li></Link>
                 <Link to='/blogs' >
