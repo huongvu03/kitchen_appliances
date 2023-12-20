@@ -86,12 +86,12 @@ function ContactUs() {
 
                 </div>
 
-                <div className='Contact_infoCol3'>
+                <div className='Contact_infoCol3' onClick={()=>navigate('/feedback')}>
                     <div >
                         <div className='Contact_infoColIcon'><EnvelopeCheck /></div>
 
                         <div><h4>FeedBack</h4></div>
-                        <a href='https://www.gmail.com'><div> <Google />customercare@tashaindia.com</div></a>
+                        {/* <a href='https://www.gmail.com'><div> <Google />customercare@tashaindia.com</div></a> */}
                     </div>
 
                 </div>
@@ -145,10 +145,10 @@ function ContactUs() {
 
                 <div className='ContactUs_branchesimg'><img src="./contact_us_img/contact.png" alt="branches" /></div>
                 <ul >
-                    <li className='ContactUs_branches_title'>Head Office</li>
+                    <li className='ContactUs_branches_title'>HEAD OFFICE</li>
                     <li className='ContactUs_branches_add'>Tasha's Company Limited. Pirojshanagar, Vikhroli, Mumbai, Maharashtra 400079</li>
 
-                    <li className='ContactUs_branches_title'>Our Registered Offices</li>
+                    <li className='ContactUs_branches_title'>OUR REGISTERED OFFICES</li>
 
                     <li className='ContactUs_branchesbranches'>
                         <li className='ContactUs_branches_title'>Delhi Branch</li>

@@ -290,6 +290,7 @@ function App() {
         <Route path='/promotion#appliances' element={<Promotion cook={cooks} app={apps} refridge={refridge} food={foods} addCart={addToCart} />} />
         <Route path='/promotion#cook' element={<Promotion cook={cooks} app={apps} refridge={refridge} food={foods} addCart={addToCart} />} />
         <Route path='/promotion#fridge' element={<Promotion cook={cooks} app={apps} refridge={refridge} food={foods} addCart={addToCart} />} />
+        <Route path='/promotion#food' element={<Promotion cook={cooks} app={apps} refridge={refridge} food={foods} addCart={addToCart} />} />
 
 
         <Route path="/products" element={
@@ -334,9 +335,6 @@ function App() {
         <Route path="/manualdetail/:id" element={<ManualDetail products={products} />} />
         <Route path="/blogs" element={<Blog blogs={blogs} />} />
         <Route path="/notfound" element={<NotFound />} />
-        {/* <Route path="/manualdetail" element={<ManualDetail  />} />  */}
-
-
         <Route path="/expert-tips" element={<Blog blogs={blogs} />} />
         <Route path="/blogs" element={<BlogList2 blogs={blogs2} />} />
         <Route path="/blog-detail2/:id" element={<BlogDetails2 />} />

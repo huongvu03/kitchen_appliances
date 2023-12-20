@@ -1,44 +1,47 @@
 import { useParams } from "react-router-dom";
-import FileViewer from 'react-file-viewer'
+
+import React from 'react';
+
 import '../css/ManualDetail.css';
 
-function ManualDetail({products}) {
+
+
+function ManualDetail({ products }) {
     const { id } = useParams();
     console.log(id);
 
-     const product = products.find(item => item.id == parseInt(id));
+    const product = products.find(item => item.id == parseInt(id));
     console.log(products);
     console.log(product.manual);
 
     return (
         <div className="ManualDetail">
 
-<div className="ManualDetaillink"ManualDetail><a href={product.manual} download>Download here</a></div>
-          <div className="Manualdetailview">
-          <div  >
+            <div className="Manualdetailview" >
+
                 {/* <object width="100%"
                     height="700px"
-                    data="./file/blenders.pdf"
-                  
+          
+                  data={product.manual}
                     type="application/pdf"
                 >
                     File Load Fails!
-                </object> */}
-                <FileViewer
+                </object>  */}
+                {/* <FileViewer
         fileType='pdf' 
-        filePath={product.manual}
-/>
-               
+        filePath={product.manual} */}
+                {/* /> */}
+                <embed src={product.manual} width="100%" height="700px"
+                    type="application/pdf"></embed>
+
+
             </div>
-            </div>  
         </div>
-
-
 
     );
 }
 
-         
-           
-  
+
+
+
 export default ManualDetail;

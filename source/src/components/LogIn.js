@@ -91,7 +91,6 @@ const showReset=(e)=>{
                 </div>
                 <div>
 
-
                     <div className="Loginright">
                         <h4>Register today and get up to <span>35% off</span> your first purchase <Link to="/promotion">on Our Best Deal*.</Link> </h4>
                         <button className="Loginright-btn"><Link to="/register">REGISTER NOW</Link></button>

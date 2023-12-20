@@ -2,7 +2,7 @@
 .headerHome {
   /* border: black 2px solid; */
   display: grid;
-  grid-template-columns: auto 100px 60% auto 25%;
+  grid-template-columns: auto 100px 60% auto 27%;
   max-width: 100%;
   height: 100px;
   text-indent: 0px;
@@ -19,7 +19,8 @@
   visibility: hidden;
 }
 
-.headerHome ul {
+.headerHome ul,
+.headerHomeTabmedia ul {
   /* border: red 2px solid; */
   height: 100%;
   display: grid;
@@ -49,7 +50,8 @@
 }
 
 /* text */
-.headerHome a {
+.headerHome a,
+.headerHomeTabmedia a {
   text-decoration: none;
   color: black;
   list-style: none;
@@ -129,6 +131,7 @@
     } */
 
 .headerHomeTab a:hover,
+.headerHomeTabmedia a:hover,
 .dropbtn:hover {
   border-bottom: 5px solid #c41239;
 }
@@ -142,42 +145,64 @@
   color: #c41239;
 }
 
-
+.headerHomeTabmedia {
+  display: none;
+}
+.headerUser a{
+  font-size: 20px;
+  font-weight: lighter;
+}
 /* MEDIA tablet*/
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
-  .headerHomeTab a li,
-  .dropbtn {
-    font-size: 20px;
-  }
-
   .headerHomeTab {
-    column-gap: 5px;
+    display: none;
 
   }
 
   .headerHome {
     display: grid;
-    grid-template-columns: 10px 100px 65% 0% 25%;
-
+    grid-template-columns: 20px 80px auto 300px;
+    border-bottom: solid 0.5px rgb(171, 169, 169);
+    box-shadow: none;
   }
 
-  .headerHome4 {
-    color: red;
+  .headerHomeTabmedia {
+    display: unset;
+    text-indent: 0%;
+    padding: 0%;
+    margin-left:20px ;
+    justify-content: space-around;
+  }
+
+  .Header {
     display: grid;
-    grid-template-columns: 50% 15% 20%;
+    grid-template-columns: auto;
+    height: fit-content;
+    border-bottom: rgb(228, 226, 226) 5px solid;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 32px 0px;
   }
-
-  .headerHome4 input {
-    width: 100%;
-    height: 100%;
+  .headerHome {
+    display: grid;
+    grid-template-columns:10px 100px 30% auto ;
   }
 
   .cartQty_container {
-    margin-right: 10px;
+    margin-right: 18px;
   }
+.headerHome4 {
+  margin-left: 30px;
+  display: grid;
+  max-width: 300px;
+  grid-template-columns: auto 70% auto;
 }
-
+.headerUser a{
+  font-size: 20px;
+}
+.headerUser span{
+  font-weight: 700;
+}
+}
 
 /* MEDIA phone*/
 @media(max-width: 767px) {
@@ -191,23 +216,31 @@
     display: grid;
     grid-template-columns: auto 100px auto auto;
     max-width: 100%;
+   
   }
-
+  .headerHomemedia_dropdown{
+    margin-left: 5px;
+  }
   .headerHome4 {
     display: grid;
-    grid-template-columns: 65% 20% 20%;
+    grid-template-columns: auto auto auto;
+  
   }
-
+  .headerUser a{
+    font-size: 15px;
+  }
+  .headerUser span{
+    font-weight: 700;
+  }
   .headerHome4 input {
     width: 100%;
     height: 100%;
-  }
-  .cartQty_container {
-    margin-right: 20px;
+    font-size: 16px;
   }
 
   .headerHomemedia_dropdown {
     visibility: visible;
+
   }
 
   .headerHomemedia_dropdown-content {

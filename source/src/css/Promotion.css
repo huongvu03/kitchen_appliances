@@ -29,16 +29,18 @@
   width: 150px;
   height: 30px;
   font-weight: bold;
+ 
 }
 
 /* 3 section box category*/
-.PromotionSec1, .PromotionSec2 {
+.PromotionSec1, .PromotionSec2,.PromotionSec3, .PromotionSec4 {
+  /* border: blue 2px solid; */
   display: grid;
   grid-template-columns: auto auto;
   text-indent: 0%;
   margin-bottom: 100px;
  background-size: 100% 100%;
-  max-width: 100%;
+  width: 100%;
  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 32px 0px;
 border-radius: 30px;
  }
@@ -50,41 +52,53 @@ border-radius: 30px;
  background-image: url("../../public/homeimg/proApp.png") ; 
 
  }
- .PromotionSec1_left , .PromotionSec2_left {
+ .PromotionSec3{
+  background-image: url("../../public/homeimg/fridgehome.png");
+ margin-top: 80px;
+  }
+  .PromotionSec4{
+    background-image: url("../../public/homeimg/proFood.png");
+   
+    }
+ .PromotionSec1_left , .PromotionSec2_left, 
+ .PromotionSec3_left, .PromotionSec4_left{
   margin: auto 60px auto 60px;
   color: white;
   font-size: 20px;
 }
 
-.PromotionSec1_right ul, .PromotionSec2_right ul {
-
+.PromotionSec1_right ul,.PromotionSec2_right ul,
+.PromotionSec3_right ul ,  .PromotionSec4_right ul{
+/* border:red solid 3px; */
 display: grid;
 grid-template-columns: auto auto;
 padding: 0%;
 text-indent: 0%;
-max-width: 100%;
 column-gap:60px;
 margin:30px 60px;
 
+
 }
-.PromotionSec1_right ul li, .PromotionSec2_right ul li{
+.PromotionSec1_right ul li, .PromotionSec2_right ul li,
+.PromotionSec3_right ul li,  .PromotionSec4_right ul li {
   list-style: none;
-}
+
+ }
 
 /* product item */
 .PromotionItem {
- 
+/* border: yellow 2px solid; */
   display: grid;
-  grid-template-rows: 60% auto 10% 10%;
+  grid-template-rows: 60% 15% 5% auto;
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0) 0px 0px 50px 0px;
   border-radius: 50px;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
+max-width: 100%;
+height: 450px;
+   padding: 20px;
   text-align: center;
   row-gap: 10px;
-  font-size: 17px;
+  font-size: 18px;
 }
 .PromotionItem img {
    width: 100%;
@@ -99,14 +113,13 @@ margin:30px 60px;
   flex-grow: 1;
  margin-left: auto;
  margin-right: auto;
-
   gap: 10px;
 }
 .productitem_price h5{
   font-weight: bold;
   color: red;
   margin-top: auto;
-  margin-bottom: auto;
+ 
 
 }
 .productitem_price h6{
@@ -114,27 +127,28 @@ margin:30px 60px;
   font-size: medium;
   font-weight: normal;
    margin-top: auto;
-  margin-bottom: auto;
-  
 
 }
 
 /* button */
 .productitem_bottom {
-  height: 100%;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  text-align: center;
-  margin: 0px 20px 50px 20px;
+display: grid;
+grid-template-columns: 50% 50%;
+   gap: 5px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+
 }
 
 .btn_add {
-  margin-right: 20px;
-  background-color: #a50034;
+   background-color: #a50034;
   color: white;
   border: none;
   border-radius: 20px;
-}
+  font-weight: bold;
+
+ }
+
 .btn_add:hover , .Promotion_btn:hover, .Promotion_top .btn:hover{
   color: rgb(255, 255, 255);
   background-color: #7e0028;
@@ -143,62 +157,21 @@ margin:30px 60px;
 .btn_details {
   color: black;
   background-color: #ffffff;
-  line-height: 30px;
   border: none;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px 0px;
+  border-radius: 20px;
 }
 .btn_details:hover {
   color: rgba(0, 0, 0, 0.381);
   transition: 0.35s ease;
 }
 
-
-.Promotion h4{
+.Promotion h2{
   font-size: 40px;
   text-align: center;
-}
-
-/*  last */
-.PromotionLast{
-
-  display: grid;
-  grid-template-columns: 50% 50%;
-  margin-top: 60px;
-  background-image: url("../../public/homeimg/fridgehome.png");
-  background-size: 100% 100%;
-  max-width: 100%;
-  border-radius: 30px;
-}
-.PromotionLastItem {
- 
-  display: grid;
-  grid-template-rows: 25% 70%;
-  row-gap: 30px;
-   padding: 0%;
-  text-indent: 0%;
-  color: black;
-  text-align: left;
-  max-width: 100%;
-  margin: 60px;
-  font-size: 20px;
-}
-.PromotionLast_itemtop{
-  margin-left: 10px;
-  color: white;
-}
-
-.PromotionLast_itembottom ul{
-  
-  display: grid;
-  grid-template-columns: auto auto;
-  padding: 0%;
-  text-indent: 0%;
-  column-gap: 20px;
-  width: 100%;
-  height: 100%;
-}
-.PromotionLast_itembottom ul li{
-  list-style: none;
-  height: 100%;
 }
 .Promotion_btn{
   border: none;
@@ -209,6 +182,153 @@ margin:30px 60px;
   border-radius: 20px;
   width: 150px;
 }
-/* .Promotion{
-  background-color: #f0ece4;
-} */
+
+  .PromotionSec2_leftmedia, .PromotionSec4_leftmedia{
+    display: none;
+   }
+
+
+/* Tablet */
+@media(min-width: 768px) and (max-width: 1024px){
+  .Promotion_top div {
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+  .Promotion_topbtn{
+       margin-right: 0px;
+    margin-top: 30px;
+  
+  }
+  .PromotionSec1_left , .PromotionSec3_left, 
+  .PromotionSec2_left, .PromotionSec4_left{
+    margin:auto 40px auto 40px ;
+  }
+  
+  /* product item */
+.PromotionItem {display: grid;
+  grid-template-rows: 55% 20% 5% auto;
+  max-width: 100%;
+  height: 500px;
+     padding: 15px;
+    text-align: center;
+    row-gap: 10px;
+  
+  }
+  .PromotionSec1_right ul, .PromotionSec3_right ul {
+    column-gap:20px;
+    margin:30px 30px 30px 0px;
+    
+}
+ .PromotionSec2_right ul,.PromotionSec4_right ul {
+  margin: 30px 0px 30px 30px ;
+  column-gap:20px;
+ }     
+ .PromotionSec2_leftmedia, .PromotionSec4_leftmedia{
+  display: none;
+ }
+ .btn_add, .btn_details{
+  font-size: 13px;
+ }
+ 
+}
+
+
+/* PHONE*/
+@media (max-width: 767px) {
+  .Promotion_top div {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-top:0px;
+  }
+  .Promotion_topbtn{
+    margin-right: 0px;
+ margin-top: 10px;
+
+}
+/*section */
+  .PromotionSec1, .PromotionSec3,.PromotionSec2, .PromotionSec4{
+    display: grid;
+    grid-template-columns: auto;
+   background: none;
+   box-shadow: none;
+  }
+  .PromotionSec2_left, .PromotionSec4_left{
+    display: none;
+  }
+  .PromotionSec1_left,.PromotionSec3_left,
+  .PromotionSec2_leftmedia,.PromotionSec4_leftmedia{
+background-size: cover;
+margin-left: auto;
+margin-right: auto;
+padding: 30px;
+  }
+  .PromotionSec1_left{
+    background-image: url("../../public/homeimg/cook2.png") ; 
+
+  }
+  .PromotionSec2_leftmedia{
+    background-image: url("../../public/homeimg/proApp.png") ; 
+  
+    }
+    .PromotionSec3_left{
+     background-image: url("../../public/homeimg/fridgehome.png");
+     }
+     .PromotionSec4_leftmedia{
+       background-image: url("../../public/homeimg/proFood.png");
+      
+       }
+  .PromotionSec1_right ul, .PromotionSec2_right ul,
+  .PromotionSec3_right ul, .PromotionSec4_right ul{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 40px;
+    margin-bottom: 0%;
+
+  }
+  .PromotionSec1_left .title, h3, h5, h6{
+text-align: center;
+ 
+  }
+  .PromotionSec1 ul li,.PromotionSec3 ul li,
+  .PromotionSec2 ul li,.PromotionSec4 ul li{
+    border-radius: 60px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 40px 0px;
+   
+  }
+  .PromotionSec2_leftmedia,.PromotionSec4_leftmedia {
+    display: unset;
+    color:white;
+    margin: 0px;
+    padding: 30px;
+    color: white;
+    font-size: 20px;
+   }
+     /* product item */
+.PromotionItem {display: grid;
+  grid-template-rows: 55% 20% 5% 10%;
+  max-width: 100%;
+  height: 500px;
+     padding: 15px;
+    text-align: center;
+    row-gap: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+  .Promotion h2{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 35px;
+    margin-top:60px;
+  }
+  .productitem_bottom{
+   font-size: 15px;
+  }
+  .Promotion_top h1{
+ font-size: 25px;
+  }
+}

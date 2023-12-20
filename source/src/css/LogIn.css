@@ -1,111 +1,260 @@
-.LoginPage img{
- object-fit: cover;
- height: 500px;
+.LoginPage img {
+    object-fit: cover;
+    height: 500px;
+    position: relative;
 }
-.LoginContent{
+
+.LoginContent {
     position: absolute;
-    color:white;
+    color: white;
     width: fit-content;
     font-size: 20px;
-    top:35%;
-    left:30%;
+    top: 35%;
+    left: 30%;
     width: 600px;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.427);
-    
+
+
 }
 
-.Login{
+.Login {
     display: grid;
     grid-template-columns: 50% 50%;
     margin: 80px;
-    border: rgb(228, 226, 226) 2px solid ; ;
-    box-shadow:  rgba(0, 0, 0, 0.1) 0px 0px 40px 0px;
+    border: rgb(228, 226, 226) 2px solid;
+    ;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px 0px;
     padding: 60px 100px;
 }
-.Loginleft{
- max-width: 100%;
- line-height: 30px;
-padding-left: 80px;
-padding-right: 100px;
-margin-bottom: 60px;
+
+.Loginleft {
+    max-width: 100%;
+    line-height: 30px;
+    padding-left: 80px;
+    padding-right: 100px;
+    margin-bottom: 60px;
 
 }
-.Login h6{
- font-size: 15px;
- font-weight: lighter;
+
+.Login h6 {
+    font-size: 15px;
+    font-weight: lighter;
 }
-.LoginError{
-color: rgb(158, 11, 11);
-text-align: center;
-font-size: 16px;
+
+.LoginError {
+    color: rgb(158, 11, 11);
+    text-align: center;
+    font-size: 16px;
 }
-.LoginleftLabel, .LoginlefPass{
+
+.LoginleftLabel,
+.LoginlefPass {
     font-weight: 600;
     font-size: 18px;
 }
-.LoginlefPass{
+
+.LoginlefPass {
     text-align: center;
     margin-top: 30px;
-   cursor: pointer;
+    cursor: pointer;
 
 }
-.LoginlefPass:hover{
-color: rgb(158, 11, 11);
+
+.LoginlefPass:hover {
+    color: rgb(158, 11, 11);
 
 }
-.LoginleftInput, .LoginleftBottom{
+
+.LoginleftInput,
+.LoginleftBottom {
     height: 30px;
     width: 100%;
     font-size: 16px;
 }
-.LoginleftBottom, .Loginbottom-btn {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 16px;
+
+.LoginleftBottom,
+.Loginbottom-btn {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
 }
 
-.Login-btn, .Loginright-btn{ 
+.Login-btn,.NotFoundcontent button,
+.Loginright-btn {
     background-color: #a50034;
     color: white;
     font-weight: 500;
     border: none;
     width: 100%;
     margin: 30px 0px 30px 0px;
-    height: fit-content;
+    height: max-content;
     text-align: center;
 }
 
-.Loginright-btn a{
-   color:white;
-   text-decoration: none;
+.Loginright-btn a {
+    color: white;
+    text-decoration: none;
 }
 
 
-.Loginright{
+.Loginright {
     max-width: 100%;
     line-height: 30px;
     padding-right: 80px;
-   padding-left: 100px;
- border-left:  rgb(228, 226, 226) 2px solid ;
-    
+    padding-left: 100px;
+    border-left: rgb(228, 226, 226) 2px solid;
+
 }
 
-.Loginright ul li{
-  font-weight: lighter;
-  font-size: 18px;
+.Loginright ul li {
+    font-weight: lighter;
+    font-size: 18px;
 }
-.Login-btn:hover{
-   color:rgba(255, 255, 255, 0.796);
+
+.Login-btn:hover {
+    color: rgba(255, 255, 255, 0.796);
 }
-.Loginright-btn:hover, .Login-btn:hover{
-    background-color:#a50034cf;
+
+.Loginright-btn:hover,
+.Login-btn:hover {
+    background-color: #a50034cf;
 
 
 }
 
 /*email data */
-.EmailData{
+.EmailData {
     padding: 60px;
     text-align: center;
+}
+
+/*Not Found Page*/
+.NotFoundimg {
+max-width: 100%;
+position: relative;
+height: 700px;
+}
+.NotFoundimg img{
+width: 100%;
+height: 100%;
+}
+
+.NotFoundcontent{
+    position: absolute;
+    top:40%;
+    right:10%;
+    width: 300px;
+    height: 300px;
+    padding: 30px;
+    background-color: white;
+    font-size: 20px;
+   
+}
+.NotFoundcontent h3{
+    text-align: center;
+}
+.NotFoundimg:hover{
+    cursor: pointer;
+}
+
+/***********TABLET******/
+
+/* MEDIA tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .LoginContent {
+        top: 20%;
+        left: 0%;
+        width: 600px;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.427);
+    }
+
+    .Login {
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 50px;
+        border-radius: 60px;
+             padding:30px;
+
+    }
+    .Loginleft{
+        margin-top: 60px;
+      
+    }
+
+    .Loginright {
+        border-left: none;
+        padding-left: 70px;
+        padding-right: 120px;
+        margin-bottom: 60px;
+    }
+    /* notfound*/
+    .NotFoundcontent{
+        top:30%;
+        right:10px;
+        margin-right: 5px;
+        width: 250px;
+        height: min-content;
+        padding: 20px;
+        font-size: 18px;
+    }
+}
+
+/* MEDIA phone*/
+@media(max-width: 767px) {
+    .LoginContent {
+        top: 30%;
+        left: 10px;
+        width: 95%;
+        padding: 10px;
+        font-size: 18px;
+        display: flexbox;
+    }
+
+    .Login {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        margin: 80px 50px;
+        padding: 0%;
+        row-gap: 30px;
+        text-indent: 0%;
+        border: none;
+        box-shadow: none;
+
+    }
+
+    .Loginleft {
+
+        padding: 30px;
+        border-radius: 30px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 40px 0px;
+
+    }
+
+    .Loginright {
+
+        padding: 30px;
+        border-left: none;
+        border-radius: 30px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 40px 0px;
+    }
+    
+        /* notfound*/
+    .NotFoundcontent{
+              position: static;
+           margin-right: 5px;
+        width: 300px;
+        height: min-content;
+        padding: 20px;
+        font-size: 18px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .NotFoundimg {
+        object-fit: scale-down;
+        height: auto;
+    }
+
 }
