@@ -70,13 +70,7 @@ function Header({ handleSubmit, value, carts }) {
                     </li>
                 </Link>
 
-<<<<<<< Updated upstream
-            <ul className='headerHomeTab'>
-                <Link to='/' > <li>HOME</li></Link>
-                {/* <Link to='/promotion' headerHomeTab> <li>PROMOTION</li></Link> */}
-=======
                 <div>  <Link to='/'><img src="./homeimg/Logo-Tashas-Design.png" alt="logo" height="100px" width="100px" /></Link></div>
->>>>>>> Stashed changes
 
                 <div className='headerHomeTab'>  <ul>
                     {/* <Link to='/' > <li>HOME</li></Link> */}
