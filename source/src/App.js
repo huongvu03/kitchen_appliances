@@ -319,12 +319,12 @@ function App() {
           </div>
         } />
         <Route path='/cart' element={
-          localStorage.getItem('username') ? (
+          // localStorage.getItem('username') ? (
             <>
               <CartList carts={carts} deleteCart={deleteCart} decreaseQty={decreaseQuantity} increaseQty={increaseQuantity} handlePaymentData={handlePaymentData} />
 
             </>
-          ) : (< Navigate to='/log-in' />)
+          // ) : (< Navigate to='/log-in' />)
         } />
 
         <Route path='/feedback' element={<Feedback />} />
@@ -333,7 +333,7 @@ function App() {
         <Route path='/privacy-policy' element={<Privacy />} />
         <Route path="/blogdetail/:id" element={<BlogDetail blogs={blogs} />} />
         <Route path="/manualdetail/:id" element={<ManualDetail products={products} />} />
-        <Route path="/blogs" element={<Blog blogs={blogs} />} />
+   
         <Route path="/notfound" element={<NotFound />} />
         <Route path="/expert-tips" element={<Blog blogs={blogs} />} />
         <Route path="/blogs" element={<BlogList2 blogs={blogs2} />} />
