@@ -7,6 +7,7 @@ import ProductSortPrice from "./ProductSortPrice";
 import { Pagination } from "react-bootstrap";
 import { useState } from "react";
 import '../css/ProductList.css';
+import { useNavigate } from "react-router-dom";
 
 function ProductsList({ products,
     searchValue, handleSearch,
@@ -15,6 +16,7 @@ function ProductsList({ products,
     clearFilter,
     addToCart, error
 }) {
+    const navigate=useNavigate('');
     const [activePage, setActivePage] = useState(1);
     const productsPerPage = 8;
     const handlePageChange = (pageNumber) => { setActivePage(pageNumber); };
@@ -32,18 +34,18 @@ function ProductsList({ products,
     return (<div className="productslist_page ">
         <Carousel className="productslist_carousel">
             <Carousel.Item>
-                <img className="d-block w-100 "
-                    src="./homeimg/carousel_1.jpg" height={"400px"}
+                <img className="d-block w-100 " onClick={()=>navigate(`/detail/4`)}
+                    src="./homeimg/carousel_97.jpg" height={"400px"}
                     alt="First slide" />
             </Carousel.Item>
             <Carousel.Item>
                 <img className="d-block w-100 "
-                    src="./homeimg/carousel_2.png" height={"400px"}
+                    src="./homeimg/carousel_98.png" height={"400px"}
                     alt="Second slide" />
             </Carousel.Item>
             <Carousel.Item>
                 <img className="d-block w-100 "
-                    src="./homeimg/carousel_3.jpg" height={"400px"}
+                    src="./homeimg/carousel_99.jpg" height={"400px"}
                     alt="Third slide" />
             </Carousel.Item>
         </Carousel>

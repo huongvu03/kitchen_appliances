@@ -128,7 +128,7 @@ function Payment({ handlePaymentData, totalpayment }) {
                         </div>
                         <div className="form-group">
                             <div>Phone</div>
-                            <div className="payment_field_input"> <input type="tel" name="tel" value={tel} placeholder='0xxxxxxxx' onChange={(e) => setTel(e.target.value)} />
+                            <div className="payment_field_input"> <input type="tel" name="tel" value={tel} placeholder='0-xxx-xxx-xxx' onChange={(e) => setTel(e.target.value)} />
                                 <div className="payment_error">{errorTel}</div></div>
                         </div>
                         <div className="payment_button_wrap"> <button type="submit" className="btn_checkout"><h5>Check out</h5></button></div>

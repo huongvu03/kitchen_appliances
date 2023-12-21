@@ -9,7 +9,7 @@ function Promotion({ cook, refridge, app, food, addCart }) {
 
     return (
         <div className="Promotion">
-            <div><video src="./homeimg/giftidea.mp4" controls autoPlay loop width={'100%'} height={"auto"} /></div>
+            <div><video src="./homeimg/giftidea.mp4" controls  loop width={'100%'} height={"auto"} /></div>
 
             <div className='Promotion_top'>
                 <h1>BIG SAVING FOR A BIG DREAMS</h1>

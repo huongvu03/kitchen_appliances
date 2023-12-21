@@ -28,7 +28,9 @@ function ProductItem({ product, addToCart }) {
                     </div>
 
                     <div className="productitem_card_control">
-                        <button className='btn_addCart' onClick={() => { addToCart(product); handleShow() }}>ADD TO CART</button>
+                        <button className='btn_addCart' onClick={() => { addToCart(product)
+                        // ; handleShow() 
+                            }}>ADD TO CART</button>
                         <button className='btn_detail' onClick={() => navigate(`/detail/${product.id}`)}>DETAILS</button>
 
                     </div>
