@@ -137,14 +137,14 @@
     } */
 
 .headerHomeTab a li:hover,
-.headerHomeTabmedia a:hover,
+.headerHomeTabmedia a li:hover,
 .dropbtn:hover {
   border-bottom: 5px solid #c41239;
 }
 
  .dropdown-content :hover  {
     text-decoration: underline black 1px solid;
-
+  
 }
 
 .headerUser :hover,

@@ -40,6 +40,7 @@ function Header({ handleSubmit, value, carts }) {
                                             <div class="headerHome_dropdown">
                                                 <div className='dropbtn'>Blog</div>
                                                 <div class="dropdown-content">
+                                                    <Link to="/blogs">Our Blog</Link>
                                                     <Link to="/expert-tips">Expert Tips</Link>
 
                                                 </div>
@@ -82,6 +83,8 @@ function Header({ handleSubmit, value, carts }) {
                             <div class="headerHome_dropdown">
                                 <div className='dropbtn'>BLOG</div>
                                 <div class="dropdown-content">
+                                <Link to="/blogs">Our Blog</Link>
+
                                     <Link to="/expert-tips">Expert Tips</Link>
 
                                 </div>
@@ -135,6 +138,8 @@ function Header({ handleSubmit, value, carts }) {
                             <div class="headerHome_dropdown">
                                 <div className='dropbtn'>BLOG</div>
                                 <div class="dropdown-content">
+                                <Link to="/blogs">Our Blog</Link>
+
                                     <Link to="/expert-tips">Expert Tips</Link>
 
                                 </div>
