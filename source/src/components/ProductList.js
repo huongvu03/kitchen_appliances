@@ -34,17 +34,17 @@ function ProductsList({ products,
     return (<div className="productslist_page ">
         <Carousel className="productslist_carousel">
             <Carousel.Item>
-                <img className="d-block w-100 " onClick={()=>navigate(`/detail/4`)}
+                <img className="d-block w-100 " onClick={()=>navigate(`/detail/11`)}
                     src="./homeimg/carousel_97.jpg" height={"400px"}
                     alt="First slide" />
             </Carousel.Item>
             <Carousel.Item>
-                <img className="d-block w-100 "
+                <img className="d-block w-100 " onClick={()=>navigate(`/detail/13`)}
                     src="./homeimg/carousel_98.png" height={"400px"}
                     alt="Second slide" />
             </Carousel.Item>
             <Carousel.Item>
-                <img className="d-block w-100 "
+                <img className="d-block w-100 " onClick={()=>navigate(`/detail/4`)}
                     src="./homeimg/carousel_99.jpg" height={"400px"}
                     alt="Third slide" />
             </Carousel.Item>
