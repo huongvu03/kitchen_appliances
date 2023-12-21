@@ -134,9 +134,9 @@ import '../css/Register.css';
                                 <input type="checkbox" />
                                 <div>Sign me up to receive product tips and tricks, special offers and more from Tasha.</div>
                                 <input type="checkbox"checked="true"/>
-                                <div>I have read and agree to the TASHA PRIVACY POLICY.<span>*</span></div>
+                                <div>I have read and agree to the <Link to='/privacy-policy'>TASHA PRIVACY POLICY</Link>.<span>*</span></div>
                                 <input type="checkbox" checked="true"/>
-                                <div>I have read and agree to the TASHA TERMS AND CONDITIONS.<span>*</span></div>
+                                <div>I have read and agree to the <Link to='/terms-of-use'>TASHA TERMS AND CONDITIONS</Link>.<span>*</span></div>
                             </div>
                             <hr></hr>
                             <div className="Register_button">

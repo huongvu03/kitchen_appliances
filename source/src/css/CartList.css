@@ -46,4 +46,7 @@ thead {
   .cartlist_action {
     display: none;
   }
+  .table thead {
+    display: none;
+  }
 }

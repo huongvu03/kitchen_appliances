@@ -1,7 +1,7 @@
 
 @media(max-width: 767px){
     .BlogList_grid{
-        display: grid;
+        display: none;
         grid-template-columns: 40% 60%;
         height: 400px;
         background-color: rgb(49, 86, 74);

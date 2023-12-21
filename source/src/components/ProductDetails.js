@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import '../css/ProductDetail.css';
-import { CheckCircle, Heart, Star, StarFill, StarHalf } from 'react-bootstrap-icons';
+import { CheckCircle, Heart, StarFill, StarHalf } from 'react-bootstrap-icons';
 import React from 'react';
 
 function ProductDetail({ products,sendqtyDetail }) {
