@@ -130,8 +130,8 @@ function App() {
   }
   //************************************* RESET FILTER ***********************************
   const clearFilter = () => {
-    setFilterProducts(products);
-    // window.location.reload()
+    // setFilterProducts(products);
+    window.location.reload();
   };
   //************************************ ADD CART ************************************
 
@@ -334,7 +334,7 @@ function App() {
         <Route path="/blogdetail/:id" element={<BlogDetail blogs={blogs} />} />
         <Route path="/manualdetail/:id" element={<ManualDetail products={products} />} />
    
-        <Route path="/notfound" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
         <Route path="/expert-tips" element={<Blog blogs={blogs} />} />
         <Route path="/blogs" element={<BlogList2 blogs={blogs2} />} />
         <Route path="/blog-detail2/:id" element={<BlogDetails2 />} />

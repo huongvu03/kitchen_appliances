@@ -268,7 +268,12 @@
         margin-left: 2rem;
 
     }
+    .HomeNew2Left{
+        max-width: 100%;
+     height:500px ;
 
+    }
+ 
 
 }
 
@@ -378,3 +383,4 @@
         text-align: center;
     }
 }
+

@@ -29,7 +29,7 @@ function ProductsList({ products,
             </Pagination.Item>
         );
     }
-    return (<div className="productslist_page container">
+    return (<div className="productslist_page ">
         <Carousel className="productslist_carousel">
             <Carousel.Item>
                 <img className="d-block w-100 "
@@ -51,7 +51,7 @@ function ProductsList({ products,
             <h3>{error}</h3>
         </div>
 
-        <div className='productslist container'>
+        <div className='productslist '>
 
             <div className='productslist_category_left'>
                 <div className="productslist_search_bar"><ProductSearch searchValue={searchValue} handleSearch={handleSearch} /></div>

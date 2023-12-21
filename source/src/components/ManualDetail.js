@@ -32,7 +32,9 @@ function ManualDetail({ products }) {
         filePath={product.manual} */}
                 {/* /> */}
                 <embed src={product.manual} width="100%" height="700px"
-                    type="application/pdf"></embed>
+                    type="application/pdf">
+                      
+                    </embed>
 
 
             </div>

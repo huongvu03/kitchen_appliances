@@ -2,7 +2,7 @@ import '../css/Header.css';
 import { Link } from 'react-router-dom';
 import { Cart3 } from 'react-bootstrap-icons';
 import { Person } from 'react-bootstrap-icons';
-import { Telephone, List } from 'react-bootstrap-icons';
+import { List } from 'react-bootstrap-icons';
 
 import HeaderSearch from './HeaderSearch';
 
@@ -13,10 +13,10 @@ function Header({ handleSubmit, value, carts }) {
     const totalQuantity = carts.reduce((total, product) => total + product.quantity, 0);
     console.log(totalQuantity);
 
-    const showMenu = (e) => {
-        document.getElementById("headerContent").removeAttribute("hidden");
-        return true;
-    }
+    // const showMenu = (e) => {
+    //     document.getElementById("headerContent").removeAttribute("hidden");
+    //     return true;
+    // }
     return (
         <div className='Header'>
 
@@ -113,7 +113,7 @@ function Header({ handleSubmit, value, carts }) {
                     <div class="headersearch" ><HeaderSearch value={value} handleSubmit={handleSubmit} /></div>
                     <div className='headerUser'>
                         {localStorage.getItem('username') ?
-                            (<span> Hi, {localStorage.getItem('username')} | <Link to="/log-in" onClick={() => deleteLocalStorage()}>LOG OUT</Link> </span>) :
+                            (<span>  Hi, {localStorage.getItem('username')} | <Link to="/log-in" onClick={() => deleteLocalStorage()}>LOG OUT</Link> </span>) :
                             (<Link to="/log-in"><div><Person /></div></Link>)
                         }
                     </div>
