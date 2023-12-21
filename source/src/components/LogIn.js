@@ -31,15 +31,15 @@ const showReset=(e)=>{
 
     return (
         <div className="LoginPage">
-            <div>
+            <div className="Logintop">
                 <img src='./homeimg/Homepage-Register.jpg' alt="" width={"100%"} height={"100%"} />
-                <div >
-                    <p className="LoginContent">
+              <div className="LoginContent">
+                    <p >
                         PRODUCT REGISTRATION
                         <h2>THERE’S GOOD REASON TO REGISTER</h2>
                         Register your appliance for easy access to product updates, warranty information, special offers, recipes and more.
                     </p>
-                </div>
+                    </div>
 
             </div>
             <div className="Login">

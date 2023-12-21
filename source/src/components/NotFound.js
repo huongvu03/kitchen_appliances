@@ -15,15 +15,16 @@ function NotFound() {
 
     return (
         <div className='Notfound' onClick={navigateNew}>
-             <div className='NotFoundimg'>
-            <div className='NotFoundcontent'>
-                <h3>Page Not Found 404</h3>
-                We know this is'nt what you're looking for. Let's find something new arrival.
-                <div><button>Find your flavour</button></div>
+            <div className='NotFoundimg'>
+                <div className='NotFoundcontent'>
+                    <h3>Page Not Found 404</h3>
+                    We know this is'nt what you're looking for. Let's find something new arrival.
+                    <div><button>Find your flavour</button></div>
 
-            </div>
-          <img src="./homeimg/notfound.png" alt="new arrival"/>
-            
+                </div>
+               <img src="./homeimg/notfound.jpg" alt="new arrival" className='img'/>
+              <div><img src="./homeimg/notfound.png" alt="new arrival" /></div>  
+
             </div>
         </div>
     );

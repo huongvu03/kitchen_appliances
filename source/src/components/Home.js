@@ -48,7 +48,7 @@ function Home() {
 
     return (
         <div className="Home">
-            <HomeCarousel />
+           <div className="Hometop"><HomeCarousel /></div> 
             <div className="HomeBody">
 
                 <div className="HomeBody_title"><h1>CHRISTMAST FEATURED DEALS</h1></div>

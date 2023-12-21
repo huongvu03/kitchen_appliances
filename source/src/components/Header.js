@@ -22,10 +22,12 @@ function Header({ handleSubmit, value, carts }) {
 
 
             <div className="headerHome">
+
+                {/* // Menu @ media  */}
                 <Link to='#' >
-                    <li>
+                   
                         <div className='headerHomemedia_dropdown' >
-                            <div className='headerHomemedia_dropdownbtn'><List /></div>
+                            <div className='headerHomemedia_dropdownbtn'><List /> </div>
 
                             <div className='headerHomemedia_dropdown-content' >
                                 <ul >
@@ -35,48 +37,40 @@ function Header({ handleSubmit, value, carts }) {
                                     <Link to='/products' ><li>Products</li></Link>
                                     <Link to='/blogs' >
                                         <li>
-                                            {/* <div class="headerHome_dropdown"> */}
-                                            {/* <div className='dropbtn'> */}
-                                            Blog
-                                            {/* </div> */}
-                                            {/* <div class="dropdown-content">
-                                                <Link to="/expert-tips">Expert Tips</Link>
+                                            <div class="headerHome_dropdown">
+                                                <div className='dropbtn'>Blog</div>
+                                                <div class="dropdown-content">
+                                                    <Link to="/expert-tips">Expert Tips</Link>
 
+                                                </div>
                                             </div>
-                                        </div> */}
 
                                         </li>
                                     </Link>
 
 
                                     <Link to='/contact' > <li>
-                                        {/* <div class="headerHome_dropdown"> */}
-                                        {/* <div className='dropbtn'> */}
-                                        Support
-                                        {/* </div>
-                                        {/* <div class="dropdown-content" hidden id="headerContent"> */}
-                                        {/* <Link to="/contact">Contact Us</Link> */}
+                                        <div class="headerHome_dropdown">
+                                            <div className='dropbtn'>Support</div>
+                                            <div class="dropdown-content"  id="headerContent">
+                                                <Link to="/contact">Contact Us</Link>
 
-                                        {/* <Link to="/feedback">Feedback</Link> */}
-                                        {/* </div> */}
-                                        {/* </div>  */}
+                                                <Link to="/feedback">Feedback</Link>
+                                            </div>
+                                        </div>
 
                                     </li>
                                     </Link>
                                     <Link to='/about-us' ><li>About Us</li></Link>
                                 </ul>
                             </div>
+                           
                         </div>
-                    </li>
+                 
                 </Link>
 
-<<<<<<< Updated upstream
-            <ul className='headerHomeTab'>
-                <Link to='/' > <li>HOME</li></Link>
-                {/* <Link to='/promotion' headerHomeTab> <li>PROMOTION</li></Link> */}
-=======
+                {/* // Main menu */}
                 <div>  <Link to='/'><img src="./homeimg/Logo-Tashas-Design.png" alt="logo" height="100px" width="100px" /></Link></div>
->>>>>>> Stashed changes
 
                 <div className='headerHomeTab'>  <ul>
                     {/* <Link to='/' > <li>HOME</li></Link> */}
@@ -129,6 +123,7 @@ function Header({ handleSubmit, value, carts }) {
 
             </div>
 
+            {/* //Menu nav @ tablet */}
             <div className='headerHomeTabmedia'>
                 <ul >
                     {/* <Link to='/' > <li>HOME</li></Link> */}

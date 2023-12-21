@@ -1,5 +1,6 @@
 
     /*top*/
+ 
 .ContactUs_top div img {
     width: 100%;
     object-fit: fill;
@@ -10,7 +11,8 @@
     font-size: 30px;
     position: absolute;
     top: 40%;
-    left: 30%;
+    left: 0;
+    right: 0;
     color: white;
     text-align: center;
     font-weight: lighter;
@@ -243,13 +245,9 @@ text-align: center;
 
    /* MEDIA tablet*/
 @media only screen and (min-width: 768px) and (max-width: 1024px)  {
-    .ContactUs_topcontent {
-         position: absolute;
-        top: 22%;
-        left: 10%;
-        display: flexbox;
-            }
-  
+    .ContactUs_top{
+         position: relative;
+    }
     .Contact_info{
         grid-template-columns: 33% 33% 33%;
         column-gap: 10px;
@@ -285,11 +283,16 @@ text-align: center;
 
 /* Phone */
 @media (max-width:767px){
+    .ContactUs{
+        position: relative;
+    }
     .ContactUs_topcontent{
-        left: 3%;
-        top:20%;
-        font-size: 27px;
-        display: flexbox;
+top: 80px;
+       left:40px;
+       right:40px;
+        font-size: 23px;
+       
+        
     }
     .ContactUs_top img{
         object-fit: scale-down;
