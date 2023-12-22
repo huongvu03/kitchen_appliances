@@ -24,7 +24,7 @@ eProject documentation at https://github.com/huongvu03/kitchen_appliances/tree/m
 
 ============================
 
-eProject published at https://lnnhi1310.github.io/Kitchen-Appliances/index.html
+
 
 ============================
 
