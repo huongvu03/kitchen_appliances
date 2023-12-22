@@ -385,3 +385,33 @@ object-fit: cover;
 
 }
 }
+/****LAPTOP */
+@media only screen and (min-width: 1025px) and (max-width: 1210px){
+    .Feedback ul {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .ContactUs_top{
+        position: relative;
+   }
+   .Contact_info{
+       grid-template-columns: 33% 33% 33%;
+       column-gap: 10px;
+       margin-left: 20px;
+       margin-right: 30px;
+       text-indent: 0%;
+       padding: 0%;
+   }
+    
+ /* bracnhes */
+ .ContactUs_branches ul {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    
+}
+.Feedback ul {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+}

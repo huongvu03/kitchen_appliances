@@ -21,10 +21,10 @@ function Feedback() {
             setError('Type is required');
             return false;
         }else{
-        var feedback = `purpose: ${purpose}, 
-            custom purpose:${cpurpose} , 
-            improved:${improve}, 
-            satisfies: ${satisfied} `
+        var feedback = `Purpose: ${purpose}, 
+            Custom purpose:${cpurpose} , 
+            Improved:${improve}, 
+            Satisfies: ${satisfied} `
         localStorage.setItem("feedback", feedback);
         setTextModal('Thank you for your Feedback !');
         setShowModal(true);

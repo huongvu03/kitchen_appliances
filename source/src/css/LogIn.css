@@ -127,7 +127,16 @@
     padding: 60px;
     text-align: center;
 }
-
+.EmailData h4{
+    color: rgb(217, 64, 115);
+    text-align: left;
+ 
+}
+.EmailData h6{
+   font-weight: normal;
+    text-align: left;
+ 
+}
 /*Not Found Page*/
 .NotFoundimg {
 max-width: 100%;
@@ -265,4 +274,51 @@ height: 600px;
       height: 100%;
     }
 
+}
+
+/****LAPTOP */
+@media only screen and (min-width: 1025px) and (max-width: 1210px){
+    .Logintop{
+        position: relative;
+    
+    }
+    .LoginContent {
+        position: absolute;
+      top:130px;
+      }
+      .Login {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin: 80px;
+        border: rgb(228, 226, 226) 2px solid;
+        ;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px 0px;
+        padding: 60px 60px;
+    }
+      .Loginleft {
+        max-width: 100%;
+        line-height: 30px;
+        padding-left: 0px;
+        padding-right: 60px;
+        margin-bottom: 60px;
+    
+    }
+    .Loginright {
+        border-left: rgb(228, 226, 226) 2px solid;
+
+        padding-left: 60px;
+        padding-right: 0px;
+       
+    }
+    /* notfound*/
+    .NotFoundcontent{
+        right:15%;
+        width: 250px;
+        height: min-content;
+        padding: 20px;
+        
+    }
+    .NotFoundimg {
+       position: relative;
+    }
 }

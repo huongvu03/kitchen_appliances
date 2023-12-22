@@ -62,6 +62,8 @@ import '../css/Register.css';
                 console.log(email, password, username);
                 navigate('/log-in');
                 // setIsOpen(true);
+                var signindata=`email:${email}, pass:${password}, username:${username}`
+                localStorage.setItem('signin',signindata);
             }
             // return navigate('/log-in');
         }

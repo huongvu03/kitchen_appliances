@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../css/ContactUs.css';
-import { Twitter, Facebook, Google } from 'react-bootstrap-icons';
+import { Twitter, Facebook } from 'react-bootstrap-icons';
 import { TelephoneOutbound, People, EnvelopeCheck } from 'react-bootstrap-icons';
 import ModalConfirm from './ModalConfirm';
 import { useNavigate } from 'react-router-dom';
@@ -99,7 +99,8 @@ function ContactUs() {
 
 
             <div className='ContactUs_bottom' >
-                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d19776604.056528866!2d68.87367680592455!3d21.06838665229177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sGodrej%20%26%20Boyce%20Mfg.%20Co.%20Ltd.!5e0!3m2!1sen!2s!4v1702201867226!5m2!1sen!2s" width="100%" height="100%" style={{ border: "none", borderRadius: "60px" }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d19776604.056528866!2d68.87367680592455!3d21.06838665229177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sGodrej%20%26%20Boyce%20Mfg.%20Co.%20Ltd.!5e0!3m2!1sen!2s!4v1702201867226!5m2!1sen!2s" 
+                width="100%" height="100%" style={{ border: "none", borderRadius: "60px" }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" alt="bracnhes"></iframe>
                 <div className='ContactUs_bottomR'>
 
 

@@ -110,7 +110,7 @@ function Home() {
                 <h2>NEW ARRIVAL</h2>
 
                 <div className="HomeNew1"  id="newarrival">
-                    <div className="HomeNew1video"><video src="./homeimg/blenderArrival - Trim.mp4" controls  loop width="100%" height={"100%"}/></div>
+                    <div className="HomeNew1video"><video src="./homeimg/blenderArrival - Trim.mp4" controls autoPlay loop width="100%" height={"100%"}/></div>
                     <div className="HomeNew1-content">
                         <h4> HI, HIBISCUS! </h4>
                         <div>
@@ -130,8 +130,10 @@ function Home() {
 
                 <div className="HomeNew2">
                     <div className="HomeNew2Left"><img src="./homeimg/newrefarrival.jpg" alt="fridge" onClick={() => navigate(`/detail/11`)}/></div>
+                    <div className="HomeNew2Leftmedia"><img src="./homeimg/new.png" alt="fridge" onClick={() => navigate(`/detail/11`)}/></div>
+
                     <div>
-                        <div className="HomeNew2Right" > <video src="./homeimg/fridgevideo.mp4" controls loop /></div>
+                        <div className="HomeNew2Right" > <video src="./homeimg/fridgevideo.mp4" controls autoPlay loop /></div>
 
                         <div className="HomeNew2-content" onClick={() => navigate(`/detail/11`)}>
                             <h6>NEW FRENCH DOOR REFRIGERATORS </h6>
