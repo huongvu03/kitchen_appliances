@@ -80,7 +80,7 @@ function Footer() {
             <div className='Footerrow2'>
 
                 <div className='Footer_c1'>
-                    <div><h5> <Link to="/terms-of-use">Terms of Use</Link>|  <Link to="/privacy-policy"> Privacy Policy </Link></h5></div>
+                    <div><h5> <Link to="/terms-of-use">Terms of Use</Link>|  <Link to="/privacy-policy"> Privacy Policy</Link>| <Link to="/sitemap"> Site Map</Link></h5></div>
 
                     <div className='Footer_c1Content'>
                         | Don't Sell or Share My Information

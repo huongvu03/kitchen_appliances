@@ -49,7 +49,7 @@ function CartList({ carts, deleteCart, decreaseQty, increaseQty, handlePaymentDa
 
                 <div className="cartlist_payment_wrap">
                     <div className="total_price"> <h5>Total: {formatCurrency(totalPrice)}</h5></div>
-                    <div className="cartlist_payment_btn_wrap"> <button className="cartlist_payment_btn" onClick={togglePaymentForm}><h5>Payment</h5></button></div>
+                    <div className="cartlist_payment_btn_wrap"> <button className="cartlist_payment_btn" onClick={togglePaymentForm}><h5>Place Order</h5></button></div>
 
 
                 </div>

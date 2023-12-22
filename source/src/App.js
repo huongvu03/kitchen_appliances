@@ -26,7 +26,7 @@ import ManualDetail from './components/ManualDetail';
 import NotFound from './components/NotFound';
 import BlogList2 from './components/BlogList2';
 import BlogDetails2 from './components/BlogDetails2';
-
+import SiteMap from './components/SiteMap';
 
 
 function App() {
@@ -331,6 +331,8 @@ function App() {
         <Route path='/feedbackdata' element={<FeedbackData />} />
         <Route path='/terms-of-use' element={<TermsOfUse />} />
         <Route path='/privacy-policy' element={<Privacy />} />
+        <Route path='/sitemap' element={<SiteMap />} />
+
         <Route path="/blogdetail/:id" element={<BlogDetail blogs={blogs} />} />
         <Route path="/manualdetail/:id" element={<ManualDetail products={products} />} />
    
