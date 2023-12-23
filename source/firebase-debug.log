@@ -1,0 +1,21 @@
+[debug] [2023-12-22T09:28:11.801Z] ----------------------------------------------------------------------
+[debug] [2023-12-22T09:28:11.807Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\PC-User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-12-22T09:28:11.808Z] CLI Version:   13.0.2
+[debug] [2023-12-22T09:28:11.809Z] Platform:      win32
+[debug] [2023-12-22T09:28:11.809Z] Node Version:  v18.18.2
+[debug] [2023-12-22T09:28:11.811Z] Time:          Fri Dec 22 2023 16:28:11 GMT+0700 (Indochina Time)
+[debug] [2023-12-22T09:28:11.811Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-22T09:28:11.826Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-22T09:28:11.827Z] > authorizing via signed-in user (huongvu031096@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\PC-User\OneDrive\Desktop\FPT_APTECH\HK1\5.project\kitchen_appliances\kitchen_appliances\source
+
